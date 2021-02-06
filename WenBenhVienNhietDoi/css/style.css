@@ -2185,3 +2185,9 @@ ul.menu_topbar li:last-child a {
     position: absolute;
     top: 0;
 }
+.news-hot-home {
+    height: 90px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid;
+    padding-bottom: 15px;
+}
