@@ -1,0 +1,5 @@
+G:\CCCLC\CommonHelper\bin\Release\CommonHelper.dll
+G:\CCCLC\CommonHelper\bin\Release\CommonHelper.pdb
+G:\CCCLC\CommonHelper\obj\Release\CommonHelper.dll
+G:\CCCLC\CommonHelper\obj\Release\CommonHelper.pdb
+G:\CCCLC\CommonHelper\obj\Release\CommonHelper.csprojResolveAssemblyReference.cache

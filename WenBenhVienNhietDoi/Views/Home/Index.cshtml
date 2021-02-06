@@ -1,0 +1,76 @@
+﻿@model WenBenhVienNhietDoi.Models.ListMenuModels
+@{
+    ViewBag.Title = "Index";
+}
+    <div class="headermenu wow fadeIn" data-wow-delay="0.2s" style="    border-top: 4px solid rgb(181, 179, 179);   ">
+        <div class="container">
+            <div class="navbar" role="navigation">
+                @*<div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>*@
+                <div class="navbar-collapse collapse">
+                    <ul id="main-menu" class="sm sm-blue">
+                        <li class='<%= getCss("0")%>'>
+                            <a href="home.html" title="TRANG CHỦ">TRANG CHỦ</a>
+                        </li>
+                        @foreach (var itemparent in Model.ListParentMenu)
+                        {
+                            if (@itemparent.CapMenu == 0)
+                            {
+                                <li>
+                                    <a href=" @itemparent.Linkurl" title="@itemparent.TenMenu" class="has-submenu">@itemparent.TenMenu</a>
+                                    <ul class="dropdown">
+                                        @foreach (var item in Model.ListMenu)
+                                        {
+                                            if (@item.IdCha == @itemparent.Id)
+                                            {
+                                                <li><a href=" @item.Linkurl" title="@item.TenMenu">@item.TenMenu</a></li>
+                                            }
+                                        }
+                                    </ul>
+                                </li>
+                            }
+
+                        }                       
+                        @*<li class="  dropdown">
+                            <a href="#" title="Thư viện" class="has-submenu"><span class="sub-arrow">+</span>Thư viện</a>
+                            <ul class="sm-nowrap" style="width: auto; min-width: 10em; display: none; max-width: 20em; top: auto; left: 0px; margin-left: 0px; margin-top: 0px;">
+
+                                <li>
+                                    <a href="cate-album-anh.html" title="Thư viện ảnh">Thư viện ảnh</a>
+                                </li>
+                                <li>
+                                    <a href="cate-video.html" title="Videos">Videos</a>
+                                </li>
+                            </ul>
+                        </li>*@
+
+
+                        <li class="">
+                            <a href="module-hoi-dap.html" target="_blank" title="Liên hệ">Liên hệ</a>
+                        </li>
+
+                        <li class="" style="float: right; padding-top: 2px;">
+
+                            <div class="" style="display: none; float: right; padding-top: 6px; color: #ffffff; font-weight: bold">
+
+                                <asp:Button ID="butimkiemnew" runat="server" OnClick="butimkiemnew_Click" Text="Button" />
+
+                            </div>
+                            <div class="" style="float: right; padding-top: 3px">
+                                <asp:TextBox ID="txtkeynew" runat="server" Width="200px" Height="40px" CssClass="form-control" placeholder="Từ khóa..." autocomplete="off"></asp:TextBox>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- SmartMenus jQuery init -->
+        </div>
+    </div>
+<h2>Index</h2>
+

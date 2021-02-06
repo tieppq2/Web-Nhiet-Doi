@@ -1,0 +1,62 @@
+D:\QUAN LY DU AN\Thangnq15\CCCLC\CommonHelper\bin\Debug\CommonHelper.dll
+D:\QUAN LY DU AN\Thangnq15\CCCLC\CommonHelper\bin\Debug\CommonHelper.pdb
+D:\QUAN LY DU AN\Thangnq15\CCCLC\CommonHelper\obj\Debug\ResolveAssemblyReference.cache
+D:\QUAN LY DU AN\Thangnq15\CCCLC\CommonHelper\obj\Debug\CommonHelper.dll
+D:\QUAN LY DU AN\Thangnq15\CCCLC\CommonHelper\obj\Debug\CommonHelper.pdb
+D:\QUAN LY DU AN\Du An Yte\06.SOURCE\CCCLC\CommonHelper\bin\Debug\CommonHelper.dll
+D:\QUAN LY DU AN\Du An Yte\06.SOURCE\CCCLC\CommonHelper\bin\Debug\CommonHelper.pdb
+D:\QUAN LY DU AN\Du An Yte\06.SOURCE\CCCLC\CommonHelper\obj\Debug\ResolveAssemblyReference.cache
+D:\QUAN LY DU AN\Du An Yte\06.SOURCE\CCCLC\CommonHelper\obj\Debug\CommonHelper.dll
+D:\QUAN LY DU AN\Du An Yte\06.SOURCE\CCCLC\CommonHelper\obj\Debug\CommonHelper.pdb
+D:\QUAN LY DU AN\Du An Yte\06.SOURCE\CCCLC_vs1\CommonHelper\bin\Debug\CommonHelper.dll
+D:\QUAN LY DU AN\Du An Yte\06.SOURCE\CCCLC_vs1\CommonHelper\bin\Debug\CommonHelper.pdb
+D:\QUAN LY DU AN\Du An Yte\06.SOURCE\CCCLC_vs1\CommonHelper\obj\Debug\ResolveAssemblyReference.cache
+D:\QUAN LY DU AN\Du An Yte\06.SOURCE\CCCLC_vs1\CommonHelper\obj\Debug\CommonHelper.dll
+D:\QUAN LY DU AN\Du An Yte\06.SOURCE\CCCLC_vs1\CommonHelper\obj\Debug\CommonHelper.pdb
+G:\CCCLC\CommonHelper\bin\Debug\CommonHelper.dll
+G:\CCCLC\CommonHelper\bin\Debug\CommonHelper.pdb
+G:\CCCLC\CommonHelper\obj\Debug\CommonHelper.dll
+G:\CCCLC\CommonHelper\obj\Debug\CommonHelper.pdb
+C:\Users\manhdh\Desktop\web_yte_v1\CommonHelper\bin\Debug\CommonHelper.dll
+C:\Users\manhdh\Desktop\web_yte_v1\CommonHelper\bin\Debug\CommonHelper.pdb
+C:\Users\manhdh\Desktop\web_yte_v1\CommonHelper\obj\Debug\CommonHelper.csprojResolveAssemblyReference.cache
+C:\Users\manhdh\Desktop\web_yte_v1\CommonHelper\obj\Debug\CommonHelper.dll
+C:\Users\manhdh\Desktop\web_yte_v1\CommonHelper\obj\Debug\CommonHelper.pdb
+C:\Users\manhdh\Desktop\Web_yte\CommonHelper\bin\Debug\CommonHelper.dll
+C:\Users\manhdh\Desktop\Web_yte\CommonHelper\bin\Debug\CommonHelper.pdb
+C:\Users\manhdh\Desktop\Web_yte\CommonHelper\obj\Debug\CommonHelper.dll
+C:\Users\manhdh\Desktop\Web_yte\CommonHelper\obj\Debug\CommonHelper.pdb
+C:\Users\manhdh\Desktop\Web_yte\CommonHelper\obj\Debug\CommonHelper.csprojResolveAssemblyReference.cache
+G:\vnpt\Web_yte\CommonHelper\bin\Debug\CommonHelper.dll
+G:\vnpt\Web_yte\CommonHelper\bin\Debug\CommonHelper.pdb
+G:\vnpt\Web_yte\CommonHelper\obj\Debug\CommonHelper.dll
+G:\vnpt\Web_yte\CommonHelper\obj\Debug\CommonHelper.pdb
+C:\Users\manhdh\Desktop\vnpt_v1\vnpt_v1\CommonHelper\bin\Debug\CommonHelper.dll
+C:\Users\manhdh\Desktop\vnpt_v1\vnpt_v1\CommonHelper\bin\Debug\CommonHelper.pdb
+C:\Users\manhdh\Desktop\vnpt_v1\vnpt_v1\CommonHelper\obj\Debug\CommonHelper.csprojResolveAssemblyReference.cache
+C:\Users\manhdh\Desktop\vnpt_v1\vnpt_v1\CommonHelper\obj\Debug\CommonHelper.dll
+C:\Users\manhdh\Desktop\vnpt_v1\vnpt_v1\CommonHelper\obj\Debug\CommonHelper.pdb
+G:\vnpt\vnpt_v1\vnpt_v1\CommonHelper\bin\Debug\CommonHelper.dll
+G:\vnpt\vnpt_v1\vnpt_v1\CommonHelper\bin\Debug\CommonHelper.pdb
+G:\vnpt\vnpt_v1\vnpt_v1\CommonHelper\obj\Debug\CommonHelper.dll
+G:\vnpt\vnpt_v1\vnpt_v1\CommonHelper\obj\Debug\CommonHelper.pdb
+G:\vnpt\vnpt_v1\vnpt_v1\CommonHelper\obj\Debug\CommonHelper.csprojResolveAssemblyReference.cache
+G:\vnpt\bv_v1\CommonHelper\bin\Debug\CommonHelper.dll
+G:\vnpt\bv_v1\CommonHelper\bin\Debug\CommonHelper.pdb
+G:\vnpt\bv_v1\CommonHelper\obj\Debug\CommonHelper.dll
+G:\vnpt\bv_v1\CommonHelper\obj\Debug\CommonHelper.pdb
+G:\vnpt\bv_v1\CommonHelper\obj\Debug\CommonHelper.csprojResolveAssemblyReference.cache
+D:\vnpt\bv_v1\CommonHelper\bin\Debug\CommonHelper.dll
+D:\vnpt\bv_v1\CommonHelper\bin\Debug\CommonHelper.pdb
+D:\vnpt\bv_v1\CommonHelper\obj\Debug\CommonHelper.dll
+D:\vnpt\bv_v1\CommonHelper\obj\Debug\CommonHelper.pdb
+D:\vnpt\web_bv2\CommonHelper\bin\Debug\CommonHelper.dll
+D:\vnpt\web_bv2\CommonHelper\bin\Debug\CommonHelper.pdb
+D:\vnpt\web_bv2\CommonHelper\obj\Debug\CommonHelper.csprojResolveAssemblyReference.cache
+D:\vnpt\web_bv2\CommonHelper\obj\Debug\CommonHelper.dll
+D:\vnpt\web_bv2\CommonHelper\obj\Debug\CommonHelper.pdb
+D:\WenBenhVienNhietDoi\CommonHelper\bin\Debug\CommonHelper.dll
+D:\WenBenhVienNhietDoi\CommonHelper\bin\Debug\CommonHelper.pdb
+D:\WenBenhVienNhietDoi\CommonHelper\obj\Debug\CommonHelper.csprojAssemblyReference.cache
+D:\WenBenhVienNhietDoi\CommonHelper\obj\Debug\CommonHelper.dll
+D:\WenBenhVienNhietDoi\CommonHelper\obj\Debug\CommonHelper.pdb

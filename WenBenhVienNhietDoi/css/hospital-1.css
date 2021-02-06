@@ -1,0 +1,438 @@
+/**************** Dành cho MAIN SPECIALITY ****************/
+.speciality_list {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+}
+.speciality_list .item {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+}
+.speciality_list .item .simg {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	height: 180px;
+	overflow: hidden;
+}
+.speciality_list .item .simg img {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+}
+
+.speciality_list .item .sdes {
+	position: relative;
+	margin: 0 auto 20px;
+	padding: 0;
+	width: 100%;
+}
+.speciality_list .item .sdes h3 {
+	position: relative;
+	margin: 20px 0 0;
+	padding: 10px 0 0;
+	width: 100%;
+	text-transform: uppercase;
+	height: 50px;
+	overflow: hidden;
+	line-height: 20px;
+}
+.speciality_list .item .sdes h3:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	width: 60px;
+	height: 2px;
+	content: "";
+	background-color: #db2032;
+}
+.speciality_list .item .sdes p {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+}
+/**************** Dành cho DETAIL SPECIALITY ****************/
+.speciality_detail {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+}
+.speciality_detail .sheader {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+}
+.speciality_detail .sheader h1 {
+	position: relative;
+	width: 100%;
+	text-transform: uppercase;
+}
+.speciality_detail .sheader p {
+	position: relative;
+	margin: 0 0 20px;
+	padding: 0;
+	width: 100%;
+	font-weight: 700;
+}
+.speciality_detail .show_intab {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.speciality_detail .show_intab .content_tab {
+	position: relative;
+	margin: 20px 0;
+	padding: 0;
+	width: 100%;
+}
+
+.speciality_detail .show_intab .content_tab .bx-wrapper {
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border: 0;
+	background: transparent;
+	margin: 0;
+}
+.speciality_detail .show_intab .content_tab ul.bxslider_hospital {
+	margin: 0;
+	padding: 0;
+}
+
+.speciality_detail .show_intab .content_tab .bx-wrapper .bx-caption {
+	background: transparent;
+	bottom: 20%;
+	left: auto;
+	left: 100px;
+	position: absolute;
+	width: 40%;
+	padding: 20px 12px 67px 12px;
+}
+.speciality_detail .show_intab .content_tab .bx-wrapper .bx-pager, .speciality_detail .show_intab .content_tab .bx-wrapper .bx-controls-auto {
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+}
+.speciality_detail .show_intab .content_tab .bx-wrapper .bx-pager.bx-default-pager a {
+	background: #fff;
+	border: 3px solid #db2032;
+	display: block;
+	width: 15px;
+	height: 15px;
+	margin: 0 5px;
+	outline: 0;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+}
+.speciality_detail .show_intab .content_tab .bx-wrapper .bx-pager.bx-default-pager a:hover, .speciality_detail .show_intab .content_tab .bx-wrapper .bx-pager.bx-default-pager a.active {
+	background: #db2032;
+	border: 3px solid #fff;
+}
+
+.speciality_detail .show_intab .nav-tabs > li.active > a, .speciality_detail .show_intab .nav-tabs > li.active > a:hover, .speciality_detail .show_intab .nav-tabs > li.active > a:focus {
+	color: #fff;
+	background-color: #db2032;
+	border-top: 1px solid #db2032;
+	border-right: 1px solid #db2032;
+	border-bottom: 1px solid #db2032;
+	border-left: 1px solid #db2032;
+	border-bottom-color: rgb(221, 221, 221);
+	border-bottom-color: transparent;
+	cursor: default;
+}
+.show_intab .nav-tabs {
+	border-bottom: 5px solid #db2032;
+}
+.show_intab .nav > li > a {
+	position: relative;
+	display: block;
+	padding: 4px 15px;
+	text-transform: uppercase;
+}
+
+.speciality_detail .show_intab .item {
+	position: relative;
+	margin: 0 0 20px;
+	padding: 0 0 20px;
+	width: 100%;
+	border-bottom: 1px solid #ebebeb;
+}
+.speciality_detail .show_intab .item .simg {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 30%;
+	float: left;
+}
+.speciality_detail .show_intab .item .simg img {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.speciality_detail .show_intab .item .sdes {
+	position: relative;
+	margin: 0;
+	padding: 0 40px;
+	width: 70%;
+	float: left;
+}
+
+/* List doctor chung */
+.simg .appointment {
+	position: relative;
+	margin: 20px auto;
+	padding: 0;
+	text-align: center;
+}
+.sdes table.list_doctor tr td {
+	padding: 4px 10px;
+}
+.sdes table.list_doctor tr td label {
+	/*text-transform: uppercase;*/
+}
+.sdes table.list_doctor tr td h4 {
+	margin: 0px;
+	padding: 0;
+}
+.sdes ul.list_doctor {
+	list-style: none;
+	border: 1px solid #999;
+	margin: 0px;
+	padding: 0;
+}
+.sdes ul.list_doctor li {
+	list-style: none;
+	display: table;
+	border-bottom: 1px solid #999;
+	margin: 0px;
+	padding: 0;
+}
+.sdes ul.list_doctor li:last-child {
+	border-bottom: 0;
+}
+.sdes ul.list_doctor label {
+	font-weight: 700;
+	color: #999;
+	width: 150px;
+}
+.sdes ul.list_doctor p {
+	width: calc(100% - 155px);
+	float: right;
+	font-size: 13px;
+}
+.sdes ul.list_doctor h4 {
+	display: inline;
+	width: auto;
+	text-transform: uppercase;
+	color: #db2032;
+}
+.sdes .datework {
+	position: relative;
+	margin: 0 auto;
+	padding: 0px;
+	width: 100%;
+}
+.sdes .datework table {
+	position: relative;
+	margin: 0 auto;
+	padding: 0px;
+	width: 80%;
+}
+.sdes .datework table tr th {
+	background-color: #777;
+	color: #fff;
+	padding: 0px 10px;
+}
+.sdes .datework table tr td {
+	padding: 0px 10px;
+}
+/**************** Dành cho doctors ****************/
+.doctors {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.doctors .search_doctor {
+	position: relative;
+	margin: 0 0 30px;
+	padding: 0;
+	width: 100%;
+}
+.doctors .search_doctor .show_info {
+	position: relative;
+	margin: 0;
+	padding: 20px;
+	width: 100%;
+	float: left;
+	background-color: #fafafa;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	min-height: 300px;
+}
+.doctors .search_doctor .show_info .search_detail {
+	position: relative;
+	margin: 0;
+	padding: 0px;
+	width: 100%;
+}
+.doctors .search_doctor .show_info .search_detail ul {
+	position: relative;
+	margin: 0;
+	padding: 0px;
+	width: 100%;
+}
+.doctors .search_doctor .show_info .search_detail ul {
+	position: relative;
+	margin: 0;
+	padding: 0px;
+	width: 100%;
+	display: table;
+}
+.doctors .search_doctor .show_info .search_detail ul li {
+	position: relative;
+	margin: 0 20px 0 0;
+	padding: 0px;
+	float: left;
+}
+.doctors .search_doctor .show_info .search_detail ul li input[type="checkbox"], .doctors .search_doctor .show_info .search_detail ul li input[type="radio"] {
+	position: relative;
+	margin: 0;
+	padding: 0px;
+}
+
+.doctors .showlist {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.doctors .showlist .item {
+	position: relative;
+	margin: 0 0 20px;
+	padding: 0 0 20px;
+	width: 100%;
+	border-bottom: 1px solid #ebebeb;
+}
+.doctors .showlist .item .simg {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.doctors .showlist .item .simg img {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.doctors .showlist .item .sdes {
+	position: relative;
+	margin: 0;
+	padding: 0px;
+	width: 100%;
+}
+
+/**************** Dành cho modal ****************/
+.appointment_modal {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.appointment_modal .doctor_info {
+	position: relative;
+	margin: 0 0 20px;
+	padding: 10px;
+	width: 100%;
+}
+.appointment_modal .doctor_info h3 {
+	text-align: center;
+}
+.appointment_modal h5 {
+	position: relative;
+	margin: 0 0 20px;
+	padding: 0px;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.modal-dialog {
+	min-width: 70%;
+	margin: 10% auto 30px;
+}
+
+.modal-header {
+	padding: 10px 20px;
+	border-bottom: 0;
+}
+.modal-body {
+	padding: 0 20px 20px;
+}
+.modal-title {
+	position: relative;
+	padding: 0px 0 5px;
+	margin: 0px;
+	text-transform: uppercase;
+	border-bottom: 1px solid #ebebeb;
+}
+.modal-title::before {
+	content: "";
+	height: 2px;
+	width: 100px;
+	background-color: #db2032;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.ui-datepicker {
+	z-index: 9999 !important;
+}
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 992px) {
+}
+@media (max-width: 767px) {
+	.show_intab .nav > li {
+		width: 33.33%;
+	}
+	.show_intab .nav > li > a {
+		padding: 4px 5px;
+		font-size: 80%;
+		white-space: nowrap;
+		text-align: center
+	}
+
+	.speciality_detail .show_intab .item .simg {
+		width: 100%;
+		float: none;
+	}
+	.speciality_detail .show_intab .item .sdes {
+		margin: 20px 0;
+		padding: 0px;
+		width: 100%;
+		float: none;
+	}
+	.sdes .datework table {
+		width: 100%;
+	}
+}
+@media (max-width: 460px) {
+}

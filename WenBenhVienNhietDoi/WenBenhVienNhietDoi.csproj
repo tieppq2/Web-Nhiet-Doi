@@ -1,0 +1,781 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{28675D5E-EE03-44E0-B9A2-9BBE40480F8E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WenBenhVienNhietDoi</RootNamespace>
+    <AssemblyName>WenBenhVienNhietDoi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44337</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonHelper">
+      <HintPath>..\CommonHelper\bin\Debug\CommonHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.2\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.1.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.1.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.1.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.1.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\GioiThieuBVController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MenuModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\animate.min-1.css" />
+    <Content Include="css\animate.min.css" />
+    <Content Include="css\bghome1.gif" />
+    <Content Include="css\bghome1_right.gif" />
+    <Content Include="css\bgright.png" />
+    <Content Include="css\bgtab.jpg" />
+    <Content Include="css\blueimp-gallery.min-1.css" />
+    <Content Include="css\blueimp-gallery.min.css" />
+    <Content Include="css\bootstrap.min-1.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\bx_loader-1.gif" />
+    <Content Include="css\comment-1.css" />
+    <Content Include="css\comment.css" />
+    <Content Include="css\contact.css" />
+    <Content Include="css\controls-1.png" />
+    <Content Include="css\controls-sliderhome.png" />
+    <Content Include="css\css-family=Muli-400,400i,700,700i.css" />
+    <Content Include="css\detailvideo.css" />
+    <Content Include="css\dot.gif" />
+    <Content Include="css\faq.css" />
+    <Content Include="css\font-awesome.min-1.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\github-1.css" />
+    <Content Include="css\github.css" />
+    <Content Include="css\global.service.css" />
+    <Content Include="css\global.y_kien_khach_hang.css" />
+    <Content Include="css\hospital-1.css" />
+    <Content Include="css\hospital.css" />
+    <Content Include="css\hover-min-1.css" />
+    <Content Include="css\hover-min.css" />
+    <Content Include="css\icon-zalo-hover.png" />
+    <Content Include="css\jquery.bxslider-1.css" />
+    <Content Include="css\jquery.bxslider-2.css" />
+    <Content Include="css\jquery.bxslider.css" />
+    <Content Include="css\jquery.rating-1.css" />
+    <Content Include="css\jquery.rating.css" />
+    <Content Include="css\jquery.smartmenus.bootstrap-1.css" />
+    <Content Include="css\jquery.smartmenus.bootstrap.css" />
+    <Content Include="css\loading-3.gif" />
+    <Content Include="css\MANHBEO.css" />
+    <Content Include="css\metisMenu-1.css" />
+    <Content Include="css\metisMenu.css" />
+    <Content Include="css\mm-vertical-home.css" />
+    <Content Include="css\mm-vertical-page-1.css" />
+    <Content Include="css\mm-vertical-page.css" />
+    <Content Include="css\news-1.css" />
+    <Content Include="css\news.css" />
+    <Content Include="css\page_coner.png" />
+    <Content Include="css\photos-1.css" />
+    <Content Include="css\photos.css" />
+    <Content Include="css\prettyPhoto.css" />
+    <Content Include="css\sm-blue-1.css" />
+    <Content Include="css\sm-blue.css" />
+    <Content Include="css\sm-core-css-1.css" />
+    <Content Include="css\sm-core-css.css" />
+    <Content Include="css\style-1.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\style.responsive-1.css" />
+    <Content Include="css\style.responsive.css" />
+    <Content Include="css\styleMenu.css" />
+    <Content Include="css\users.css" />
+    <Content Include="css\videos.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Images\0-10.jpg" />
+    <Content Include="Images\0-13.jpg" />
+    <Content Include="Images\0-14.jpg" />
+    <Content Include="Images\0-17.jpg" />
+    <Content Include="Images\0-8.jpg" />
+    <Content Include="Images\0-9.jpg" />
+    <Content Include="Images\123.jpg" />
+    <Content Include="Images\27-2.jpg" />
+    <Content Include="Images\27073274_411293955980577_927263042436179528_n-1.jpg" />
+    <Content Include="Images\3.1.jpg" />
+    <Content Include="Images\370s.jpg" />
+    <Content Include="Images\3cd3b851f4f521996bf9305e79bc6515.png" />
+    <Content Include="Images\alltruycap.png" />
+    <Content Include="Images\arrow-right-1.png" />
+    <Content Include="Images\arrow-right.png" />
+    <Content Include="Images\arrow_left_orange-1.png" />
+    <Content Include="Images\arrow_left_orange.png" />
+    <Content Include="Images\banner-gap-go-nu-cuoi_1-1.jpg" />
+    <Content Include="Images\banner-gap-go-nu-cuoi_1.jpg" />
+    <Content Include="Images\banner-trang-trong-1.jpg" />
+    <Content Include="Images\banner-trang-trong.jpg" />
+    <Content Include="Images\banner-trang-trong3-1.jpg" />
+    <Content Include="Images\banner-trang-trong3.jpg" />
+    <Content Include="Images\banner1.jpg" />
+    <Content Include="Images\banner2.jpg" />
+    <Content Include="Images\banner3.jpg" />
+    <Content Include="Images\banner4.jpg" />
+    <Content Include="Images\banner5.jpg" />
+    <Content Include="Images\benh-tri_bv-minh-anh_1.jpg" />
+    <Content Include="Images\bghome1-1.gif" />
+    <Content Include="Images\bghome1.gif" />
+    <Content Include="Images\bghome1_right-1.gif" />
+    <Content Include="Images\bghome1_right.gif" />
+    <Content Include="Images\bgright-1.png" />
+    <Content Include="Images\bgright.png" />
+    <Content Include="Images\bgtab.jpg" />
+    <Content Include="Images\blockquote-left-1.jpg" />
+    <Content Include="Images\blockquote-left.jpg" />
+    <Content Include="Images\blockquote-right-1.jpg" />
+    <Content Include="Images\blockquote-right.jpg" />
+    <Content Include="Images\bs-hoa-1.jpg" />
+    <Content Include="Images\bs-hoa-3.png" />
+    <Content Include="Images\bs-th-ba-3.png" />
+    <Content Include="Images\bs-thu-ba.jpg" />
+    <Content Include="Images\bs-thuy.jpg" />
+    <Content Include="Images\btnNext-1.png" />
+    <Content Include="Images\btnNext-2.png" />
+    <Content Include="Images\btnNext-3.png" />
+    <Content Include="Images\btnNext-4.png" />
+    <Content Include="Images\btnNext.png" />
+    <Content Include="Images\btnPrevious-1.png" />
+    <Content Include="Images\btnPrevious-2.png" />
+    <Content Include="Images\btnPrevious-3.png" />
+    <Content Include="Images\btnPrevious-4.png" />
+    <Content Include="Images\btnPrevious.png" />
+    <Content Include="Images\bvminhanh-1-1.jpg" />
+    <Content Include="Images\bvminhanh-1.jpg" />
+    <Content Include="Images\bvminhanh_1_1.jpg" />
+    <Content Include="Images\bx_loader-1.gif" />
+    <Content Include="Images\cam-on.jpg" />
+    <Content Include="Images\cap-cuu-1.jpg" />
+    <Content Include="Images\cap-cuu-2.jpg" />
+    <Content Include="Images\cap-cuu-3.jpg" />
+    <Content Include="Images\cap-cuu-4.jpg" />
+    <Content Include="Images\cap-cuu-5.jpg" />
+    <Content Include="Images\cap-cuu-dot-quy.jpg" />
+    <Content Include="Images\chuan-doan-hinh-anh-1.jpg" />
+    <Content Include="Images\chuan-doan-hinh-anh.jpg" />
+    <Content Include="Images\chuc-mung-8-3_1-1.jpg" />
+    <Content Include="Images\chuc-mung-8-3_1.jpg" />
+    <Content Include="Images\contentPattern.png" />
+    <Content Include="Images\contentPatternBottom.png" />
+    <Content Include="Images\contentPatternLeft.png" />
+    <Content Include="Images\contentPatternRight.png" />
+    <Content Include="Images\contentPatternTop.png" />
+    <Content Include="Images\controls-1.png" />
+    <Content Include="Images\controls-sliderhome-1.png" />
+    <Content Include="Images\controls-sliderhome.png" />
+    <Content Include="Images\copd_1.jpg" />
+    <Content Include="Images\copd_2.jpg" />
+    <Content Include="Images\cus-avatar.gif" />
+    <Content Include="Images\da-binh-phuc_bvminhanh1.jpg" />
+    <Content Include="Images\dai-thao-duong-1.jpg" />
+    <Content Include="Images\dai-thao-duong.jpg" />
+    <Content Include="Images\dai-thao-duong_1.jpg" />
+    <Content Include="Images\default_thumbnail.gif" />
+    <Content Include="Images\delete-1.gif" />
+    <Content Include="Images\delete.gif" />
+    <Content Include="Images\diagnosis-1.jpg" />
+    <Content Include="Images\diagnosis-2.jpg" />
+    <Content Include="Images\diagnosis.jpg" />
+    <Content Include="Images\dich-vu-khac.jpg" />
+    <Content Include="Images\dien-sinh-ky-1.jpg" />
+    <Content Include="Images\dien-sinh-ky-2.jpg" />
+    <Content Include="Images\dien-sinh-ky-3.jpg" />
+    <Content Include="Images\dien-sinh-ky-4.jpg" />
+    <Content Include="Images\dien-sinh-ly_1.jpg" />
+    <Content Include="Images\dieu-tri-noi-tru.jpg" />
+    <Content Include="Images\dinh-duong.jpg" />
+    <Content Include="Images\dinh-duong_bv-minh-anh-1-1.jpg" />
+    <Content Include="Images\dinh-duong_bv-minh-anh-1.jpg" />
+    <Content Include="Images\dinh-duong_bv-minh-anh.jpg" />
+    <Content Include="Images\dmb-2.jpg" />
+    <Content Include="Images\doctor-woman_minhanh.png" />
+    <Content Include="Images\dong-luu-ba.jpg" />
+    <Content Include="Images\dong-luu-ba.png" />
+    <Content Include="Images\dot.gif" />
+    <Content Include="Images\ds-hong_bvminhanh.jpg" />
+    <Content Include="Images\face.jpg" />
+    <Content Include="Images\favicon-1.png" />
+    <Content Include="Images\favicon.png" />
+    <Content Include="Images\flag_english-1.png" />
+    <Content Include="Images\flag_english.png" />
+    <Content Include="Images\flag_vietnamese-1.png" />
+    <Content Include="Images\flag_vietnamese.png" />
+    <Content Include="Images\gioi-thieu-benh-vien.jpg" />
+    <Content Include="Images\go.png" />
+    <Content Include="Images\hau-mon-3.jpg" />
+    <Content Include="Images\hau-mon-4.jpg" />
+    <Content Include="Images\hc-ong-co-tay.jpg" />
+    <Content Include="Images\hinh-minh-hoa-h3-1.jpg" />
+    <Content Include="Images\hinh-minh-hoa-h3.jpg" />
+    <Content Include="Images\hoang-giang.jpg" />
+    <Content Include="Images\hoi-chan-cap-cuu.jpg" />
+    <Content Include="Images\huynh-thi-thuy-ai.jpg" />
+    <Content Include="Images\icon-arrow-32.png" />
+    <Content Include="Images\icon-calendar-1.png" />
+    <Content Include="Images\icon-calendar.png" />
+    <Content Include="Images\icon-doctor-1.png" />
+    <Content Include="Images\icon-doctor.png" />
+    <Content Include="Images\icon-hospitalcar-1.png" />
+    <Content Include="Images\icon-hospitalcar.png" />
+    <Content Include="Images\icon-location-1.png" />
+    <Content Include="Images\icon-location.png" />
+    <Content Include="Images\icon-zalo-hover-1.png" />
+    <Content Include="Images\icon-zalo-hover.png" />
+    <Content Include="Images\if_facebook_410527.png" />
+    <Content Include="Images\if_youtube-2_273176.png" />
+    <Content Include="Images\img_4515.jpg" />
+    <Content Include="Images\img_4520.jpg" />
+    <Content Include="Images\in-body-1.jpg" />
+    <Content Include="Images\in-body-2.jpg" />
+    <Content Include="Images\in-body-3.jpg" />
+    <Content Include="Images\in-body-5.jpg" />
+    <Content Include="Images\in-body.jpg" />
+    <Content Include="Images\index.php-scaptcha=captcha&amp;t=1527651497.jpg" />
+    <Content Include="Images\index.php-scaptcha=captcha&amp;t=1527651520.jpg" />
+    <Content Include="Images\index.php-scaptcha=captcha&amp;t=1527651524.jpg" />
+    <Content Include="Images\index.php-scaptcha=captcha&amp;t=1527651525.jpg" />
+    <Content Include="Images\index.php-scaptcha=captcha&amp;t=1527651556.jpg" />
+    <Content Include="Images\index.php-scaptcha=captcha&amp;t=1527651557.jpg" />
+    <Content Include="Images\index.php-scaptcha=captcha&amp;t=1527651571.jpg" />
+    <Content Include="Images\index.php-scaptcha=captcha&amp;t=1527651579.jpg" />
+    <Content Include="Images\index.php-scaptcha=captcha&amp;t=1527651594.jpg" />
+    <Content Include="Images\index.php-scaptcha=captcha&amp;t=1527651597.jpg" />
+    <Content Include="Images\index.php-scaptcha=captcha&amp;t=1527651598.jpg" />
+    <Content Include="Images\index.php-second=cronjobs&amp;p=s438yTWc.jpg" />
+    <Content Include="Images\index.php-second=cronjobs&amp;p=s5vl5F8h.jpg" />
+    <Content Include="Images\japan-1.jpg" />
+    <Content Include="Images\khai-truong_bvminhanh-1.jpg" />
+    <Content Include="Images\kham-mat-2.jpg" />
+    <Content Include="Images\kham-mat-3.jpg" />
+    <Content Include="Images\kham-mat.jpg" />
+    <Content Include="Images\kham-tai.jpg" />
+    <Content Include="Images\khanh-thanh-khu-noi-tru_bvminhanh-1.jpg" />
+    <Content Include="Images\kho-phac-do-dieu-tri.png" />
+    <Content Include="Images\khoa-cap-cuu_1.jpg" />
+    <Content Include="Images\khoa-duoc.jpg" />
+    <Content Include="Images\khoa-hau-mon-truc-trang.jpg" />
+    <Content Include="Images\khoa-kham-benh_1.jpg" />
+    <Content Include="Images\khoa-mat_1.jpg" />
+    <Content Include="Images\kiem-tra-tong-quat.jpg" />
+    <Content Include="Images\ksk-tong-qua_bv-minh-anh-1.jpg" />
+    <Content Include="Images\ksk-tong-qua_bv-minh-anh-3.jpg" />
+    <Content Include="Images\ksk-tong-qua_bv-minh-anh-4.jpg" />
+    <Content Include="Images\ksk-tong-qua_bv-minh-anh-51.jpg" />
+    <Content Include="Images\ksk-tong-qua_bv-minh-anh-6.jpg" />
+    <Content Include="Images\ksk-tong-qua_bv-minh-anh-7-1.jpg" />
+    <Content Include="Images\ksk-tong-qua_bv-minh-anh-7-2.jpg" />
+    <Content Include="Images\ksk-tong-qua_bv-minh-anh-7.jpg" />
+    <Content Include="Images\le-ba-truong.jpg" />
+    <Content Include="Images\le-huy-hoa.jpg" />
+    <Content Include="Images\le-huy-hoa.png" />
+    <Content Include="Images\le-ngoan.jpg" />
+    <Content Include="Images\le-thanh-quang.jpg" />
+    <Content Include="Images\le-thi-hai.png" />
+    <Content Include="Images\lead_960.jpg" />
+    <Content Include="Images\lead_960_1.jpg" />
+    <Content Include="Images\lead_960_2.jpg" />
+    <Content Include="Images\lead_960_3.jpg" />
+    <Content Include="Images\lead_960_4-1.jpg" />
+    <Content Include="Images\lead_960_4.jpg" />
+    <Content Include="Images\loader-1.gif" />
+    <Content Include="Images\loader-2.gif" />
+    <Content Include="Images\loader-3.gif" />
+    <Content Include="Images\loader-4.gif" />
+    <Content Include="Images\loader.gif" />
+    <Content Include="Images\loading-3-1.gif" />
+    <Content Include="Images\loading-3.gif" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\load_bar-1.gif" />
+    <Content Include="Images\load_bar.gif" />
+    <Content Include="Images\LOGO BsssV.png" />
+    <Content Include="Images\LOGO BsV copy.png" />
+    <Content Include="Images\LOGO BsV.png" />
+    <Content Include="Images\logo-1.png" />
+    <Content Include="Images\logo-hoitinhmach000.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\logocopy.png" />
+    <Content Include="Images\ma-2.jpg" />
+    <Content Include="Images\mai-van-minh.jpg" />
+    <Content Include="Images\mai-van-minh.png" />
+    <Content Include="Images\manh-xuong_bvminhanh.jpg" />
+    <Content Include="Images\maxresdefault.jpg" />
+    <Content Include="Images\minh-anh-about-new-3.png" />
+    <Content Include="Images\minhanh-1-1.jpg" />
+    <Content Include="Images\minhanh-1.jpg" />
+    <Content Include="Images\minhanh_5-1.jpg" />
+    <Content Include="Images\minhanh_5.jpg" />
+    <Content Include="Images\my-huynh-1.jpg" />
+    <Content Include="Images\New folder\logo-1.png" />
+    <Content Include="Images\New folder\logo.png" />
+    <Content Include="Images\new-1.gif" />
+    <Content Include="Images\new.gif" />
+    <Content Include="Images\ngoai-tru.jpg" />
+    <Content Include="Images\nguyen-an-chau.jpg" />
+    <Content Include="Images\nguyen-an-chau.png" />
+    <Content Include="Images\nguyen-cong-nhut.jpg" />
+    <Content Include="Images\nguyen-cong-thien.png" />
+    <Content Include="Images\nguyen-hoai-nam.jpg" />
+    <Content Include="Images\nguyen-hoai-nam.png" />
+    <Content Include="Images\nguyen-khanh-du.png" />
+    <Content Include="Images\nguyen-khoi-phuc.jpg" />
+    <Content Include="Images\nguyen-nhat-phun.jpg" />
+    <Content Include="Images\nguyen-quang-long.png" />
+    <Content Include="Images\nguyen-thi-bich-thuy.jpg" />
+    <Content Include="Images\nguyen-thi-bich-thuy.png" />
+    <Content Include="Images\nguyen-thi-ngoc-bich.jpg" />
+    <Content Include="Images\nguyen-thi-ngoc-bich.png" />
+    <Content Include="Images\nguyen-thi-tien.png" />
+    <Content Include="Images\nguyen-thi-tuyet-minh.jpg" />
+    <Content Include="Images\nguyen-van-yen.jpg" />
+    <Content Include="Images\no-image.jpg" />
+    <Content Include="Images\noi-soi-1.jpg" />
+    <Content Include="Images\noi-soi-2.jpg" />
+    <Content Include="Images\noi-soi-3.jpg" />
+    <Content Include="Images\noi-soi.jpg" />
+    <Content Include="Images\noi-soi_1.jpg" />
+    <Content Include="Images\noi-tru.jpg" />
+    <Content Include="Images\noi-tru1.jpg" />
+    <Content Include="Images\noi-tru2.jpg" />
+    <Content Include="Images\noi-tru3.jpg" />
+    <Content Include="Images\onay.png" />
+    <Content Include="Images\page_coner.png" />
+    <Content Include="Images\pccc-1.jpg" />
+    <Content Include="Images\pccc.jpg" />
+    <Content Include="Images\pectus-chest-wall-deformity.jpg" />
+    <Content Include="Images\pham-van-ben.jpg" />
+    <Content Include="Images\phan-thi-ho-hai.jpg" />
+    <Content Include="Images\phan-thi-ho-hai.png" />
+    <Content Include="Images\phau-thuat-1.jpg" />
+    <Content Include="Images\phau-thuat-3.jpg" />
+    <Content Include="Images\phau-thuat.jpg" />
+    <Content Include="Images\phau-thuat1.jpg" />
+    <Content Include="Images\phau-thuat2.jpg" />
+    <Content Include="Images\phong-benh_1.jpg" />
+    <Content Include="Images\phong-kham-bac-sy-hoai-nam.png" />
+    <Content Include="Images\phong-noi-tru-1.jpg" />
+    <Content Include="Images\phong-noi-tru-2.jpg" />
+    <Content Include="Images\phong-noi-tru-3.jpg" />
+    <Content Include="Images\phong-noi-tru-4.jpg" />
+    <Content Include="Images\photos_400x400-2-5fc61b0e7d83c69d8dcba60074254b2c.jpg" />
+    <Content Include="Images\photos_400x400-3-7c637146a5c4105a58883ec98a6cb61e.jpg" />
+    <Content Include="Images\photos_400x400-4-080e94734af7b05558624fd7a2264398.jpg" />
+    <Content Include="Images\photos_400x400-6-6b79a68d44a5ae428d92beb4f6af06c4.jpg" />
+    <Content Include="Images\photos_400x400-7-dcd4367dac7747e00162fbc5dce0b37f.jpg" />
+    <Content Include="Images\photos_400x400-8-8847414b90777814eaeab2e071f39a72.jpg" />
+    <Content Include="Images\phuc-vu_minhanh-1-1.jpg" />
+    <Content Include="Images\phuc-vu_minhanh-1-2.jpg" />
+    <Content Include="Images\phuc-vu_minhanh-1.jpg" />
+    <Content Include="Images\phuc-vu_minhanh-10.jpg" />
+    <Content Include="Images\phuc-vu_minhanh-2.jpg" />
+    <Content Include="Images\phuc-vu_minhanh-3.jpg" />
+    <Content Include="Images\phuc-vu_minhanh-4.jpg" />
+    <Content Include="Images\phuc-vu_minhanh-5.jpg" />
+    <Content Include="Images\phuc-vu_minhanh-6.jpg" />
+    <Content Include="Images\phuc-vu_minhanh-7.jpg" />
+    <Content Include="Images\phuc-vu_minhanh-8.jpg" />
+    <Content Include="Images\phuc-vu_minhanh-9.jpg" />
+    <Content Include="Images\required-1.png" />
+    <Content Include="Images\required.png" />
+    <Content Include="Images\saigon-holiday.png" />
+    <Content Include="Images\sieu-am.jpg" />
+    <Content Include="Images\slogan.png" />
+    <Content Include="Images\so-y-te-tphcm.png" />
+    <Content Include="Images\song-khoe.jpg" />
+    <Content Include="Images\sot-xuat-huyet.jpg" />
+    <Content Include="Images\sprite-1.png" />
+    <Content Include="Images\sprite-2.png" />
+    <Content Include="Images\sprite-3.png" />
+    <Content Include="Images\sprite-4.png" />
+    <Content Include="Images\sprite-5.png" />
+    <Content Include="Images\sprite.png" />
+    <Content Include="Images\sprite_prev.png" />
+    <Content Include="Images\sprite_x.png" />
+    <Content Include="Images\sprite_y.png" />
+    <Content Include="Images\squared-blue-1.png" />
+    <Content Include="Images\squared-blue.png" />
+    <Content Include="Images\star-1.gif" />
+    <Content Include="Images\star.gif" />
+    <Content Include="Images\tai-mui-hong-1.jpg" />
+    <Content Include="Images\tai-mui-hong.jpg" />
+    <Content Include="Images\tai-mui-hong1.jpg" />
+    <Content Include="Images\tat-nien_bvminhanh-1.jpg" />
+    <Content Include="Images\tat-nien_bvminhanh.jpg" />
+    <Content Include="Images\thieu-iod.jpg" />
+    <Content Include="Images\thong-bao-nghi-le.jpg" />
+    <Content Include="Images\tien-tien.jpg" />
+    <Content Include="Images\tran-quoc-tuy.jpg" />
+    <Content Include="Images\tran-thi-bao-tran.jpg" />
+    <Content Include="Images\truong-quang-than.jpg" />
+    <Content Include="Images\truong-thi-thu.png" />
+    <Content Include="Images\truyen-thong_minhanh-5-1.jpg" />
+    <Content Include="Images\truyen-thong_minhanh-5.jpg" />
+    <Content Include="Images\tsttourist.png" />
+    <Content Include="Images\tu-thien-h1.jpg" />
+    <Content Include="Images\tu-thien-h10.jpg" />
+    <Content Include="Images\tu-thien-h11.jpg" />
+    <Content Include="Images\tu-thien-h12.jpg" />
+    <Content Include="Images\tu-thien-h13.jpg" />
+    <Content Include="Images\tu-thien-h15.jpg" />
+    <Content Include="Images\tu-thien-h16.jpg" />
+    <Content Include="Images\tu-thien-h2.jpg" />
+    <Content Include="Images\tu-thien-h3.jpg" />
+    <Content Include="Images\tu-thien-h5.jpg" />
+    <Content Include="Images\tu-thien-h6.jpg" />
+    <Content Include="Images\tu-thien-h6b.jpg" />
+    <Content Include="Images\tu-thien-h7.jpg" />
+    <Content Include="Images\tu-thien-h9.jpg" />
+    <Content Include="Images\tu-van-thuoc-1_bvminhanh-1.jpg" />
+    <Content Include="Images\tu-van-thuoc-1_bvminhanh.jpg" />
+    <Content Include="Images\tung-siri.jpg" />
+    <Content Include="Images\vo-le-thu_1.jpg" />
+    <Content Include="Images\vo-ta-trang.jpg" />
+    <Content Include="Images\x-quang2.jpg" />
+    <Content Include="Images\xet-nghiem-1.jpg" />
+    <Content Include="Images\xet-nghiem-2.jpg" />
+    <Content Include="Images\xet-nghiem.jpg" />
+    <Content Include="Images\xet-nghiem1.jpg" />
+    <Content Include="Images\youto.png" />
+    <Content Include="Images\zalo.png" />
+    <Content Include="js\bootstrap.min-1.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\comment-1.js" />
+    <Content Include="js\comment.js" />
+    <Content Include="js\contact.js" />
+    <Content Include="js\dataTables.bootstrap.js" />
+    <Content Include="js\dataTables.bootstrap.min.js" />
+    <Content Include="js\en.js" />
+    <Content Include="js\faq.js" />
+    <Content Include="js\global-1.js" />
+    <Content Include="js\global.js" />
+    <Content Include="js\highlight.pack-1.js" />
+    <Content Include="js\highlight.pack.js" />
+    <Content Include="js\hospital-1.js" />
+    <Content Include="js\hospital.js" />
+    <Content Include="js\jquery.blueimp-gallery.min-1.js" />
+    <Content Include="js\jquery.blueimp-gallery.min.js" />
+    <Content Include="js\jquery.bxslider-1.js" />
+    <Content Include="js\jquery.bxslider-2.js" />
+    <Content Include="js\jquery.bxslider.js" />
+    <Content Include="js\jquery.bxslider.min.js" />
+    <Content Include="js\jquery.dataTables.min.js" />
+    <Content Include="js\jquery.lazyload.min.js" />
+    <Content Include="js\jquery.MetaData-1.js" />
+    <Content Include="js\jquery.MetaData.js" />
+    <Content Include="js\jquery.min-1.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.prettyPhoto.js" />
+    <Content Include="js\jquery.rating.pack-1.js" />
+    <Content Include="js\jquery.rating.pack.js" />
+    <Content Include="js\jquery.smartmenus-1.js" />
+    <Content Include="js\jquery.smartmenus.bootstrap-1.js" />
+    <Content Include="js\jquery.smartmenus.bootstrap.js" />
+    <Content Include="js\jquery.smartmenus.js" />
+    <Content Include="js\js-v=3.exp&amp;sensor=false&amp;callback=initializeMap.js" />
+    <Content Include="js\jwplayer.js" />
+    <Content Include="js\main-1.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\metisMenu-1.js" />
+    <Content Include="js\metisMenu.js" />
+    <Content Include="js\news-1.js" />
+    <Content Include="js\news.js" />
+    <Content Include="js\page.js" />
+    <Content Include="js\photos.js" />
+    <Content Include="js\plusone.js" />
+    <Content Include="js\polyfills.vttrenderer.js" />
+    <Content Include="js\provider.youtube.js" />
+    <Content Include="js\sdk.js" />
+    <Content Include="js\users.js" />
+    <Content Include="js\vi-1.js" />
+    <Content Include="js\vi.js" />
+    <Content Include="js\videos.js" />
+    <Content Include="js\widgets.js" />
+    <Content Include="js\wow.min-1.js" />
+    <Content Include="js\wow.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Images\New folder\logo.psd" />
+    <Content Include="css\fontawesome-webfont.eot-v=4.7-1.0" />
+    <Content Include="css\fontawesome-webfont.eot-v=4.7.0" />
+    <Content Include="css\fontawesome-webfont.svg-v=4.7-1.0" />
+    <Content Include="css\fontawesome-webfont.svg-v=4.7.0" />
+    <Content Include="css\fontawesome-webfont.ttf-v=4.7-1.0" />
+    <Content Include="css\fontawesome-webfont.ttf-v=4.7.0" />
+    <Content Include="css\fontawesome-webfont.woff" />
+    <Content Include="css\fontawesome-webfont.woff-v=4.7-1.0" />
+    <Content Include="css\fontawesome-webfont.woff2-v=4.7-1.0" />
+    <Content Include="css\fontawesome-webfont.woff2-v=4.7.0" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_MasterPage.cshtml" />
+    <Content Include="Views\GioiThieuBV\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>48335</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44337/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
