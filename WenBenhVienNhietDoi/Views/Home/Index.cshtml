@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "Index";
 }
-    <div class="headermenu wow fadeIn" data-wow-delay="0.2s" style="    border-top: 4px solid rgb(181, 179, 179);   ">
+    <div class="headermenu wow fadeIn" data-wow-delay="0.2s" style="    border-top: 4px solid rgb(181, 179, 179);  background-color: #2096db; ">
         <div class="container">
             <div class="navbar" role="navigation">
                 @*<div class="navbar-header">
@@ -16,7 +16,7 @@
                 <div class="navbar-collapse collapse">
                     <ul id="main-menu" class="sm sm-blue">
                         <li class='<%= getCss("0")%>'>
-                            <a href="home.html" title="TRANG CHỦ">TRANG CHỦ</a>
+                            <a href="" title="TRANG CHỦ">TRANG CHỦ</a>
                         </li>
                         @foreach (var itemparent in Model.ListParentMenu)
                         {
@@ -52,10 +52,10 @@
 
 
                         <li class="">
-                            <a href="module-hoi-dap.html" target="_blank" title="Liên hệ">Liên hệ</a>
+                            <a href=" " target="_blank" title="Liên hệ">Liên hệ</a>
                         </li>
 
-                        <li class="" style="float: right; padding-top: 2px;">
+                        @*<li class="" style="float: right; padding-top: 2px;">
 
                             <div class="" style="display: none; float: right; padding-top: 6px; color: #ffffff; font-weight: bold">
 
@@ -65,12 +65,92 @@
                             <div class="" style="float: right; padding-top: 3px">
                                 <asp:TextBox ID="txtkeynew" runat="server" Width="200px" Height="40px" CssClass="form-control" placeholder="Từ khóa..." autocomplete="off"></asp:TextBox>
                             </div>
-                        </li>
+                        </li>*@
                     </ul>
                 </div>
             </div>
-            <!-- SmartMenus jQuery init -->
         </div>
     </div>
-<h2>Index</h2>
+    <div class="site-section block-8" style="margin: 0; padding: 0;">
+        <div class="slideshow-container">
+            <div class="mySlides fades" style="display: none;">
+                <a href="http://test.vn/">
+                    <div class="numbertext">1 / 5</div>
+                    <img src="./Images/155905918.jpg" style="width:100%" title="Dự án xây dựng bệnh viện nhiệt đới trung ương">
+                    <div class="text">@*Dự án xây dựng bệnh viện nhiệt đới trung ương*@</div>
+                </a>
+            </div>
+            <div class="mySlides fades" style="display: block;">
+                <a href="http://www.benhnhietdoi.vn/tin-tuc/chi-tiet/le-cong-bo-quyet-dinh-bo-nhiem-giam-doc-va-pho-giam-doc-phu-trach-kinh-te-benh-vien-benh-nhiet-doi-trung-uong/901">
+                    <div class="numbertext">2 / 5</div>
+                    <img src="../Images/094126661.jpg" style="width:100%" title="LỄ CÔNG BỐ QUYẾT ĐỊNH BỔ NHIỆM GIÁM ĐỐC VÀ PHÓ GIÁM ĐỐC PHỤ TRÁCH KINH TẾ BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG">
+                    @*<div class="text">LỄ CÔNG BỐ QUYẾT ĐỊNH BỔ NHIỆM GIÁM ĐỐC VÀ PHÓ GIÁM ĐỐC PHỤ TRÁCH KINH TẾ BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG</div>*@
+                </a>
+            </div>
+            <div class="mySlides fades" style="display: none;">
+                <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/pho-chu-tich-nuoc-dang-thi-ngoc-thinh-trao-tang-huan-chuong-lao-dong-hang-3-cho-benh-vien-benh-nhiet-doi-trung-uong/941">
+                    <div class="numbertext">3 / 5</div>
+                    <img src="../Images/093840021.jpg" style="width:100%" title="PHÓ CHỦ TỊCH NƯỚC ĐẶNG THỊ NGỌC THỊNH TRAO TẶNG HUÂN CHƯƠNG LAO ĐỘNG HẠNG 3 CHO BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG">
+                    <div class="text">@*PHÓ CHỦ TỊCH NƯỚC ĐẶNG THỊ NGỌC THỊNH TRAO TẶNG HUÂN CHƯƠNG LAO ĐỘNG HẠNG 3 CHO BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG*@</div>
+                </a>
+            </div>
+            <div class="mySlides fades" style="display: none;">
+                <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/benh-vien-benh-nhiet-doi-trung-uong-bao-cao-thanh-tich-dien-hinh-tien-tien-voi-chu-tich-quoc-hoi-nguyen-thi-kim-ngan-truoc-them-dai-hoi-thi-dua-yeu-nuoc-toan-quoc-nam-2020/998">
+                    <div class="numbertext">4 / 5</div>
+                    <img src="../Images/134543592.jpg" style="width:100%" title="BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG BÁO CÁO THÀNH TÍCH ĐIỂN HÌNH TIÊN TIẾN VỚI CHỦ TỊCH QUỐC HỘI NGUYỄN THỊ KIM NGÂN TRƯỚC THỀM ĐẠI HỘI THI ĐUA YÊU NƯỚC TOÀN QUỐC NĂM 2020">
+                    <div class="text">@*BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG BÁO CÁO THÀNH TÍCH ĐIỂN HÌNH TIÊN TIẾN VỚI CHỦ TỊCH QUỐC HỘI NGUYỄN THỊ KIM NGÂN TRƯỚC THỀM ĐẠI HỘI THI ĐUA YÊU NƯỚC TOÀN QUỐC NĂM 2020*@</div>
+                </a>
+            </div>
+            <div class="mySlides fades" style="display: none;">
+                <a href="http://www.benhnhietdoi.vn/tin-tuc/chi-tiet/le-ky-ket-hop-tac/906">
+                    <div class="numbertext">5 / 5</div>
+                    <img src="../Images/094554130.jpg" style="width:100%" title="LỄ KÝ KẾT HỢP TÁC">
+                    @*<div class="text">LỄ KÝ KẾT HỢP TÁC</div>*@
+                </a>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        <div style="text-align:center; margin-top: -30px;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot active" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+
+        </div>
+
+        <script type="text/javascript">
+            //var slideIndex = 1;
+            //showSlides(slideIndex);
+
+            //function plusSlides(n) {
+            //    showSlides(slideIndex += n);
+            //}
+
+            //function currentSlide(n) {
+            //    showSlides(slideIndex = n);
+            //}
+
+            //function showSlides(n) {
+            //    var i;
+            //    var slides = document.getElementsByClassName("mySlides");
+            //    var dots = document.getElementsByClassName("dot");
+            //    if (n > slides.length) { slideIndex = 1 }
+            //    if (n < 1) { slideIndex = slides.length }
+            //    for (i = 0; i < slides.length; i++) {
+            //        slides[i].style.display = "none";
+            //    }
+            //    for (i = 0; i < dots.length; i++) {
+            //        dots[i].className = dots[i].className.replace(" active", "");
+            //    }
+            //    slideIndex++;
+            //    if (slideIndex > slides.length) { slideIndex = 1 }
+            //    slides[slideIndex - 1].style.display = "block";
+            //    dots[slideIndex - 1].className += " active";
+            //    setTimeout(showSlides, 5000); // Change image every 2 seconds
+            //}
+        </script>
+    </div>
 

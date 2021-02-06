@@ -1146,14 +1146,14 @@ footer .s_top {
 	background: #f2f1f1;
 	padding: 20px 0;
 }
-footer .s_bottom {
-	position: relative;
-	width: 100%;
-	background: #db2032;
-	padding: 20px 0;
-	color: #fff;
-	font-size: 13px;
-}
+    footer .s_bottom {
+        position: relative;
+        width: 100%;
+        background: #2096db;
+        padding: 20px 0;
+        color: #fff;
+        font-size: 13px;
+    }
 footer .s_bottom a {
 	color: #fff;
 }
@@ -2168,4 +2168,20 @@ ul.menu_topbar li:last-child a {
 	text-align: center;
 	font-size: 13px;
 	z-index: 1;
+}
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
 }
