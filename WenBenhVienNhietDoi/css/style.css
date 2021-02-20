@@ -2500,3 +2500,10 @@ ul.menu_topbar {
     border-collapse: collapse;
     padding: 4px;
 }
+.td-next-prev-wrap {
+    float: right;
+    margin-right: 20px;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+}
