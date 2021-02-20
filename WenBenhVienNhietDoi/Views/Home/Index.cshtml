@@ -2,325 +2,753 @@
 @{
     ViewBag.Title = "Index";
 }
-    <div class="headermenu wow fadeIn" data-wow-delay="0.2s" style="    border-top: 4px solid rgb(181, 179, 179);  background-color: #2096db; ">
-        <div class="container">
-            <div class="navbar" role="navigation">
-                @*<div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>*@
-                <div class="navbar-collapse collapse">
-                    <ul id="main-menu" class="sm sm-blue">
-                        <li class='<%= getCss("0")%>'>
-                            <a href="" title="TRANG CHỦ">TRANG CHỦ</a>
-                        </li>
+<div class="headermenu wow fadeIn" data-wow-delay="0.2s" style="    border-top: 4px solid rgb(181, 179, 179);  background-color: #2096db; ">
+    <div class="container">
+        <div class="navbar" role="navigation">
+            <div class="navbar-collapse collapse">
+
+                <nav>
+                    <ul class="cf">
+                        <li class="active"><a href="#">Trang Chủ</a></li>
+
                         @foreach (var itemparent in Model.ListParentMenu)
                         {
                             if (@itemparent.CapMenu == 0)
                             {
-                                <li>
-                                    <a href=" @itemparent.Linkurl" title="@itemparent.TenMenu" class="has-submenu">@itemparent.TenMenu</a>
-                                    <ul class="dropdown">
+                                <li class=" has-children">
+                                    <a href="@itemparent.Linkurl" title="@itemparent.TenMenu">@itemparent.TenMenu</a>
+                                    <ul class="fa">
                                         @foreach (var item in Model.ListMenu)
                                         {
                                             if (@item.IdCha == @itemparent.Id)
                                             {
-                                                <li><a href=" @item.Linkurl" title="@item.TenMenu">@item.TenMenu</a></li>
+                                                <li><a href="@item.Linkurl" title="@item.TenMenu" style="font-size: 10px;">@item.TenMenu</a></li>
                                             }
                                         }
                                     </ul>
                                 </li>
                             }
-
-                        }                       
-                        @*<li class="  dropdown">
-                            <a href="#" title="Thư viện" class="has-submenu"><span class="sub-arrow">+</span>Thư viện</a>
-                            <ul class="sm-nowrap" style="width: auto; min-width: 10em; display: none; max-width: 20em; top: auto; left: 0px; margin-left: 0px; margin-top: 0px;">
-
-                                <li>
-                                    <a href="cate-album-anh.html" title="Thư viện ảnh">Thư viện ảnh</a>
-                                </li>
-                                <li>
-                                    <a href="cate-video.html" title="Videos">Videos</a>
-                                </li>
-                            </ul>
-                        </li>*@
-
-
-                        <li class="">
-                            <a href=" " target="_blank" title="Liên hệ">Liên hệ</a>
-                        </li>
-
-                        @*<li class="" style="float: right; padding-top: 2px;">
-
-                            <div class="" style="display: none; float: right; padding-top: 6px; color: #ffffff; font-weight: bold">
-
-                                <asp:Button ID="butimkiemnew" runat="server" OnClick="butimkiemnew_Click" Text="Button" />
-
-                            </div>
-                            <div class="" style="float: right; padding-top: 3px">
-                                <asp:TextBox ID="txtkeynew" runat="server" Width="200px" Height="40px" CssClass="form-control" placeholder="Từ khóa..." autocomplete="off"></asp:TextBox>
-                            </div>
-                        </li>*@
+                        }
+                        <li class="active"><a href="#">Liên hệ</a></li>
                     </ul>
-                </div>
+                </nav>
             </div>
         </div>
     </div>
-    <div class="site-section block-8" style="margin: 0; padding: 0;">
-        <div class="slideshow-container">
-            <div class="mySlides fades" style="display: none;">
-                <a href="http://test.vn/">
-                    <div class="numbertext">1 / 5</div>
-                    <img src="./Images/155905918.jpg" style="width:100%" title="Dự án xây dựng bệnh viện nhiệt đới trung ương">
-                    <div class="text">@*Dự án xây dựng bệnh viện nhiệt đới trung ương*@</div>
-                </a>
-            </div>
-            <div class="mySlides fades" style="display: block;">
-                <a href="http://www.benhnhietdoi.vn/tin-tuc/chi-tiet/le-cong-bo-quyet-dinh-bo-nhiem-giam-doc-va-pho-giam-doc-phu-trach-kinh-te-benh-vien-benh-nhiet-doi-trung-uong/901">
-                    <div class="numbertext">2 / 5</div>
-                    <img src="../Images/094126661.jpg" style="width:100%" title="LỄ CÔNG BỐ QUYẾT ĐỊNH BỔ NHIỆM GIÁM ĐỐC VÀ PHÓ GIÁM ĐỐC PHỤ TRÁCH KINH TẾ BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG">
-                    @*<div class="text">LỄ CÔNG BỐ QUYẾT ĐỊNH BỔ NHIỆM GIÁM ĐỐC VÀ PHÓ GIÁM ĐỐC PHỤ TRÁCH KINH TẾ BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG</div>*@
-                </a>
-            </div>
-            <div class="mySlides fades" style="display: none;">
-                <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/pho-chu-tich-nuoc-dang-thi-ngoc-thinh-trao-tang-huan-chuong-lao-dong-hang-3-cho-benh-vien-benh-nhiet-doi-trung-uong/941">
-                    <div class="numbertext">3 / 5</div>
-                    <img src="../Images/093840021.jpg" style="width:100%" title="PHÓ CHỦ TỊCH NƯỚC ĐẶNG THỊ NGỌC THỊNH TRAO TẶNG HUÂN CHƯƠNG LAO ĐỘNG HẠNG 3 CHO BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG">
-                    <div class="text">@*PHÓ CHỦ TỊCH NƯỚC ĐẶNG THỊ NGỌC THỊNH TRAO TẶNG HUÂN CHƯƠNG LAO ĐỘNG HẠNG 3 CHO BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG*@</div>
-                </a>
-            </div>
-            <div class="mySlides fades" style="display: none;">
-                <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/benh-vien-benh-nhiet-doi-trung-uong-bao-cao-thanh-tich-dien-hinh-tien-tien-voi-chu-tich-quoc-hoi-nguyen-thi-kim-ngan-truoc-them-dai-hoi-thi-dua-yeu-nuoc-toan-quoc-nam-2020/998">
-                    <div class="numbertext">4 / 5</div>
-                    <img src="../Images/134543592.jpg" style="width:100%" title="BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG BÁO CÁO THÀNH TÍCH ĐIỂN HÌNH TIÊN TIẾN VỚI CHỦ TỊCH QUỐC HỘI NGUYỄN THỊ KIM NGÂN TRƯỚC THỀM ĐẠI HỘI THI ĐUA YÊU NƯỚC TOÀN QUỐC NĂM 2020">
-                    <div class="text">@*BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG BÁO CÁO THÀNH TÍCH ĐIỂN HÌNH TIÊN TIẾN VỚI CHỦ TỊCH QUỐC HỘI NGUYỄN THỊ KIM NGÂN TRƯỚC THỀM ĐẠI HỘI THI ĐUA YÊU NƯỚC TOÀN QUỐC NĂM 2020*@</div>
-                </a>
-            </div>
-            <div class="mySlides fades" style="display: none;">
-                <a href="http://www.benhnhietdoi.vn/tin-tuc/chi-tiet/le-ky-ket-hop-tac/906">
-                    <div class="numbertext">5 / 5</div>
-                    <img src="../Images/094554130.jpg" style="width:100%" title="LỄ KÝ KẾT HỢP TÁC">
-                    @*<div class="text">LỄ KÝ KẾT HỢP TÁC</div>*@
-                </a>
-            </div>
-
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+<div class="site-section block-8" style="margin: 0; padding: 0;">
+    <div class="slideshow-container">
+        <div class="mySlides fades" style="display: none;">
+            <a href="http://test.vn/">
+                <div class="numbertext">1 / 5</div>
+                <img src="./Images/155905918.jpg" style="width:100%" title="Dự án xây dựng bệnh viện nhiệt đới trung ương">
+                <div class="text">@*Dự án xây dựng bệnh viện nhiệt đới trung ương*@</div>
+            </a>
         </div>
-        <div style="text-align:center; margin-top: -30px;">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot active" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-
+        <div class="mySlides fades" style="display: block;">
+            <a href="http://www.benhnhietdoi.vn/tin-tuc/chi-tiet/le-cong-bo-quyet-dinh-bo-nhiem-giam-doc-va-pho-giam-doc-phu-trach-kinh-te-benh-vien-benh-nhiet-doi-trung-uong/901">
+                <div class="numbertext">2 / 5</div>
+                <img src="../Images/094126661.jpg" style="width:100%" title="LỄ CÔNG BỐ QUYẾT ĐỊNH BỔ NHIỆM GIÁM ĐỐC VÀ PHÓ GIÁM ĐỐC PHỤ TRÁCH KINH TẾ BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG">
+                @*<div class="text">LỄ CÔNG BỐ QUYẾT ĐỊNH BỔ NHIỆM GIÁM ĐỐC VÀ PHÓ GIÁM ĐỐC PHỤ TRÁCH KINH TẾ BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG</div>*@
+            </a>
+        </div>
+        <div class="mySlides fades" style="display: none;">
+            <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/pho-chu-tich-nuoc-dang-thi-ngoc-thinh-trao-tang-huan-chuong-lao-dong-hang-3-cho-benh-vien-benh-nhiet-doi-trung-uong/941">
+                <div class="numbertext">3 / 5</div>
+                <img src="../Images/093840021.jpg" style="width:100%" title="PHÓ CHỦ TỊCH NƯỚC ĐẶNG THỊ NGỌC THỊNH TRAO TẶNG HUÂN CHƯƠNG LAO ĐỘNG HẠNG 3 CHO BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG">
+                <div class="text">@*PHÓ CHỦ TỊCH NƯỚC ĐẶNG THỊ NGỌC THỊNH TRAO TẶNG HUÂN CHƯƠNG LAO ĐỘNG HẠNG 3 CHO BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG*@</div>
+            </a>
+        </div>
+        <div class="mySlides fades" style="display: none;">
+            <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/benh-vien-benh-nhiet-doi-trung-uong-bao-cao-thanh-tich-dien-hinh-tien-tien-voi-chu-tich-quoc-hoi-nguyen-thi-kim-ngan-truoc-them-dai-hoi-thi-dua-yeu-nuoc-toan-quoc-nam-2020/998">
+                <div class="numbertext">4 / 5</div>
+                <img src="../Images/134543592.jpg" style="width:100%" title="BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG BÁO CÁO THÀNH TÍCH ĐIỂN HÌNH TIÊN TIẾN VỚI CHỦ TỊCH QUỐC HỘI NGUYỄN THỊ KIM NGÂN TRƯỚC THỀM ĐẠI HỘI THI ĐUA YÊU NƯỚC TOÀN QUỐC NĂM 2020">
+                <div class="text">@*BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG BÁO CÁO THÀNH TÍCH ĐIỂN HÌNH TIÊN TIẾN VỚI CHỦ TỊCH QUỐC HỘI NGUYỄN THỊ KIM NGÂN TRƯỚC THỀM ĐẠI HỘI THI ĐUA YÊU NƯỚC TOÀN QUỐC NĂM 2020*@</div>
+            </a>
+        </div>
+        <div class="mySlides fades" style="display: none;">
+            <a href="http://www.benhnhietdoi.vn/tin-tuc/chi-tiet/le-ky-ket-hop-tac/906">
+                <div class="numbertext">5 / 5</div>
+                <img src="../Images/094554130.jpg" style="width:100%" title="LỄ KÝ KẾT HỢP TÁC">
+                @*<div class="text">LỄ KÝ KẾT HỢP TÁC</div>*@
+            </a>
         </div>
 
-        <script type="text/javascript">
-            var slideIndex = 1;
-            showSlides(slideIndex);
-
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
-            }
-
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
-            }
-
-            function showSlides(n) {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                var dots = document.getElementsByClassName("dot");
-                if (n > slides.length) { slideIndex = 1 }
-                if (n < 1) { slideIndex = slides.length }
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slideIndex++;
-                if (slideIndex > slides.length) { slideIndex = 1 }
-                slides[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].className += " active";
-                setTimeout(showSlides, 5000); // Change image every 2 seconds
-            }
-        </script>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
     </div>
-    <div class="site-blocks-cover site-blocks-1 bg-light" style="padding-top: 50px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-sm-12">
-                    <div class="row" style="width:100%; padding: 2px; margin-left:0px;">
-                        <!--LEFT-->
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:10px 10px 10px 0px;">
-                            <div class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
+    <div style="text-align:center; margin-top: -30px;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot active" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
 
-                                    <div class="item active">
-                                        <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/thong-bao-ve-viec-hoan-buoi-gap-mat-can-bo-huu-tri-nam-2021/1007"><img src="../Images/192516180.jpg" alt="THÔNG BÁO VỀ VIỆC HOÃN BUỔI GẶP MẶT CÁN BỘ HƯU TRÍ NĂM 2021" style="width:100%; height: 235px; padding-bottom:10px;"></a>
-                                        <div class="titleTranblock">
-                                            <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/thong-bao-ve-viec-hoan-buoi-gap-mat-can-bo-huu-tri-nam-2021/1007" title="#" style="font-size: 16px;">THÔNG BÁO VỀ VIỆC HOÃN BUỔI GẶP MẶT CÁN BỘ HƯU TRÍ NĂM 2021</a>
-                                        </div>
-                                        <div class="title-time">
-                                            <i class="icon icon-calendar" style="color:red; padding:0; font-size: 14px;"></i>
-                                            01/02/2021 19:25&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <i class="icon icon-heart-o" style="color:red; padding:0; font-size: 14px; cursor: pointer;" onclick="jsNews_Update_Like();"></i>
-                                            <span id="idLike"></span> &nbsp;&nbsp;&nbsp;&nbsp;
-                                            <i class="icon icon-eye" style="color:red; padding:0; font-size: 14px;"></i>
-                                            <span id="idView">68</span>
-                                        </div>
-                                        <p style="text-align:justify;"></p>
-                                    </div>
-                                </div>
-                            </div>
+    </div>
+
+    <script type="text/javascript">
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+    </script>
+</div>
+<div class="site-blocks-cover site-blocks-1 bg-light" style="padding-top: 50px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                <div class="row" style="width:100%; padding: 2px; margin-left:0px;">
+                    <!--Tin mới-->
+
+                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-ea5040e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ea5040e" data-element_type="section">
+                        <div class="elementor-widget-container">
+                            <h2 class="elementor-heading-title elementor-size-default">Tin Mới</h2>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 news-row" style="margin-top:10px; padding: 0;">
-                            <div class="news-hot-home">
-                                <div style="float: left; z-index: 2;">
-                                    <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/hoi-nghi-can-bo-vien-chuc-nguoi-lao-dong-nam-2020-va-phuong-huong-nhiem-vu-nam-2021/1003">
-                                        <img src="../Images/133033512.jpg" alt="HỘI NGHỊ CÁN BỘ VIÊN CHỨC, NGƯỜI LAO ĐỘNG NĂM 2020 VÀ PHƯƠNG HƯỚNG NHIỆM VỤ NĂM 2021" style="width:120px; height:80px;">
-                                    </a>
-                                </div>
-                                <div style="padding-left:135px;">
-                                    <div class="titleTranblock">
-                                        <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/hoi-nghi-can-bo-vien-chuc-nguoi-lao-dong-nam-2020-va-phuong-huong-nhiem-vu-nam-2021/1003">HỘI NGHỊ CÁN BỘ VIÊN CHỨC, NGƯỜI LAO ĐỘNG NĂM 2020...</a>
-                                    </div>
-                                    <div class="line-time"></div>
-                                    <div class="title-time">
-                                        <i class="icon icon-calendar" style="color:red; padding:0; font-size: 14px;"></i>
-                                        13/01/2021 13:30&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <i class="icon icon-heart-o" style="color:red; padding:0; font-size: 14px; cursor: pointer;" onclick="jsNews_Update_Like();"></i>
-                                        <span id="idLike"></span> &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <i class="icon icon-eye" style="color:red; padding:0; font-size: 14px;"></i>
-                                        <span id="idView">411</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-hot-home">
-                                <div style="float: left; z-index: 2;">
-                                    <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/thong-bao-lich-lam-viec-cua-khoa-kham-benh-theo-yeu-cau-va-tiem-chung-vac-xin/1001">
-                                        <img src="../Images/151055694.png" alt="THÔNG BÁO LỊCH LÀM VIỆC CỦA KHOA KHÁM BỆNH THEO YÊU CẦU VÀ TIÊM CHỦNG VẮC XIN" style="width:120px; height:80px;">
-                                    </a>
-                                </div>
-                                <div style="padding-left:135px;">
-                                    <div class="titleTranblock">
-                                        <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/thong-bao-lich-lam-viec-cua-khoa-kham-benh-theo-yeu-cau-va-tiem-chung-vac-xin/1001">THÔNG BÁO LỊCH LÀM VIỆC CỦA KHOA KHÁM BỆNH THEO...</a>
-                                    </div>
-                                    <div class="line-time"></div>
-                                    <div class="title-time">
-                                        <i class="icon icon-calendar" style="color:red; padding:0; font-size: 14px;"></i>
-                                        29/12/2020 15:10&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <i class="icon icon-heart-o" style="color:red; padding:0; font-size: 14px; cursor: pointer;" onclick="jsNews_Update_Like();"></i>
-                                        <span id="idLike"></span> &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <i class="icon icon-eye" style="color:red; padding:0; font-size: 14px;"></i>
-                                        <span id="idView">474</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-hot-home">
-                                <div style="float: left; z-index: 2;">
-                                    <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/dai-dien-benh-vien-benh-nhiet-doi-trung-uong-tham-du-dai-hoi-thi-dua-yeu-nuoc-toan-quoc/999">
-                                        <img src="../Images/141524490.jpg" alt="ĐẠI DIỆN BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG THAM DỰ ĐẠI HỘI THI ĐUA YÊU NƯỚC TOÀN QUỐC" style="width:120px; height:80px;">
-                                    </a>
-                                </div>
-                                <div style="padding-left:135px;">
-                                    <div class="titleTranblock">
-                                        <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/dai-dien-benh-vien-benh-nhiet-doi-trung-uong-tham-du-dai-hoi-thi-dua-yeu-nuoc-toan-quoc/999">ĐẠI DIỆN BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG THAM...</a>
-                                    </div>
-                                    <div class="line-time"></div>
-                                    <div class="title-time">
-                                        <i class="icon icon-calendar" style="color:red; padding:0; font-size: 14px;"></i>
-                                        11/12/2020 14:15&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <i class="icon icon-heart-o" style="color:red; padding:0; font-size: 14px; cursor: pointer;" onclick="jsNews_Update_Like();"></i>
-                                        <span id="idLike"></span> &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <i class="icon icon-eye" style="color:red; padding:0; font-size: 14px;"></i>
-                                        <span id="idView">450</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-hot-home">
-                                <div style="float: left; z-index: 2;">
-                                    <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/benh-vien-benh-nhiet-doi-trung-uong-bao-cao-thanh-tich-dien-hinh-tien-tien-voi-chu-tich-quoc-hoi-nguyen-thi-kim-ngan-truoc-them-dai-hoi-thi-dua-yeu-nuoc-toan-quoc-nam-2020/998">
-                                        <img src="../Images/083203978.jpg" alt="BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG BÁO CÁO THÀNH TÍCH ĐIỂN HÌNH TIÊN TIẾN VỚI CHỦ TỊCH QUỐC HỘI NGUYỄN THỊ KIM NGÂN TRƯỚC THỀM ĐẠI HỘI THI ĐUA YÊU NƯỚC TOÀN QUỐC NĂM 2020" style="width:120px; height:80px;">
-                                    </a>
-                                </div>
-                                <div style="padding-left:135px;">
-                                    <div class="titleTranblock">
-                                        <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/benh-vien-benh-nhiet-doi-trung-uong-bao-cao-thanh-tich-dien-hinh-tien-tien-voi-chu-tich-quoc-hoi-nguyen-thi-kim-ngan-truoc-them-dai-hoi-thi-dua-yeu-nuoc-toan-quoc-nam-2020/998">BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG BÁO CÁO THÀNH...</a>
-                                    </div>
-                                    <div class="line-time"></div>
-                                    <div class="title-time">
-                                        <i class="icon icon-calendar" style="color:red; padding:0; font-size: 14px;"></i>
-                                        10/12/2020 08:31&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <i class="icon icon-heart-o" style="color:red; padding:0; font-size: 14px; cursor: pointer;" onclick="jsNews_Update_Like();"></i>
-                                        <span id="idLike"></span> &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <i class="icon icon-eye" style="color:red; padding:0; font-size: 14px;"></i>
-                                        <span id="idView">640</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-hot-home">
-                                <div style="float: left; z-index: 2;">
-                                    <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/khai-truong-don-vi-kham-chua-benh-theo-yeu-cau-va-tiem-chung-vac-xin/996">
-                                        <img src="../Images/101115408.jpg" alt="KHAI TRƯƠNG ĐƠN VỊ KHÁM CHỮA BỆNH THEO YÊU CẦU VÀ TIÊM CHỦNG VẮC XIN" style="width:120px; height:80px;">
-                                    </a>
-                                </div>
-                                <div style="padding-left:135px;">
-                                    <div class="titleTranblock">
-                                        <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/khai-truong-don-vi-kham-chua-benh-theo-yeu-cau-va-tiem-chung-vac-xin/996">KHAI TRƯƠNG ĐƠN VỊ KHÁM CHỮA BỆNH THEO YÊU CẦU VÀ...</a>
-                                    </div>
-                                    <div class="line-time"></div>
-                                    <div class="title-time">
-                                        <i class="icon icon-calendar" style="color:red; padding:0; font-size: 14px;"></i>
-                                        07/12/2020 10:11&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <i class="icon icon-heart-o" style="color:red; padding:0; font-size: 14px; cursor: pointer;" onclick="jsNews_Update_Like();"></i>
-                                        <span id="idLike"></span> &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <i class="icon icon-eye" style="color:red; padding:0; font-size: 14px;"></i>
-                                        <span id="idView">603</span>
-                                    </div>
-                                </div>
-                            </div>
+                    </section>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:10px 10px 10px 0px;">
+                        <div class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
 
+                                <div class="item active">
+                                    <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/thong-bao-ve-viec-hoan-buoi-gap-mat-can-bo-huu-tri-nam-2021/1007"><img src="../Images/192516180.jpg" alt="THÔNG BÁO VỀ VIỆC HOÃN BUỔI GẶP MẶT CÁN BỘ HƯU TRÍ NĂM 2021" style="width:100%; height: 235px; padding-bottom:10px;"></a>
+                                    <div class="titleTranblock">
+                                        <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/thong-bao-ve-viec-hoan-buoi-gap-mat-can-bo-huu-tri-nam-2021/1007" title="#" style="font-size: 16px;">THÔNG BÁO VỀ VIỆC HOÃN BUỔI GẶP MẶT CÁN BỘ HƯU TRÍ NĂM 2021</a>
+                                    </div>
+                                    <div class="title-time">
+                                        <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                        01/02/2021 19:25&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <i class="fa fa-heart" style="color:red; padding:0; font-size: 14px; cursor: pointer;" onclick="jsNews_Update_Like();"></i>
+                                        <span id="idLike"></span> &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <i class="fa fa-eye" style="color:red; padding:0; font-size: 14px;"></i>
+                                        <span id="idView">68</span>
+                                    </div>
+                                    <p style="text-align:justify;"></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-12">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 news-row" style="margin-top:10px; padding: 0;">
+                        <div class="news-hot-home">
+                            <div style="float: left; z-index: 2;">
+                                <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/hoi-nghi-can-bo-vien-chuc-nguoi-lao-dong-nam-2020-va-phuong-huong-nhiem-vu-nam-2021/1003">
+                                    <img src="../Images/133033512.jpg" alt="HỘI NGHỊ CÁN BỘ VIÊN CHỨC, NGƯỜI LAO ĐỘNG NĂM 2020 VÀ PHƯƠNG HƯỚNG NHIỆM VỤ NĂM 2021" style="width:120px; height:80px;">
+                                </a>
+                            </div>
+                            <div style="padding-left:135px;">
+                                <div class="titleTranblock">
+                                    <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/hoi-nghi-can-bo-vien-chuc-nguoi-lao-dong-nam-2020-va-phuong-huong-nhiem-vu-nam-2021/1003">HỘI NGHỊ CÁN BỘ VIÊN CHỨC, NGƯỜI LAO ĐỘNG NĂM 2020...</a>
+                                </div>
+                                <div class="line-time"></div>
+                                <div class="title-time">
+                                    <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                    13/01/2021 13:30&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fa fa-heart" style="color:red; padding:0; font-size: 14px; cursor: pointer;" onclick="jsNews_Update_Like();"></i>
+                                    <span id="idLike"></span> &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fa fa-eye" style="color:red; padding:0; font-size: 14px;"></i>
+                                    <span id="idView">411</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-hot-home">
+                            <div style="float: left; z-index: 2;">
+                                <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/thong-bao-lich-lam-viec-cua-khoa-kham-benh-theo-yeu-cau-va-tiem-chung-vac-xin/1001">
+                                    <img src="../Images/151055694.png" alt="THÔNG BÁO LỊCH LÀM VIỆC CỦA KHOA KHÁM BỆNH THEO YÊU CẦU VÀ TIÊM CHỦNG VẮC XIN" style="width:120px; height:80px;">
+                                </a>
+                            </div>
+                            <div style="padding-left:135px;">
+                                <div class="titleTranblock">
+                                    <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/thong-bao-lich-lam-viec-cua-khoa-kham-benh-theo-yeu-cau-va-tiem-chung-vac-xin/1001">THÔNG BÁO LỊCH LÀM VIỆC CỦA KHOA KHÁM BỆNH THEO...</a>
+                                </div>
+                                <div class="line-time"></div>
+                                <div class="title-time">
+                                    <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                    29/12/2020 15:10&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fa fa-heart" style="color:red; padding:0; font-size: 14px; cursor: pointer;" onclick="jsNews_Update_Like();"></i>
+                                    <span id="idLike"></span> &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fa fa-eye" style="color:red; padding:0; font-size: 14px;"></i>
+                                    <span id="idView">474</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-hot-home">
+                            <div style="float: left; z-index: 2;">
+                                <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/dai-dien-benh-vien-benh-nhiet-doi-trung-uong-tham-du-dai-hoi-thi-dua-yeu-nuoc-toan-quoc/999">
+                                    <img src="../Images/141524490.jpg" alt="ĐẠI DIỆN BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG THAM DỰ ĐẠI HỘI THI ĐUA YÊU NƯỚC TOÀN QUỐC" style="width:120px; height:80px;">
+                                </a>
+                            </div>
+                            <div style="padding-left:135px;">
+                                <div class="titleTranblock">
+                                    <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/dai-dien-benh-vien-benh-nhiet-doi-trung-uong-tham-du-dai-hoi-thi-dua-yeu-nuoc-toan-quoc/999">ĐẠI DIỆN BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG THAM...</a>
+                                </div>
+                                <div class="line-time"></div>
+                                <div class="title-time">
+                                    <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                    11/12/2020 14:15&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fa fa-heart" style="color:red; padding:0; font-size: 14px; cursor: pointer;" onclick="jsNews_Update_Like();"></i>
+                                    <span id="idLike"></span> &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fa fa-eye" style="color:red; padding:0; font-size: 14px;"></i>
+                                    <span id="idView">450</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-hot-home">
+                            <div style="float: left; z-index: 2;">
+                                <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/benh-vien-benh-nhiet-doi-trung-uong-bao-cao-thanh-tich-dien-hinh-tien-tien-voi-chu-tich-quoc-hoi-nguyen-thi-kim-ngan-truoc-them-dai-hoi-thi-dua-yeu-nuoc-toan-quoc-nam-2020/998">
+                                    <img src="../Images/083203978.jpg" alt="BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG BÁO CÁO THÀNH TÍCH ĐIỂN HÌNH TIÊN TIẾN VỚI CHỦ TỊCH QUỐC HỘI NGUYỄN THỊ KIM NGÂN TRƯỚC THỀM ĐẠI HỘI THI ĐUA YÊU NƯỚC TOÀN QUỐC NĂM 2020" style="width:120px; height:80px;">
+                                </a>
+                            </div>
+                            <div style="padding-left:135px;">
+                                <div class="titleTranblock">
+                                    <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/benh-vien-benh-nhiet-doi-trung-uong-bao-cao-thanh-tich-dien-hinh-tien-tien-voi-chu-tich-quoc-hoi-nguyen-thi-kim-ngan-truoc-them-dai-hoi-thi-dua-yeu-nuoc-toan-quoc-nam-2020/998">BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG BÁO CÁO THÀNH...</a>
+                                </div>
+                                <div class="line-time"></div>
+                                <div class="title-time">
+                                    <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                    10/12/2020 08:31&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fa fa-heart" style="color:red; padding:0; font-size: 14px; cursor: pointer;" onclick="jsNews_Update_Like();"></i>
+                                    <span id="idLike"></span> &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fa fa-eye" style="color:red; padding:0; font-size: 14px;"></i>
+                                    <span id="idView">640</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-hot-home">
+                            <div style="float: left; z-index: 2;">
+                                <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/khai-truong-don-vi-kham-chua-benh-theo-yeu-cau-va-tiem-chung-vac-xin/996">
+                                    <img src="../Images/101115408.jpg" alt="KHAI TRƯƠNG ĐƠN VỊ KHÁM CHỮA BỆNH THEO YÊU CẦU VÀ TIÊM CHỦNG VẮC XIN" style="width:120px; height:80px;">
+                                </a>
+                            </div>
+                            <div style="padding-left:135px;">
+                                <div class="titleTranblock">
+                                    <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/khai-truong-don-vi-kham-chua-benh-theo-yeu-cau-va-tiem-chung-vac-xin/996">KHAI TRƯƠNG ĐƠN VỊ KHÁM CHỮA BỆNH THEO YÊU CẦU VÀ...</a>
+                                </div>
+                                <div class="line-time"></div>
+                                <div class="title-time">
+                                    <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                    07/12/2020 10:11&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fa fa-heart" style="color:red; padding:0; font-size: 14px; cursor: pointer;" onclick="jsNews_Update_Like();"></i>
+                                    <span id="idLike"></span> &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fa fa-eye" style="color:red; padding:0; font-size: 14px;"></i>
+                                    <span id="idView">603</span>
+                                </div>
+                            </div>
+                        </div>
 
+                    </div>
+                    <!--Hoạt động BV-->
+                    <div class="col-md-6 col-sm-12">
+                        <div class="elementor-element elementor-element-46ca6b9 elementor-widget elementor-widget-heading" data-id="46ca6b9" data-element_type="widget" data-widget_type="heading.default">
+                            <div class="elementor-widget-container-2">
+                                <h3 class="h3-element-heading">Hoạt động bệnh viện</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Tin truyền nhiễm-->
+                    <div class="col-md-6 col-sm-12">
+                        <div class="elementor-element elementor-element-46ca6b9 elementor-widget elementor-widget-heading" data-id="46ca6b9" data-element_type="widget" data-widget_type="heading.default">
+                            <div class="elementor-widget-container-2">
+                                <h3 class="h3-element-heading">Tin truyền nhiễm</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 news-row" style="margin-top:10px; padding: 0;">
+                        <div class="news-hot-home-2">
+                            <div style="float: left; z-index: 2;">
+                                <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/hoi-nghi-can-bo-vien-chuc-nguoi-lao-dong-nam-2020-va-phuong-huong-nhiem-vu-nam-2021/1003">
+                                    <img src="../Images/133033512.jpg" alt="HỘI NGHỊ CÁN BỘ VIÊN CHỨC, NGƯỜI LAO ĐỘNG NĂM 2020 VÀ PHƯƠNG HƯỚNG NHIỆM VỤ NĂM 2021" style="width:120px; height:80px;">
+                                </a>
+                            </div>
+                            <div style="padding-left:135px;">
+                                <div class="titleTranblock">
+                                    <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/hoi-nghi-can-bo-vien-chuc-nguoi-lao-dong-nam-2020-va-phuong-huong-nhiem-vu-nam-2021/1003">HỘI NGHỊ CÁN BỘ VIÊN CHỨC, NGƯỜI LAO ĐỘNG NĂM 2020...</a>
+                                </div>
+                                <div class="line-time"></div>
+                                <div class="title-time" style="text-align: right;">
+                                    <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                    13/01/2021 13:30&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-hot-home-2">
+                            <div style="float: left; z-index: 2;">
+                                <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/thong-bao-lich-lam-viec-cua-khoa-kham-benh-theo-yeu-cau-va-tiem-chung-vac-xin/1001">
+                                    <img src="../Images/151055694.png" alt="THÔNG BÁO LỊCH LÀM VIỆC CỦA KHOA KHÁM BỆNH THEO YÊU CẦU VÀ TIÊM CHỦNG VẮC XIN" style="width:120px; height:80px;">
+                                </a>
+                            </div>
+                            <div style="padding-left:135px;">
+                                <div class="titleTranblock">
+                                    <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/thong-bao-lich-lam-viec-cua-khoa-kham-benh-theo-yeu-cau-va-tiem-chung-vac-xin/1001">THÔNG BÁO LỊCH LÀM VIỆC CỦA KHOA KHÁM BỆNH THEO...</a>
+                                </div>
+                                <div class="line-time"></div>
+                                <div class="title-time" style="text-align: right;">
+                                    <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                    29/12/2020 15:10&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-hot-home-2">
+                            <div style="float: left; z-index: 2;">
+                                <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/dai-dien-benh-vien-benh-nhiet-doi-trung-uong-tham-du-dai-hoi-thi-dua-yeu-nuoc-toan-quoc/999">
+                                    <img src="../Images/141524490.jpg" alt="ĐẠI DIỆN BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG THAM DỰ ĐẠI HỘI THI ĐUA YÊU NƯỚC TOÀN QUỐC" style="width:120px; height:65px;">
+                                </a>
+                            </div>
+                            <div style="padding-left:135px;">
+                                <div class="titleTranblock">
+                                    <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/dai-dien-benh-vien-benh-nhiet-doi-trung-uong-tham-du-dai-hoi-thi-dua-yeu-nuoc-toan-quoc/999">ĐẠI DIỆN BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG THAM...</a>
+                                </div>
+                                <div class="line-time"></div>
+                                <div class="title-time" style="text-align: right;">
+                                    <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                    11/12/2020 14:15&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-hot-home-2">
+                            <div style="float: left; z-index: 2;">
+                                <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/benh-vien-benh-nhiet-doi-trung-uong-bao-cao-thanh-tich-dien-hinh-tien-tien-voi-chu-tich-quoc-hoi-nguyen-thi-kim-ngan-truoc-them-dai-hoi-thi-dua-yeu-nuoc-toan-quoc-nam-2020/998">
+                                    <img src="../Images/083203978.jpg" alt="BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG BÁO CÁO THÀNH TÍCH ĐIỂN HÌNH TIÊN TIẾN VỚI CHỦ TỊCH QUỐC HỘI NGUYỄN THỊ KIM NGÂN TRƯỚC THỀM ĐẠI HỘI THI ĐUA YÊU NƯỚC TOÀN QUỐC NĂM 2020" style="width:120px; height:65px;">
+                                </a>
+                            </div>
+                            <div style="padding-left:135px;">
+                                <div class="titleTranblock">
+                                    <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/benh-vien-benh-nhiet-doi-trung-uong-bao-cao-thanh-tich-dien-hinh-tien-tien-voi-chu-tich-quoc-hoi-nguyen-thi-kim-ngan-truoc-them-dai-hoi-thi-dua-yeu-nuoc-toan-quoc-nam-2020/998">BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG BÁO CÁO THÀNH...</a>
+                                </div>
+                                <div class="line-time"></div>
+                                <div class="title-time" style="text-align: right;">
+                                    <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                    10/12/2020 08:31&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 news-row" style="margin-top:10px; padding: 0;">
+                        <div class="news-hot-home-2">
+                            <div style="float: left; z-index: 2;">
+                                <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/hoi-nghi-can-bo-vien-chuc-nguoi-lao-dong-nam-2020-va-phuong-huong-nhiem-vu-nam-2021/1003">
+                                    <img src="../Images/133033512.jpg" alt="HỘI NGHỊ CÁN BỘ VIÊN CHỨC, NGƯỜI LAO ĐỘNG NĂM 2020 VÀ PHƯƠNG HƯỚNG NHIỆM VỤ NĂM 2021" style="width:120px; height:80px;">
+                                </a>
+                            </div>
+                            <div style="padding-left:135px;">
+                                <div class="titleTranblock">
+                                    <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/hoi-nghi-can-bo-vien-chuc-nguoi-lao-dong-nam-2020-va-phuong-huong-nhiem-vu-nam-2021/1003">HỘI NGHỊ CÁN BỘ VIÊN CHỨC, NGƯỜI LAO ĐỘNG NĂM 2020...</a>
+                                </div>
+                                <div class="line-time"></div>
+                                <div class="title-time" style="text-align: right;">
+                                    <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                    13/01/2021 13:30&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-hot-home-2">
+                            <div style="float: left; z-index: 2;">
+                                <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/thong-bao-lich-lam-viec-cua-khoa-kham-benh-theo-yeu-cau-va-tiem-chung-vac-xin/1001">
+                                    <img src="../Images/151055694.png" alt="THÔNG BÁO LỊCH LÀM VIỆC CỦA KHOA KHÁM BỆNH THEO YÊU CẦU VÀ TIÊM CHỦNG VẮC XIN" style="width:120px; height:80px;">
+                                </a>
+                            </div>
+                            <div style="padding-left:135px;">
+                                <div class="titleTranblock">
+                                    <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/thong-bao-lich-lam-viec-cua-khoa-kham-benh-theo-yeu-cau-va-tiem-chung-vac-xin/1001">THÔNG BÁO LỊCH LÀM VIỆC CỦA KHOA KHÁM BỆNH THEO...</a>
+                                </div>
+                                <div class="line-time"></div>
+                                <div class="title-time" style="text-align: right;">
+                                    <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                    29/12/2020 15:10&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-hot-home-2">
+                            <div style="float: left; z-index: 2;">
+                                <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/dai-dien-benh-vien-benh-nhiet-doi-trung-uong-tham-du-dai-hoi-thi-dua-yeu-nuoc-toan-quoc/999">
+                                    <img src="../Images/141524490.jpg" alt="ĐẠI DIỆN BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG THAM DỰ ĐẠI HỘI THI ĐUA YÊU NƯỚC TOÀN QUỐC" style="width:120px; height:65px;">
+                                </a>
+                            </div>
+                            <div style="padding-left:135px;">
+                                <div class="titleTranblock">
+                                    <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/dai-dien-benh-vien-benh-nhiet-doi-trung-uong-tham-du-dai-hoi-thi-dua-yeu-nuoc-toan-quoc/999">ĐẠI DIỆN BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG THAM...</a>
+                                </div>
+                                <div class="line-time"></div>
+                                <div class="title-time" style="text-align: right;">
+                                    <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                    11/12/2020 14:15&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-hot-home-2">
+                            <div style="float: left; z-index: 2;">
+                                <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/benh-vien-benh-nhiet-doi-trung-uong-bao-cao-thanh-tich-dien-hinh-tien-tien-voi-chu-tich-quoc-hoi-nguyen-thi-kim-ngan-truoc-them-dai-hoi-thi-dua-yeu-nuoc-toan-quoc-nam-2020/998">
+                                    <img src="../Images/083203978.jpg" alt="BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG BÁO CÁO THÀNH TÍCH ĐIỂN HÌNH TIÊN TIẾN VỚI CHỦ TỊCH QUỐC HỘI NGUYỄN THỊ KIM NGÂN TRƯỚC THỀM ĐẠI HỘI THI ĐUA YÊU NƯỚC TOÀN QUỐC NĂM 2020" style="width:120px; height:65px;">
+                                </a>
+                            </div>
+                            <div style="padding-left:135px;">
+                                <div class="titleTranblock">
+                                    <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/benh-vien-benh-nhiet-doi-trung-uong-bao-cao-thanh-tich-dien-hinh-tien-tien-voi-chu-tich-quoc-hoi-nguyen-thi-kim-ngan-truoc-them-dai-hoi-thi-dua-yeu-nuoc-toan-quoc-nam-2020/998">BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG BÁO CÁO THÀNH...</a>
+                                </div>
+                                <div class="line-time"></div>
+                                <div class="title-time" style="text-align: right;">
+                                    <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                    10/12/2020 08:31&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Khoa học & Đào tạo-->
+                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-ea5040e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ea5040e" data-element_type="section">
+                        <div class="elementor-widget-container">
+                            <h2 class="elementor-heading-title elementor-size-default">Khoa học & đào tạo</h2>
+                        </div>
+                    </section>
 
-                    <div id="cpos_7" style="width: 100%; padding: 0px;">
-                        <div class="box_c box_c_1" style="margin: 0;">
-                            <div class="box_header">
-                                <div class="left">
-                                    <div class="right">
-                                        <div class="center"><h3>Đăng ký tư vấn</h3></div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 news-row" style="margin-top:10px; padding: 0;">
+                        <div id="box_ucpostbox23" class="box_body">
+                            <div class="d_scroll">
+                                <div id="pl_iEmPA_c0">
+                                    <div class="pl_thumb_c">
+                                        <div class="plc4">
+                                            <div class="l-item ">
+                                                <div class="pl_top_c">
+                                                    <div class="pl_thumb">
+                                                        <a title="BỆNH MẠCH VÀNH" href="/tin-tuc/chi-tiet/benh-mach-vanh/902" rlink="/tin-tuc/chi-tiet/benh-mach-vanh/902">
+                                                            <img alt="BỆNH MẠCH VÀNH" src="../Images/141631853.jpg" style="width:100%; height:130px;">
+                                                        </a>
+                                                    </div>
+                                                    <div class="l-item-h">
+                                                        <a class="l-title" href="/tin-tuc/chi-tiet/benh-mach-vanh/902"><h4>BỆNH MẠCH VÀNH</h4></a>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                                <div class="pl_thumb_brief">Bệnh mạch vành là bệnh của các động mạch nuôi tim, còn được gọi là bệnh tim thiếu máu cục bộ, suy...</div>
+                                                <div class="pl_readmore"><a href="/tin-tuc/chi-tiet/benh-mach-vanh/902" title="BỆNH MẠCH VÀNH" rlink="/tin-tuc/chi-tiet/benh-mach-vanh/902">Xem tiếp</a></div>
+                                            </div>
+                                        </div>
+                                        <div class="plc4">
+                                            <div class="l-item ">
+                                                <div class="pl_top_c">
+                                                    <div class="pl_thumb">
+                                                        <a title="BỆNH MẠCH VÀNH" href="/tin-tuc/chi-tiet/benh-mach-vanh/902" rlink="/tin-tuc/chi-tiet/benh-mach-vanh/902">
+                                                            <img alt="BỆNH MẠCH VÀNH" src="../Images/141631853.jpg" style="width:100%; height:130px;">
+                                                        </a>
+                                                    </div>
+                                                    <div class="l-item-h">
+                                                        <a class="l-title" href="/tin-tuc/chi-tiet/benh-mach-vanh/902"><h4>BỆNH MẠCH VÀNH</h4></a>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                                <div class="pl_thumb_brief">Bệnh mạch vành là bệnh của các động mạch nuôi tim, còn được gọi là bệnh tim thiếu máu cục bộ, suy...</div>
+                                                <div class="pl_readmore"><a href="/tin-tuc/chi-tiet/benh-mach-vanh/902" title="BỆNH MẠCH VÀNH" rlink="/tin-tuc/chi-tiet/benh-mach-vanh/902">Xem tiếp</a></div>
+                                            </div>
+                                        </div>
+                                        <div class="plc4">
+                                            <div class="l-item ">
+                                                <div class="pl_top_c">
+                                                    <div class="pl_thumb">
+                                                        <a title="BỆNH MẠCH VÀNH" href="/tin-tuc/chi-tiet/benh-mach-vanh/902" rlink="/tin-tuc/chi-tiet/benh-mach-vanh/902">
+                                                            <img alt="BỆNH MẠCH VÀNH" src="../Images/141631853.jpg" style="width:100%; height:130px;">
+                                                        </a>
+                                                    </div>
+                                                    <div class="l-item-h">
+                                                        <a class="l-title" href="/tin-tuc/chi-tiet/benh-mach-vanh/902"><h4>BỆNH MẠCH VÀNH</h4></a>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                                <div class="pl_thumb_brief">Bệnh mạch vành là bệnh của các động mạch nuôi tim, còn được gọi là bệnh tim thiếu máu cục bộ, suy...</div>
+                                                <div class="pl_readmore"><a href="/tin-tuc/chi-tiet/benh-mach-vanh/902" title="BỆNH MẠCH VÀNH" rlink="/tin-tuc/chi-tiet/benh-mach-vanh/902">Xem tiếp</a></div>
+                                            </div>
+                                        </div>
+                                        <div class="clear"></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="box_body">
-                                <div class="contact_c regbox-c">
-                                    <div class="form">
-                                        <p><a class="btn btn--orange btnDangKyOnline" href="http://benhnhietdoi.vn/dang-ky-kham"><span class="icon-list-ol"></span>&nbsp;&nbsp;ĐẶT LỊCH KHÁM</a></p>
-                                        <p><a class="btn btn--red btnDangKyOnline" href="http://benhnhietdoi.vn/Account/Members"><span class="icon-heart"></span>&nbsp;&nbsp;TRANG BỆNH NHÂN</a></p>
-
-                                        <p><a class="btn btn--yellow btnDangKyOnline" href="http://benhnhietdoi.vn/tin-tuc/lich-hoi-thao/12"><span class="icon-calendar"></span>&nbsp;&nbsp;LỊCH HỘI THẢO</a></p>
-                                        <p><a class="btn btn--green btnDangKyOnline" href="http://benhnhietdoi.vn/tin-tuc/thong-tin-uu-dai/13"><span class="icon-bullhorn"></span>&nbsp;&nbsp;THÔNG TIN ƯU ĐÃI</a></p>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                            <div class="box_footer"><div class="left"><div class="right"><div class="center"></div></div></div></div>
                             <div class="clear"></div>
                         </div>
                     </div>
+                    <!--Đội ngũ BS-->
+                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-ea5040e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ea5040e" data-element_type="section">
+                        <div class="elementor-widget-container">
+                            <h2 class="elementor-heading-title elementor-size-default">Đội ngũ bác sỹ</h2>
+                        </div>
+                    </section>
 
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 news-row" style="margin-top:10px; padding: 0;">
+                        <div class="nonloop-block-3 owl-carousel owl-loaded owl-drag">
+                            <div class="owl-stage-outer">
+                                <div class="owl-item active plc4">
+                                    <div class="item">
+                                        <div class="block-38 text-center">
+                                            <div class="block-38-img text-center">
+                                                <div class="block-38-header text-center">
+                                                    <img style="width: 85%; margin-left: 13px;" src="../Images/102741329.jpg" alt="TS. Phạm Ngọc Thạch" class="mb-4">
+                                                    <h3 class="block-38-heading h4" style="font-size: 16px;">TS. Phạm Ngọc Thạch</h3>
+                                                    <p class="block-38-subheading" style="font-size: 11px;">Giám đốc</p>
+                                                </div>
+                                                <div class="block-38-body">
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="owl-item active plc4">
+                                    <div class="item">
+                                        <div class="block-38 text-center">
+                                            <div class="block-38-img text-center">
+                                                <div class="block-38-header text-center">
+                                                    <img style="width: 85%; margin-left: 13px;" src="../Images/150310772.jpg" alt="Ths.BS Đặng Hồng Hải" class="mb-4">
+                                                    <h3 class="block-38-heading h4" style="font-size: 16px;">Ths.BS Đặng Hồng Hải</h3>
+                                                    <p class="block-38-subheading" style="font-size: 11px;">Trưởng phòng Kế hoạch Tổng hợp</p>
+                                                </div>
+                                                <div class="block-38-body">
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="owl-item active plc4">
+                                    <div class="item">
+                                        <div class="block-38 text-center">
+                                            <div class="block-38-img text-center">
+                                                <div class="block-38-header text-center">
+                                                    <img style="width: 85%; margin-left: 13px;" src="../Images/140543393.jpg" alt="BsCKII. Nguyễn Trung Cấp" class="mb-4">
+                                                    <h3 class="block-38-heading h4" style="font-size: 16px;">BsCKII. Nguyễn Trung Cấp</h3>
+                                                    <p class="block-38-subheading" style="font-size: 11px;">Phó Giám đốc</p>
+                                                </div>
+                                                <div class="block-38-body">
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><div class="owl-nav"><div class="owl-prev disabled"><span class="icon-arrow_back"></span></div><div class="owl-next"><span class="icon-arrow_forward"></span></div></div><div class="owl-dots"><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div></div>
+                        </div>
+                    </div>
+
+                    <!--VB phát hành-->
+                    <div style="    width: inherit;" class="elementor-element elementor-element-46ca6b9 elementor-widget elementor-widget-heading" data-element_type="widget" data-widget_type="heading.default">
+                        <div class="elementor-widget-container-2">
+                            <h3 class="h3-element-heading" style="text-align: left;">
+                                Văn bản mới nhất
+                                <div style=" display: inline-block; float: right;"><a target="_blank" href="http://emohbackup.moh.gov.vn/publish"><i class="fa fa-search"></i>&nbsp;Tìm kiếm</a></div>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="site-section block-3 site-blocks-2">
+                        <div class="container">
+                            <div class="row">
+                                <div id="cpos_25">
+                                    <div class="box_c box_c_1" style="background-color: #ffffff;margin-top:10px">
+                                        <div class="box_body">
+                                            <div class="site-blocks-table">
+                                                <table class="table tabel-ressponsive moh-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col" style="text-align: center;width: 150px;">Số hiệu</th>
+                                                            <th scope="col" style="text-align: center;">Trích yếu nội dung</th>
+                                                            <th scope="col" style="text-align: center;">Cơ quan</th>
+                                                            <th scope="col" style="text-align: center;width: 100px;">Ngày</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="doc-body-content">
+                                                        <tr>
+                                                            <td style="width: 150px;">103/AIDS-ĐT</td>
+                                                            <td>
+                                                                <a class="limitwords" style="color: #2a30f9;" href="https://emohbackup.moh.gov.vn/publish/home?documentId=8239" target="_blank">Đăng tải dự thảo Thông tư hướng dẫn xét nghiệm HIV cho phụ nữ mang thai và chăm sóc, điều trị đối với phụ nữ nhiễm HIV trong thời kỳ mang thai, khi sinh con, cho con bú</a>
+                                                            </td>
+                                                            <td> Cục Phòng chống HIV/AIDS</td>
+                                                            <td style="width: 100px; text-align: center;"> 18/2/2021</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width: 150px;">176/BC-BYT</td>
+                                                            <td>
+                                                                <a class="limitwords" style="color: #2a30f9;" href="https://emohbackup.moh.gov.vn/publish/home?documentId=8238" target="_blank">Trình xin Thứ trưởng phê duyệt Báo cáo công tác y tế trực Tết Nguyên đán Tân Sửu ngày 16/02/2021 (Mùng 5 Tết)</a>
+                                                            </td>
+                                                            <td> Bộ Y Tế</td>
+                                                            <td style="width: 100px; text-align: center;"> 18/2/2021</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width: 150px;">984/CV-BCĐ</td>
+                                                            <td>
+                                                                <a class="limitwords" style="color: #2a30f9;" href="https://emohbackup.moh.gov.vn/publish/home?documentId=8236" target="_blank">V/v tích cực rà soát, lấy mẫu xét nghiệm, giám sát sức khỏe người về từ huyện Cẩm Giàng, Hải Dương</a>
+                                                            </td>
+                                                            <td> Bộ Y Tế</td>
+                                                            <td style="width: 100px; text-align: center;"> 15/2/2021</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width: 150px;">23/KL-TTRB</td>
+                                                            <td>
+                                                                <a class="limitwords" style="color: #2a30f9;" href="https://emohbackup.moh.gov.vn/publish/home?documentId=8233" target="_blank">Kết luận thanh tra tại Sở Y tế Hà Nội</a>
+                                                            </td>
+                                                            <td> Thanh tra Bộ</td>
+                                                            <td style="width: 100px; text-align: center;"> 9/2/2021</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width: 150px;">1000/QLD-PCTTR</td>
+                                                            <td>
+                                                                <a class="limitwords" style="color: #2a30f9;" href="https://emohbackup.moh.gov.vn/publish/home?documentId=8232" target="_blank">V/v đề nghị đăng tải dự thảo Thông tư bãi bỏ một số văn bản QPPL do Bộ trưởng Bộ Y tế ban hành</a>
+                                                            </td>
+                                                            <td> Cục Quản lý Dược</td>
+                                                            <td style="width: 100px; text-align: center;"> 9/2/2021</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <!--Đăng ký tư vấn-->
+                <div id="cpos_7" style="width: 100%; padding: 0px; margin-top: 20px;">
+                    <div class="box_c box_c_1" style="margin: 0;">
+                        <div class="box_body">
+                            <div class="contact_c regbox-c">
+                                <div class="form">
+                                    <p><a class="btn btn--orange btnDangKyOnline" href="http://benhnhietdoi.vn/dang-ky-kham"><span class="fa fa-list-ol"></span>&nbsp;&nbsp;ĐĂNG KÝ KHÁM</a></p>
+                                    <p><a class="btn btn--green btnDangKyOnline" href="http://benhnhietdoi.vn/tin-tuc/thong-tin-uu-dai/13"><span class="fa fa-bullhorn"></span>&nbsp;&nbsp;THÔNG TIN ƯU ĐÃI</a></p>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Khai báo y tế-->
+                <div class="elementor-element elementor-element-c161c37 elementor-widget elementor-widget-image" data-id="c161c37" data-element_type="widget" data-widget_type="image.default">
+                    <div style="margin-left:2px">
+                        <div class="elementor-image">
+                            <a href="https://tokhaiyte.vn/" target="_blank" rel="noopener">
+                                <img style=" margin-top: 10px;width: 100%;" width="614" height="274" src="../Images/12345.jpg" class="attachment-large size-large" alt="" loading="lazy" sizes="(max-width: 614px) 100vw, 614px" title="KHAI BÁO Y TẾ">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Thông điệp BV-->
+                <div class="elementor-element elementor-element-c161c37 elementor-widget elementor-widget-image" data-id="c161c37" data-element_type="widget" data-widget_type="image.default">
+                    <div style="margin-left:2px">
+                        <div class="elementor-image">
+                            <a href="" target="_blank" rel="noopener">
+                                <img style=" margin-top: 10px;width: 100%;" width="614" height="274" src="../Images/thong_diep_5k--15753885916748196.jpg" class="attachment-large size-large" alt="" loading="lazy" sizes="(max-width: 614px) 100vw, 614px">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Liên kết nhanh-->
+                <div style="margin-top: 10px;" class="elementor-element elementor-element-46ca6b9 elementor-widget elementor-widget-heading" data-id="46ca6b9" data-element_type="widget" data-widget_type="heading.default">
+                    <div class="elementor-widget-container-2 " style="background-color: #dc3545;margin-top: 10px;">
+                        <h3 class="h3-element-heading">Liên kết nhanh</h3>
+                    </div>
+                </div>
+                <div class="news-hot-home-2">
+                    <div style="float: left; z-index: 2;">
+                        <a href="https://soyte.hungyen.gov.vn/portal/Pages/default.aspx" target="_blank">
+                            <img src="../Images/1d3c62d6335938ddSOYTE.jpg" style="width:100%; height:90px;margin-top:2px">
+                        </a>
+                    </div>
+                </div>
+                <div class="news-hot-home-2">
+                    <div style="float: left; z-index: 2;" class="banner-moh">
+                        <a href="https://moh.gov.vn/" target="_blank">
+                            <img src="../Images/layout_set_logo_byt.png" style="width:100%; height:90px;">
+                        </a>
+                    </div>
+                </div>
+                <!--Video-->
+                <div style="margin-top: 10px;max-width: 100px;margin-inline: auto;" class="elementor-element elementor-element-46ca6b9 elementor-widget elementor-widget-heading" data-id="46ca6b9" data-element_type="widget" data-widget_type="heading.default">
+                    <div class="elementor-widget-container-2">
+                        <h3 class="h3-element-heading">Video</h3>
+                    </div>
+                </div>
+                <div class="elementor-element elementor-element-549f709 elementor-aspect-ratio-169 elementor-widget elementor-widget-video" data-id="549f709" data-element_type="widget" data-settings="{&quot;aspect_ratio&quot;:&quot;169&quot;}" data-widget_type="video.default">
+                    <div style="margin-left:2px">
+                        <div class="elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
+                            <iframe style="margin-top: 10px;width: 100%;" class="elementor-video-iframe" allowfullscreen="" title="youtube Video Player" src="https://player.vimeo.com/video/137857207"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="elementor-element elementor-element-8f4e086 elementor-aspect-ratio-169 elementor-widget elementor-widget-video" data-id="8f4e086" data-element_type="widget" data-settings="{&quot;aspect_ratio&quot;:&quot;169&quot;}" data-widget_type="video.default">
+                    <div style="margin-left:2px">
+                        <div class="elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
+                            <iframe style="width: 100%;" class="elementor-video-iframe" allowfullscreen="" title="youtube Video Player" src="https://player.vimeo.com/video/137857207"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!--Truyền thông-->
+                <div class="elementor-element elementor-element-46ca6b9 elementor-widget elementor-widget-heading" data-id="46ca6b9" data-element_type="widget" data-widget_type="heading.default">
+                    <div class="elementor-widget-container-2">
+                        <h3 class="h3-element-heading">Truyền thông</h3>
+                    </div>
+                </div>
+                <div style="margin-top:10px">
+                    <div class="news-hot-home-2">
+                        <div style="float: left; z-index: 2;">
+                            <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/hoi-nghi-can-bo-vien-chuc-nguoi-lao-dong-nam-2020-va-phuong-huong-nhiem-vu-nam-2021/1003">
+                                <img src="../Images/133033512.jpg" alt="HỘI NGHỊ CÁN BỘ VIÊN CHỨC, NGƯỜI LAO ĐỘNG NĂM 2020 VÀ PHƯƠNG HƯỚNG NHIỆM VỤ NĂM 2021" style="width:120px; height:80px;">
+                            </a>
+                        </div>
+                        <div style="padding-left:135px;">
+                            <div class="titleTranblock">
+                                <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/hoi-nghi-can-bo-vien-chuc-nguoi-lao-dong-nam-2020-va-phuong-huong-nhiem-vu-nam-2021/1003">HỘI NGHỊ CÁN BỘ VIÊN CHỨC, NGƯỜI LAO ĐỘNG NĂM 2020...</a>
+                            </div>
+                            <div class="line-time"></div>
+                            <div class="title-time" style="text-align: right;">
+                                <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                13/01/2021 13:30&nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-hot-home-2">
+                        <div style="float: left; z-index: 2;">
+                            <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/hoi-nghi-can-bo-vien-chuc-nguoi-lao-dong-nam-2020-va-phuong-huong-nhiem-vu-nam-2021/1003">
+                                <img src="../Images/133033512.jpg" alt="HỘI NGHỊ CÁN BỘ VIÊN CHỨC, NGƯỜI LAO ĐỘNG NĂM 2020 VÀ PHƯƠNG HƯỚNG NHIỆM VỤ NĂM 2021" style="width:120px; height:80px;">
+                            </a>
+                        </div>
+                        <div style="padding-left:135px;">
+                            <div class="titleTranblock">
+                                <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/hoi-nghi-can-bo-vien-chuc-nguoi-lao-dong-nam-2020-va-phuong-huong-nhiem-vu-nam-2021/1003">HỘI NGHỊ CÁN BỘ VIÊN CHỨC, NGƯỜI LAO ĐỘNG NĂM 2020...</a>
+                            </div>
+                            <div class="line-time"></div>
+                            <div class="title-time" style="text-align: right;">
+                                <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                13/01/2021 13:30&nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+

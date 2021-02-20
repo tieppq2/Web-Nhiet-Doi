@@ -3123,3 +3123,12 @@ b, strong {
         background-attachment: scroll !important;
     }
 }
+#cpos_7 {
+    width: 50%;
+    float: right;
+    margin-left: 2px;
+    margin-right: -2px
+}
+#cpos_7 .pl_readmore a {
+        font-weight: 300
+    }

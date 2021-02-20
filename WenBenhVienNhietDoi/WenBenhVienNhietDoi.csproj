@@ -231,6 +231,7 @@
     <Content Include="css\MANHBEO.css" />
     <Content Include="css\metisMenu-1.css" />
     <Content Include="css\metisMenu.css" />
+    <Content Include="css\meunudropdown.css" />
     <Content Include="css\mm-vertical-home.css" />
     <Content Include="css\mm-vertical-page-1.css" />
     <Content Include="css\mm-vertical-page.css" />
