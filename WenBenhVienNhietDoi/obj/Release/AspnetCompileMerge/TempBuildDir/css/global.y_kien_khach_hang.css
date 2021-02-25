@@ -1,0 +1,187 @@
+.customer_review {
+	display: block;
+	margin: 0;
+	padding: 30px 0 40px;
+	position: relative;
+}
+.customer_review .s_header {
+	position: relative;
+	display: block;
+	margin: 0px;
+	padding: 0;
+	width: 100%;
+}
+.customer_review .s_header h3 {
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.customer_review .s_header p {
+	position: relative;
+	display: block;
+	margin: 0 0 10px;
+	padding: 0;
+	width: 100%;
+}
+
+.customer_review i.fa-quote-left {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #e0e0e0;
+	font-size: 40px;
+}
+.customer_review i.fa-quote-right {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	color: #e0e0e0;
+	font-size: 40px;
+}
+.customer_review .show_comment {
+	display: block;
+	margin: 0 auto 24px;
+	padding: 0px;
+	position: relative;
+	width: 100%;
+}
+
+.customer_review .show_comment .simg {
+	float: left;
+	margin: 0 10px 0 0;
+	padding: 0;
+	width: 100px;
+	height: 100px;
+	border: 2px solid #ebebeb;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.customer_review .show_comment .simg img {
+	width: 100%;
+}
+.customer_review .show_comment .sdes {
+	display: block;
+	margin: 0 auto;
+	padding: 20px;
+	position: relative;
+	width: 70%;
+	float: left;
+	background-color: #fff5db;
+	background-image: url(page_coner.png)/*tpa=https://minhanhhospital.com.vn/themes/ngoisaoso/images/page_coner.png*/;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	-webkit-border-radius: 5px;
+	-webkit-border-bottom-right-radius: 0;
+	-moz-border-radius: 5px;
+	-moz-border-radius-bottomright: 0;
+	border-radius: 5px;
+	border-bottom-right-radius: 0;
+}
+.customer_review .show_comment .sdes p {
+	background-image: url(dot.gif)/*tpa=https://minhanhhospital.com.vn/themes/ngoisaoso/images/dot.gif*/;
+	background-repeat: repeat;
+	line-height: 22px;
+	text-align: justify
+}
+
+.customer_review .sdes span {
+	font-size: 18px;
+	margin: 0;
+	padding: 0;
+	font-weight: 600;
+}
+.customer_review .sdes small {
+	display: block;
+}
+
+.customer_review .bx-wrapper, .customer_review .bx-wrapper .bx-viewport {
+	background: transparent;
+	border: 0;
+	box-shadow: none !important;
+	left: 0px;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	border: none !important;
+}
+
+.customer_review .bx-wrapper .bx-pager.bx-default-pager a {
+	background: #02559f;
+}
+.customer_review .bx-wrapper .bx-pager.bx-default-pager a:hover, .customer_review .bx-wrapper .bx-pager.bx-default-pager a.active {
+	background: #47b8ea;
+}
+.customer_review .bx-wrapper .bx-controls-direction a {
+	height: 32px;
+	margin-top: -80px;
+	top: 0;
+	width: 32px;
+}
+.customer_review .bx-wrapper .bx-prev, .customer_review .bx-wrapper .bx-prev:hover {
+	left: auto;
+	right: 30px;
+}
+.customer_review .bx-wrapper .bx-next, .customer_review .bx-wrapper .bx-next:hover {
+	right: 0;
+	left: auto;
+}
+@media (max-width: 767px) {
+	.customer_review {
+		display: block;
+		margin: 0;
+		padding: 20px 0 0px;
+		position: relative;
+	}
+	.customer_review .simg {
+		margin: 0 auto 10px;
+		padding: 0;
+		display: block;
+		width: 100%;
+		float: none;
+		height: auto;
+		border: 0;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+	}
+	.customer_review .simg img {
+		width: auto;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+	.customer_review .sdes {
+		display: block;
+		margin: 0 auto;
+		padding: 0;
+		position: relative;
+		width: 100%;
+		float: none;
+	}
+	.customer_review .show_comment {
+		margin: 0;
+		padding: 0px;
+		width: 100%;
+	}
+	.customer_review .show_comment .simg {
+		float: none;
+		margin: 0;
+		padding: 0;
+		display: table;
+	}
+	.customer_review .show_comment .sdes {
+		margin: 20px 0;
+		padding: 20px;
+		width: 100%;
+		float: none;
+	}
+	.customer_review .bx-controls-direction {
+		display: block;
+	}
+	.customer_review .bx-wrapper .bx-controls-direction a {
+		margin-top: 34px;
+		top: 0;
+	}
+}

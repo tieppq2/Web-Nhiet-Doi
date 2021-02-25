@@ -1,0 +1,45 @@
+﻿@model WenBenhVienNhietDoi.Models.ListMenuModels
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div class="headermenu wow fadeIn" data-wow-delay="0.2s" style="    border-top: 4px solid rgb(181, 179, 179);  background-color: #2096db; ">
+        <div class="container">
+            <div class="navbar" role="navigation">
+                <div class="navbar-collapse collapse">
+                    <nav>
+                        @*<ul class="cf">*@
+                        <li class="active"><a href="/">Trang Chủ</a></li>
+
+                        @foreach (var itemparent in Model.ListParentMenu)
+                        {
+                            if (@itemparent.CapMenu == 0)
+                            {
+                                <li class=" has-children">
+                                    <a href="@itemparent.Linkurl" title="@itemparent.TenMenu">@itemparent.TenMenu</a>
+                                    <ul class="">
+                                        @foreach (var item in Model.ListMenu)
+                                        {
+                                            if (@item.IdCha == @itemparent.Id)
+                                            {
+                                                <li><a href="@item.Linkurl" title="@item.TenMenu" style="font-size: 10px;">@item.TenMenu</a></li>
+                                            }
+                                        }
+                                    </ul>
+                                </li>
+                            }
+                        }
+                        <li class="active"><a href="#">Liên hệ</a></li>
+                        @*</ul>*@
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

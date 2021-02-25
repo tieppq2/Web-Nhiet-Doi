@@ -60,3 +60,8 @@ D:\WenBenhVienNhietDoi\CommonHelper\bin\Debug\CommonHelper.pdb
 D:\WenBenhVienNhietDoi\CommonHelper\obj\Debug\CommonHelper.csprojAssemblyReference.cache
 D:\WenBenhVienNhietDoi\CommonHelper\obj\Debug\CommonHelper.dll
 D:\WenBenhVienNhietDoi\CommonHelper\obj\Debug\CommonHelper.pdb
+G:\OutSource\Web-Nhiet-Doi\CommonHelper\bin\Debug\CommonHelper.dll
+G:\OutSource\Web-Nhiet-Doi\CommonHelper\bin\Debug\CommonHelper.pdb
+G:\OutSource\Web-Nhiet-Doi\CommonHelper\obj\Debug\CommonHelper.csprojAssemblyReference.cache
+G:\OutSource\Web-Nhiet-Doi\CommonHelper\obj\Debug\CommonHelper.dll
+G:\OutSource\Web-Nhiet-Doi\CommonHelper\obj\Debug\CommonHelper.pdb

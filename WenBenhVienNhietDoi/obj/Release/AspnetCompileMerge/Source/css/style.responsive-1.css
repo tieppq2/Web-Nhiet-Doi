@@ -1,0 +1,127 @@
+@media (max-width: 1200px) {
+	header .container, header .headermenu .container {
+		width: 100%;
+	}
+	header .headermenu .navbar {
+		margin: 0 auto;
+		display: table;
+	}
+
+	.bghome_1 {
+		position: relative;
+		width: 100%;
+		padding: 0;
+		margin: 60px 0 20px;
+		background-image: none;
+		height: auto;
+	}
+	.bghome_1 .sleft {
+		position: relative;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		float: none;
+		height: auto;
+		display: table;
+	}
+	.bghome_1 .sright {
+		position: relative;
+		width: 100%;
+		height: auto;
+		padding: 0px;
+		margin: 0;
+		float: none;
+		background-image: none;
+	}
+}
+
+@media (max-width: 992px) {
+	header .logo {
+		margin: 0;
+		padding: 10px 0;
+		text-align: center;
+		width: 40%;
+	}
+	header .logo img {
+		height: 45px;
+		width: auto;
+	}
+	header .headtop {
+		position: relative;
+		width: auto;
+		margin: 0;
+		padding: 0;
+		display: block;
+		float: right;
+	}
+	header .headtop .headerSearch {
+		display: none;
+	}
+	header .headtop .headsocial {
+		width: auto;
+		display: block;
+		margin: 20px 10px 0 0;
+	}
+	header .headtop .language {
+		width: auto;
+		margin: 18px 0 0;
+	}
+
+}
+@media (max-width: 767px) {
+	.third-nav {
+		display: none;
+	}
+	.bghome_1 {
+		position: relative;
+		margin: 20px 0 20px;
+	}
+	ul.socialList {
+		margin: 0;
+		display: block;
+	}
+	header .headtop .headerSearch button {
+		top: 15px;
+	}
+
+	header .headermenu .navbar {
+		margin: 0;
+		display: block;
+	}
+
+	section .bg-right {
+		background-image: none;
+		padding: 0;
+		margin: 0;
+		position: relative;
+		display: block;
+		width: 100%;
+	}
+
+	.navbar-toggle .icon-bar {
+		display: block;
+		width: 22px;
+		height: 2px;
+		border-radius: 1px;
+		background: #ff0000;
+	}
+
+	footer .s_bottom, footer .text-right {
+		text-align: center;
+	}
+
+}
+@media (max-width: 420px) {
+	header .logo {
+		width: 30%;
+	}
+	header .logo img {
+		height: 35px;
+	}
+	header .headtop .headsocial {
+		margin: 15px 10px 0 0;
+	}
+	header .headtop .language {
+		margin: 13px 0 0;
+	}
+}

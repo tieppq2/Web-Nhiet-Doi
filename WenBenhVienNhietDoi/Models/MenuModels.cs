@@ -10,6 +10,7 @@ namespace WenBenhVienNhietDoi.Models
         int _id = 0;
         int _idCha = 0;
         string _TenMenu = string.Empty;
+        string _TenMenuCha = string.Empty;
         int _CapMenu = 0;
         string _linkurl = string.Empty;
 
@@ -18,6 +19,7 @@ namespace WenBenhVienNhietDoi.Models
         public string TenMenu { get => _TenMenu; set => _TenMenu = value; }
         public int CapMenu { get => _CapMenu; set => _CapMenu = value; }
         public string Linkurl { get => _linkurl; set => _linkurl = value; }
+        public string TenMenuCha { get => _TenMenuCha; set => _TenMenuCha = value; }
     }
     public class ListMenuModels
     {

@@ -1,0 +1,53 @@
+.faq {
+	position: relative;
+	display: block;
+	margin: 0px 0;
+	width: 100%;
+	padding: 0px;
+}
+.faq .listitem {
+	position: relative;
+	display: block;
+	margin: 0;
+	width: 100%;
+	padding: 0px;
+}
+.faq .listitem .item {
+	position: relative;
+	display: block;
+	margin: 0 0 10px;
+	width: 100%;
+	padding: 0 0 10px;
+	border-bottom: 1px dashed #ebebeb;
+}
+.faq .listitem .item h4 {
+	margin: 0;
+	padding: 0;
+}
+.faq .listitem .item a {
+	position: relative;
+	display: block;
+	margin: 0;
+	width: 100%;
+	padding: 0px;
+}
+.faq .s_search {
+	position: relative;
+	display: block;
+	margin: 20px 0;
+	width: 100%;
+	padding: 20px 40px;
+	text-align: center;
+	background-color: #fafafa;
+	border: 1px solid #ff0000;
+}
+.faq .sthanksend {
+	position: relative;
+	display: block;
+	margin: 20px 0;
+	width: 100%;
+	padding: 20px 40px;
+	text-align: center;
+	background-color: #fafafa;
+	border: 1px solid #0fd300;
+}

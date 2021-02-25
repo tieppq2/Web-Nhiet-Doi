@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_MasterPage.cshtml";
+}
+<div class="site-blocks-cover site-blocks-1 bg-light" style="padding-top: 10px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 news_content" style="background: #f3f4f5;">
+                @foreach (var item in ViewBag.TinTuc_Details)
+                {
+                    <div class="site-section-heading pt-3 mb-4">
+                        <h4 class="text-black" style="font-size:30px">@item.TieuDe</h4>
+                        <div class="title-time" style="margin-top: 15px;">
+                            <div style="width: 100%;text-align:right;">
+                                <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                @item.NgayDuyet&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="fa fa-eye" style="color:red; padding:0; font-size: 14px;"></i>
+                                <span id="idView">@item.SoLuongXem</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="icon icon-comment" style="color:red; padding:0; font-size: 14px;"></i>
+                            </div>
+                        </div>
+                        <hr style="margin: 0;">
+                    </div>
+                    <div style="    margin-top: 15px;">@Html.Raw(@item.NoiDung)</div>
+                }
+                <p ></p>
+
+                <div class="othernews">                    
+                    <span class="line mgt16"></span>
+                </div>
+                <div class="othernews">
+                    <div class="titothernews">
+                        Tin mới:
+                    </div>
+                    <div class="news1">
+                        @foreach (var item in ViewBag.TinTuc_Top5_New)
+                        {
+                            <a href="/TinTuc/Details/@item.idTinTuc" title="@item.TieuDe"><span class="other_news_title">@item.TieuDe</span></a>
+                        }                        
+                    </div>
+                </div>
+                <div class="othernews">
+                    <div class="titothernews">
+                        Các tin khác:
+                    </div>
+                    <div class="news1">
+                        @foreach (var item in ViewBag.TinTuc_Top5_NewOther)
+                        {
+                            <a href="/TinTuc/Details/@item.idTinTuc" title="@item.TieuDe"><span class="other_news_title">@item.TieuDe</span></a>
+                        }                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

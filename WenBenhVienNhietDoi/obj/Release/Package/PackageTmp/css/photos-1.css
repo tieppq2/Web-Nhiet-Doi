@@ -1,0 +1,223 @@
+/* photo_header */
+.photo_header {
+	padding: 0;
+	margin: 0;
+	position: relative;
+	width: 100%;
+	display: block;
+}
+.photo_header .s_head {
+	padding: 0;
+	margin: 0;
+	position: relative;
+	width: 100%;
+	display: block;
+}
+.photo_header .s_head h1 {
+	padding: 0 0 10px;
+	margin: 0 0 20px;
+	position: relative;
+	width: 100%;
+	display: block;
+	text-transform: uppercase;
+}
+.photo_header .s_head h1:after {
+	content: "";
+	width: 80px;
+	height: 2px;
+	overflow: hidden;
+	background-color: #db2032;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.photo_header .s_head h2 {
+	padding: 0 0 10px;
+	margin: 0 0 20px;
+	position: relative;
+	width: 100%;
+	display: block;
+	text-transform: uppercase;
+	border-bottom: 1px solid #ebebeb;
+}
+.photo_header .s_head h2::before {
+    content: "";
+    height: 2px;
+    width: 100px;
+    background-color: #db2032;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.photo_header .s_des {
+	padding: 0;
+	margin: 0;
+	position: relative;
+	width: 100%;
+	display: block;
+}
+.photo_header .s_des img {
+	width: 100%;
+}
+
+.photo_header .submenu {
+	padding: 0;
+	margin: 0;
+	position: relative;
+	width: 100%;
+	display: block;
+}
+/* mainphoto */
+.mainphoto {
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+.mainphoto .listalbum {
+	position: relative;
+	padding: 0;
+	margin: 0 0 20px;
+}
+.mainphoto .listalbum .item {
+	position: relative;
+	padding: 0;
+	margin: 0 0 20px;
+}
+.mainphoto .listalbum .item .album-image {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+.mainphoto .listalbum .item .album-image .hoverviewimg {
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 300;
+	position: absolute;
+	text-align: center;
+	padding: 20px;
+	width: 100%;
+	margin: 0;
+	background-color: rgba(0,0,0,0.5);
+	-webkit-transition: all 0.1s ease;
+	transition: all 0.1s ease;
+	bottom: -100px;
+}
+.mainphoto .listalbum .item .album-image:hover .hoverviewimg {
+	bottom: 0px;
+}
+.mainphoto .listalbum .item .album-image img {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	min-width: 100%;
+	min-height: 100%;
+	max-width: 120%;
+	max-height: 120%;
+}
+.mainphoto .listalbum .item:hover .album-image img, .mainphoto .listalbum .item:focus .album-image img, .mainphoto .listalbum .item:active .album-image img {
+	transform: scale(1.2);
+	transition: all 0.3s ease 0s;
+}
+.mainphoto .listalbum .item .album-image h3 {
+	color: #fff;
+	font-size: 15px;
+	font-weight: 300;
+	position: absolute;
+	text-align: center;
+	bottom: 0;
+	padding: 20px;
+	width: 100%;
+	margin: 0;
+	background-color: rgba(0,0,0,0.5);
+	-webkit-transition: all 0.1s ease;
+	transition: all 0.1s ease;
+}
+.mainphoto .listalbum .item:hover .album-image h3 {
+	font-weight: 600;
+}
+.mainphoto .listalbum .item .album-info {
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+	padding: 10px;
+}
+
+/* Responsive Facebook comments*/
+.fb-comments {
+	margin-left: -5px;
+	margin-right: -5px;
+}
+.fb_iframe_widget, .fb_iframe_widget, .fb_iframe_widget iframe[style] {
+	min-width: 100% !important;
+	width: 100% !important;
+}
+.fb-comments, .fb-comments iframe[style], .fb-like-box, .fb-like-box iframe[style], .fb-comments span, .fb-comments iframe span[style], .fb-like-box span, .fb-like-box iframe span[style] {
+	width: 100% !important;
+}
+.fb_iframe_widget_fluid span, .fb_iframe_widget iframe {
+	width: 100% !important
+}
+
+/*Fix Bootstrap*/
+.panel-body img {
+	margin: auto;
+}
+.album-name h3 {
+	line-height: 2.5
+}
+.view_detail {
+	height: auto;
+	overflow: auto
+}
+.pd5 {
+	padding: 5px
+}
+.pd10_0 {
+	padding: 10px 0px
+}
+.mg0_0_10 {
+	margin: 0px 0px 10px
+}
+.mg0_10_10 {
+	margin: 0px 10px 10px
+}
+.txt16 {
+	font-size: 16px
+}
+.txt20 {
+	font-size: 20px
+}
+.txt_bold {
+	font-weight: bold
+}
+.album-name h3 {
+	line-height: 1.5;
+	height: 40px;
+}
+
+.arrow_left {
+	position: absolute;
+	z-index: 999;
+	top: 50%;
+	left: 2%
+}
+.arrow_right {
+	position: absolute;
+	z-index: 999;
+	top: 50%;
+	right: 2%
+}
+
+.author_avatar {
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+}

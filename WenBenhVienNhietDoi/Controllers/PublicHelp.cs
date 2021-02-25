@@ -31,14 +31,16 @@ namespace WenBenhVienNhietDoi.Controllers
                 return objT;
             }).ToList();
         }
-        public DataSet DanhSach_TinTuc_main(string store, int IDCHA, int Top)
+        public DataSet DanhSach_TinTuc(string store, int IDCHA,int ID_Parent, int Top)
         {
             SqlParameter[] paras = {
-                new SqlParameter("@ID_CHA", SqlDbType.Int),
+                new SqlParameter("@ID", SqlDbType.Int),
+                new SqlParameter("@ID_Parent", SqlDbType.Int),
                 new SqlParameter("@count", SqlDbType.Int),
             };
             paras[0].Value = Convert.ToInt32(IDCHA);
-            paras[1].Value = Convert.ToInt32(Top);
+            paras[1].Value = Convert.ToInt32(ID_Parent);
+            paras[2].Value = Convert.ToInt32(Top);
             return DBProcess.GetDataSet(store, paras);
         }
     }

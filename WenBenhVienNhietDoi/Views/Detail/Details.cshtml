@@ -1,0 +1,77 @@
+﻿
+@{
+    //ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_MasterPage.cshtml";
+}
+<div class="site-blocks-cover site-blocks-1 bg-light" style="padding-top: 50px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 news_content">
+                @foreach (var item in ViewBag.TinTuc_Details)
+                {
+                    <div class="site-section-heading pt-3 mb-4">
+                        <h4 class="text-black">@item.TieuDe</h4>
+                        <div class="title-time" style="margin-top: 15px;">
+                            <div style="width: 100%;text-align:right;">
+                                <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                @item.NguoiDuyet&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="fa fa-eye" style="color:red; padding:0; font-size: 14px;"></i>
+                                <span id="idView">8,313</span> &nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="icon icon-comment" style="color:red; padding:0; font-size: 14px;"></i>
+                            </div>
+                        </div>
+                        <hr style="margin: 0;">
+                    </div>
+                    @item.NoiDung
+                }
+                @*<p class="titles">Theo công bố của các nhà khoa học Anh hôm 5/1/2016 thì khu vực Cận Sahara châu Phi và Đông Nam Á là 2 khu vực có nguy cơ cao nhất thế giới về sự lây truyền dịch bệnh từ loài dơi sang người và gây ra các căn bệnh mới làm bùng phát cao tỷ lệ tử vong.</p>
+                    <p></p>
+                    <p style="text-align: justify;">
+                        Các chuyên gia ước tính hiện có 60 – 75% bệnh truyền nhiễm đang nổi lên thuộc nhóm gọi là “zoo notie event” (tạm dịch là lây truyền từ động vật), sau khi các vi rút gây bệnh ở động vật “nhảy” sang người, đặc biệt là loài dơi, như chúng ta đã biết dơi là loài mang nhiều vi rút gây bệnh này. Người ta nghi ngờ loài động vật bé nhỏ này mang các vi rút nguyên bản như dại, Ebola, SARS (vi rút gây ra Hội chứng viêm đường hô hấp cấp) hay có khả năng cả vi rút gây ra Hội chứng hô hấp Địa Trung Hải (MERS) và cũng có thể gây các bệnh khác trong tương lai mà chúng ta chưa biết.
+                    </p>
+                    <p>
+                        &nbsp;
+                    </p>
+                    <p style="text-align: right;">
+                        <strong><em>Theo Reuters, ACD116</em></strong>
+                    </p>*@
+                <p></p>
+
+                <div class="othernews">
+                    <div class="fb-comments fb_iframe_widget fb_iframe_widget_fluid_desktop" data-href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/dong-nam-a-la-khu-vuc-co-nguy-co-cao-ve-su-lay-truyen-dich-benh-tu-doi/863" data-width="100%" data-numposts="20" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=304378406871567&amp;container_width=730&amp;height=100&amp;href=http%3A%2F%2Fbenhnhietdoi.vn%2Ftin-tuc%2Fchi-tiet%2Fdong-nam-a-la-khu-vuc-co-nguy-co-cao-ve-su-lay-truyen-dich-benh-tu-doi%2F863&amp;locale=vi_VN&amp;numposts=20&amp;sdk=joey&amp;version=v3.2&amp;width=" style="width: 100%;"><span style="vertical-align: bottom; width: 100%; height: 211px;"><iframe name="f22eb9c69edac3" width="1000px" height="100px" data-testid="fb:comments Facebook Social Plugin" title="fb:comments Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v3.2/plugins/comments.php?app_id=304378406871567&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df367c67fe6ad3dc%26domain%3Dbenhnhietdoi.vn%26origin%3Dhttp%253A%252F%252Fbenhnhietdoi.vn%252Ff3e60fb901939d8%26relation%3Dparent.parent&amp;container_width=730&amp;height=100&amp;href=http%3A%2F%2Fbenhnhietdoi.vn%2Ftin-tuc%2Fchi-tiet%2Fdong-nam-a-la-khu-vuc-co-nguy-co-cao-ve-su-lay-truyen-dich-benh-tu-doi%2F863&amp;locale=vi_VN&amp;numposts=20&amp;sdk=joey&amp;version=v3.2&amp;width=" style="border: none; visibility: visible; width: 100%; height: 211px;" class=""></iframe></span></div>
+                    <div class="fb-like fb_iframe_widget" data-href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/dong-nam-a-la-khu-vuc-co-nguy-co-cao-ve-su-lay-truyen-dich-benh-tu-doi/863" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=304378406871567&amp;container_width=730&amp;href=http%3A%2F%2Fbenhnhietdoi.vn%2Ftin-tuc%2Fchi-tiet%2Fdong-nam-a-la-khu-vuc-co-nguy-co-cao-ve-su-lay-truyen-dich-benh-tu-doi%2F863&amp;layout=standard&amp;locale=vi_VN&amp;sdk=joey&amp;share=true&amp;show_faces=true"><span style="vertical-align: bottom; width: 450px; height: 28px;"><iframe name="f26dc33bf2777d" width="1000px" height="1000px" data-testid="fb:like Facebook Social Plugin" title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v3.2/plugins/like.php?action=like&amp;app_id=304378406871567&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df1ba4089e67f294%26domain%3Dbenhnhietdoi.vn%26origin%3Dhttp%253A%252F%252Fbenhnhietdoi.vn%252Ff3e60fb901939d8%26relation%3Dparent.parent&amp;container_width=730&amp;href=http%3A%2F%2Fbenhnhietdoi.vn%2Ftin-tuc%2Fchi-tiet%2Fdong-nam-a-la-khu-vuc-co-nguy-co-cao-ve-su-lay-truyen-dich-benh-tu-doi%2F863&amp;layout=standard&amp;locale=vi_VN&amp;sdk=joey&amp;share=true&amp;show_faces=true" style="border: none; visibility: visible; width: 450px; height: 28px;" class=""></iframe></span></div>
+                </div>
+                <div class="othernews">
+                    <div class="titothernews">
+                        Tin mới:
+                    </div>
+                    <div class="news1">
+                        <a href="/tin-tuc/chi-tiet/thong-bao-ve-viec-hoan-buoi-gap-mat-can-bo-huu-tri-nam-2021/1007" title="THÔNG BÁO VỀ VIỆC HOÃN BUỔI GẶP MẶT CÁN BỘ HƯU TRÍ NĂM 2021"><span class="other_news_title">THÔNG BÁO VỀ VIỆC HOÃN BUỔI GẶP MẶT CÁN BỘ HƯU TRÍ NĂM 2021</span></a>
+                        <a href="/tin-tuc/chi-tiet/hoi-nghi-can-bo-vien-chuc-nguoi-lao-dong-nam-2020-va-phuong-huong-nhiem-vu-nam-2021/1003" title="HỘI NGHỊ CÁN BỘ VIÊN CHỨC, NGƯỜI LAO ĐỘNG NĂM 2020 VÀ PHƯƠNG HƯỚNG NHIỆM VỤ NĂM 2021"><span class="other_news_title">HỘI NGHỊ CÁN BỘ VIÊN CHỨC, NGƯỜI LAO ĐỘNG NĂM 2020 VÀ PHƯƠNG HƯỚNG NHIỆM VỤ NĂM 2021</span></a>
+                        <a href="/tin-tuc/chi-tiet/thong-bao-lich-lam-viec-cua-khoa-kham-benh-theo-yeu-cau-va-tiem-chung-vac-xin/1001" title="THÔNG BÁO LỊCH LÀM VIỆC CỦA KHOA KHÁM BỆNH THEO YÊU CẦU VÀ TIÊM CHỦNG VẮC XIN"><span class="other_news_title">THÔNG BÁO LỊCH LÀM VIỆC CỦA KHOA KHÁM BỆNH THEO YÊU CẦU VÀ TIÊM CHỦNG VẮC XIN</span></a>
+                        <a href="/tin-tuc/chi-tiet/dai-dien-benh-vien-benh-nhiet-doi-trung-uong-tham-du-dai-hoi-thi-dua-yeu-nuoc-toan-quoc/999" title="ĐẠI DIỆN BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG THAM DỰ ĐẠI HỘI THI ĐUA YÊU NƯỚC TOÀN QUỐC"><span class="other_news_title">ĐẠI DIỆN BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG THAM DỰ ĐẠI HỘI THI ĐUA YÊU NƯỚC TOÀN QUỐC</span></a>
+                        <a href="/tin-tuc/chi-tiet/benh-vien-benh-nhiet-doi-trung-uong-bao-cao-thanh-tich-dien-hinh-tien-tien-voi-chu-tich-quoc-hoi-nguyen-thi-kim-ngan-truoc-them-dai-hoi-thi-dua-yeu-nuoc-toan-quoc-nam-2020/998" title="BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG BÁO CÁO THÀNH TÍCH ĐIỂN HÌNH TIÊN TIẾN VỚI CHỦ TỊCH QUỐC HỘI NGUYỄN THỊ KIM NGÂN TRƯỚC THỀM ĐẠI HỘI THI ĐUA YÊU NƯỚC TOÀN QUỐC NĂM 2020"><span class="other_news_title">BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG BÁO CÁO THÀNH TÍCH ĐIỂN HÌNH TIÊN TIẾN VỚI CHỦ TỊCH QUỐC HỘI NGUYỄN THỊ KIM NGÂN TRƯỚC THỀM ĐẠI HỘI THI ĐUA YÊU NƯỚC TOÀN QUỐC NĂM 2020</span></a>
+                        <a href="/tin-tuc/chi-tiet/khai-truong-don-vi-kham-chua-benh-theo-yeu-cau-va-tiem-chung-vac-xin/996" title="KHAI TRƯƠNG ĐƠN VỊ KHÁM CHỮA BỆNH THEO YÊU CẦU VÀ TIÊM CHỦNG VẮC XIN"><span class="other_news_title">KHAI TRƯƠNG ĐƠN VỊ KHÁM CHỮA BỆNH THEO YÊU CẦU VÀ TIÊM CHỦNG VẮC XIN</span></a>
+
+                    </div>
+                </div>
+                <div class="othernews">
+                    <div class="titothernews">
+                        Các tin khác:
+                    </div>
+                    <div class="news1">
+                        <a href="/tin-tuc/chi-tiet/dich-benh-da-co-cach-day-gan-6-000-nam/862" title="Dịch bệnh đã có cách đây gần… 6.000 năm"><span class="other_news_title">Dịch bệnh đã có cách đây gần… 6.000 năm</span></a>
+                        <a href="/tin-tuc/chi-tiet/khang-sinh-dau-tien-duoc-che-tao-sau-30-nam/861" title="Kháng sinh đầu tiên được chế tạo sau 30 năm"><span class="other_news_title">Kháng sinh đầu tiên được chế tạo sau 30 năm</span></a>
+                        <a href="/tin-tuc/chi-tiet/phan-ung-day-truyen-tiem-chung-19-tre-bi-met-xiu-sau-tiem-vac-xin-soi-rubella/860" title="Phản ứng dây truyền tiêm chủng 19 trẻ bị mệt xỉu sau tiêm vắc xin sởi – rubella"><span class="other_news_title">Phản ứng dây truyền tiêm chủng 19 trẻ bị mệt xỉu sau tiêm vắc xin sởi – rubella</span></a>
+                        <a href="/tin-tuc/chi-tiet/chuong-trinh-tiem-chung-cho-tre-em-cua-my-da-giup-tranh-duoc-700-000-truong-hop-tu-vong/859" title="Chương trình tiêm chủng cho trẻ em của Mỹ đã giúp tránh được 700.000 trường hợp tử vong"><span class="other_news_title">Chương trình tiêm chủng cho trẻ em của Mỹ đã giúp tránh được 700.000 trường hợp tử vong</span></a>
+                        <a href="/tin-tuc/chi-tiet/hiem-hoa-tu-benh-viem-mang-nao-do-nao-mo-cau-neisseria-meningitidis/858" title="HIỂM HOẠ TỪ BỆNH VIÊM MÀNG NÃO DO NÃO MÔ CẦU ( Neisseria meningitidis )"><span class="other_news_title">HIỂM HOẠ TỪ BỆNH VIÊM MÀNG NÃO DO NÃO MÔ CẦU ( Neisseria meningitidis )</span></a>
+                        <a href="/tin-tuc/chi-tiet/canh-giac-voi-benh-viem-nao-nhat-ban-trong-mua-he/857" title="CẢNH GIÁC VỚI BỆNH VIÊM NÃO NHẬT BẢN TRONG MÙA HÈ"><span class="other_news_title">CẢNH GIÁC VỚI BỆNH VIÊM NÃO NHẬT BẢN TRONG MÙA HÈ</span></a>
+                        <a href="/tin-tuc/chi-tiet/tiem-vac-xin-viem-gan-b-trong-24-gio-sau-khi-sinh-cach-tot-nhat-phong-lay-truyen-viem-gan-b-tu-me-sang-con/856" title="Tiêm vắc-xin viêm gan B trong 24 giờ sau khi sinh - Cách tốt nhất phòng lây truyền viêm gan B từ mẹ sang con"><span class="other_news_title">Tiêm vắc-xin viêm gan B trong 24 giờ sau khi sinh - Cách tốt nhất phòng lây truyền viêm gan B từ mẹ sang con</span></a>
+                        <a href="/tin-tuc/chi-tiet/benh-thuy-dau/855" title="BỆNH THUỶ ĐẬU"><span class="other_news_title">BỆNH THUỶ ĐẬU</span></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

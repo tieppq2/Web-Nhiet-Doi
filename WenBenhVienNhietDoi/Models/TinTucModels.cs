@@ -9,6 +9,7 @@ namespace WenBenhVienNhietDoi.Models
 {
     public class TinTucModels
     {
+        int _idTinTuc = 0;
         string _TieuDe = string.Empty;
         string _TomTatNoiDung = string.Empty;
         string _NoiDung = string.Empty;
@@ -26,6 +27,7 @@ namespace WenBenhVienNhietDoi.Models
         int _type = 0;
         string _CrawData = string.Empty;
 
+        public int idTinTuc { get => _idTinTuc; set => _idTinTuc = value; }
         public string TieuDe { get => _TieuDe; set => _TieuDe = value; }
         public string TomTatNoiDung { get => _TomTatNoiDung; set => _TomTatNoiDung = value; }
         public string NoiDung { get => _NoiDung; set => _NoiDung = value; }
@@ -42,5 +44,6 @@ namespace WenBenhVienNhietDoi.Models
         public int SoLuongXem { get => _SoLuongXem; set => _SoLuongXem = value; }
         public string CrawData { get => _CrawData; set => _CrawData = value; }
         public int Type { get => _type; set => _type = value; }
+        
     }
 }
