@@ -184,6 +184,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MenuLinkModels.cs" />
     <Compile Include="Models\MenuModels.cs" />
     <Compile Include="Models\TinTucModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -266,7 +267,26 @@
     <Content Include="Images\0-17.jpg" />
     <Content Include="Images\0-8.jpg" />
     <Content Include="Images\0-9.jpg" />
+    <Content Include="Images\083203978.jpg" />
+    <Content Include="Images\090650648.jpg" />
+    <Content Include="Images\093840021.jpg" />
+    <Content Include="Images\094126661.jpg" />
+    <Content Include="Images\094554130.jpg" />
+    <Content Include="Images\101115408.jpg" />
+    <Content Include="Images\102741329.jpg" />
     <Content Include="Images\123.jpg" />
+    <Content Include="Images\12345.jpg" />
+    <Content Include="Images\125714687.jpg" />
+    <Content Include="Images\133033512.jpg" />
+    <Content Include="Images\134543592.jpg" />
+    <Content Include="Images\140543393.jpg" />
+    <Content Include="Images\141524490.jpg" />
+    <Content Include="Images\141631853.jpg" />
+    <Content Include="Images\150310772.jpg" />
+    <Content Include="Images\151055694.png" />
+    <Content Include="Images\155905918.jpg" />
+    <Content Include="Images\192516180.jpg" />
+    <Content Include="Images\1d3c62d6335938ddSOYTE.jpg" />
     <Content Include="Images\27-2.jpg" />
     <Content Include="Images\27073274_411293955980577_927263042436179528_n-1.jpg" />
     <Content Include="Images\3.1.jpg" />
@@ -288,6 +308,7 @@
     <Content Include="Images\banner3.jpg" />
     <Content Include="Images\banner4.jpg" />
     <Content Include="Images\banner5.jpg" />
+    <Content Include="Images\banner_byt.png" />
     <Content Include="Images\benh-tri_bv-minh-anh_1.jpg" />
     <Content Include="Images\bghome1-1.gif" />
     <Content Include="Images\bghome1.gif" />
@@ -315,6 +336,7 @@
     <Content Include="Images\btnPrevious-3.png" />
     <Content Include="Images\btnPrevious-4.png" />
     <Content Include="Images\btnPrevious.png" />
+    <Content Include="Images\bull2.gif" />
     <Content Include="Images\bvminhanh-1-1.jpg" />
     <Content Include="Images\bvminhanh-1.jpg" />
     <Content Include="Images\bvminhanh_1_1.jpg" />
@@ -368,6 +390,7 @@
     <Content Include="Images\dong-luu-ba.png" />
     <Content Include="Images\dot.gif" />
     <Content Include="Images\ds-hong_bvminhanh.jpg" />
+    <Content Include="Images\ekip.JPG" />
     <Content Include="Images\face.jpg" />
     <Content Include="Images\favicon-1.png" />
     <Content Include="Images\favicon.png" />
@@ -419,6 +442,7 @@
     <Content Include="Images\index.php-second=cronjobs&amp;p=s438yTWc.jpg" />
     <Content Include="Images\index.php-second=cronjobs&amp;p=s5vl5F8h.jpg" />
     <Content Include="Images\japan-1.jpg" />
+    <Content Include="Images\khai-bao-y-te.jpg" />
     <Content Include="Images\khai-truong_bvminhanh-1.jpg" />
     <Content Include="Images\kham-mat-2.jpg" />
     <Content Include="Images\kham-mat-3.jpg" />
@@ -440,6 +464,7 @@
     <Content Include="Images\ksk-tong-qua_bv-minh-anh-7-1.jpg" />
     <Content Include="Images\ksk-tong-qua_bv-minh-anh-7-2.jpg" />
     <Content Include="Images\ksk-tong-qua_bv-minh-anh-7.jpg" />
+    <Content Include="Images\layout_set_logo_byt.png" />
     <Content Include="Images\le-ba-truong.jpg" />
     <Content Include="Images\le-huy-hoa.jpg" />
     <Content Include="Images\le-huy-hoa.png" />
@@ -452,6 +477,7 @@
     <Content Include="Images\lead_960_3.jpg" />
     <Content Include="Images\lead_960_4-1.jpg" />
     <Content Include="Images\lead_960_4.jpg" />
+    <Content Include="Images\line.png" />
     <Content Include="Images\loader-1.gif" />
     <Content Include="Images\loader-2.gif" />
     <Content Include="Images\loader-3.gif" />
@@ -468,6 +494,7 @@
     <Content Include="Images\logo-1.png" />
     <Content Include="Images\logo-hoitinhmach000.png" />
     <Content Include="Images\logo.png" />
+    <Content Include="Images\LOGOBVND.png" />
     <Content Include="Images\logocopy.png" />
     <Content Include="Images\ma-2.jpg" />
     <Content Include="Images\mai-van-minh.jpg" />

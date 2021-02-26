@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -22,7 +23,7 @@ namespace WenBenhVienNhietDoi.Controllers
         }
         public ActionResult Details(int ID,int CapMenu)
         {
-            if(CapMenu==1)
+            if (CapMenu==1)
             {
                 DataSet TinTuc_Details = _publicHelp.DanhSach_TinTuc("TinTuc_Details", 0, ID, 5);
                 ViewBag.TinTuc_Details = _publicHelp.ConvertToList<TinTucModels>(TinTuc_Details.Tables[0]);
@@ -39,6 +40,9 @@ namespace WenBenhVienNhietDoi.Controllers
             }
             else
             {
+                DataSet DanhSach_TinTuc_MainParent = _publicHelp.DanhSach_TinTuc_MainParent("TinTuc_Details_main", ID, CapMenu, 5);
+                ViewBag.TinTuc_MainParent = _publicHelp.ConvertToList<TinTucModels>(DanhSach_TinTuc_MainParent.Tables[0]);
+                ViewBag.DanhSach_Menu_MainParent = _publicHelp.ConvertToList<MenuLinkModels>(DanhSach_TinTuc_MainParent.Tables[1]);
                 return View("~/Views/MainParent/DetailsMainParent.cshtml");
             }
             

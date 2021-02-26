@@ -25,7 +25,10 @@ namespace WenBenhVienNhietDoi.Models
         string _url_file = string.Empty;
         int _SoLuongXem = 0;
         int _type = 0;
+        int _CapMenu = 0;
         string _CrawData = string.Empty;
+        string _MenuParent = string.Empty;
+        string _TenMenu = string.Empty;
 
         public int idTinTuc { get => _idTinTuc; set => _idTinTuc = value; }
         public string TieuDe { get => _TieuDe; set => _TieuDe = value; }
@@ -44,6 +47,8 @@ namespace WenBenhVienNhietDoi.Models
         public int SoLuongXem { get => _SoLuongXem; set => _SoLuongXem = value; }
         public string CrawData { get => _CrawData; set => _CrawData = value; }
         public int Type { get => _type; set => _type = value; }
-        
+        public string MenuParent { get => _MenuParent; set => _MenuParent = value; }
+        public string TenMenu { get => _TenMenu; set => _TenMenu = value; }
+        public int CapMenu { get => _CapMenu; set => _CapMenu = value; }
     }
 }
