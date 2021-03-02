@@ -1,0 +1,85 @@
+.show_service {
+	position: relative;
+	display: table;
+	margin: 30px 0 0;
+	padding: 0;
+	width: 100%;
+}
+.show_service .item {
+	position: relative;
+	display: block;
+	margin: 0 0 20px;
+	width: 100%;
+	padding: 0;
+	background-color: #f0f0f0;
+	border-bottom: 2px solid #db2032;
+	overflow: hidden;
+}
+.show_service .item .s_image {
+	position: relative;
+	display: block;
+	margin: 0px auto;
+	padding: 0px;
+	width: 100%;
+	height: 150px;
+	overflow: hidden;
+	text-align: center;
+}
+.show_service .item .s_image img {
+	width: 100%;
+	min-height: 150px;
+}
+.show_service .item .s_des {
+	position: relative;
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 20px 20px;
+	overflow: hidden;
+}
+.show_service .item .s_des p {
+	text-align: justify
+}
+.show_service .item .s_des a h3 {
+	color: #333;
+	padding: 0;
+	margin: 0 auto 10px;
+	-webkit-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+
+	line-height: 20px;
+}
+.show_service .item .s_des a h3:hover {
+	color: #db2032;
+}
+.show_service .vmore {
+	position: relative;
+	display: table;
+	margin: 20px auto 0;
+	padding: 0px;
+	text-align: center;
+}
+.show_service .vmore a {
+	position: relative;
+	margin: 0;
+	padding: 10px 30px;
+	text-align: center;
+	color: #db2032;
+	border: 1px solid #db2032;
+}
+.show_service .vmore a:hover {
+	color: #333;
+	border: 1px solid #333;
+}
+
+@media (max-width: 767px) {
+	.show_service .item .s_image {
+		height: auto;
+	}
+	.show_service .item .s_image img {
+		min-height: auto;
+	}
+}
+
+@media (max-width: 499px) {
+}

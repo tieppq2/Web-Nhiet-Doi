@@ -26,4 +26,18 @@ namespace WenBenhVienNhietDoi.Models
         public List<MenuModels> ListParentMenu { get; set; }
         public List<MenuModels> ListMenu { get; set; }
     }
+    public class Child
+    {
+        public int id { get; set; }
+        public string text { get; set; }
+
+        public string url { get; set; }
+    }
+    public class MenuJson
+    {
+        public int id { get; set; }
+        public string text { get; set; }
+        public string url { get; set; }
+        public List<Child> inc { get; set; }
+    }
 }

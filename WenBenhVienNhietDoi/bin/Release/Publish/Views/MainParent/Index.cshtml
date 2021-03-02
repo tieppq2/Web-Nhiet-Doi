@@ -1,0 +1,171 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MasterPage.cshtml";
+}
+<div class="site-blocks-cover site-blocks-1 bg-light" style="padding-top: 50px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                <div class="row" style="width:100%; padding: 2px; margin-left:0px;">
+                    <!--Tin mới-->
+                    @*<section class="elementor-section elementor-inner-section elementor-element elementor-element-ea5040e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ea5040e" data-element_type="section">
+                            <div class="elementor-widget-container">
+                                <h2 class="elementor-heading-title elementor-size-default">Tin Tức</h2>
+                            </div>
+                        </section>*@
+                    <h2 class="news-header-title heading-line"> <a href="https://moh.gov.vn:443/hoat-dong-cua-lanh-dao-bo?p_p_auth=BKXPljq4QE&amp;p_p_id=101_INSTANCE_iVSSyRXdH68n&amp;p_p_lifecycle=0&amp;p_p_col_id=row-0-column-2&amp;p_p_col_count=2" title="HOẠT ĐỘNG CỦA LÃNH ĐẠO BỘ">HOẠT ĐỘNG CỦA LÃNH ĐẠO BỘ</a> </h2>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:10px 10px 10px 0px;">
+                        @foreach (var item in ViewBag.DanhSach_TinTuc_Top_main)
+                        {
+                            <div class="news-hot-home-3">
+                                <div style="float: left; z-index: 2;">
+                                    <a href="/TinTuc/Details/@item.idTinTuc" target="_blank">
+                                        <img src="@item.Avata" alt="@item.TieuDe" style="width:250px; height:170px;">
+                                    </a>
+                                </div>
+                                <div style="padding-left:273px;">
+                                    <div class="titleTranblock">
+                                        <a href="/TinTuc/Details/@item.idTinTuc" target="_blank">@item.TieuDe</a>
+                                    </div>
+                                    <div class="line-time" >@item.TomTatNoiDung</div>
+                                    <div class="title-time">
+                                        <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                        @item.NgayDuyet&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <i class="fa fa-eye" style="color:red; padding:0; font-size: 14px;"></i>
+                                        <span id="idView">@item.SoLuongXem</span>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        <div style="position: absolute;    left: 50%;">
+                            <a id="prev-page" style="color: #000;"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                            &nbsp;&nbsp;
+                            <a id="next-page" style="color: #000;"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <!--Đăng ký tư vấn-->
+                <div id="cpos_7" style="width: 100%; padding: 0px; margin-top: 20px;">
+                    <div class="box_c box_c_1" style="margin: 0;">
+                        <div class="box_body">
+                            <div class="contact_c regbox-c">
+                                <div class="form">
+                                    <p><a class="btn btn--orange btnDangKyOnline" href="http://benhnhietdoi.vn/dang-ky-kham"><span class="fa fa-list-ol"></span>&nbsp;&nbsp;ĐĂNG KÝ KHÁM</a></p>
+                                    <p><a class="btn btn--green btnDangKyOnline" href="http://benhnhietdoi.vn/tin-tuc/thong-tin-uu-dai/13"><span class="fa fa-bullhorn"></span>&nbsp;&nbsp;THÔNG TIN ƯU ĐÃI</a></p>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Khai báo y tế-->
+                <div class="elementor-element elementor-element-c161c37 elementor-widget elementor-widget-image" data-id="c161c37" data-element_type="widget" data-widget_type="image.default">
+                    <div style="margin-left:2px">
+                        <div class="elementor-image">
+                            <a href="https://tokhaiyte.vn/" target="_blank" rel="noopener">
+                                <img style=" margin-top: 10px;width: 100%;" width="614" height="274" src="../Images/12345.jpg" class="attachment-large size-large" alt="" loading="lazy" sizes="(max-width: 614px) 100vw, 614px" title="KHAI BÁO Y TẾ">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Thông điệp BV-->
+                <div class="elementor-element elementor-element-c161c37 elementor-widget elementor-widget-image" data-id="c161c37" data-element_type="widget" data-widget_type="image.default">
+                    <div style="margin-left:2px">
+                        <div class="elementor-image">
+                            <a href="" target="_blank" rel="noopener">
+                                <img style=" margin-top: 10px;width: 100%;" width="614" height="274" src="../Images/thong_diep_5k--15753885916748196.jpg" class="attachment-large size-large" alt="" loading="lazy" sizes="(max-width: 614px) 100vw, 614px">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Liên kết nhanh-->
+                <div style="margin-top: 10px;" class="elementor-element elementor-element-46ca6b9 elementor-widget elementor-widget-heading" data-id="46ca6b9" data-element_type="widget" data-widget_type="heading.default">
+                    <div class="elementor-widget-container-2 " style="background-color: #dc3545;margin-top: 10px;">
+                        <h3 class="h3-element-heading">Liên kết nhanh</h3>
+                    </div>
+                </div>
+                <div class="news-hot-home-2">
+                    <div style="float: left; z-index: 2;">
+                        <a href="https://soyte.hungyen.gov.vn/portal/Pages/default.aspx" target="_blank">
+                            <img src="../Images/1d3c62d6335938ddSOYTE.jpg" style="width:100%; height:90px;margin-top:2px">
+                        </a>
+                    </div>
+                </div>
+                <div class="news-hot-home-2">
+                    <div style="float: left; z-index: 2;" class="banner-moh">
+                        <a href="https://moh.gov.vn/" target="_blank">
+                            <img src="../Images/layout_set_logo_byt.png" style="width:100%; height:90px;">
+                        </a>
+                    </div>
+                </div>
+                <!--Video-->
+                <div style="margin-top: 10px;max-width: 100px;margin-inline: auto;" class="elementor-element elementor-element-46ca6b9 elementor-widget elementor-widget-heading" data-id="46ca6b9" data-element_type="widget" data-widget_type="heading.default">
+                    <div class="elementor-widget-container-2">
+                        <h3 class="h3-element-heading">Video</h3>
+                    </div>
+                </div>
+                <div class="elementor-element elementor-element-549f709 elementor-aspect-ratio-169 elementor-widget elementor-widget-video" data-id="549f709" data-element_type="widget" data-settings="{&quot;aspect_ratio&quot;:&quot;169&quot;}" data-widget_type="video.default">
+                    <div style="margin-left:2px">
+                        <div class="elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
+                            <iframe style="margin-top: 10px;width: 100%;" class="elementor-video-iframe" allowfullscreen="" title="youtube Video Player" src="https://player.vimeo.com/video/137857207"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="elementor-element elementor-element-8f4e086 elementor-aspect-ratio-169 elementor-widget elementor-widget-video" data-id="8f4e086" data-element_type="widget" data-settings="{&quot;aspect_ratio&quot;:&quot;169&quot;}" data-widget_type="video.default">
+                    <div style="margin-left:2px">
+                        <div class="elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
+                            <iframe style="width: 100%;" class="elementor-video-iframe" allowfullscreen="" title="youtube Video Player" src="https://player.vimeo.com/video/137857207"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!--Truyền thông-->
+                @*<div class="elementor-element elementor-element-46ca6b9 elementor-widget elementor-widget-heading" data-id="46ca6b9" data-element_type="widget" data-widget_type="heading.default">
+                        <div class="elementor-widget-container-2">
+                            <h3 class="h3-element-heading">Truyền thông</h3>
+                        </div>
+                    </div>
+                    <div style="margin-top:10px">
+                        <div class="news-hot-home-2">
+                            <div style="float: left; z-index: 2;">
+                                <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/hoi-nghi-can-bo-vien-chuc-nguoi-lao-dong-nam-2020-va-phuong-huong-nhiem-vu-nam-2021/1003">
+                                    <img src="../Images/133033512.jpg" alt="HỘI NGHỊ CÁN BỘ VIÊN CHỨC, NGƯỜI LAO ĐỘNG NĂM 2020 VÀ PHƯƠNG HƯỚNG NHIỆM VỤ NĂM 2021" style="width:120px; height:80px;">
+                                </a>
+                            </div>
+                            <div style="padding-left:135px;">
+                                <div class="titleTranblock">
+                                    <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/hoi-nghi-can-bo-vien-chuc-nguoi-lao-dong-nam-2020-va-phuong-huong-nhiem-vu-nam-2021/1003">HỘI NGHỊ CÁN BỘ VIÊN CHỨC, NGƯỜI LAO ĐỘNG NĂM 2020...</a>
+                                </div>
+                                <div class="line-time"></div>
+                                <div class="title-time" style="text-align: right;">
+                                    <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                    13/01/2021 13:30&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-hot-home-2">
+                            <div style="float: left; z-index: 2;">
+                                <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/hoi-nghi-can-bo-vien-chuc-nguoi-lao-dong-nam-2020-va-phuong-huong-nhiem-vu-nam-2021/1003">
+                                    <img src="../Images/133033512.jpg" alt="HỘI NGHỊ CÁN BỘ VIÊN CHỨC, NGƯỜI LAO ĐỘNG NĂM 2020 VÀ PHƯƠNG HƯỚNG NHIỆM VỤ NĂM 2021" style="width:120px; height:80px;">
+                                </a>
+                            </div>
+                            <div style="padding-left:135px;">
+                                <div class="titleTranblock">
+                                    <a href="http://benhnhietdoi.vn/tin-tuc/chi-tiet/hoi-nghi-can-bo-vien-chuc-nguoi-lao-dong-nam-2020-va-phuong-huong-nhiem-vu-nam-2021/1003">HỘI NGHỊ CÁN BỘ VIÊN CHỨC, NGƯỜI LAO ĐỘNG NĂM 2020...</a>
+                                </div>
+                                <div class="line-time"></div>
+                                <div class="title-time" style="text-align: right;">
+                                    <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                    13/01/2021 13:30&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                            </div>
+                        </div>
+                    </div>*@
+            </div>
+        </div>
+    </div>
+</div>    

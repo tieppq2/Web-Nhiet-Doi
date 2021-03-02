@@ -1,0 +1,1909 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>G:\OutSource\Web-Nhiet-Doi\WenBenhVienNhietDoi\bin\Release\Publish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="bin/CommonHelper.dll">
+      <publishTime>02/26/2021 15:30:52</publishTime>
+    </File>
+    <File Include="bin/CommonHelper.pdb">
+      <publishTime>02/26/2021 15:30:52</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Google.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>02/05/2021 14:40:07</publishTime>
+    </File>
+    <File Include="bin/WenBenhVienNhietDoi.dll">
+      <publishTime>03/01/2021 09:32:17</publishTime>
+    </File>
+    <File Include="bin/WenBenhVienNhietDoi.pdb">
+      <publishTime>03/01/2021 09:32:17</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>02/05/2021 14:40:05</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css.map">
+      <publishTime>02/05/2021 14:40:05</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>02/05/2021 14:40:05</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css.map">
+      <publishTime>02/05/2021 14:40:05</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>02/05/2021 14:40:05</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>02/05/2021 14:40:05</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>02/05/2021 14:40:05</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css.map">
+      <publishTime>02/05/2021 14:40:05</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>02/05/2021 14:40:05</publishTime>
+    </File>
+    <File Include="css/animate.min-1.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/animate.min.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/bghome1.gif">
+      <publishTime>05/30/2018 11:24:06</publishTime>
+    </File>
+    <File Include="css/bghome1_right.gif">
+      <publishTime>05/30/2018 11:24:06</publishTime>
+    </File>
+    <File Include="css/bgright.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="css/bgtab.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="css/blueimp-gallery.min-1.css">
+      <publishTime>06/02/2018 11:28:51</publishTime>
+    </File>
+    <File Include="css/blueimp-gallery.min.css">
+      <publishTime>06/02/2018 11:28:51</publishTime>
+    </File>
+    <File Include="css/bootstrap.min.css">
+      <publishTime>02/18/2021 09:22:00</publishTime>
+    </File>
+    <File Include="css/bx_loader-1.gif">
+      <publishTime>05/30/2018 11:24:06</publishTime>
+    </File>
+    <File Include="css/comment-1.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/comment.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/contact.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/controls-1.png">
+      <publishTime>06/01/2018 07:54:16</publishTime>
+    </File>
+    <File Include="css/controls-sliderhome.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="css/css-family=Muli-400,400i,700,700i.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/detailvideo.css">
+      <publishTime>06/04/2018 07:59:05</publishTime>
+    </File>
+    <File Include="css/dot.gif">
+      <publishTime>05/30/2018 11:24:06</publishTime>
+    </File>
+    <File Include="css/faq.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/font-awesome.min-1.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/font-awesome.min.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/fontawesome-webfont.eot-v=4.7-1.0">
+      <publishTime>05/30/2018 11:27:14</publishTime>
+    </File>
+    <File Include="css/fontawesome-webfont.eot-v=4.7.0">
+      <publishTime>05/30/2018 11:27:14</publishTime>
+    </File>
+    <File Include="css/fontawesome-webfont.svg-v=4.7-1.0">
+      <publishTime>05/30/2018 11:27:14</publishTime>
+    </File>
+    <File Include="css/fontawesome-webfont.svg-v=4.7.0">
+      <publishTime>05/30/2018 11:27:14</publishTime>
+    </File>
+    <File Include="css/fontawesome-webfont.ttf-v=4.7-1.0">
+      <publishTime>05/30/2018 11:27:14</publishTime>
+    </File>
+    <File Include="css/fontawesome-webfont.ttf-v=4.7.0">
+      <publishTime>05/30/2018 11:27:14</publishTime>
+    </File>
+    <File Include="css/fontawesome-webfont.woff">
+      <publishTime>05/30/2018 11:27:14</publishTime>
+    </File>
+    <File Include="css/fontawesome-webfont.woff-v=4.7-1.0">
+      <publishTime>05/30/2018 11:27:14</publishTime>
+    </File>
+    <File Include="css/fontawesome-webfont.woff2-v=4.7-1.0">
+      <publishTime>05/30/2018 11:27:14</publishTime>
+    </File>
+    <File Include="css/fontawesome-webfont.woff2-v=4.7.0">
+      <publishTime>05/30/2018 11:27:14</publishTime>
+    </File>
+    <File Include="css/github-1.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/github.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/global.service.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/global.y_kien_khach_hang.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/hospital-1.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/hospital.css">
+      <publishTime>05/30/2018 11:22:27</publishTime>
+    </File>
+    <File Include="css/hover-min-1.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/hover-min.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/icon-zalo-hover.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="css/jquery.bxslider-1.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/jquery.bxslider-2.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/jquery.bxslider.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/jquery.rating-1.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/jquery.rating.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/jquery.smartmenus.bootstrap-1.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/jquery.smartmenus.bootstrap.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/loading-3.gif">
+      <publishTime>06/01/2018 17:25:28</publishTime>
+    </File>
+    <File Include="css/MANHBEO.css">
+      <publishTime>05/30/2018 13:59:31</publishTime>
+    </File>
+    <File Include="css/metisMenu-1.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/metisMenu.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/meunudropdown.css">
+      <publishTime>02/23/2021 13:33:00</publishTime>
+    </File>
+    <File Include="css/mm-vertical-home.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/mm-vertical-page-1.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/mm-vertical-page.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/news-1.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/news.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/page_coner.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="css/photos-1.css">
+      <publishTime>06/02/2018 10:52:46</publishTime>
+    </File>
+    <File Include="css/photos.css">
+      <publishTime>06/02/2018 10:52:48</publishTime>
+    </File>
+    <File Include="css/prettyPhoto.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/sm-blue-1.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/sm-blue.css">
+      <publishTime>02/06/2021 09:47:12</publishTime>
+    </File>
+    <File Include="css/sm-core-css-1.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/sm-core-css.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/style-1.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/style.css">
+      <publishTime>02/24/2021 13:48:41</publishTime>
+    </File>
+    <File Include="css/style.responsive-1.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/style.responsive.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/styleMenu.css">
+      <publishTime>02/04/2021 08:29:35</publishTime>
+    </File>
+    <File Include="css/users.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="css/videos.css">
+      <publishTime>05/30/2018 11:15:46</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>02/05/2021 14:40:05</publishTime>
+    </File>
+    <File Include="Images/0-10.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/0-13.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/0-14.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/0-17.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/0-8.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/0-9.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/083203978.jpg">
+      <publishTime>02/05/2021 09:27:50</publishTime>
+    </File>
+    <File Include="Images/090650648.jpg">
+      <publishTime>02/17/2021 14:19:00</publishTime>
+    </File>
+    <File Include="Images/093840021.jpg">
+      <publishTime>02/05/2021 09:27:47</publishTime>
+    </File>
+    <File Include="Images/094126661.jpg">
+      <publishTime>02/05/2021 09:27:47</publishTime>
+    </File>
+    <File Include="Images/094554130.jpg">
+      <publishTime>02/05/2021 09:27:50</publishTime>
+    </File>
+    <File Include="Images/101115408.jpg">
+      <publishTime>02/17/2021 14:19:00</publishTime>
+    </File>
+    <File Include="Images/102741329.jpg">
+      <publishTime>02/17/2021 14:19:00</publishTime>
+    </File>
+    <File Include="Images/123.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/12345.jpg">
+      <publishTime>02/19/2021 11:19:57</publishTime>
+    </File>
+    <File Include="Images/125714687.jpg">
+      <publishTime>02/17/2021 14:19:00</publishTime>
+    </File>
+    <File Include="Images/133033512.jpg">
+      <publishTime>02/05/2021 09:27:50</publishTime>
+    </File>
+    <File Include="Images/134543592.jpg">
+      <publishTime>02/05/2021 09:27:47</publishTime>
+    </File>
+    <File Include="Images/140543393.jpg">
+      <publishTime>02/17/2021 14:19:00</publishTime>
+    </File>
+    <File Include="Images/141524490.jpg">
+      <publishTime>02/05/2021 09:27:50</publishTime>
+    </File>
+    <File Include="Images/141631853.jpg">
+      <publishTime>02/17/2021 14:19:00</publishTime>
+    </File>
+    <File Include="Images/150310772.jpg">
+      <publishTime>02/17/2021 14:19:00</publishTime>
+    </File>
+    <File Include="Images/151055694.png">
+      <publishTime>02/05/2021 09:27:50</publishTime>
+    </File>
+    <File Include="Images/155905918.jpg">
+      <publishTime>02/05/2021 09:27:47</publishTime>
+    </File>
+    <File Include="Images/192516180.jpg">
+      <publishTime>02/05/2021 09:27:50</publishTime>
+    </File>
+    <File Include="Images/1d3c62d6335938ddSOYTE.jpg">
+      <publishTime>02/19/2021 14:29:25</publishTime>
+    </File>
+    <File Include="Images/27-2.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/27073274_411293955980577_927263042436179528_n-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/3.1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/370s.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/3cd3b851f4f521996bf9305e79bc6515.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/alltruycap.png">
+      <publishTime>10/12/2018 08:44:01</publishTime>
+    </File>
+    <File Include="Images/arrow-right-1.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/arrow-right.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/arrow_left_orange-1.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/arrow_left_orange.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/banner-gap-go-nu-cuoi_1-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/banner-gap-go-nu-cuoi_1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/banner-trang-trong-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/banner-trang-trong.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/banner-trang-trong3-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/banner-trang-trong3.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/banner1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/banner2.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/banner3.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/banner4.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/banner5.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/banner_byt.png">
+      <publishTime>02/19/2021 14:22:35</publishTime>
+    </File>
+    <File Include="Images/benh-tri_bv-minh-anh_1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/bghome1-1.gif">
+      <publishTime>05/30/2018 11:24:06</publishTime>
+    </File>
+    <File Include="Images/bghome1.gif">
+      <publishTime>05/30/2018 11:24:06</publishTime>
+    </File>
+    <File Include="Images/bghome1_right-1.gif">
+      <publishTime>05/30/2018 11:24:06</publishTime>
+    </File>
+    <File Include="Images/bghome1_right.gif">
+      <publishTime>05/30/2018 11:24:06</publishTime>
+    </File>
+    <File Include="Images/bgright-1.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/bgright.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/bgtab.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/blockquote-left-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/blockquote-left.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/blockquote-right-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/blockquote-right.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/bs-hoa-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/bs-hoa-3.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/bs-th-ba-3.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/bs-thu-ba.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/bs-thuy.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/btnNext-1.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/btnNext-2.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/btnNext-3.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/btnNext-4.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/btnNext.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/btnPrevious-1.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/btnPrevious-2.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/btnPrevious-3.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/btnPrevious-4.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/btnPrevious.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/bull2.gif">
+      <publishTime>02/22/2021 11:32:31</publishTime>
+    </File>
+    <File Include="Images/bvminhanh-1-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/bvminhanh-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/bvminhanh_1_1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/bx_loader-1.gif">
+      <publishTime>05/30/2018 11:24:06</publishTime>
+    </File>
+    <File Include="Images/cam-on.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/cap-cuu-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/cap-cuu-2.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/cap-cuu-3.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/cap-cuu-4.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/cap-cuu-5.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/cap-cuu-dot-quy.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/chuan-doan-hinh-anh-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/chuan-doan-hinh-anh.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/chuc-mung-8-3_1-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/chuc-mung-8-3_1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/contentPattern.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/contentPatternBottom.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/contentPatternLeft.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/contentPatternRight.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/contentPatternTop.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/controls-1.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/controls-sliderhome-1.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/controls-sliderhome.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/copd_1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/copd_2.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/cus-avatar.gif">
+      <publishTime>05/30/2018 11:24:06</publishTime>
+    </File>
+    <File Include="Images/da-binh-phuc_bvminhanh1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/dai-thao-duong-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/dai-thao-duong.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/dai-thao-duong_1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/default_thumbnail.gif">
+      <publishTime>05/30/2018 11:24:06</publishTime>
+    </File>
+    <File Include="Images/delete-1.gif">
+      <publishTime>05/30/2018 11:24:06</publishTime>
+    </File>
+    <File Include="Images/delete.gif">
+      <publishTime>05/30/2018 11:24:06</publishTime>
+    </File>
+    <File Include="Images/diagnosis-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/diagnosis-2.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/diagnosis.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/dich-vu-khac.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/dien-sinh-ky-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/dien-sinh-ky-2.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/dien-sinh-ky-3.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/dien-sinh-ky-4.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/dien-sinh-ly_1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/dieu-tri-noi-tru.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/dinh-duong.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/dinh-duong_bv-minh-anh-1-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/dinh-duong_bv-minh-anh-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/dinh-duong_bv-minh-anh.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/dmb-2.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/doctor-woman_minhanh.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/dong-luu-ba.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/dong-luu-ba.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/dot.gif">
+      <publishTime>05/30/2018 11:24:06</publishTime>
+    </File>
+    <File Include="Images/ds-hong_bvminhanh.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/ekip.JPG">
+      <publishTime>02/17/2021 14:19:00</publishTime>
+    </File>
+    <File Include="Images/face.jpg">
+      <publishTime>08/15/2018 15:48:35</publishTime>
+    </File>
+    <File Include="Images/favicon-1.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/favicon.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/flag_english-1.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/flag_english.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/flag_vietnamese-1.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/flag_vietnamese.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/gioi-thieu-benh-vien.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/go.png">
+      <publishTime>08/15/2018 15:48:35</publishTime>
+    </File>
+    <File Include="Images/hau-mon-3.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/hau-mon-4.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/hc-ong-co-tay.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/hinh-minh-hoa-h3-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/hinh-minh-hoa-h3.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/hoang-giang.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/hoi-chan-cap-cuu.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/huynh-thi-thuy-ai.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/icon-arrow-32.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/icon-calendar-1.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/icon-calendar.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/icon-doctor-1.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/icon-doctor.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/icon-hospitalcar-1.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/icon-hospitalcar.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/icon-location-1.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/icon-location.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/icon-zalo-hover-1.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/icon-zalo-hover.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/if_facebook_410527.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/if_youtube-2_273176.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/img_4515.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/img_4520.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/in-body-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/in-body-2.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/in-body-3.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/in-body-5.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/in-body.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/index.php-scaptcha=captcha&amp;t=1527651497.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/index.php-scaptcha=captcha&amp;t=1527651520.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/index.php-scaptcha=captcha&amp;t=1527651524.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/index.php-scaptcha=captcha&amp;t=1527651525.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/index.php-scaptcha=captcha&amp;t=1527651556.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/index.php-scaptcha=captcha&amp;t=1527651557.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/index.php-scaptcha=captcha&amp;t=1527651571.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/index.php-scaptcha=captcha&amp;t=1527651579.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/index.php-scaptcha=captcha&amp;t=1527651594.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/index.php-scaptcha=captcha&amp;t=1527651597.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/index.php-scaptcha=captcha&amp;t=1527651598.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/index.php-second=cronjobs&amp;p=s438yTWc.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/index.php-second=cronjobs&amp;p=s5vl5F8h.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/japan-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/khai-bao-y-te.jpg">
+      <publishTime>02/19/2021 10:25:42</publishTime>
+    </File>
+    <File Include="Images/khai-truong_bvminhanh-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/kham-mat-2.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/kham-mat-3.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/kham-mat.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/kham-tai.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/khanh-thanh-khu-noi-tru_bvminhanh-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/kho-phac-do-dieu-tri.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/khoa-cap-cuu_1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/khoa-duoc.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/khoa-hau-mon-truc-trang.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/khoa-kham-benh_1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/khoa-mat_1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/kiem-tra-tong-quat.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/ksk-tong-qua_bv-minh-anh-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/ksk-tong-qua_bv-minh-anh-3.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/ksk-tong-qua_bv-minh-anh-4.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/ksk-tong-qua_bv-minh-anh-51.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/ksk-tong-qua_bv-minh-anh-6.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/ksk-tong-qua_bv-minh-anh-7-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/ksk-tong-qua_bv-minh-anh-7-2.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/ksk-tong-qua_bv-minh-anh-7.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/layout_set_logo_byt.png">
+      <publishTime>02/19/2021 14:19:04</publishTime>
+    </File>
+    <File Include="Images/le-ba-truong.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/le-huy-hoa.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/le-huy-hoa.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/le-ngoan.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/le-thanh-quang.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/le-thi-hai.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/lead_960.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/lead_960_1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/lead_960_2.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/lead_960_3.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/lead_960_4-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/lead_960_4.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/line.png">
+      <publishTime>02/24/2021 12:44:00</publishTime>
+    </File>
+    <File Include="Images/loader-1.gif">
+      <publishTime>05/30/2018 11:24:06</publishTime>
+    </File>
+    <File Include="Images/loader-2.gif">
+      <publishTime>05/30/2018 11:24:06</publishTime>
+    </File>
+    <File Include="Images/loader-3.gif">
+      <publishTime>05/30/2018 11:24:06</publishTime>
+    </File>
+    <File Include="Images/loader-4.gif">
+      <publishTime>05/30/2018 11:24:06</publishTime>
+    </File>
+    <File Include="Images/loader.gif">
+      <publishTime>05/30/2018 11:24:06</publishTime>
+    </File>
+    <File Include="Images/loading-3-1.gif">
+      <publishTime>06/01/2018 17:26:19</publishTime>
+    </File>
+    <File Include="Images/loading-3.gif">
+      <publishTime>06/01/2018 17:25:28</publishTime>
+    </File>
+    <File Include="Images/loading.gif">
+      <publishTime>06/04/2018 15:31:25</publishTime>
+    </File>
+    <File Include="Images/load_bar-1.gif">
+      <publishTime>05/30/2018 11:24:06</publishTime>
+    </File>
+    <File Include="Images/load_bar.gif">
+      <publishTime>05/30/2018 11:24:06</publishTime>
+    </File>
+    <File Include="Images/LOGO BsssV.png">
+      <publishTime>08/15/2018 08:44:08</publishTime>
+    </File>
+    <File Include="Images/LOGO BsV copy.png">
+      <publishTime>08/09/2018 11:05:27</publishTime>
+    </File>
+    <File Include="Images/LOGO BsV.png">
+      <publishTime>08/16/2018 11:32:24</publishTime>
+    </File>
+    <File Include="Images/logo-1.png">
+      <publishTime>07/30/2018 15:30:02</publishTime>
+    </File>
+    <File Include="Images/logo-hoitinhmach000.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/logo.png">
+      <publishTime>07/30/2018 15:29:03</publishTime>
+    </File>
+    <File Include="Images/LOGOBVND.png">
+      <publishTime>01/29/2021 13:13:34</publishTime>
+    </File>
+    <File Include="Images/logocopy.png">
+      <publishTime>08/16/2018 11:32:25</publishTime>
+    </File>
+    <File Include="Images/ma-2.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/mai-van-minh.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/mai-van-minh.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/manh-xuong_bvminhanh.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/maxresdefault.jpg">
+      <publishTime>06/04/2018 10:54:43</publishTime>
+    </File>
+    <File Include="Images/minh-anh-about-new-3.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/minhanh-1-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/minhanh-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/minhanh_5-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/minhanh_5.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/my-huynh-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/New folder/logo-1.png">
+      <publishTime>06/19/2018 10:05:15</publishTime>
+    </File>
+    <File Include="Images/New folder/logo.png">
+      <publishTime>06/19/2018 10:05:15</publishTime>
+    </File>
+    <File Include="Images/New folder/logo.psd">
+      <publishTime>06/19/2018 10:05:01</publishTime>
+    </File>
+    <File Include="Images/new-1.gif">
+      <publishTime>05/30/2018 11:24:06</publishTime>
+    </File>
+    <File Include="Images/new.gif">
+      <publishTime>05/30/2018 11:24:06</publishTime>
+    </File>
+    <File Include="Images/ngoai-tru.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/nguyen-an-chau.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/nguyen-an-chau.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/nguyen-cong-nhut.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/nguyen-cong-thien.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/nguyen-hoai-nam.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/nguyen-hoai-nam.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/nguyen-khanh-du.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/nguyen-khoi-phuc.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/nguyen-nhat-phun.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/nguyen-quang-long.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/nguyen-thi-bich-thuy.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/nguyen-thi-bich-thuy.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/nguyen-thi-ngoc-bich.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/nguyen-thi-ngoc-bich.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/nguyen-thi-tien.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/nguyen-thi-tuyet-minh.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/nguyen-van-yen.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/no-image.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/noi-soi-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/noi-soi-2.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/noi-soi-3.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/noi-soi.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/noi-soi_1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/noi-tru.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/noi-tru1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/noi-tru2.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/noi-tru3.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/onay.png">
+      <publishTime>10/12/2018 08:44:01</publishTime>
+    </File>
+    <File Include="Images/page_coner.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/pccc-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/pccc.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/pectus-chest-wall-deformity.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/pham-van-ben.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/phan-thi-ho-hai.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/phan-thi-ho-hai.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/phau-thuat-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/phau-thuat-3.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/phau-thuat.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/phau-thuat1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/phau-thuat2.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/phong-benh_1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/phong-kham-bac-sy-hoai-nam.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/phong-noi-tru-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/phong-noi-tru-2.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/phong-noi-tru-3.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/phong-noi-tru-4.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/photos_400x400-2-5fc61b0e7d83c69d8dcba60074254b2c.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/photos_400x400-3-7c637146a5c4105a58883ec98a6cb61e.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/photos_400x400-4-080e94734af7b05558624fd7a2264398.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/photos_400x400-6-6b79a68d44a5ae428d92beb4f6af06c4.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/photos_400x400-7-dcd4367dac7747e00162fbc5dce0b37f.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/photos_400x400-8-8847414b90777814eaeab2e071f39a72.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/phuc-vu_minhanh-1-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/phuc-vu_minhanh-1-2.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/phuc-vu_minhanh-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/phuc-vu_minhanh-10.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/phuc-vu_minhanh-2.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/phuc-vu_minhanh-3.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/phuc-vu_minhanh-4.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/phuc-vu_minhanh-5.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/phuc-vu_minhanh-6.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/phuc-vu_minhanh-7.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/phuc-vu_minhanh-8.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/phuc-vu_minhanh-9.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/required-1.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/required.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/saigon-holiday.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/sieu-am.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/slogan.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/so-y-te-tphcm.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/song-khoe.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/sot-xuat-huyet.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/sprite-1.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/sprite-2.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/sprite-3.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/sprite-4.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/sprite-5.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/sprite.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/sprite_prev.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/sprite_x.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/sprite_y.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/squared-blue-1.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/squared-blue.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/star-1.gif">
+      <publishTime>05/30/2018 11:24:06</publishTime>
+    </File>
+    <File Include="Images/star.gif">
+      <publishTime>05/30/2018 11:24:06</publishTime>
+    </File>
+    <File Include="Images/tai-mui-hong-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/tai-mui-hong.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/tai-mui-hong1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/tat-nien_bvminhanh-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/tat-nien_bvminhanh.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/thieu-iod.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/thong-bao-nghi-le.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/tien-tien.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/tran-quoc-tuy.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/tran-thi-bao-tran.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/truong-quang-than.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/truong-thi-thu.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/truyen-thong_minhanh-5-1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/truyen-thong_minhanh-5.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/tsttourist.png">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/tu-thien-h1.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/tu-thien-h10.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/tu-thien-h11.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/tu-thien-h12.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/tu-thien-h13.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/tu-thien-h15.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/tu-thien-h16.jpg">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/tu-thien-h2.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/tu-thien-h3.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/tu-thien-h5.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/tu-thien-h6.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/tu-thien-h6b.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/tu-thien-h7.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/tu-thien-h9.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/tu-van-thuoc-1_bvminhanh-1.jpg">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/tu-van-thuoc-1_bvminhanh.jpg">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/tung-siri.jpg">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="Images/vo-le-thu_1.jpg">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/vo-ta-trang.jpg">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/x-quang2.jpg">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/xet-nghiem-1.jpg">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/xet-nghiem-2.jpg">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/xet-nghiem.jpg">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/xet-nghiem1.jpg">
+      <publishTime>05/30/2018 10:55:32</publishTime>
+    </File>
+    <File Include="Images/youto.png">
+      <publishTime>08/15/2018 15:48:35</publishTime>
+    </File>
+    <File Include="Images/zalo.png">
+      <publishTime>05/30/2018 10:55:31</publishTime>
+    </File>
+    <File Include="js/bootstrap.min-1.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/bootstrap.min.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/comment-1.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/comment.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/contact.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/dataTables.bootstrap.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/dataTables.bootstrap.min.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/en.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/faq.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/global-1.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/global.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/highlight.pack-1.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/highlight.pack.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/hospital-1.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/hospital.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/jquery.blueimp-gallery.min-1.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/jquery.blueimp-gallery.min.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/jquery.bxslider-1.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/jquery.bxslider-2.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/jquery.bxslider.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/jquery.bxslider.min.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/jquery.dataTables.min.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/jquery.lazyload.min.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/jquery.MetaData-1.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/jquery.MetaData.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/jquery.min-1.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/jquery.min.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/jquery.prettyPhoto.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/jquery.rating.pack-1.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/jquery.rating.pack.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/jquery.smartmenus-1.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/jquery.smartmenus.bootstrap-1.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/jquery.smartmenus.bootstrap.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/jquery.smartmenus.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/js-v=3.exp&amp;sensor=false&amp;callback=initializeMap.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/jwplayer.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/main-1.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/main.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/metisMenu-1.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/metisMenu.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/news-1.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/news.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/page.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/photos.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/plusone.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/polyfills.vttrenderer.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/provider.youtube.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/sdk.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/users.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/vi-1.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/vi.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/videos.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/widgets.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/wow.min-1.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="js/wow.min.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.3.1.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.3.1.min.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.3.1.min.map">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.3.1.slim.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.3.1.slim.min.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.3.1.slim.min.map">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.8.3.js">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Account/ConfirmEmail.cshtml">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginFailure.cshtml">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Account/ForgotPassword.cshtml">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Account/ForgotPasswordConfirmation.cshtml">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Account/Login.cshtml">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Account/Register.cshtml">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Account/ResetPassword.cshtml">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Account/ResetPasswordConfirmation.cshtml">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Account/SendCode.cshtml">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Account/VerifyCode.cshtml">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Account/_ExternalLoginsListPartial.cshtml">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Administrator/Index.cshtml">
+      <publishTime>03/01/2021 08:57:28</publishTime>
+    </File>
+    <File Include="Views/Detail/Details.cshtml">
+      <publishTime>02/23/2021 09:16:34</publishTime>
+    </File>
+    <File Include="Views/Detail/Index.cshtml">
+      <publishTime>02/23/2021 09:17:47</publishTime>
+    </File>
+    <File Include="Views/GioiThieuBV/Index.cshtml">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>03/01/2021 07:52:06</publishTime>
+    </File>
+    <File Include="Views/MainParent/Details.cshtml">
+      <publishTime>02/24/2021 16:38:33</publishTime>
+    </File>
+    <File Include="Views/MainParent/DetailsMainParent.cshtml">
+      <publishTime>02/26/2021 09:41:02</publishTime>
+    </File>
+    <File Include="Views/MainParent/Index.cshtml">
+      <publishTime>02/24/2021 13:34:24</publishTime>
+    </File>
+    <File Include="Views/Manage/AddPhoneNumber.cshtml">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Manage/ChangePassword.cshtml">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Manage/Index.cshtml">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Manage/ManageLogins.cshtml">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Manage/SetPassword.cshtml">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Manage/VerifyPhoneNumber.cshtml">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Shared/Lockout.cshtml">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Shared/_DetailAll.cshtml">
+      <publishTime>02/22/2021 09:05:58</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartial.cshtml">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/Shared/_MasterPage.cshtml">
+      <publishTime>02/23/2021 11:23:16</publishTime>
+    </File>
+    <File Include="Views/Shared/_MenuAction.cshtml">
+      <publishTime>03/01/2021 07:45:15</publishTime>
+    </File>
+    <File Include="Views/TinTuc/Details.cshtml">
+      <publishTime>02/23/2021 13:50:42</publishTime>
+    </File>
+    <File Include="Views/TinTuc/Index.cshtml">
+      <publishTime>02/23/2021 09:26:35</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>02/05/2021 14:40:06</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>02/22/2021 08:39:04</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/01/2021 09:32:18</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
