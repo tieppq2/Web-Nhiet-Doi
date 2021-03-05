@@ -61,6 +61,38 @@ namespace WenBenhVienNhietDoi.Controllers
             return PartialView("_MenuAction", Menu);
             //return PartialView("_LayoutMasterPage", Menu);
         }
+        public ActionResult MenuAction2()
+        {
+            List<MenuModels> menuModels;
+            List<MenuModels> menuModels_parent;
+            ListMenuModels Menu = new ListMenuModels();
+            var dt_tmp = DBProcess.GetDataSet("web_ListMenu");
+            var dt = dt_tmp.Tables[0];
+            var dt_parent = dt.Select("capmenu = 1");
+            //menuModels_parent= _publicHelp.ConvertToList<MenuModels>(dt);
+            menuModels_parent = (from rw in dt.AsEnumerable()
+                                 select new MenuModels()
+                                 {
+                                     IdCha = Convert.ToInt32(rw["idCha"]),
+                                     Id = Convert.ToInt32(rw["id"]),
+                                     TenMenu = Convert.ToString(rw["TenMenu"]),
+                                     CapMenu = Convert.ToInt32(rw["capmenu"]),
+                                     Linkurl = Convert.ToString(rw["linkurl"])
+                                 }).ToList();
+            Menu.ListParentMenu = menuModels_parent;
+            menuModels = (from rw in dt_parent.AsEnumerable()
+                          select new MenuModels()
+                          {
+                              IdCha = Convert.ToInt32(rw["idCha"]),
+                              Id = Convert.ToInt32(rw["id"]),
+                              TenMenu = Convert.ToString(rw["TenMenu"]),
+                              CapMenu = Convert.ToInt32(rw["capmenu"]),
+                              Linkurl = Convert.ToString(rw["linkurl"])
+                          }).ToList();
+            Menu.ListMenu = menuModels;
+            return PartialView("_MenuAction2", Menu);
+            //return PartialView("_LayoutMasterPage", Menu);
+        }
         public ActionResult Menu()
         {
             List<MenuModels> menuModels;

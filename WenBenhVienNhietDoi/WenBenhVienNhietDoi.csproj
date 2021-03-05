@@ -177,6 +177,7 @@
     <Compile Include="Controllers\DetailController.cs" />
     <Compile Include="Controllers\GioiThieuBVController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LienHeController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\MainParentController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -1435,6 +1436,24 @@
     <Content Include="css\users.css" />
     <Content Include="css\videos.css" />
     <Content Include="css\www-player-webp.css" />
+    <Content Include="data\cover-home-1.jpg" />
+    <Content Include="data\cover-home-2-N.jpg" />
+    <Content Include="data\cover-home-2.jpg" />
+    <Content Include="data\cover-home-3.jpg" />
+    <Content Include="data\cover-home-5.jpg" />
+    <Content Include="data\cover-home-6.jpg" />
+    <Content Include="data\cover-home_mobile-1.jpg" />
+    <Content Include="data\cover-home_mobile-2.jpg" />
+    <Content Include="data\cover-home_mobile-2_N.jpg" />
+    <Content Include="data\cover-home_mobile-3.jpg" />
+    <Content Include="data\cover-home_mobile-5.jpg" />
+    <Content Include="data\cover-home_mobile-6-N.jpg" />
+    <Content Include="data\icon-tieubieu.png" />
+    <Content Include="data\icon1_chamsockhachhang.png" />
+    <Content Include="data\icon1_lichbacsi.png" />
+    <Content Include="data\icon1_vip.png" />
+    <Content Include="data\logo_benhviennhandan115.jpg" />
+    <Content Include="data\logo_footer_Benhviennhandan115.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -1866,6 +1885,7 @@
     <Content Include="js\provider.youtube.js" />
     <Content Include="js\sdk.js" />
     <Content Include="js\select2totree.js" />
+    <Content Include="js\site.min.js" />
     <Content Include="js\users.js" />
     <Content Include="js\vi-1.js" />
     <Content Include="js\vi.js" />
@@ -2009,6 +2029,8 @@
     <Content Include="Views\Administrator\DangBai.cshtml" />
     <Content Include="Views\Shared\_LayoutMasterPage.cshtml" />
     <Content Include="Views\Main\Index.cshtml" />
+    <Content Include="Views\LienHe\Index.cshtml" />
+    <Content Include="Views\Shared\_MenuAction2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

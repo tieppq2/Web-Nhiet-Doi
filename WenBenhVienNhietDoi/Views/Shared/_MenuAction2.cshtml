@@ -1,0 +1,68 @@
+﻿@model WenBenhVienNhietDoi.Models.ListMenuModels
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link rel="stylesheet" href="~/css/site.min.css?v=nLFellpLZx4brMV2iZSsGclPYU1x4FK3f1Iyrgcngxs" />
+</head>
+<body>
+    <div class="menu-hdr hidden-xs">
+        <ul class="container">
+            <li><a href="/"><img alt="Trang chủ" src="../Images/home-icon-silhouette.png"></a></li>
+
+            @foreach (var itemparent in Model.ListParentMenu)
+            {
+                if (@itemparent.CapMenu == 0)
+                {
+                    <li>
+                        <a href="@itemparent.Linkurl" title="@itemparent.TenMenu">@itemparent.TenMenu</a>
+
+                        <div class="dropdown-menu-hdr">
+                            <div class="container">
+                                <span class="name-submenu1"><a href="@itemparent.Linkurl" title="@itemparent.TenMenu">@itemparent.TenMenu</a></span>
+                                <div class="row">
+                                    @foreach (var item in Model.ListMenu)
+                                    {
+
+                                        if (@item.IdCha == @itemparent.Id)
+                                        {
+
+                                            <div class="col-xs-6">
+                                                <p><a class="name-submenu2" href="@item.Linkurl" title="@item.TenMenu" style="font-size: 16px;">@item.TenMenu</a></p>
+                                            </div>
+
+                                        }
+
+
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                }
+            }
+            <li>
+                <a href="#">Tổng đài tư vấn</a>
+                <div class="dropdown-menu-hdr">
+                    <div class="container">
+                        <span class="name-submenu1"><a href="#">Tổng đài tư vấn</a></span>
+                        <div class="home-chamsockhachhang">
+                            <img alt="" src="~/data/icon1_chamsockhachhang.png" />
+                            <p>Trả lời câu hỏi  - Tư vấn sức khỏe:</p>
+                            <span class="number-chamsockhachhang">(028) 38.683.496 - 0906.336.115</span>
+                            <p><a class="btn btn-chamsockhachhang" data-toggle="modal" data-target="#send-email"><b>Gửi câu hỏi</b><i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="/thong-bao/91">Liên hệ</a>
+            </li>
+
+        </ul>
+    </div>
+</body>
+</html>

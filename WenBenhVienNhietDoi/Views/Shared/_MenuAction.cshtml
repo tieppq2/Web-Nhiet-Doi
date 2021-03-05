@@ -13,9 +13,7 @@
             <div class="navbar" role="navigation">
                 <div class="navbar-collapse collapse">
                     <nav>
-                        @*<ul class="cf">*@
                         <li class="active"><a href="/Home/Index">Trang Chủ</a></li>
-
                         @foreach (var itemparent in Model.ListParentMenu)
                         {
                             if (@itemparent.CapMenu == 0)
@@ -35,7 +33,6 @@
                             }
                         }
                         <li class="active"><a href="#">Liên hệ</a></li>
-                        @*</ul>*@
                     </nav>
                 </div>
             </div>
