@@ -177,6 +177,7 @@
     <Compile Include="Controllers\DetailController.cs" />
     <Compile Include="Controllers\GioiThieuBVController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LienHeController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\MainParentController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -1884,6 +1885,7 @@
     <Content Include="js\provider.youtube.js" />
     <Content Include="js\sdk.js" />
     <Content Include="js\select2totree.js" />
+    <Content Include="js\site.min.js" />
     <Content Include="js\users.js" />
     <Content Include="js\vi-1.js" />
     <Content Include="js\vi.js" />
@@ -2027,6 +2029,8 @@
     <Content Include="Views\Administrator\DangBai.cshtml" />
     <Content Include="Views\Shared\_LayoutMasterPage.cshtml" />
     <Content Include="Views\Main\Index.cshtml" />
+    <Content Include="Views\LienHe\Index.cshtml" />
+    <Content Include="Views\Shared\_MenuAction2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
