@@ -177,6 +177,7 @@
     <Compile Include="Controllers\DetailController.cs" />
     <Compile Include="Controllers\GioiThieuBVController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\MainParentController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PublicHelp.cs" />
@@ -1798,6 +1799,8 @@
     <Content Include="Views\MainParent\DetailsMainParent.cshtml" />
     <Content Include="Views\Administrator\Index.cshtml" />
     <Content Include="Views\Administrator\DangBai.cshtml" />
+    <Content Include="Views\Shared\_LayoutMasterPage.cshtml" />
+    <Content Include="Views\Main\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
