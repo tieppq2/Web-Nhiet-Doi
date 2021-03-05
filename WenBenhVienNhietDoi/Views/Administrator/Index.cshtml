@@ -13,13 +13,22 @@
     <link rel="stylesheet" href="~/css/Admin/assets/css/ace-rtl.min.css">
     @*<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css" rel="stylesheet" />*@
 
+    
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
 </head>
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    @*<script src="../js/jquery.min.js"></script>
+        <script src="../css/Admin/assets/js/jquery-2.1.4.min.js"></script>*@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <link href="../css/select2totree.css" rel="stylesheet">
+    <script src="../js/select2totree.js"></script>
+    <script src="../lib/datatables/dataTables.select.min.js"></script>
+    <script src="~/lib/datatables/jquery.dataTables.min.js"></script>
     @*<style type="text/css">
             .datepicker {
                 font-size: 0.875em;
@@ -110,60 +119,60 @@
                     <div id="ctl00_ContentPlaceHolder1_UpdatePanel1">
                         <div id="sidebar2" class="sidebar h-sidebar navbar-collapse collapse ace-save-state" data-sidebar="true" data-sidebar-scroll="true" data-sidebar-hover="true">
                             <ul class="nav nav-list" style="top: 0px;">
-                                <li class="hover" style="margin-right: 5px">
-                                    <a class="btn btn-xs btn-success " href="quan-tri-tin-bai-0.html">Thêm mới </a>
-                                </li>
-                                <li class="hover" style="margin-right: 5px">
-                                    <a id="ctl00_ContentPlaceHolder1_ctl01_LinkButton5" class="btn btn-xs btn-danger " href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$ctl01$LinkButton5','')">Xóa</a>
-                                </li>
-                                <li class="hover" style="margin-right: 5px">
-                                    <div class="btn-group">
-                                        <button data-toggle="dropdown" class="btn btn-success btn-sm dropdown-toggle" aria-expanded="false">
-                                            Chuyển trạng thái
-                                            <i class="ace-icon fa fa-angle-down icon-on-right"></i>
-                                        </button>
-                                        <ul class="dropdown-menu dropdown-success dropdown-menu-right">
-                                            <li>
-                                                <a id="ctl00_ContentPlaceHolder1_ctl01_butduyet" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$ctl01$butduyet','')">Duyệt</a>
-                                            </li>
-                                            <li>
-                                                <a id="ctl00_ContentPlaceHolder1_ctl01_butchoduyet" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$ctl01$butchoduyet','')">Chờ duyệt</a>
-                                            </li>
-                                            <li>
-                                                <a id="ctl00_ContentPlaceHolder1_ctl01_butcam" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$ctl01$butcam','')">Cấm</a>
-                                            </li>
+                                @*<li class="hover" style="margin-right: 5px">
+                                        <a class="btn btn-xs btn-success " href="quan-tri-tin-bai-0.html">Thêm mới </a>
+                                    </li>*@
+                                @*<li class="hover" style="margin-right: 5px">
+                                        <a id="ctl00_ContentPlaceHolder1_ctl01_LinkButton5" class="btn btn-xs btn-danger " href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$ctl01$LinkButton5','')">Xóa</a>
+                                    </li>*@
+                                @*<li class="hover" style="margin-right: 5px">
+                                        <div class="btn-group">
+                                            <button data-toggle="dropdown" class="btn btn-success btn-sm dropdown-toggle" aria-expanded="false">
+                                                Chuyển trạng thái
+                                                <i class="ace-icon fa fa-angle-down icon-on-right"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-success dropdown-menu-right">
+                                                <li>
+                                                    <a id="ctl00_ContentPlaceHolder1_ctl01_butduyet" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$ctl01$butduyet','')">Duyệt</a>
+                                                </li>
+                                                <li>
+                                                    <a id="ctl00_ContentPlaceHolder1_ctl01_butchoduyet" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$ctl01$butchoduyet','')">Chờ duyệt</a>
+                                                </li>
+                                                <li>
+                                                    <a id="ctl00_ContentPlaceHolder1_ctl01_butcam" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$ctl01$butcam','')">Cấm</a>
+                                                </li>
 
-                                        </ul>
-                                    </div>
+                                            </ul>
+                                        </div>
 
-                                </li>
-                                <li class="hover" style="margin-right: 5px">
-                                    <div class="btn-group">
-                                        <button data-toggle="dropdown" class="btn btn-success btn-sm dropdown-toggle" aria-expanded="false">
-                                            Set tin nổi bật
-                                            <i class="ace-icon fa fa-angle-down icon-on-right"></i>
-                                        </button>
-                                        <ul class="dropdown-menu dropdown-success dropdown-menu-right">
-                                            <li>
-                                                <a id="ctl00_ContentPlaceHolder1_ctl01_LinkButton3" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$ctl01$LinkButton3','')">Top 1</a>
-                                            </li>
-                                            <li>
-                                                <a id="ctl00_ContentPlaceHolder1_ctl01_LinkButton4" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$ctl01$LinkButton4','')">Top 2</a>
-                                            </li>
-                                            <li>
-                                                <a id="ctl00_ContentPlaceHolder1_ctl01_LinkButton6" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$ctl01$LinkButton6','')">Top 3</a>
-                                            </li>
-                                            <li>
-                                                <a id="ctl00_ContentPlaceHolder1_ctl01_LinkButton7" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$ctl01$LinkButton7','')">Top 4</a>
-                                            </li>
-                                            <li>
-                                                <a id="ctl00_ContentPlaceHolder1_ctl01_LinkButton8" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$ctl01$LinkButton8','')">Top 5</a>
-                                            </li>
+                                    </li>*@
+                                @*<li class="hover" style="margin-right: 5px">
+                                        <div class="btn-group">
+                                            <button data-toggle="dropdown" class="btn btn-success btn-sm dropdown-toggle" aria-expanded="false">
+                                                Set tin nổi bật
+                                                <i class="ace-icon fa fa-angle-down icon-on-right"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-success dropdown-menu-right">
+                                                <li>
+                                                    <a id="ctl00_ContentPlaceHolder1_ctl01_LinkButton3" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$ctl01$LinkButton3','')">Top 1</a>
+                                                </li>
+                                                <li>
+                                                    <a id="ctl00_ContentPlaceHolder1_ctl01_LinkButton4" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$ctl01$LinkButton4','')">Top 2</a>
+                                                </li>
+                                                <li>
+                                                    <a id="ctl00_ContentPlaceHolder1_ctl01_LinkButton6" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$ctl01$LinkButton6','')">Top 3</a>
+                                                </li>
+                                                <li>
+                                                    <a id="ctl00_ContentPlaceHolder1_ctl01_LinkButton7" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$ctl01$LinkButton7','')">Top 4</a>
+                                                </li>
+                                                <li>
+                                                    <a id="ctl00_ContentPlaceHolder1_ctl01_LinkButton8" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$ctl01$LinkButton8','')">Top 5</a>
+                                                </li>
 
-                                        </ul>
-                                    </div>
+                                            </ul>
+                                        </div>
 
-                                </li>
+                                    </li>*@
 
                             </ul>
                             <!-- /.nav-list -->
@@ -176,36 +185,29 @@
                                             <label>Chuyên mục</label>
                                         </div>
                                         <div class="col-md-2">
-                                            <div id="rdvdanhmucnew" style="width:100%;background:#fff;color:#858585" title="--Tất cả--" tabindex="0">
-                                                <span class="rddtInner">
-                                                    <span class="rddtFakeInput">--Tất cả--</span>
-                                                    <span class="rddtIcon"><!-- &nbsp; --></span>
-                                                </span>
-                                                <input id="ctl00_ContentPlaceHolder1_ctl01_rdvdanhmucnew_ClientState" name="ctl00_ContentPlaceHolder1_ctl01_rdvdanhmucnew_ClientState" type="hidden" autocomplete="off">
-                                            </div>
+                                            <select id="danhmuc" style="width:100%;background:#fff;color:#858585" title="--Tất cả--" tabindex="0">                                               
+                                            </select>
+                                        </div>                                      
+
+                                        <div class="col-md-1">
+                                            <label>Trạng thái Duyệt</label>
                                         </div>
-                                        @*<div class="col-md-1">
-                                                <label>Người đăng</label>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <select name="ctl00$ContentPlaceHolder1$ctl01$ddlnguoidang" id="ctl00_ContentPlaceHolder1_ctl01_ddlnguoidang" class="form-control">
-                                                    <option selected="selected" value="0">= Tất cả =</option>
-                                                    <option value="1">doan huu manh</option>
-                                                    <option value="4">Phòng Tham Mưu</option>
-                                                    <option value="7">admin1</option>
-                                                    <option value="8">admin2</option>
-                                                    <option value="9">Đào Thị Thảo</option>
-                                                </select>
-                                            </div>*@
+                                        <div class="col-md-2">
+                                            <select name="trangthai" id="trangthai" class="form-control">
+                                                <option selected="selected" value="0">-----Tất cả-----</option>
+                                                <option value="1">Chờ duyệt</option>
+                                                <option value="2">Đã duyệt</option>
+                                            </select>
+                                        </div>
 
                                         <div class="col-md-1">
                                             <label>Trạng thái</label>
                                         </div>
                                         <div class="col-md-2">
-                                            <select name="ctl00$ContentPlaceHolder1$ctl01$ddltrangthai" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ctl01$ddltrangthai\',\'\')', 0)" id="ctl00_ContentPlaceHolder1_ctl01_ddltrangthai" class="form-control">
-                                                <option value="2">Đã duyệt</option>
-                                                <option selected="selected" value="1">Chờ duyệt</option>
-                                                <option value="0">Cấm</option>
+                                            <select name="type" id="type_delete" class="form-control">
+                                                <option selected="selected" value="0">----Tất cả-----</option>
+                                                <option value="1">Chưa hủy</option>
+                                                <option value="2">Hủy</option>
 
                                             </select>
                                         </div>
@@ -253,145 +255,51 @@
                                             $('#datepicker_denngay').datepicker("setDate", new Date());
                                         </script>
                                         <div class="col-md-3">
-                                            <a id="ctl00_ContentPlaceHolder1_ctl01_butloadtinbai" class="btn btn-sm btn-danger btn-primary" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$ctl01$butloadtinbai','')">Xem</a>
+                                            <a id="loadtinbai" class="btn btn-sm btn-danger btn-primary">Xem</a>
+                                            <a class="btn btn-xs btn-sm  btn-success " href="/Administrator/DangBai">Thêm mới </a>
+                                            @*<li class="hover" style="margin-right: 5px">
 
+                                                </li>*@
                                         </div>
                                         <div style="clear: both"></div>
                                     </div>
 
                                     <div class="col-md-12 col-sm-12" style="padding: 5px">
                                         <div>
-                                            <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="dataTables_length" id="example1_length">
-                                                            <label>
-                                                                Hiển thị
-                                                                <select name="example1_length" aria-controls="example1" class="form-control input-sm">
-                                                                    <option value="30">30</option>
-                                                                    <option value="50">50</option>
-                                                                    <option value="70">70</option>
-                                                                    <option value="100">100</option>
-                                                                    <option value="-1">All</option>
-                                                                </select> bản ghi mỗi trang
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <div id="example1_filter" class="dataTables_filter">
-                                                            <label>Từ khóa tìm kiếm:<input type="search" class="form-control input-sm" placeholder="" aria-controls="example1"></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">                                              
                                                 <div class="row">
                                                     <div class="col-sm-12">
-                                                        <table id="example1" class="table table-bordered table-striped dataTable no-footer" role="grid" aria-describedby="example1_info">
+                                                        <table id="example1" class="table table-striped dataTable no-footer table-responsive" data-toolbar="#tableTitle" role="grid">
                                                             <thead>
-                                                                <tr role="row">
-                                                                    <th class="sorting_desc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="descending" aria-label=": activate to sort column ascending" style="width: 146px;">
-                                                                        <span class="form-control">
-                                                                            <input id="ctl00_ContentPlaceHolder1_ctl01_cb_goc" type="checkbox" name="ctl00$ContentPlaceHolder1$ctl01$cb_goc" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ctl01$cb_goc\',\'\')', 0)">
-                                                                        </span>
-                                                                    </th>
+                                                                <tr role="row">                                                                 
                                                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="ID: activate to sort column ascending" style="width: 76px;">ID</th>
                                                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Title: activate to sort column ascending" style="width: 111px;">Title</th>
-                                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Sampo: activate to sort column ascending" style="width: 157px;">Sampo</th>
-                                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Danh mục: activate to sort column ascending" style="width: 209px;">Danh mục</th>
-                                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Ngày đăng: activate to sort column ascending" style="width: 220px;">Ngày đăng</th>
-                                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Người Đăng: activate to sort column ascending" style="width: 244px;">Người Đăng</th>
+                                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Sampo: activate to sort column ascending" style="width: 300px;">Sampo</th>
+                                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Danh mục: activate to sort column ascending" style="width: 100px;">Danh mục</th>
+                                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Ngày đăng: activate to sort column ascending" style="width: 100px;">Ngày đăng</th>
+                                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Người Đăng: activate to sort column ascending" style="width: 100px;">Người Đăng</th>
                                                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Avata: activate to sort column ascending" style="width: 136px;">Avata</th>
-                                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label=": activate to sort column ascending" style="width: 42px;"></th>
+                                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Crawdata: activate to sort column ascending" style="width: 76px;">Crawdata</th>
+                                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 80px;">Status</th>                                                                    
+                                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Duyệt Bài: activate to sort column ascending" style="width: 100px;">Duyệt Bài</th>
                                                                 </tr>
                                                             </thead>
-                                                            <tbody>
-                                                                <tr class="odd"><td valign="top" colspan="9" class="dataTables_empty">Không có bản ghi nào !</td></tr>
-                                                            </tbody>
-
                                                         </table>
                                                     </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm-5">
-                                                        <div class="dataTables_info" id="example1_info" role="status" aria-live="polite">
-                                                            Không có dữ liệu !
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-7">
-                                                        <div class="dataTables_paginate paging_simple_numbers" id="example1_paginate">
-                                                            <ul class="pagination">
-                                                                <li class="paginate_button previous disabled" id="example1_previous">
-                                                                    <a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0">Previous</a>
-                                                                </li>
-                                                                <li class="paginate_button next disabled" id="example1_next">
-                                                                    <a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0">Next</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                </div>                                                
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <script type="text/ecmascript">
-                            $(function () {
-                                $("#example1").DataTable(
-                                    {
-                                        "order": [[0, "desc"]]
-                                                   ,
-                                        "lengthMenu": [[30, 50, 70, 100, -1], [30, 50, 70, 100, "All"]]
-                                        ,
-                                        "language": {
-                                            "lengthMenu": "Hiển thị _MENU_ bản ghi mỗi trang",
-                                            "zeroRecords": "Không có bản ghi nào !",
-                                            "info": "Trang _PAGE_/_PAGES_",
-                                            "infoEmpty": "Không có dữ liệu !",
-                                            "infoFiltered": "(Lọc từ _MAX_ tổng bản ghi)",
-                                            "search": "Từ khóa tìm kiếm:"
-                                        }
-                                    }
-                                    );
-                            });
-                        </script>
-                        <script>
-                            function goToDataTable() {
-                                $("#example1").DataTable(
-                                    {
-                                        "order": [[0, "desc"]]
-                                        ,
-                                        "lengthMenu": [[30, 50, 70, 100, -1], [30, 50, 70, 100, "All"]]
-                                        ,
-                                        "language": {
-                                            "lengthMenu": "Hiển thị _MENU_ bản ghi mỗi trang",
-                                            "zeroRecords": "Không có bản ghi nào !",
-                                            "info": "Trang _PAGE_/_PAGES_",
-                                            "infoEmpty": "Không có dữ liệu !",
-                                            "infoFiltered": "(Lọc từ _MAX_ tổng bản ghi)",
-                                            "search": "Từ khóa tìm kiếm:"
-
-                                        }
-                                    }
-                                );
-                            }
-                        </script>
-                    </div>
-                    @*<div id="ctl00_ContentPlaceHolder1_UpdateProgress1" style="display:none;" role="status" aria-hidden="true">
-                            <div id="modal-table" class="modal fade in" tabindex="-1" style="display: block; padding-right: 17px; background: rgba(0,0,0,.7);" aria-hidden="false">
-                                <div class="modal-dialog" style="text-align: center; background: none; margin-top: 15% !important; border: 0;">
-                                    <div class="modal-content" style="text-align: center; background: none; border: 0;">
-                                        <div class="modal-body no-padding" style="text-align: center; background: none; border: 0;">
-                                            <img src="../Images/loading.gif" style="width: 100px; margin: auto; background: none; border-radius: 5px">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>*@
+                        </div>                        
+                    </div>                    
                 </div>
                 <!-- /.page-content -->
             </div>
         </div>
     </div>
 </body>
+
+<script src="../js/MethodView/Administrator.js"></script>
 </html>

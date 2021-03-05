@@ -16,12 +16,12 @@ namespace WenBenhVienNhietDoi.Models
         string _avata = string.Empty;
         int _LoaiTinTuc = 0;
         int _TrangThai = 0;
-        DateTime _NgayTao;
-        DateTime _NgaySua;
-        DateTime _NgayDuyet;
-        string _NguoiTao = string.Empty;
-        string _NguoiSua = string.Empty;
-        string _NguoiDuyet = string.Empty;
+        string _NgayTao= string.Empty;
+        string _NgaySua = string.Empty;
+        string _NgayDuyet = string.Empty;
+        int _NguoiTao = 0;
+        int _NguoiSua = 0;
+        int _NguoiDuyet = 0;
         string _url_file = string.Empty;
         int _SoLuongXem = 0;
         int _type = 0;
@@ -37,12 +37,12 @@ namespace WenBenhVienNhietDoi.Models
         public string Avata { get => _avata; set => _avata = value; }
         public int LoaiTinTuc { get => _LoaiTinTuc; set => _LoaiTinTuc = value; }
         public int TrangThai { get => _TrangThai; set => _TrangThai = value; }
-        public DateTime NgayTao { get => _NgayTao; set => _NgayTao = value; }
-        public DateTime NgaySua { get => _NgaySua; set => _NgaySua = value; }
-        public DateTime NgayDuyet { get => _NgayDuyet; set => _NgayDuyet = value; }
-        public string NguoiTao { get => _NguoiTao; set => _NguoiTao = value; }
-        public string NguoiSua { get => _NguoiSua; set => _NguoiSua = value; }
-        public string NguoiDuyet { get => _NguoiDuyet; set => _NguoiDuyet = value; }
+        public string NgayTao { get => _NgayTao; set => _NgayTao = value; }
+        public string NgaySua { get => _NgaySua; set => _NgaySua = value; }
+        public string NgayDuyet { get => _NgayDuyet; set => _NgayDuyet = value; }
+        public int NguoiTao { get => _NguoiTao; set => _NguoiTao = value; }
+        public int NguoiSua { get => _NguoiSua; set => _NguoiSua = value; }
+        public int NguoiDuyet { get => _NguoiDuyet; set => _NguoiDuyet = value; }
         public string Url_file { get => _url_file; set => _url_file = value; }
         public int SoLuongXem { get => _SoLuongXem; set => _SoLuongXem = value; }
         public string CrawData { get => _CrawData; set => _CrawData = value; }
