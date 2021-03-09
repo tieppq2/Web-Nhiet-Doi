@@ -98,7 +98,7 @@ namespace WenBenhVienNhietDoi.Controllers
             }
             return serializer.Serialize(rows);
         }
-        public List<MenuJson> Getdata(DataTable dt )
+        public List<MenuJson> Getdata(DataTable dt)
         {
             List<MenuJson> data = new List<MenuJson>();
             data.Add(new MenuJson
@@ -111,8 +111,8 @@ namespace WenBenhVienNhietDoi.Controllers
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 if (dt.Rows[i]["capmenu"].ToString() == "0")
-                    
-                data.Add(new MenuJson
+
+                    data.Add(new MenuJson
                     {
                         id = int.Parse(dt.Rows[i]["idCha"].ToString()),
                         text = dt.Rows[i]["TenMenuCha"].ToString(),
@@ -137,7 +137,7 @@ namespace WenBenhVienNhietDoi.Controllers
                 }
             }
             return data;
-        }        
+        }
         public int AdminExcTinTuc(TinTucModels tinTucModels)
         {
             SqlParameter[] paras = {
@@ -222,5 +222,10 @@ namespace WenBenhVienNhietDoi.Controllers
 
             return statusEx;
         }
+        public DataTable DanhSachDichVU()
+        {
+            return DBProcess.GetDataTable("DanhSachDichVU");
+        } 
+
     }
 }
