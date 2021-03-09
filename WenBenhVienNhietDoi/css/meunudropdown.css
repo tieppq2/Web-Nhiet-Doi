@@ -44,6 +44,7 @@ nav li ul {
     left: 0;
     opacity: 0;
     position: absolute;
+    min-width: 250px;
     top: 35px;
     visibility: hidden;
     z-index: 1;
