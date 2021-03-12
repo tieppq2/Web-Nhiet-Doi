@@ -45,8 +45,7 @@ function readURL(input) {
         reader.readAsDataURL(input.files[0]);
     }
 }
-$.post("/Administrator/PostMethod",
-function (response) {
+$.post("/Administrator/PostMethod",function (response) {
         $("#danhmuc").select2ToTree({ treeData: { dataArr: response }, maximumSelectionLength: 3 });
     }
 )
@@ -115,8 +114,9 @@ function renderdata() {
     formData.append("TomTatNoiDung", $("#txtlead").val());
     var editorText = CKEDITOR.instances.htmlNoiDung.getData();
     formData.append("NoiDung", editorText);
-    if(id === 0 )
+    if (id === 0 || files.length>0) {
         formData.append("Avata", '/Images/' + files[0].name);
+    }        
     else
         formData.append("Avata", $("#imghinhanh").attr('src'));
     formData.append("NgayTao", $("#datepicker_NgayDang").val());
@@ -225,10 +225,11 @@ function loaddataDefault(data) {
                 "name": 'Status',
                 render: function (data) {
                     var _Type = data.Type == 2 ? 'true' : 'false';
+                    var _sildes = data.Sildes == 1 ? 'true' : 'false';
                     if (data.TrangThai === 1)
-                        return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,this.checked,' + _Type + ')" type= "checkbox" id="' + data.idTinTuc + '" checked ><span class="slider round"></span></label>';
+                        return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,this.checked,' + _Type + ',' + _sildes+')" type= "checkbox" id="' + data.idTinTuc + '" checked ><span class="slider round"></span></label>';
                     else
-                        return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,this.checked,' + _Type  + ')"  type= "checkbox" id="' + data.idTinTuc + '"><span class="slider round"></span></label>';
+                        return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,this.checked,' + _Type + ',' + _sildes +')"  type= "checkbox" id="' + data.idTinTuc + '"><span class="slider round"></span></label>';
                 }
             },
             {
@@ -236,12 +237,25 @@ function loaddataDefault(data) {
                 "name": 'Duyệt Bài',
                 render: function (data) {
                     var _TrangThai = data.TrangThai == 1 ? 'true' : 'false';
+                    var _sildes = data.Sildes == 1 ? 'true' : 'false';
                     if (data.Type === 1)
-                        return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,' + _TrangThai + ',this.checked)" type= "checkbox" id="' + data.idTinTuc + '"  ><span class="slider round"></span></label>';
+                        return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,' + _TrangThai + ',this.checked,' + _sildes +')" type= "checkbox" id="' + data.idTinTuc + '"  ><span class="slider round"></span></label>';
                     else
-                        return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,' + _TrangThai + ',this.checked)" type= "checkbox" id="' + data.idTinTuc + '" checked><span class="slider round"></span></label>';
+                        return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,' + _TrangThai + ',this.checked,' + _sildes +')" type= "checkbox" id="' + data.idTinTuc + '" checked><span class="slider round"></span></label>';
                 }
-            }
+            },
+            {
+                "data": null,
+                "name": 'Slides',
+                render: function (data) {
+                    var _Type = data.Type == 2 ? 'true' : 'false';
+                    var _TrangThai = data.TrangThai == 1 ? 'true' : 'false';
+                    if (data.Sildes === 0)
+                        return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,' + _TrangThai + ',' + _Type + ',this.checked)" type= "checkbox" id="' + data.idTinTuc + '"  ><span class="slider round"></span></label>';
+                    else
+                        return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,' + _TrangThai + ',' + _Type + ',this.checked)" type= "checkbox" id="' + data.idTinTuc + '" checked><span class="slider round"></span></label>';
+                }
+            },
         ],
         order: [
             [0, 'DECS']
@@ -254,10 +268,11 @@ $('#loadtinbai').click(function () {
     loaddataDefault(data);    
 })
 
-function AdminUpdateStatusMes(id, TrangThai, type) {
+function AdminUpdateStatusMes(id, TrangThai, type, Sildes) {
     var _trangthai = TrangThai ? 2 : 1;
     var _type = type ? 2 : 1;
-    var url = '/Administrator/AdminUpdateStatusMes?ID=' + id + '&TrangThai=' + _trangthai + '&type=' + _type;
+    var _Sildes = Sildes ? 1 : 0;
+    var url = '/Administrator/AdminUpdateStatusMes?ID=' + id + '&TrangThai=' + _trangthai + '&type=' + _type + '&slides=' + _Sildes;
     $.ajax({
         type: "POST",
         url: url,

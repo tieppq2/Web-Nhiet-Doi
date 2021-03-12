@@ -179,6 +179,7 @@
     <Compile Include="Controllers\GioiThieuBVController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LienHeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\MainParentController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -192,10 +193,10 @@
     <Compile Include="Models\FileUploadModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ListTinTucAdminModels.cs" />
-    <Compile Include="Models\LoginController.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MenuLinkModels.cs" />
     <Compile Include="Models\MenuModels.cs" />
+    <Compile Include="Models\ThongTinDatLichModels.cs" />
     <Compile Include="Models\TinTucModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -1878,6 +1879,7 @@
     <Content Include="js\main.js" />
     <Content Include="js\MethodView\Administrator.js" />
     <Content Include="js\MethodView\BangGiaDVKT.js" />
+    <Content Include="js\MethodView\DatLichKham.js" />
     <Content Include="js\metisMenu-1.js" />
     <Content Include="js\metisMenu.js" />
     <Content Include="js\news-1.js" />
@@ -1903,19 +1905,12 @@
     <Content Include="lib\datatables\jquery.dataTables.min.css" />
     <Content Include="lib\datatables\jquery.dataTables.min.js" />
     <Content Include="lib\datatables\select.dataTables.min.css" />
+    <Content Include="lib\toastr\toastr-icon.png" />
+    <Content Include="lib\toastr\toastr.css" />
+    <Content Include="lib\toastr\toastr.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Images\New folder\logo.psd" />
-    <Content Include="css\fontawesome-webfont.eot-v=4.7-1.0" />
-    <Content Include="css\fontawesome-webfont.eot-v=4.7.0" />
-    <Content Include="css\fontawesome-webfont.svg-v=4.7-1.0" />
-    <Content Include="css\fontawesome-webfont.svg-v=4.7.0" />
-    <Content Include="css\fontawesome-webfont.ttf-v=4.7-1.0" />
-    <Content Include="css\fontawesome-webfont.ttf-v=4.7.0" />
-    <Content Include="css\fontawesome-webfont.woff" />
-    <Content Include="css\fontawesome-webfont.woff-v=4.7-1.0" />
-    <Content Include="css\fontawesome-webfont.woff2-v=4.7-1.0" />
-    <Content Include="css\fontawesome-webfont.woff2-v=4.7.0" />
     <Content Include="ckfinder\plugins\fileeditor\codemirror\LICENSE" />
     <Content Include="ckfinder\userfiles\.htaccess" />
     <Content Include="ckeditor\CHANGES.md" />
@@ -1971,6 +1966,9 @@
     <Content Include="css\Admin\assets\scss\_screen-reader.scss" />
     <Content Include="css\Admin\assets\scss\_stacked.scss" />
     <Content Include="css\Admin\assets\scss\_variables.scss" />
+    <Content Include="lib\toastr\toastr.less" />
+    <Content Include="lib\Vietnamese.json" />
+    <Content Include="lib\VietnameseBanDo.json" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -2036,11 +2034,12 @@
     <Content Include="Views\LienHe\Index.cshtml" />
     <Content Include="Views\Shared\_MenuAction2.cshtml" />
     <Content Include="Views\BangGiaDVKT\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="ckfinder\userfiles\flash\" />
-    <Folder Include="Views\Login\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

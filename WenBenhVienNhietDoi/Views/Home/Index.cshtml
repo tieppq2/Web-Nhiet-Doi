@@ -1,44 +1,56 @@
 ﻿@model WenBenhVienNhietDoi.Models.ListMenuModels
 @{
     ViewBag.Title = "Index";
+    var index_slides = 0;
 }
 <div class="site-section block-8" style="margin: 0; padding: 0;">
     <div class="slideshow-container">
-        <div class="mySlides fades" style="display: none;">
+        @foreach (var item in ViewBag.DanhSach_Slides)
+            {
+                //@index_slides = @index_slides + 1;
+            <div class="mySlides fades" style="display: none;">
+                <a href="/TinTuc/Details/@item.idTinTuc">
+                    <div class="numbertext">1 / 5</div>
+                    <img src="@item.Avata" style="width:100%;height: 575px;" title="@item.TieuDe">
+                    <div class="text">@*Dự án xây dựng bệnh viện nhiệt đới trung ương*@</div>
+                </a>
+            </div>
+        }
+        @*<div class="mySlides fades" style="display: none;">
             <a href="/Home/Index">
                 <div class="numbertext">1 / 5</div>
-                <img src="./Images/155905918.jpg" style="width:100%;height: 575px;" title="Dự án xây dựng bệnh viện nhiệt đới trung ương">
-                <div class="text">@*Dự án xây dựng bệnh viện nhiệt đới trung ương*@</div>
+                <img src="./Images/noi-tru1.jpg" style="width:100%;height: 575px;" title="Dự án xây dựng bệnh viện nhiệt đới trung ương">
+                <div class="text">Dự án xây dựng bệnh viện nhiệt đới trung ương</div>
             </a>
         </div>
         <div class="mySlides fades" style="display: block;">
             <a href="/Home/Index">
                 <div class="numbertext">2 / 5</div>
-                <img src="../Images/094126661.jpg" style="width:100%;height: 575px;" title="LỄ CÔNG BỐ QUYẾT ĐỊNH BỔ NHIỆM GIÁM ĐỐC VÀ PHÓ GIÁM ĐỐC PHỤ TRÁCH KINH TẾ BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG">
-                @*<div class="text">LỄ CÔNG BỐ QUYẾT ĐỊNH BỔ NHIỆM GIÁM ĐỐC VÀ PHÓ GIÁM ĐỐC PHỤ TRÁCH KINH TẾ BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG</div>*@
+                <img src="../Images/noi-soi-2.jpg" style="width:100%;height: 575px;" title="LỄ CÔNG BỐ QUYẾT ĐỊNH BỔ NHIỆM GIÁM ĐỐC VÀ PHÓ GIÁM ĐỐC PHỤ TRÁCH KINH TẾ BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG">
+                <div class="text">LỄ CÔNG BỐ QUYẾT ĐỊNH BỔ NHIỆM GIÁM ĐỐC VÀ PHÓ GIÁM ĐỐC PHỤ TRÁCH KINH TẾ BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG</div>
             </a>
         </div>
         <div class="mySlides fades" style="display: none;">
             <a href="/Home/Index">
                 <div class="numbertext">3 / 5</div>
-                <img src="../Images/093840021.jpg" style="width:100%;height: 575px;" title="PHÓ CHỦ TỊCH NƯỚC ĐẶNG THỊ NGỌC THỊNH TRAO TẶNG HUÂN CHƯƠNG LAO ĐỘNG HẠNG 3 CHO BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG">
-                <div class="text">@*PHÓ CHỦ TỊCH NƯỚC ĐẶNG THỊ NGỌC THỊNH TRAO TẶNG HUÂN CHƯƠNG LAO ĐỘNG HẠNG 3 CHO BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG*@</div>
+                <img src="../Images/noi-soi-3.jpg" style="width:100%;height: 575px;" title="PHÓ CHỦ TỊCH NƯỚC ĐẶNG THỊ NGỌC THỊNH TRAO TẶNG HUÂN CHƯƠNG LAO ĐỘNG HẠNG 3 CHO BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG">
+                <div class="text">PHÓ CHỦ TỊCH NƯỚC ĐẶNG THỊ NGỌC THỊNH TRAO TẶNG HUÂN CHƯƠNG LAO ĐỘNG HẠNG 3 CHO BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG</div>
             </a>
         </div>
         <div class="mySlides fades" style="display: none;">
             <a href="/Home/Index">
                 <div class="numbertext">4 / 5</div>
-                <img src="../Images/134543592.jpg" style="width:100%;height: 575px;" title="BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG BÁO CÁO THÀNH TÍCH ĐIỂN HÌNH TIÊN TIẾN VỚI CHỦ TỊCH QUỐC HỘI NGUYỄN THỊ KIM NGÂN TRƯỚC THỀM ĐẠI HỘI THI ĐUA YÊU NƯỚC TOÀN QUỐC NĂM 2020">
-                <div class="text">@*BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG BÁO CÁO THÀNH TÍCH ĐIỂN HÌNH TIÊN TIẾN VỚI CHỦ TỊCH QUỐC HỘI NGUYỄN THỊ KIM NGÂN TRƯỚC THỀM ĐẠI HỘI THI ĐUA YÊU NƯỚC TOÀN QUỐC NĂM 2020*@</div>
+                <img src="../Images/141631853.jpg" style="width:100%;height: 575px;" title="BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG BÁO CÁO THÀNH TÍCH ĐIỂN HÌNH TIÊN TIẾN VỚI CHỦ TỊCH QUỐC HỘI NGUYỄN THỊ KIM NGÂN TRƯỚC THỀM ĐẠI HỘI THI ĐUA YÊU NƯỚC TOÀN QUỐC NĂM 2020">
+                <div class="text">BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG BÁO CÁO THÀNH TÍCH ĐIỂN HÌNH TIÊN TIẾN VỚI CHỦ TỊCH QUỐC HỘI NGUYỄN THỊ KIM NGÂN TRƯỚC THỀM ĐẠI HỘI THI ĐUA YÊU NƯỚC TOÀN QUỐC NĂM 2020</div>
             </a>
         </div>
         <div class="mySlides fades" style="display: none;">
             <a href="/Home/Index">
                 <div class="numbertext">5 / 5</div>
-                <img src="../Images/094554130.jpg" style="width:100%;height: 575px;" title="LỄ KÝ KẾT HỢP TÁC">
-                @*<div class="text">LỄ KÝ KẾT HỢP TÁC</div>*@
+                <img src="../Images/dien-sinh-ky-1.jpg" style="width:100%;height: 575px;" title="LỄ KÝ KẾT HỢP TÁC">
+                <div class="text">LỄ KÝ KẾT HỢP TÁC</div>
             </a>
-        </div>
+        </div>*@
 
         <a class="prev" style="top: 25%;" onclick="plusSlides(-1)">❮</a>
         <a class="next" style="top: 25%;" onclick="plusSlides(1)">❯</a>

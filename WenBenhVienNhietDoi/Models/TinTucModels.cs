@@ -29,6 +29,7 @@ namespace WenBenhVienNhietDoi.Models
         string _CrawData = string.Empty;
         string _MenuParent = string.Empty;
         string _TenMenu = string.Empty;
+        int _Sildes = 0;
 
         public int idTinTuc { get => _idTinTuc; set => _idTinTuc = value; }
         public string TieuDe { get => _TieuDe; set => _TieuDe = value; }
@@ -50,5 +51,6 @@ namespace WenBenhVienNhietDoi.Models
         public string MenuParent { get => _MenuParent; set => _MenuParent = value; }
         public string TenMenu { get => _TenMenu; set => _TenMenu = value; }
         public int CapMenu { get => _CapMenu; set => _CapMenu = value; }
+        public int Sildes { get => _Sildes; set => _Sildes = value; }
     }
 }

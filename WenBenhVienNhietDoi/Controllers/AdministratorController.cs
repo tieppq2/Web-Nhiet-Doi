@@ -78,7 +78,9 @@ namespace WenBenhVienNhietDoi.Controllers
         {
             try
             {
-                if (_publicHelp.AdminExcTinTuc(TinTuc) != TinTuc.idTinTuc)
+                var ID = _publicHelp.AdminExcTinTuc(TinTuc);
+                if(Request.Files.Count>0)
+                //if (_publicHelp.AdminExcTinTuc(TinTuc) != TinTuc.idTinTuc)
                 {
                     foreach (string file in Request.Files)
                     {
@@ -112,9 +114,9 @@ namespace WenBenhVienNhietDoi.Controllers
             return Json(data);
         }
         [HttpPost]
-        public JsonResult AdminUpdateStatusMes(int ID, int TrangThai, int type)
+        public JsonResult AdminUpdateStatusMes(int ID, int TrangThai, int type, int slides)
         {
-            int data = _publicHelp.AdminUpdateStatusMes(ID, TrangThai, type);
+            int data = _publicHelp.AdminUpdateStatusMes(ID, TrangThai, type, slides);
 
             //ViewBag.DanhSach_TinTuc_Top5_main = _publicHelp.ConvertToList<TinTucModels>(DanhSach_TinTuc.Tables[0]);
             //var data = _publicHelp.ConvertToList<TinTucModels>(DanhSach_TinTuc.Tables[0]);

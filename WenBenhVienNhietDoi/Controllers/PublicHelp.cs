@@ -180,7 +180,7 @@ namespace WenBenhVienNhietDoi.Controllers
 
             return statusEx;
         }
-        public int AdminUpdateStatusMes(int idTinTuc, int TrangThai, int type)
+        public int AdminUpdateStatusMes(int idTinTuc, int TrangThai, int type,int slides)
         {
             SqlParameter[] paras = {
                 new SqlParameter("@idTinTuc", SqlDbType.Int),
@@ -199,7 +199,7 @@ namespace WenBenhVienNhietDoi.Controllers
                 //new SqlParameter("@url_file", SqlDbType.NVarChar),
                 //new SqlParameter("@CrawData", SqlDbType.NVarChar),
                 new SqlParameter("@type", SqlDbType.Int),
-                //new SqlParameter("@avata", SqlDbType.NVarChar),
+                new SqlParameter("@slides", SqlDbType.Int),
             };
             paras[0].Value = Convert.ToInt32(idTinTuc);
             //paras[1].Value = Convert.ToString(tinTucModels.TieuDe);
@@ -216,7 +216,7 @@ namespace WenBenhVienNhietDoi.Controllers
             //paras[12].Value = Convert.ToString(tinTucModels.Url_file);
             //paras[13].Value = Convert.ToString(tinTucModels.CrawData);
             paras[2].Value = Convert.ToInt32(type);
-            //paras[15].Value = Convert.ToString(tinTucModels.Avata);
+            paras[3].Value = Convert.ToInt32(slides);
 
             int statusEx = int.Parse(DBProcess.GetDataTable("UpdateStatusMes", paras).Rows[0]["idTinTuc"].ToString());
 
@@ -225,7 +225,34 @@ namespace WenBenhVienNhietDoi.Controllers
         public DataTable DanhSachDichVU()
         {
             return DBProcess.GetDataTable("DanhSachDichVU");
-        } 
+        }
+        public bool ThemBNDatLich(ThongTinDatLichModels datLichKham)
+        {
+            SqlParameter[] paras = {
+                new SqlParameter("@HoTen", SqlDbType.NVarChar),
+                new SqlParameter("@NgaySinh", SqlDbType.NVarChar),
+                new SqlParameter("@GioiTinh", SqlDbType.Int),
+                new SqlParameter("@DiaChi", SqlDbType.NVarChar),
+                new SqlParameter("@SDT", SqlDbType.NVarChar),
+                new SqlParameter("@Email", SqlDbType.NVarChar),
+                new SqlParameter("@TheBHYT", SqlDbType.NVarChar),
+                new SqlParameter("@NoiDungKham", SqlDbType.NText),
+                new SqlParameter("@NgayKham", SqlDbType.NVarChar),
+            };
+            paras[0].Value = !string.IsNullOrEmpty(datLichKham.HoTen)?Convert.ToString(datLichKham.HoTen): (object)DBNull.Value;
+            paras[1].Value = Convert.ToString(datLichKham.NgaySinh) ;
+            paras[2].Value = Convert.ToInt32(datLichKham.GioiTinh?1:0);
+            paras[3].Value = !string.IsNullOrEmpty(datLichKham.DiaChi) ?Convert.ToString(datLichKham.DiaChi) : (object)DBNull.Value;
+            paras[4].Value = !string.IsNullOrEmpty(datLichKham.SDT) ?Convert.ToString(datLichKham.SDT) : (object)DBNull.Value;
+            paras[5].Value = !string.IsNullOrEmpty(datLichKham.Email) ?Convert.ToString(datLichKham.Email) : (object)DBNull.Value;
+            paras[6].Value = !string.IsNullOrEmpty(datLichKham.TheBHYT) ?Convert.ToString(datLichKham.TheBHYT) : (object)DBNull.Value;
+            paras[7].Value = !string.IsNullOrEmpty(datLichKham.NoiDungKham) ?Convert.ToString(datLichKham.NoiDungKham) : (object)DBNull.Value;
+            paras[8].Value = Convert.ToString(datLichKham.NgayKham);
+
+            var statusEx = DBProcess.Exec("ThemBNDatLich", paras);
+
+            return statusEx;
+        }
 
     }
 }

@@ -3,7 +3,6 @@
     //ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_MasterPage.cshtml";
 }
-
 <div class="site-blocks-cover site-blocks-1 bg-light" style="padding-top: 10px;">
     <div class="container">
         <div class="row">
@@ -29,42 +28,42 @@
                             </div>
                         </div>
                     }
-                        @*<section class="elementor-section elementor-inner-section elementor-element elementor-element-ea5040e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ea5040e" data-element_type="section">
-                <div class="elementor-widget-container">
-                    <h2 class="elementor-heading-title elementor-size-default">Tin Tức</h2>
-                </div>
-            </section>*@
-                        @*<h2 class="news-header-title heading-line"> <a href="https://moh.gov.vn:443/hoat-dong-cua-lanh-dao-bo?p_p_auth=BKXPljq4QE&amp;p_p_id=101_INSTANCE_iVSSyRXdH68n&amp;p_p_lifecycle=0&amp;p_p_col_id=row-0-column-2&amp;p_p_col_count=2" title="HOẠT ĐỘNG CỦA LÃNH ĐẠO BỘ">HOẠT ĐỘNG CỦA LÃNH ĐẠO BỘ</a> </h2>*@
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:10px 10px 10px 0px;">
-                            @foreach (var item in ViewBag.TinTuc_Main_Details)
-                            {
-                                <div class="news-hot-home-3">
-                                    <div style="float: left; z-index: 2;">
-                                        <a href="/TinTuc/Details/@item.idTinTuc" target="_blank">
-                                            <img src="@item.Avata" alt="@item.TieuDe" style="width:250px; height:170px;">
-                                        </a>
+                    @*<section class="elementor-section elementor-inner-section elementor-element elementor-element-ea5040e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ea5040e" data-element_type="section">
+                            <div class="elementor-widget-container">
+                                <h2 class="elementor-heading-title elementor-size-default">Tin Tức</h2>
+                            </div>
+                        </section>*@
+                    @*<h2 class="news-header-title heading-line"> <a href="https://moh.gov.vn:443/hoat-dong-cua-lanh-dao-bo?p_p_auth=BKXPljq4QE&amp;p_p_id=101_INSTANCE_iVSSyRXdH68n&amp;p_p_lifecycle=0&amp;p_p_col_id=row-0-column-2&amp;p_p_col_count=2" title="HOẠT ĐỘNG CỦA LÃNH ĐẠO BỘ">HOẠT ĐỘNG CỦA LÃNH ĐẠO BỘ</a> </h2>*@
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:10px 10px 10px 0px;">
+                        @foreach (var item in ViewBag.TinTuc_Main_Details)
+                        {
+                            <div class="news-hot-home-3">
+                                <div style="float: left; z-index: 2;">
+                                    <a href="/TinTuc/Details/@item.idTinTuc" target="_blank">
+                                        <img src="@item.Avata" alt="@item.TieuDe" style="width:250px; height:170px;">
+                                    </a>
+                                </div>
+                                <div style="padding-left:273px;">
+                                    <div class="titleTranblock">
+                                        <a href="/TinTuc/Details/@item.idTinTuc" target="_blank" style="font-size: 20px;">@item.TieuDe</a>
                                     </div>
-                                    <div style="padding-left:273px;">
-                                        <div class="titleTranblock">
-                                            <a href="/TinTuc/Details/@item.idTinTuc" target="_blank" style="font-size: 20px;">@item.TieuDe</a>
-                                        </div>
-                                        <div class="line-time">@item.TomTatNoiDung</div>
-                                        <div class="title-time" style="    text-align: right;">
-                                            <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
-                                            @item.NgayDuyet&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <i class="fa fa-eye" style="color:red; padding:0; font-size: 14px;"></i>
-                                            <span id="idView">@item.SoLuongXem</span>
-                                        </div>
+                                    <div class="line-time">@item.TomTatNoiDung</div>
+                                    <div class="title-time" style="    text-align: right;">
+                                        <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                        @item.NgayDuyet&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <i class="fa fa-eye" style="color:red; padding:0; font-size: 14px;"></i>
+                                        <span id="idView">@item.SoLuongXem</span>
                                     </div>
                                 </div>
-                            }
-                            <div style="position: absolute;    left: 50%;margin-top: -14px;">
-                                <a id="prev-page" style="color: #000;"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-                                &nbsp;&nbsp;
-                                <a id="next-page" style="color: #000;"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
+                        }
+                        <div style="position: absolute;    left: 50%;margin-top: -14px;">
+                            <a id="prev-page" style="color: #000;"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                            &nbsp;&nbsp;
+                            <a id="next-page" style="color: #000;"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                         </div>
                     </div>
+                </div>
             </div>
             <div class="col-md-4 col-sm-12">
                 <!--Đăng ký tư vấn-->
@@ -109,13 +108,95 @@
 <div class="modal fade" id="ModalPopUp" role="dialog">
     <div class="modal-dialog err-pop" style="">
         <div class="modal-content">
-            <div class="modal-header">
-                <button id="DivClose" type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body" style="text-align:center;">
-                Put Your Html Element Here
+            <div class="p-3 p-lg-5 border" style="display: block">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="site-section-heading pt-3 mb-4">
+                            <h4 class="h3 mb-3 text-black" style="font-size: 20px;">THÔNG TIN BỆNH NHÂN</h4>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Index_sHoTen" class="text-black">Họ và tên <span class="text-danger">*</span></label><span class="field-validation-valid" data-valmsg-for="Index_err_sHoTen" data-valmsg-replace="true"></span>
+                                    <input id="Index_sHoTen" name="Index_sHoTen" value="" placeholder="Họ và tên" type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="Index_NgaySinh" class="text-black">Ngày sinh <span class="text-danger">*</span></label><span class="field-validation-valid" data-valmsg-for="Index_err_NgaySinh" data-valmsg-replace="true"></span>
+                                    <input type="date" my-date-format="DD/MM/YYYY" id="Index_NgaySinh" name="Index_NgaySinh" value="" placeholder="Ví dụ: 20/10/1985" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="Index_chkGioiTinh" class="text-black">Giới tính <span class="text-danger">*</span></label><span class="field-validation-valid" data-valmsg-for="Index_err_GioiTinh" data-valmsg-replace="true"></span><br>
+                                    <input type="radio" id="Index_chkGioiTinhNam" name="Index_chkGioiTinhNam" value="1" checked> Nam &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" id="Index_chkGioiTinhNu" name="Index_chkGioiTinhNu" value="2"> Nữ &nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="Index_sEmail" class="text-black">Thẻ bảo hiểm y tế </label>
+                                    <input id="Index_sBHYT" name="Index_sBHYT" value="" placeholder="Thẻ bảo hiểm y tế" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="Index_NgaySinh" class="text-black">Ngày Khám <span class="text-danger">*</span></label><span class="field-validation-valid" data-valmsg-for="Index_err_Index_NgayKham" data-valmsg-replace="true"></span>
+                                    <input type="date" my-date-format="DD/MM/YYYY" id="Index_NgayKham" name="Index_NgayKham" value="" placeholder="Ví dụ: 20/10/1985" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="Index_sDienThoai" class="text-black">Số điện thoại <span class="text-danger">*</span></label><span class="field-validation-valid" data-valmsg-for="Index_err_sDienThoai" data-valmsg-replace="true"></span>
+                                    <input id="Index_sDienThoai" name="Index_sDienThoai" value="" placeholder="Số điện thoại" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="Index_sEmail" class="text-black">Email </label>
+                                    <input id="Index_sEmail" name="Index_sEmail" value="" placeholder="Email" type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="Index_sDiaChi" class="text-black">Địa chỉ <span class="text-danger">*</span></label><span class="field-validation-valid" data-valmsg-for="Index_err_sDiaChi" data-valmsg-replace="true"></span>
+                                    <input id="Index_sDiaChi" name="Index_sDiaChi" value="" placeholder="Địa chỉ" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="Index_sNoiDung" class="text-black">Nội dung khám <span class="text-danger">*</span></label><span class="field-validation-valid" data-valmsg-for="Index_err_sNoiDung" data-valmsg-replace="true"></span>
+                                <textarea id="Index_sNoiDung" name="Index_sNoiDung" placeholder="Nội dung khám" type="text" class="form-control" style="height: 100px;"></textarea>
+                            </div>
+                            <div class="col-md-12" style="text-align: center; margin-top: 10px;">
+                                <button class="btn btn-primary btn-lg py-3 btn-block" style="width:200px" id="btn_datlichkham">Đặt lịch</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+@*<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>*@
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="~/js/bootstrap.min.js"></script>
+<script src="~/js/MethodView/DatLichKham.js"></script>
+<link href="~/lib/toastr/toastr.css" rel="stylesheet" />
+<script src="~/lib/toastr/toastr.js"></script>
+@{
+    <style scoped>
+        .p-lg-5 {
+            padding: 3rem !important;
+        }
+
+        .p-3 {
+            padding: 1rem !important;
+        }
+    </style>
+}
 

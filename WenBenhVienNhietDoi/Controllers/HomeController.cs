@@ -24,6 +24,7 @@ namespace WenBenhVienNhietDoi.Controllers
 
             ViewBag.DanhSach_TinTuc_Top5_main = _publicHelp.ConvertToList<TinTucModels>(DanhSach_TinTuc_TOP_main.Tables[0]);
             ViewBag.DanhSach_TinTuc_Top_main = _publicHelp.ConvertToList<TinTucModels>(DanhSach_TinTuc_TOP_main.Tables[1]);
+            ViewBag.DanhSach_Slides = _publicHelp.ConvertToList<TinTucModels>(DanhSach_TinTuc_TOP_main.Tables[2]);
             ViewBag.DanhSach_TinTuc_HDBV = _publicHelp.ConvertToList<TinTucModels>(DanhSach_TinTuc_HDBV.Tables[0]);
             ViewBag.DanhSach_TinTuc_KHDT = _publicHelp.ConvertToList<TinTucModels>(DanhSach_TinTuc_KHDT.Tables[0]);
             ViewBag.DanhSach_TinTuc_TRNH = _publicHelp.ConvertToList<TinTucModels>(DanhSach_TinTuc_TRNH.Tables[0]);
