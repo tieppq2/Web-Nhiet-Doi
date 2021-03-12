@@ -90,19 +90,29 @@
             <div class="col-md-8 col-sm-12">
                 <div class="row" style="width:100%; padding: 2px; margin-left:0px;">
                     <!--Tin mới-->
+                    @*<section class="elementor-section elementor-inner-section elementor-element elementor-element-ea5040e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ea5040e" data-element_type="section">
+            <div class="elementor-widget-container">
+                <h2 class="elementor-heading-title elementor-size-default">Tin mới</h2>
+            </div>
+        </section>*@
+                  
+                        <h2 style="font-weight:bold;">
+                            <a style=" font-size: 30px;color: #2096db;text-transform:uppercase;    font-family: 'Roboto Condensed',Roboto,arial;">
+                                Tin Mới
+                            </a>
+                        </h2>
+                        <span style="width:100%; height:1px;background-color:#c2c2c2;display:inline-block;">
 
-                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-ea5040e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ea5040e" data-element_type="section">
-                        <div class="elementor-widget-container">
-                            <h2 class="elementor-heading-title elementor-size-default">Tin mới</h2>
-                        </div>
-                    </section>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:10px 10px 10px 0px;">
+                        </span>
+                   
+                    
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:10px 10px 10px 0px;margin-top:10px;">
                         @foreach (var item in ViewBag.DanhSach_TinTuc_Top_main)
                         {
                             <div class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="item active">
-                                        <a href="/TinTuc/Details/@item.idTinTuc"><img src="@item.Avata" alt="@item.TieuDe" style="width:100%; height: 235px; padding-bottom:10px;"target="_blank"></a>
+                                        <a href="/TinTuc/Details/@item.idTinTuc"><img src="@item.Avata" alt="@item.TieuDe" style="width:100%; height: 235px; padding-bottom:10px;" target="_blank"></a>
                                         <div class="titleTranblock">
                                             <a href="/TinTuc/Details/@item.idTinTuc" title="#" style="font-size: 16px;">@item.TieuDe</a>
                                         </div>
@@ -148,265 +158,9 @@
                             </div>
                         }
                     </div>
-                    <!--Hoạt động BV-->
-                    <div class="col-md-6 col-sm-12">
-                        <div class="elementor-element elementor-element-46ca6b9 elementor-widget elementor-widget-heading" data-id="46ca6b9" data-element_type="widget" data-widget_type="heading.default">
-                            <div class="elementor-widget-container-2">
-                                <h3 class="h3-element-heading"><a href="/MainParent/Details/?ID=9&CapMenu=1" target="_blank" style="color: #ffffff;">Hoạt động bệnh viện</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Tin truyền nhiễm-->
-                    <div class="col-md-6 col-sm-12">
-                        <div class="elementor-element elementor-element-46ca6b9 elementor-widget elementor-widget-heading" data-id="46ca6b9" data-element_type="widget" data-widget_type="heading.default">
-                            <div class="elementor-widget-container-2">
-                                <h3 class="h3-element-heading"><a href="/MainParent/Details?ID=19&CapMenu=1" target="_blank" style="color: #ffffff;">Tin truyền nhiễm</a></h3>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 news-row" style="margin-top:10px; padding: 0;">
-                        @foreach (var item in ViewBag.DanhSach_TinTuc_HDBV)
-                        {
-                            <div class="news-hot-home-2">
-                                <div style="float: left; z-index: 2;">
-                                    <a href="/TinTuc/Details/@item.idTinTuc" target="_blank">
-                                        <img src="@item.Avata" alt="@item.TieuDe" style="width:120px; height:80px;">
-                                    </a>
-                                </div>
-                                <div style="padding-left:135px;">
-                                    <div class="titleTranblock">
-                                        <a href="/TinTuc/Details/@item.idTinTuc" target="_blank">@item.TieuDe</a>
-                                    </div>
-                                    <div class="line-time"></div>
-                                    <div class="title-time" style="text-align: right;">
-                                        <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
-                                        @item.NgayDuyet&nbsp;&nbsp;&nbsp;&nbsp;
-                                    </div>
-                                    @*<p style="margin-top:10px;">@item.TomTatNoiDung</p>*@
-                                </div>
-                            </div>
-                        }
-                        <div class="td-next-prev-wrap">
-                            <a id="prev-page" style="color: #000;"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-                            &nbsp;&nbsp;
-                            <a id="next-page" style="color: #000;"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 news-row" style="margin-top:10px; padding: 0;">
-                        @foreach (var item in ViewBag.DanhSach_TinTuc_TRNH)
-                        {
-                            <div class="news-hot-home-2">
-                                <div style="float: left; z-index: 2;">
-                                    <a href="/TinTuc/Details/@item.idTinTuc" target="_blank">
-                                        <img src="@item.Avata" alt="@item.TieuDe" style="width:120px; height:80px;">
-                                    </a>
-                                </div>
-                                <div style="padding-left:135px;">
-                                    <div class="titleTranblock">
-                                        <a href="/TinTuc/Details/@item.idTinTuc" target="_blank">@item.TieuDe</a>
-                                    </div>
-                                    <div class="line-time"></div>
-                                    <div class="title-time" style="text-align: right;">
-                                        <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
-                                        @item.NgayDuyet&nbsp;&nbsp;&nbsp;&nbsp;
-                                    </div>
-                                </div>
-                            </div>
-                        }
-                        <div class="td-next-prev-wrap">
-                            <a id="prev-page" style="color: #000;"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-                            &nbsp;&nbsp;
-                            <a id="next-page" style="color: #000;"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <!--Chuyên đề bệnh truyền nhiễm-->
-                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-ea5040e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ea5040e" data-element_type="section">
-                        <div class="elementor-widget-container">
-                            <h2 class="elementor-heading-title elementor-size-default"><a href="/MainParent/Details?ID=14&CapMenu=1" target="_blank" style="color: #ffffff;">Chuyên đề bệnh truyền nhiễm</a></h2>
-                        </div>
-                    </section>
 
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 news-row" style="margin-top:10px; padding: 0;">
-                        <div id="box_ucpostbox23" class="box_body">
-                            <div class="d_scroll">
-                                <div id="pl_iEmPA_c0">
-                                    <div class="pl_thumb_c">
-                                        @foreach (var item in ViewBag.DanhSach_TinTuc_KHDT)
-                                        {
-                                            <div class="plc4">
-                                                <div class="l-item ">
-                                                    <div class="pl_top_c">
-                                                        <div class="pl_thumb">
-                                                            <a title="@item.TieuDe" href="/TinTuc/Details/@item.idTinTuc" rlink="/TinTuc/Details/@item.idTinTuc" target="_blank">
-                                                                <img alt="@item.TieuDe" src="@item.Avata" style="width:100%; height:130px;">
-                                                            </a>
-                                                        </div>
-                                                        <div class="l-item-h">
-                                                            <a class="l-title" href="/TinTuc/Details/@item.idTinTuc" target="_blank"><h4>@item.TieuDe</h4></a>
-                                                            <div class="clear"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="clear"></div>
-                                                    <div class="pl_thumb_brief">@item.TomTatNoiDung</div>
-                                                    <div class="pl_readmore"><a href="/TinTuc/Details/@item.idTinTuc" title="@item.TieuDe" rlink="/TinTuc/Details/@item.idTinTuc" target="_blank">Xem tiếp</a></div>
-                                                </div>
-                                            </div>
-                                        }
-                                        <div class="clear"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="td-next-prev-wrap">
-                            <a id="prev-page" style="color: #000;"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-                            &nbsp;&nbsp;
-                            <a id="next-page" style="color: #000;"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <!--Đội ngũ BS-->
-                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-ea5040e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ea5040e" data-element_type="section">
-                        <div class="elementor-widget-container">
-                            <h2 class="elementor-heading-title elementor-size-default">Tổ chức bộ máy</h2>
-                        </div>
-                    </section>
 
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 news-row" style="margin-top:10px; padding: 0;">
-                        <div class="nonloop-block-3 owl-carousel owl-loaded owl-drag">
-                            <div class="owl-stage-outer">
-                                <div class="owl-item active plc4">
-                                    <div class="item">
-                                        <div class="block-38 text-center">
-                                            <div class="block-38-img text-center">
-                                                <div class="block-38-header text-center">
-                                                    <img style="width: 85%; margin-left: 13px;" src="../Images/102741329.jpg" alt="TS. Phạm Ngọc Thạch" class="mb-4">
-                                                    <h3 class="block-38-heading h4" style="font-size: 16px;">TS. Phạm Ngọc Thạch</h3>
-                                                    <p class="block-38-subheading" style="font-size: 11px;">Giám đốc</p>
-                                                </div>
-                                                <div class="block-38-body">
-                                                    <p></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="owl-item active plc4">
-                                    <div class="item">
-                                        <div class="block-38 text-center">
-                                            <div class="block-38-img text-center">
-                                                <div class="block-38-header text-center">
-                                                    <img style="width: 85%; margin-left: 13px;" src="../Images/150310772.jpg" alt="Ths.BS Đặng Hồng Hải" class="mb-4">
-                                                    <h3 class="block-38-heading h4" style="font-size: 16px;">Ths.BS Đặng Hồng Hải</h3>
-                                                    <p class="block-38-subheading" style="font-size: 11px;">Trưởng phòng Kế hoạch Tổng hợp</p>
-                                                </div>
-                                                <div class="block-38-body">
-                                                    <p></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="owl-item active plc4">
-                                    <div class="item">
-                                        <div class="block-38 text-center">
-                                            <div class="block-38-img text-center">
-                                                <div class="block-38-header text-center">
-                                                    <img style="width: 85%; margin-left: 13px;" src="../Images/140543393.jpg" alt="BsCKII. Nguyễn Trung Cấp" class="mb-4">
-                                                    <h3 class="block-38-heading h4" style="font-size: 16px;">BsCKII. Nguyễn Trung Cấp</h3>
-                                                    <p class="block-38-subheading" style="font-size: 11px;">Phó Giám đốc</p>
-                                                </div>
-                                                <div class="block-38-body">
-                                                    <p></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><div class="owl-nav"><div class="owl-prev disabled"><span class="icon-arrow_back"></span></div><div class="owl-next"><span class="icon-arrow_forward"></span></div></div><div class="owl-dots"><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div></div>
-                        </div>
-                        <div class="td-next-prev-wrap" style="margin-bottom:-20px">
-                            <a id="prev-page" style="color: #000;"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-                            &nbsp;&nbsp;
-                            <a id="next-page" style="color: #000;"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-
-                    <!--VB phát hành-->
-                    <div style="    width: inherit; " class="elementor-element elementor-element-46ca6b9 elementor-widget elementor-widget-heading" data-element_type="widget" data-widget_type="heading.default">
-                        <div class="elementor-widget-container-2" style="margin-top:37px">
-                            <h3 class="h3-element-heading" style="text-align: left;">
-                                Văn bản mới nhất
-                                <div style=" display: inline-block; float: right;"><a target="_blank" href="http://emohbackup.moh.gov.vn/publish"><i class="fa fa-search"></i>&nbsp;Tìm kiếm</a></div>
-                            </h3>
-                        </div>
-                    </div>
-                    <div class="site-section block-3 site-blocks-2">
-                        <div class="container">
-                            <div class="row">
-                                <div id="cpos_25">
-                                    <div class="box_c box_c_1" style="background-color: #ffffff;margin-top:10px">
-                                        <div class="box_body">
-                                            <div class="site-blocks-table">
-                                                <table class="table tabel-ressponsive moh-table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th scope="col" style="text-align: center;width: 150px;">Số hiệu</th>
-                                                            <th scope="col" style="text-align: center;">Trích yếu nội dung</th>
-                                                            <th scope="col" style="text-align: center;">Cơ quan</th>
-                                                            <th scope="col" style="text-align: center;width: 100px;">Ngày</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody id="doc-body-content">
-                                                        <tr>
-                                                            <td style="width: 150px;">103/AIDS-ĐT</td>
-                                                            <td>
-                                                                <a class="limitwords" style="color: #2a30f9;" href="https://emohbackup.moh.gov.vn/publish/home?documentId=8239" target="_blank">Đăng tải dự thảo Thông tư hướng dẫn xét nghiệm HIV cho phụ nữ mang thai và chăm sóc, điều trị đối với phụ nữ nhiễm HIV trong thời kỳ mang thai, khi sinh con, cho con bú</a>
-                                                            </td>
-                                                            <td> Cục Phòng chống HIV/AIDS</td>
-                                                            <td style="width: 100px; text-align: center;"> 18/2/2021</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="width: 150px;">176/BC-BYT</td>
-                                                            <td>
-                                                                <a class="limitwords" style="color: #2a30f9;" href="https://emohbackup.moh.gov.vn/publish/home?documentId=8238" target="_blank">Trình xin Thứ trưởng phê duyệt Báo cáo công tác y tế trực Tết Nguyên đán Tân Sửu ngày 16/02/2021 (Mùng 5 Tết)</a>
-                                                            </td>
-                                                            <td> Bộ Y Tế</td>
-                                                            <td style="width: 100px; text-align: center;"> 18/2/2021</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="width: 150px;">984/CV-BCĐ</td>
-                                                            <td>
-                                                                <a class="limitwords" style="color: #2a30f9;" href="https://emohbackup.moh.gov.vn/publish/home?documentId=8236" target="_blank">V/v tích cực rà soát, lấy mẫu xét nghiệm, giám sát sức khỏe người về từ huyện Cẩm Giàng, Hải Dương</a>
-                                                            </td>
-                                                            <td> Bộ Y Tế</td>
-                                                            <td style="width: 100px; text-align: center;"> 15/2/2021</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="width: 150px;">23/KL-TTRB</td>
-                                                            <td>
-                                                                <a class="limitwords" style="color: #2a30f9;" href="https://emohbackup.moh.gov.vn/publish/home?documentId=8233" target="_blank">Kết luận thanh tra tại Sở Y tế Hà Nội</a>
-                                                            </td>
-                                                            <td> Thanh tra Bộ</td>
-                                                            <td style="width: 100px; text-align: center;"> 9/2/2021</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="width: 150px;">1000/QLD-PCTTR</td>
-                                                            <td>
-                                                                <a class="limitwords" style="color: #2a30f9;" href="https://emohbackup.moh.gov.vn/publish/home?documentId=8232" target="_blank">V/v đề nghị đăng tải dự thảo Thông tư bãi bỏ một số văn bản QPPL do Bộ trưởng Bộ Y tế ban hành</a>
-                                                            </td>
-                                                            <td> Cục Quản lý Dược</td>
-                                                            <td style="width: 100px; text-align: center;"> 9/2/2021</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="col-md-4 col-sm-12">
@@ -424,30 +178,31 @@
                         </div>
                     </div>
                 </div>
+                <br />
 
                 <!--Khai báo y tế-->
-                <div class="elementor-element elementor-element-c161c37 elementor-widget elementor-widget-image" data-id="c161c37" data-element_type="widget" data-widget_type="image.default">
-                    <div style="margin-left:2px">
-                        <div class="elementor-image">
-                            <a href="https://tokhaiyte.vn/" target="_blank" rel="noopener">
-                                <img style=" margin-top: 10px;width: 100%;" width="614" height="274" src="../Images/12345.jpg" class="attachment-large size-large" alt="" loading="lazy" sizes="(max-width: 614px) 100vw, 614px" title="KHAI BÁO Y TẾ">
-                            </a>
+                @*<div class="elementor-element elementor-element-c161c37 elementor-widget elementor-widget-image" data-id="c161c37" data-element_type="widget" data-widget_type="image.default">
+                        <div style="margin-left:2px">
+                            <div class="elementor-image">
+                                <a href="https://tokhaiyte.vn/" target="_blank" rel="noopener">
+                                    <img style=" margin-top: 10px;width: 100%;" width="614" height="274" src="../Images/12345.jpg" class="attachment-large size-large" alt="" loading="lazy" sizes="(max-width: 614px) 100vw, 614px" title="KHAI BÁO Y TẾ">
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    </div>*@
                 <!-- Thông điệp BV-->
-                <div class="elementor-element elementor-element-c161c37 elementor-widget elementor-widget-image" data-id="c161c37" data-element_type="widget" data-widget_type="image.default">
-                    <div style="margin-left:2px">
-                        <div class="elementor-image">
-                            <a href="" target="_blank" rel="noopener">
-                                <img style=" margin-top: 10px;width: 100%;" width="614" height="274" src="../Images/thong_diep_5k--15753885916748196.jpg" class="attachment-large size-large" alt="" loading="lazy" sizes="(max-width: 614px) 100vw, 614px">
-                            </a>
+                @*<div class="elementor-element elementor-element-c161c37 elementor-widget elementor-widget-image" data-id="c161c37" data-element_type="widget" data-widget_type="image.default">
+                        <div style="margin-left:2px">
+                            <div class="elementor-image">
+                                <a href="" target="_blank" rel="noopener">
+                                    <img style=" margin-top: 10px;width: 100%;" width="614" height="274" src="../Images/thong_diep_5k--15753885916748196.jpg" class="attachment-large size-large" alt="" loading="lazy" sizes="(max-width: 614px) 100vw, 614px">
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    </div>*@
 
                 <!--Liên kết nhanh-->
-                <div style="margin-top: 10px;" class="elementor-element elementor-element-46ca6b9 elementor-widget elementor-widget-heading" data-id="46ca6b9" data-element_type="widget" data-widget_type="heading.default">
+                <div class="elementor-element elementor-element-46ca6b9 elementor-widget elementor-widget-heading" data-id="46ca6b9" data-element_type="widget" data-widget_type="heading.default">
                     <div class="elementor-widget-container-2 " style="background-color: #dc3545;margin-top: 10px;">
                         <h3 class="h3-element-heading">Liên kết nhanh</h3>
                     </div>
@@ -467,25 +222,25 @@
                     </div>
                 </div>
                 <!--Video-->
-                <div style="margin-top: 10px;max-width: 100px;margin-inline: auto;" class="elementor-element elementor-element-46ca6b9 elementor-widget elementor-widget-heading" data-id="46ca6b9" data-element_type="widget" data-widget_type="heading.default">
-                    <div class="elementor-widget-container-2">
-                        <h3 class="h3-element-heading">Video</h3>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-549f709 elementor-aspect-ratio-169 elementor-widget elementor-widget-video" data-id="549f709" data-element_type="widget" data-settings="{&quot;aspect_ratio&quot;:&quot;169&quot;}" data-widget_type="video.default">
-                    <div style="margin-left:2px">
-                        <div class="elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
-                            <iframe style="margin-top: 10px;width: 100%;" class="elementor-video-iframe" allowfullscreen="" title="youtube Video Player" src="https://player.vimeo.com/video/137857207"></iframe>
+                @*<div style="margin-top: 10px;max-width: 100px;margin-inline: auto;" class="elementor-element elementor-element-46ca6b9 elementor-widget elementor-widget-heading" data-id="46ca6b9" data-element_type="widget" data-widget_type="heading.default">
+                        <div class="elementor-widget-container-2">
+                            <h3 class="h3-element-heading">Video</h3>
                         </div>
                     </div>
-                </div>
-                <div class="elementor-element elementor-element-8f4e086 elementor-aspect-ratio-169 elementor-widget elementor-widget-video" data-id="8f4e086" data-element_type="widget" data-settings="{&quot;aspect_ratio&quot;:&quot;169&quot;}" data-widget_type="video.default">
-                    <div style="margin-left:2px">
-                        <div class="elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
-                            <iframe style="width: 100%;" class="elementor-video-iframe" allowfullscreen="" title="youtube Video Player" src="https://player.vimeo.com/video/137857207"></iframe>
+                    <div class="elementor-element elementor-element-549f709 elementor-aspect-ratio-169 elementor-widget elementor-widget-video" data-id="549f709" data-element_type="widget" data-settings="{&quot;aspect_ratio&quot;:&quot;169&quot;}" data-widget_type="video.default">
+                        <div style="margin-left:2px">
+                            <div class="elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
+                                <iframe style="margin-top: 10px;width: 100%;" class="elementor-video-iframe" allowfullscreen="" title="youtube Video Player" src="https://player.vimeo.com/video/137857207"></iframe>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="elementor-element elementor-element-8f4e086 elementor-aspect-ratio-169 elementor-widget elementor-widget-video" data-id="8f4e086" data-element_type="widget" data-settings="{&quot;aspect_ratio&quot;:&quot;169&quot;}" data-widget_type="video.default">
+                        <div style="margin-left:2px">
+                            <div class="elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
+                                <iframe style="width: 100%;" class="elementor-video-iframe" allowfullscreen="" title="youtube Video Player" src="https://player.vimeo.com/video/137857207"></iframe>
+                            </div>
+                        </div>
+                    </div>*@
                 <!--Truyền thông-->
                 @*<div class="elementor-element elementor-element-46ca6b9 elementor-widget elementor-widget-heading" data-id="46ca6b9" data-element_type="widget" data-widget_type="heading.default">
                         <div class="elementor-widget-container-2">
@@ -530,6 +285,382 @@
                     </div>*@
             </div>
         </div>
+
     </div>
 </div>
 
+
+
+<div class="site-blocks-cover site-blocks-1 bg-light" style="padding-top: 20px; background: #f8f8f8;">
+    <div class="container">
+        <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 news-row" style="margin-top:10px;margin-bottom: 20px; padding: 0;">
+                    <!--Hoạt động BV-->
+                    <div class="content-box3-news">
+                        @*<div class="elementor-element elementor-element-46ca6b9 elementor-widget elementor-widget-heading" data-id="46ca6b9" data-element_type="widget" data-widget_type="heading.default">
+                            <div class="elementor-widget-container-2">
+                                <h3 class="h3-element-heading"><a href="/MainParent/Details/?ID=9&CapMenu=1" target="_blank" style="color: #ffffff;">Hoạt động bệnh viện</a></h3>
+                            </div>
+                        </div>*@
+
+                        <h2 style="font-weight:bold;">
+                            <a style=" font-size: 20px;color: #2096db;text-transform:uppercase;    font-family: 'Roboto Condensed',Roboto,arial;">
+                                Hoạt động bệnh viện
+                            </a>
+                        </h2>
+                        <span style="width:100%; height:1px;background-color:#c2c2c2;display:inline-block;">
+
+                        </span>
+
+                        @foreach (var item in ViewBag.DanhSach_TinTuc_HDBV)
+                        {
+                            <div class="news-hot-home-2" style="margin-top:10px;">
+                                <div style="float: left; z-index: 2;">
+                                    <a href="/TinTuc/Details/@item.idTinTuc" target="_blank">
+                                        <img src="@item.Avata" alt="@item.TieuDe" style="width:120px; height:80px;">
+                                    </a>
+                                </div>
+                                <div style="padding-left:135px;">
+                                    <div class="titleTranblock">
+                                        <a href="/TinTuc/Details/@item.idTinTuc" target="_blank">@item.TieuDe</a>
+                                    </div>
+                                    <div class="line-time"></div>
+                                    <div class="title-time" style="text-align: right;">
+                                        <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                        @item.NgayDuyet&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </div>
+                                    @*<p style="margin-top:10px;">@item.TomTatNoiDung</p>*@
+                                </div>
+                            </div>
+                        }
+                        <div class="td-next-prev-wrap">
+                            <a id="prev-page" style="color: #000;"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                            &nbsp;&nbsp;
+                            <a id="next-page" style="color: #000;"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 news-row" style="margin-top:10px; margin-bottom: 20px; padding: 0;">
+                    <!--Tin truyền nhiễm-->
+                    <div class="content-box3-news">
+                        @*<div class="elementor-element elementor-element-46ca6b9 elementor-widget elementor-widget-heading" data-id="46ca6b9" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container-2">
+                <h3 class="h3-element-heading"><a href="/MainParent/Details?ID=19&CapMenu=1" target="_blank" style="color: #ffffff;">Tin truyền nhiễm</a></h3>
+            </div>
+        </div>*@
+                        <h2 style="font-weight:bold;">
+                            <a style=" font-size: 20px;color: #2096db;text-transform:uppercase;    font-family: 'Roboto Condensed',Roboto,arial;">
+                                Tin truyền nhiễm
+                            </a>
+                        </h2>
+                        <span style="width:100%; height:1px;background-color:#c2c2c2;display:inline-block;">
+
+                        </span>
+
+                        @foreach (var item in ViewBag.DanhSach_TinTuc_TRNH)
+                        {
+                            <div class="news-hot-home-2" style="margin-top:10px";>
+                                <div style="float: left; z-index: 2;">
+                                    <a href="/TinTuc/Details/@item.idTinTuc" target="_blank">
+                                        <img src="@item.Avata" alt="@item.TieuDe" style="width:120px; height:80px;">
+                                    </a>
+                                </div>
+                                <div style="padding-left:135px;">
+                                    <div class="titleTranblock">
+                                        <a href="/TinTuc/Details/@item.idTinTuc" target="_blank">@item.TieuDe</a>
+                                    </div>
+                                    <div class="line-time"></div>
+                                    <div class="title-time" style="text-align: right;">
+                                        <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                        @item.NgayDuyet&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        <div class="td-next-prev-wrap">
+                            <a id="prev-page" style="color: #000;"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                            &nbsp;&nbsp;
+                            <a id="next-page" style="color: #000;"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!--Chuyên đề bệnh truyền nhiễm-->
+<div class="site-blocks-cover site-blocks-1 bg-light" style="padding-top: 20px;">
+    <div class="container">
+        <div class="row">
+            @*<section class="elementor-section elementor-inner-section elementor-element elementor-element-ea5040e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ea5040e" data-element_type="section">
+            <div class="elementor-widget-container">
+                <h2 class="elementor-heading-title elementor-size-default"><a href="/MainParent/Details?ID=14&CapMenu=1" target="_blank" style="color: #ffffff;">Chuyên đề bệnh truyền nhiễm</a></h2>
+            </div>
+        </section>*@
+            <h2 style="font-weight:bold;">
+                <a style=" font-size: 30px;color: #2096db;text-transform:uppercase;    font-family: 'Roboto Condensed',Roboto,arial;">
+                    Chuyên đề bệnh nhiệt đới
+                </a>
+            </h2>
+            <span style="width:100%; height:1px;background-color:#c2c2c2;display:inline-block;">
+
+            </span>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 news-row" style="margin-top:10px; padding: 0;">
+                <div id="box_ucpostbox23" class="box_body">
+                    <div class="d_scroll">
+                        <div id="pl_iEmPA_c0">
+                            <div class="pl_thumb_c">
+                                @foreach (var item in ViewBag.DanhSach_TinTuc_KHDT)
+                                {
+                                    <div class="plc4">
+                                        <div class="l-item ">
+                                            <div class="pl_top_c">
+                                                <div class="pl_thumb">
+                                                    <a title="@item.TieuDe" href="/TinTuc/Details/@item.idTinTuc" rlink="/TinTuc/Details/@item.idTinTuc" target="_blank">
+                                                        <img alt="@item.TieuDe" src="@item.Avata" style="width:100%; height:130px;">
+                                                    </a>
+                                                </div>
+                                                <div class="l-item-h">
+                                                    <a class="l-title" href="/TinTuc/Details/@item.idTinTuc" target="_blank"><h4>@item.TieuDe</h4></a>
+                                                    <div class="clear"></div>
+                                                </div>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <div class="pl_thumb_brief">@item.TomTatNoiDung</div>
+                                            <div class="pl_readmore"><a href="/TinTuc/Details/@item.idTinTuc" title="@item.TieuDe" rlink="/TinTuc/Details/@item.idTinTuc" target="_blank">Xem tiếp</a></div>
+                                        </div>
+                                    </div>
+                                }
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="td-next-prev-wrap">
+                    <a id="prev-page" style="color: #000;"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                    &nbsp;&nbsp;
+                    <a id="next-page" style="color: #000;"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--Đội ngũ BS-->
+<div class="site-blocks-cover site-blocks-1 bg-light" style="padding-top: 20px; background: #f8f8f8;">
+    <div class="container">
+        <div class="row">
+            @*<section class="elementor-section elementor-inner-section elementor-element elementor-element-ea5040e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ea5040e" data-element_type="section">
+            <div class="elementor-widget-container">
+                <h2 class="elementor-heading-title elementor-size-default">
+                    Đội ngũ bác sĩ
+                </h2>
+            </div>
+        </section>*@
+            <h2 style="font-weight:bold;">
+                <a style=" font-size: 30px;color: #2096db;text-transform:uppercase;    font-family: 'Roboto Condensed',Roboto,arial;">
+                    Đội ngũ bác sĩ
+                </a>
+            </h2>
+            <span style="width:100%; height:1px;background-color:#c2c2c2;display:inline-block;">
+
+            </span>
+
+
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 news-row" style="    margin-top: 30px; display: flex;">
+                <div class="col-lg-4 col-md-4 col-sm-6" style=" width: 33.3%;">
+                    <div class="team__item">
+                        <img src="../Images/102741329.jpg" alt="">
+                        <h5>Caroline Grant</h5>
+                        <span>Plastic surgeon</span>
+                        <div class="team__item__social">
+                          
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6" style=" width: 33.3%;">
+                    <div class="team__item">
+                        <img src="../Images/150310772.jpg" alt="">
+                        <h5>Dr. Maria Angel</h5>
+                        <span>Plastic surgeon</span>
+                        <div class="team__item__social">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6" style=" width: 33.3%;">
+                    <div class="team__item">
+                        <img src="../Images/140543393.jpg" alt="">
+                        <h5>Nathan Mullins</h5>
+                        <span>Plastic surgeon</span>
+                        <div class="team__item__social">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            @*<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 news-row" style="margin-top:10px; padding: 0;">
+                <div class="nonloop-block-3 owl-carousel owl-loaded owl-drag">
+                    <div class="owl-stage-outer">
+                        <div class="owl-item active plc4">
+                            <div class="item">
+                                <div class="block-38 text-center">
+                                    <div class="block-38-img text-center">
+                                        <div class="block-38-header text-center">
+                                            <img style="width: 85%; margin-left: 13px;" src="../Images/102741329.jpg" alt="TS. Phạm Ngọc Thạch" class="mb-4">
+                                            <h3 class="block-38-heading h4" style="font-size: 16px;">TS. Phạm Ngọc Thạch</h3>
+                                            <p class="block-38-subheading" style="font-size: 11px;">Giám đốc</p>
+                                        </div>
+                                        <div class="block-38-body">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item active plc4">
+                            <div class="item">
+                                <div class="block-38 text-center">
+                                    <div class="block-38-img text-center">
+                                        <div class="block-38-header text-center">
+                                            <img style="width: 85%; margin-left: 13px;" src="../Images/150310772.jpg" alt="Ths.BS Đặng Hồng Hải" class="mb-4">
+                                            <h3 class="block-38-heading h4" style="font-size: 16px;">Ths.BS Đặng Hồng Hải</h3>
+                                            <p class="block-38-subheading" style="font-size: 11px;">Trưởng phòng Kế hoạch Tổng hợp</p>
+                                        </div>
+                                        <div class="block-38-body">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item active plc4">
+                            <div class="item">
+                                <div class="block-38 text-center">
+                                    <div class="block-38-img text-center">
+                                        <div class="block-38-header text-center">
+                                            <img style="width: 85%; margin-left: 13px;" src="../Images/140543393.jpg" alt="BsCKII. Nguyễn Trung Cấp" class="mb-4">
+                                            <h3 class="block-38-heading h4" style="font-size: 16px;">BsCKII. Nguyễn Trung Cấp</h3>
+                                            <p class="block-38-subheading" style="font-size: 11px;">Phó Giám đốc</p>
+                                        </div>
+                                        <div class="block-38-body">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><div class="owl-nav"><div class="owl-prev disabled"><span class="icon-arrow_back"></span></div><div class="owl-next"><span class="icon-arrow_forward"></span></div></div><div class="owl-dots"><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div></div>
+                </div>
+                <div class="td-next-prev-wrap" style="margin-bottom:-20px">
+                    <a id="prev-page" style="color: #000;"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                    &nbsp;&nbsp;
+                    <a id="next-page" style="color: #000;"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>*@
+        </div>
+
+    </div>
+</div>
+<!--VB phát hành-->
+<div class="site-blocks-cover site-blocks-1 bg-light" style="padding-top: 50px;">
+    <div class="container">
+        <div class="row">
+            <div style="    width: inherit; " class="elementor-element elementor-element-46ca6b9 elementor-widget elementor-widget-heading" data-element_type="widget" data-widget_type="heading.default">
+                <div class="elementor-widget-container-2" style="margin-top:37px">
+                    <h3 class="h3-element-heading" style="text-align: left;">
+                        Văn bản mới nhất
+                        <div style=" display: inline-block; float: right;"><a target="_blank" href="http://emohbackup.moh.gov.vn/publish"><i class="fa fa-search"></i>&nbsp;Tìm kiếm</a></div>
+                    </h3>
+                </div>
+            </div>
+            <div class="site-section block-3 site-blocks-2">
+                <div class="container">
+                    <div class="row">
+                        <div id="cpos_25">
+                            <div class="box_c box_c_1" style="background-color: #ffffff;margin-top:10px">
+                                <div class="box_body">
+                                    <div class="site-blocks-table">
+                                        <table class="table tabel-ressponsive moh-table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" style="text-align: center;width: 150px;">Số hiệu</th>
+                                                    <th scope="col" style="text-align: center;">Trích yếu nội dung</th>
+                                                    <th scope="col" style="text-align: center;">Cơ quan</th>
+                                                    <th scope="col" style="text-align: center;width: 100px;">Ngày</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="doc-body-content">
+                                                <tr>
+                                                    <td style="width: 150px;">103/AIDS-ĐT</td>
+                                                    <td>
+                                                        <a class="limitwords" style="color: #2a30f9;" href="https://emohbackup.moh.gov.vn/publish/home?documentId=8239" target="_blank">Đăng tải dự thảo Thông tư hướng dẫn xét nghiệm HIV cho phụ nữ mang thai và chăm sóc, điều trị đối với phụ nữ nhiễm HIV trong thời kỳ mang thai, khi sinh con, cho con bú</a>
+                                                    </td>
+                                                    <td> Cục Phòng chống HIV/AIDS</td>
+                                                    <td style="width: 100px; text-align: center;"> 18/2/2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 150px;">176/BC-BYT</td>
+                                                    <td>
+                                                        <a class="limitwords" style="color: #2a30f9;" href="https://emohbackup.moh.gov.vn/publish/home?documentId=8238" target="_blank">Trình xin Thứ trưởng phê duyệt Báo cáo công tác y tế trực Tết Nguyên đán Tân Sửu ngày 16/02/2021 (Mùng 5 Tết)</a>
+                                                    </td>
+                                                    <td> Bộ Y Tế</td>
+                                                    <td style="width: 100px; text-align: center;"> 18/2/2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 150px;">984/CV-BCĐ</td>
+                                                    <td>
+                                                        <a class="limitwords" style="color: #2a30f9;" href="https://emohbackup.moh.gov.vn/publish/home?documentId=8236" target="_blank">V/v tích cực rà soát, lấy mẫu xét nghiệm, giám sát sức khỏe người về từ huyện Cẩm Giàng, Hải Dương</a>
+                                                    </td>
+                                                    <td> Bộ Y Tế</td>
+                                                    <td style="width: 100px; text-align: center;"> 15/2/2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 150px;">23/KL-TTRB</td>
+                                                    <td>
+                                                        <a class="limitwords" style="color: #2a30f9;" href="https://emohbackup.moh.gov.vn/publish/home?documentId=8233" target="_blank">Kết luận thanh tra tại Sở Y tế Hà Nội</a>
+                                                    </td>
+                                                    <td> Thanh tra Bộ</td>
+                                                    <td style="width: 100px; text-align: center;"> 9/2/2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 150px;">1000/QLD-PCTTR</td>
+                                                    <td>
+                                                        <a class="limitwords" style="color: #2a30f9;" href="https://emohbackup.moh.gov.vn/publish/home?documentId=8232" target="_blank">V/v đề nghị đăng tải dự thảo Thông tư bãi bỏ một số văn bản QPPL do Bộ trưởng Bộ Y tế ban hành</a>
+                                                    </td>
+                                                    <td> Cục Quản lý Dược</td>
+                                                    <td style="width: 100px; text-align: center;"> 9/2/2021</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<style>
+    .content-box3-news {
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0 0 5px 0 #eee;
+        padding: 20px 15px;
+        float: left;
+    }
+</style>
