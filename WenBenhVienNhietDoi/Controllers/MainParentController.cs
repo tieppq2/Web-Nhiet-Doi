@@ -23,29 +23,23 @@ namespace WenBenhVienNhietDoi.Controllers
         }
         public ActionResult Details(int ID,int CapMenu)
         {
-            if (CapMenu==1)
+            DataSet dt;
+            if (CapMenu==2)
             {
-                DataSet TinTuc_Details = _publicHelp.DanhSach_TinTuc("TinTuc_Details", 0, ID, 5);
-                ViewBag.TinTuc_Details = _publicHelp.ConvertToList<TinTucModels>(TinTuc_Details.Tables[0]);
-                ViewBag.TinTuc_Top5_New = _publicHelp.ConvertToList<TinTucModels>(TinTuc_Details.Tables[1]);
-                ViewBag.TinTuc_Top5_NewOther = _publicHelp.ConvertToList<TinTucModels>(TinTuc_Details.Tables[2]);
-                ViewBag.Name_MenuParent = _publicHelp.ConvertToList<MenuModels>(TinTuc_Details.Tables[3]);
-                ViewBag.TinTuc_Main_Details = _publicHelp.ConvertToList<TinTucModels>(TinTuc_Details.Tables[4]);
-                //ViewBag.Name_MenuParent = TinTuc_Details.Tables[3].Rows[0][1];
-                //if (TinTuc_Details.Tables[3].Rows[0]["idCha"] == TinTuc_Details.Tables[3].Rows[0]["id"])
-                //    ViewBag.Name_Menu = "";
-                //else
-                //    ViewBag.Name_Menu = TinTuc_Details.Tables[3].Rows[0][3];
-                return View("~/Views/MainParent/Details.cshtml");
+                 dt = _publicHelp.DanhSach_TinTuc("MainParent_tinTuc", ID, 0, 5);
+                ViewBag.Name_MenuParent = _publicHelp.ConvertToList<MenuModels>(dt.Tables[0]);
+                ViewBag.TinTuc_Main_Details = _publicHelp.ConvertToList<TinTucModels>(dt.Tables[1]);
+                //ViewBag.TinTuc_Top5_NewOther = _publicHelp.ConvertToList<TinTucModels>(TinTuc_Details.Tables[2]);
+                //ViewBag.Name_MenuParent = _publicHelp.ConvertToList<MenuModels>(TinTuc_Details.Tables[0]);
+                //ViewBag.TinTuc_Main_Details = _publicHelp.ConvertToList<TinTucModels>(TinTuc_Details.Tables[4]);
             }
-            else
+            else //CapMenu !=2
             {
-                DataSet DanhSach_TinTuc_MainParent = _publicHelp.DanhSach_TinTuc_MainParent("TinTuc_Details_main", ID, CapMenu, 5);
-                ViewBag.TinTuc_MainParent = _publicHelp.ConvertToList<TinTucModels>(DanhSach_TinTuc_MainParent.Tables[0]);
-                ViewBag.DanhSach_Menu_MainParent = _publicHelp.ConvertToList<MenuLinkModels>(DanhSach_TinTuc_MainParent.Tables[1]);
-                return View("~/Views/MainParent/DetailsMainParent.cshtml");
+                dt = _publicHelp.DanhSach_TinTuc("MainParent_tinTuc", 0, ID, 5);
+                ViewBag.Name_MenuParent = _publicHelp.ConvertToList<MenuModels>(dt.Tables[0]);
+                ViewBag.TinTuc_Main_Details = _publicHelp.ConvertToList<TinTucModels>(dt.Tables[2]);
             }
-            
+            return View("~/Views/MainParent/Details.cshtml");
         }
 
     }

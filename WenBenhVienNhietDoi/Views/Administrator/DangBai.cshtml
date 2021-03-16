@@ -10,6 +10,9 @@
     <title>
         Đăng bài tin tức
     </title>
+    <script type="text/javascript">
+
+    </script>
     <meta name="description" content="overview &amp; stats">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" href="~/css/Admin/assets/css/bootstrap.min.css">
@@ -27,21 +30,21 @@
     <script src="../../js/select2totree.js"></script>
     <script src="../../ckeditor/ckeditor.js" type="text/javascript"></script>
 
-    <script lang="javascript">
-        function Confirm() {
-            var confirm_value = document.createElement("INPUT");
-            confirm_value.type = "hidden";
-            confirm_value.name = "confirm_value";
+    @*<script lang="javascript">
+            function Confirm() {
+                var confirm_value = document.createElement("INPUT");
+                confirm_value.type = "hidden";
+                confirm_value.name = "confirm_value";
 
-            if (confirm("Bạn có muốn thực thi hay không!")) {
-                confirm_value.value = "Yes";
+                if (confirm("Bạn có muốn thực thi hay không!")) {
+                    confirm_value.value = "Yes";
+                }
+                else {
+                    confirm_value.value = "No";
+                }
+                document.forms[0].appendChild(confirm_value);
             }
-            else {
-                confirm_value.value = "No";
-            }
-            document.forms[0].appendChild(confirm_value);
-        }
-    </script>
+        </script>*@
     <style>
         .row .col-sm-12 {
             padding: 0;
@@ -203,8 +206,16 @@
     </div>
 </body>
 <script>
-    var id=@(ViewBag.TinTuc_ID ?? 0);
-    @*id = @ViewBag.TinTuc_ID;*@
+
+    var id =@(ViewBag.TinTuc_ID ?? 0);
+    var data = @Html.Raw(Json.Encode(@HttpContext.Current.Session["Data"]));
+    window.onload = function () {
+            if (data == null)
+                window.location.replace("/Login/Index2");
+
+        };
 </script>
-<script src="../../js/MethodView/Administrator.js"></script>
+<script src="../../js/MethodView/Administrator.js">
+
+</script>
 </html>

@@ -101,23 +101,14 @@
         <div class="row">
             <div class="col-md-8 col-sm-12">
                 <div class="row" style="width:100%; padding: 2px; margin-left:0px;">
-                    <!--Tin mới-->
-                    @*<section class="elementor-section elementor-inner-section elementor-element elementor-element-ea5040e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ea5040e" data-element_type="section">
-            <div class="elementor-widget-container">
-                <h2 class="elementor-heading-title elementor-size-default">Tin mới</h2>
-            </div>
-        </section>*@
-                  
+                    <!--Tin mới-->                  
                         <h2 style="font-weight:bold;">
                             <a style=" font-size: 30px;color: #2096db;text-transform:uppercase;    font-family: 'Roboto Condensed',Roboto,arial;">
                                 Tin Mới
                             </a>
                         </h2>
                         <span style="width:100%; height:1px;background-color:#c2c2c2;display:inline-block;">
-
                         </span>
-                   
-                    
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:10px 10px 10px 0px;margin-top:10px;">
                         @foreach (var item in ViewBag.DanhSach_TinTuc_Top_main)
                         {
@@ -170,9 +161,6 @@
                             </div>
                         }
                     </div>
-
-
-
                 </div>
             </div>
             <div class="col-md-4 col-sm-12">
@@ -300,21 +288,12 @@
 
     </div>
 </div>
-
-
-
 <div class="site-blocks-cover site-blocks-1 bg-light" style="padding-top: 20px; background: #f8f8f8;">
     <div class="container">
         <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 news-row" style="margin-top:10px;margin-bottom: 20px; padding: 0;">
                     <!--Hoạt động BV-->
                     <div class="content-box3-news">
-                        @*<div class="elementor-element elementor-element-46ca6b9 elementor-widget elementor-widget-heading" data-id="46ca6b9" data-element_type="widget" data-widget_type="heading.default">
-                            <div class="elementor-widget-container-2">
-                                <h3 class="h3-element-heading"><a href="/MainParent/Details/?ID=9&CapMenu=1" target="_blank" style="color: #ffffff;">Hoạt động bệnh viện</a></h3>
-                            </div>
-                        </div>*@
-
                         <h2 style="font-weight:bold;">
                             <a style=" font-size: 20px;color: #2096db;text-transform:uppercase;    font-family: 'Roboto Condensed',Roboto,arial;">
                                 Hoạt động bệnh viện
@@ -355,20 +334,13 @@
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 news-row" style="margin-top:10px; margin-bottom: 20px; padding: 0;">
                     <!--Tin truyền nhiễm-->
                     <div class="content-box3-news">
-                        @*<div class="elementor-element elementor-element-46ca6b9 elementor-widget elementor-widget-heading" data-id="46ca6b9" data-element_type="widget" data-widget_type="heading.default">
-            <div class="elementor-widget-container-2">
-                <h3 class="h3-element-heading"><a href="/MainParent/Details?ID=19&CapMenu=1" target="_blank" style="color: #ffffff;">Tin truyền nhiễm</a></h3>
-            </div>
-        </div>*@
                         <h2 style="font-weight:bold;">
                             <a style=" font-size: 20px;color: #2096db;text-transform:uppercase;    font-family: 'Roboto Condensed',Roboto,arial;">
                                 Tin truyền nhiễm
                             </a>
                         </h2>
                         <span style="width:100%; height:1px;background-color:#c2c2c2;display:inline-block;">
-
                         </span>
-
                         @foreach (var item in ViewBag.DanhSach_TinTuc_TRNH)
                         {
                             <div class="news-hot-home-2" style="margin-top:10px";>
@@ -396,66 +368,56 @@
                         </div>
                     </div>
                 </div>
-
         </div>
-
     </div>
 </div>
-
 <!--Chuyên đề bệnh truyền nhiễm-->
 <div class="site-blocks-cover site-blocks-1 bg-light" style="padding-top: 20px;">
     <div class="container">
         <div class="row">
-            @*<section class="elementor-section elementor-inner-section elementor-element elementor-element-ea5040e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ea5040e" data-element_type="section">
-            <div class="elementor-widget-container">
-                <h2 class="elementor-heading-title elementor-size-default"><a href="/MainParent/Details?ID=14&CapMenu=1" target="_blank" style="color: #ffffff;">Chuyên đề bệnh truyền nhiễm</a></h2>
-            </div>
-        </section>*@
             <h2 style="font-weight:bold;">
                 <a style=" font-size: 30px;color: #2096db;text-transform:uppercase;    font-family: 'Roboto Condensed',Roboto,arial;">
                     Chuyên đề bệnh nhiệt đới
                 </a>
             </h2>
             <span style="width:100%; height:1px;background-color:#c2c2c2;display:inline-block;">
-
             </span>
-
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 news-row" style="margin-top:10px; padding: 0;">
-                <div id="box_ucpostbox23" class="box_body">
-                    <div class="d_scroll">
-                        <div id="pl_iEmPA_c0">
-                            <div class="pl_thumb_c">
-                                @foreach (var item in ViewBag.DanhSach_TinTuc_KHDT)
-                                {
-                                    <div class="plc4">
-                                        <div class="l-item ">
-                                            <div class="pl_top_c">
-                                                <div class="pl_thumb">
-                                                    <a title="@item.TieuDe" href="/TinTuc/Details/@item.idTinTuc" rlink="/TinTuc/Details/@item.idTinTuc" target="_blank">
-                                                        <img alt="@item.TieuDe" src="@item.Avata" style="width:100%; height:130px;">
-                                                    </a>
-                                                </div>
-                                                <div class="l-item-h">
-                                                    <a class="l-title" href="/TinTuc/Details/@item.idTinTuc" target="_blank"><h4>@item.TieuDe</h4></a>
-                                                    <div class="clear"></div>
-                                                </div>
-                                            </div>
-                                            <div class="clear"></div>
-                                            <div class="pl_thumb_brief">@item.TomTatNoiDung</div>
-                                            <div class="pl_readmore"><a href="/TinTuc/Details/@item.idTinTuc" title="@item.TieuDe" rlink="/TinTuc/Details/@item.idTinTuc" target="_blank">Xem tiếp</a></div>
-                                        </div>
-                                    </div>
-                                }
-                                <div class="clear"></div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 news-row" style="    margin-top: 30px; display: flex;">
+                <div class="col-lg-4 col-md-4 col-sm-6" style=" width: 33.3%;">
+                    <div class="item">
+                        <div class="block-4 text-center">
+                            <figure class="block-4-image">
+                                <a href="/MainParent/Details?ID=20&CapMenu=2"><img src="../Images/133925126.png" alt="Bệnh nhiệt đới" class="img-fluid"></a>
+                            </figure>
+                            <div class="block-4-text p-4">
+                                <h3><a href="/MainParent/Details?ID=20&CapMenu=2">BỆNH NHIỆT ĐỚI</a></h3>
                             </div>
                         </div>
                     </div>
-                    <div class="clear"></div>
                 </div>
-                <div class="td-next-prev-wrap">
-                    <a id="prev-page" style="color: #000;"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-                    &nbsp;&nbsp;
-                    <a id="next-page" style="color: #000;"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                <div class="col-lg-4 col-md-4 col-sm-6" style=" width: 33.3%;">
+                    <div class="item">
+                        <div class="block-4 text-center">
+                            <figure class="block-4-image">
+                                <a href="/MainParent/Details?ID=29&CapMenu=2"><img src="../Images/133946689.png" alt="HIV/AIDS" class="img-fluid"></a>
+                            </figure>
+                            <div class="block-4-text p-4">
+                                <h3><a href="/MainParent/Details?ID=29&CapMenu=2">HIV/AIDS</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6" style=" width: 33.3%;">
+                    <div class="item">
+                        <div class="block-4 text-center">
+                            <figure class="block-4-image">
+                                <a href="/MainParent/Details?ID=27&CapMenu=2"><img src="../Images/133958283.png" alt="Viêm gan" class="img-fluid"></a>
+                            </figure>
+                            <div class="block-4-text p-4">
+                                <h3><a href="/MainParent/Details?ID=27&CapMenu=">VIÊM GAN</a></h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -482,9 +444,6 @@
             <span style="width:100%; height:1px;background-color:#c2c2c2;display:inline-block;">
 
             </span>
-
-
-
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 news-row" style="    margin-top: 30px; display: flex;">
                 <div class="col-lg-4 col-md-4 col-sm-6" style=" width: 33.3%;">
                     <div class="team__item">

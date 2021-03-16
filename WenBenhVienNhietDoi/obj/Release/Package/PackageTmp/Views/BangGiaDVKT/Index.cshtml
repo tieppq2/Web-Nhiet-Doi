@@ -1,0 +1,101 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MasterPage.cshtml";
+}
+@*<link href="~/css/site.min.css" rel="stylesheet" />*@
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="../js/MethodView/BangGiaDVKT.js"></script>
+<link href="../css/BangGiaDVKT.css" rel="stylesheet" />
+<script src="../lib/datatables/dataTables.select.min.js"></script>
+<script src="../lib/datatables/jquery.dataTables.min.js"></script>
+
+
+<div class="main-detail">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="sapo">
+                    Dưới đây bảng giá dịch vụ khám bệnh và loại giường bệnh của Bệnh viện. Chi phí thực tế có thể thay đổi trên từng trường hợp cụ thể do sự khác biệt về yêu cầu thuốc, dịch vụ chuyên môn, và dịch vụ phát sinh theo chỉ định bác sĩ hoặc theo yêu cầu.
+                </div>
+                <div class="content">
+                    Dưới đây là bảng giá dịch vụ khám bệnh và loại giường bệnh của Bệnh viện, quý bệnh nhân có thể tham khảo:<br>(Ban hành kèm theo Thông tư số 13/2019/TT-BYT ngày 05/7/2019 của Bộ Y tế)<br><br>
+                    <div class="table-responsive">
+                        <table class="table table-fix">
+                            <tbody>
+                                <tr height="111">
+                                    <td class="xl1054" style="height: 83.25pt; width: 58pt; border: 1px solid black;" width="77" height="111" align="center"><span style="font-weight: bold;">STT</span></td>
+                                    <td class="xl1054" style="border: 1px solid black; width: 248pt;" width="330" align="center"><span style="font-weight: bold;">Cơ sở y tế</span></td>
+                                    <td class="xl1054" style="border: 1px solid black; width: 84pt;" width="112" align="center">
+                                        <span style="font-weight: bold;">
+                                            Giá bao gồm
+                                            chi phí trực tiếp và tiền lương (<span class="font6">Đơn vị: đồng</span><span class="font5">)</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr @*style="mso-height-source:userset;height:36.0pt"*@ height="48">
+                                    <td class="xl1047" style="height: 36pt; border: 1px solid black; width: 58pt;" width="77" height="48" align="center">1</td>
+                                    <td class="xl1048" style="border: 1px solid black; width: 248pt;" width="330" align="center">Bệnh viện hạng II</td>
+                                    <td class="xl1046" style="border: 1px solid black;" align="center">34.500</td>
+                                </tr>
+                                <tr @*style="mso-height-source:userset;height:36.0pt"*@ height="48">
+                                    <td class="xl1047" style="height: 36pt; border: 1px solid black; width: 58pt;" width="77" height="48" align="center">2</td>
+                                    <td class="xl1048" style="border: 1px solid black; width: 248pt;" width="330" align="center">Giường hồi sức cấp cứu hạng II</td>
+                                    <td class="xl1046" style="border: 1px solid black;" align="center">325.000</td>
+                                </tr>
+                                <tr @*style="mso-height-source:userset;height:36.0pt"*@ height="48">
+                                    <td class="xl1047" style="height: 36pt; border: 1px solid black; width: 58pt;" width="77" height="48" align="center">3</td>
+                                    <td class="xl1048" style="border: 1px solid black; width: 248pt;" width="330" align="center">Giường nội khoa loại 1 hạng II<span style="mso-spacerun:yes">&nbsp;</span></td>
+                                    <td class="xl1046" style="border: 1px solid black;" align="center">187.100</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <br>Bảng giá dịch vụ kỹ thuật của bệnh viện được SYT phê duyệt
+                    <div align="right">
+                        <br class="innova">
+                    </div>
+
+                </div><!--content-->
+                @*<div class="social-detail pull-right">
+                        <a href="javascript:window.print();" class="send-mail"><i class="fa fa-print" aria-hidden="true"></i>In ấn</a>
+                    </div>*@
+                <table class="table" id="Table_DV" style=" margin-bottom: 0px;">
+                    <thead>
+                        <tr>
+                            <th style="width: 15px; text-align: center;">STT</th>
+                            <th style="width: 25px; text-align: center;">Mã dịch vụ</th>
+                            <th style="width: 260px; text-align: center;" >Tên dịch vụ</th>
+                            <th style="width: 35px; text-align: center;" >Đơn giá</th>
+                        </tr>
+                    </thead>                   
+                </table>
+            </div><!--col-md-8-->
+            <div class="col-md-4 pull-right">
+
+                <div class="content-box3-news">
+                    <h2 class="name-cath2 mgbt20"><a href="#">Tin mới nhất</a></h2>
+                    <ul class="tinmoinhat">
+                        <li class="row noibat-box3">
+                            <div class="col-xs-6">
+                                <div class="responsive-image responsive-image--16by9">
+                                    <a href="/kien-thuc-y-khoa-/benh-quai-bi-dang-vao-mua/20210304023412843">
+                                        <img alt="Bệnh quai bị đang vào mùa" src="http://images.benhvien115.com.vn/Images/Uploaded/Share/2021/03/04/BVNhandan115benh-quai-bi.jpg?mode=crop&amp;amp;width=240&amp;amp;height=180">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-6"><h3><a href="/kien-thuc-y-khoa-/benh-quai-bi-dang-vao-mua/20210304023412843">Bệnh quai bị đang vào mùa</a></h3></div>
+                        </li>
+                        <li><h3><a href="/video/hoi-chung-ong-co-tay-vi-sao-hay-tai-phat-/2021030302035663">Hội chứng ống cổ tay vì sao hay tái phát?</a></h3></li>
+                        <li><h3><a href="/tin-tuc-va-hoat-dong/cap-nhat-huong-dan-giam-sat-nguoi-tu-vung-dich-den-thanh-pho-ho-chi-minh/20210302101457835">Cập nhật hướng dẫn giám sát người từ vùng dịch đến Thành phố Hồ Chí Minh</a></h3></li>
+                        <li><h3><a href="/kien-thuc-y-khoa-/hoi-chung-guillain-barré-ung-dung-ky-thuat-thay-huyet-tuong-trong-dieu-tri/20210301031931603">Hội chứng Guillain-Barré - Ứng dụng kỹ thuật thay huyết tương trong điều trị</a></h3></li>
+                    </ul>
+                </div>
+
+            </div><!--col-md-4 -->
+        </div><!--row-->
+    </div> <!--container-->
+</div>
+

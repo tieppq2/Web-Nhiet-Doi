@@ -21,8 +21,8 @@ nav a {
     color: #ffffff;
     display: block;
     font: bold 16px/50px sans-serif;
-    padding: 0 25px;
-    text-align: center;
+    padding: 0 20px;
+    text-align: left;
     text-decoration: none;
     -webkit-transition: all .25s ease;
     -moz-transition: all .25s ease;
@@ -44,6 +44,7 @@ nav li ul {
     left: 0;
     opacity: 0;
     position: absolute;
+    min-width: 250px;
     top: 35px;
     visibility: hidden;
     z-index: 1;
@@ -56,12 +57,23 @@ nav li ul {
 
 nav li:hover ul {
     opacity: 1;
-    top: 50px;
+    /*top: 50px;*/
     visibility: visible;
 }
 
 nav li ul li {
     width: 100%;
+}
+nav ul li a div {
+    border-right: 1px solid #fff;
+    padding-right: 15px;
+    line-height: 1.3;
+}
+nav ul li ul li a {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    line-height: 1.3;
 }
 
 nav li ul a:hover {

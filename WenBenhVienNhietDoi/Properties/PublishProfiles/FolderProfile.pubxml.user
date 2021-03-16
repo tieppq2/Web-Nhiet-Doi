@@ -178,10 +178,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/05/2021 14:40:07</publishTime>
     </File>
     <File Include="bin/WenBenhVienNhietDoi.dll">
-      <publishTime>03/04/2021 07:58:14</publishTime>
+      <publishTime>03/12/2021 08:52:41</publishTime>
     </File>
     <File Include="bin/WenBenhVienNhietDoi.pdb">
-      <publishTime>03/04/2021 07:58:14</publishTime>
+      <publishTime>03/12/2021 08:52:41</publishTime>
     </File>
     <File Include="ckeditor/adapters/jquery.js">
       <publishTime>06/06/2018 14:55:45</publishTime>
@@ -3883,10 +3883,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/30/2018 10:55:31</publishTime>
     </File>
     <File Include="css/blueimp-gallery.min-1.css">
-      <publishTime>02/06/2018 11:28:51</publishTime>
+      <publishTime>06/02/2018 11:28:51</publishTime>
     </File>
     <File Include="css/blueimp-gallery.min.css">
-      <publishTime>02/06/2018 11:28:51</publishTime>
+      <publishTime>06/02/2018 11:28:51</publishTime>
     </File>
     <File Include="css/bootstrap.min.css">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -3907,7 +3907,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/30/2018 11:15:46</publishTime>
     </File>
     <File Include="css/controls-1.png">
-      <publishTime>01/06/2018 07:54:16</publishTime>
+      <publishTime>06/01/2018 07:54:16</publishTime>
     </File>
     <File Include="css/controls-sliderhome.png">
       <publishTime>05/30/2018 10:55:32</publishTime>
@@ -3916,7 +3916,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/30/2018 11:15:46</publishTime>
     </File>
     <File Include="css/detailvideo.css">
-      <publishTime>04/06/2018 07:59:05</publishTime>
+      <publishTime>06/04/2018 07:59:05</publishTime>
     </File>
     <File Include="css/dot.gif">
       <publishTime>05/30/2018 11:24:06</publishTime>
@@ -4009,7 +4009,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/30/2018 11:15:46</publishTime>
     </File>
     <File Include="css/loading-3.gif">
-      <publishTime>01/06/2018 17:25:28</publishTime>
+      <publishTime>06/01/2018 17:25:28</publishTime>
     </File>
     <File Include="css/MANHBEO.css">
       <publishTime>05/30/2018 13:59:31</publishTime>
@@ -4021,7 +4021,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/30/2018 11:15:46</publishTime>
     </File>
     <File Include="css/meunudropdown.css">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>03/11/2021 10:40:28</publishTime>
     </File>
     <File Include="css/mm-vertical-home.css">
       <publishTime>05/30/2018 11:15:46</publishTime>
@@ -4045,10 +4045,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/30/2018 10:55:32</publishTime>
     </File>
     <File Include="css/photos-1.css">
-      <publishTime>02/06/2018 10:52:46</publishTime>
+      <publishTime>06/02/2018 10:52:46</publishTime>
     </File>
     <File Include="css/photos.css">
-      <publishTime>02/06/2018 10:52:48</publishTime>
+      <publishTime>06/02/2018 10:52:48</publishTime>
     </File>
     <File Include="css/prettyPhoto.css">
       <publishTime>05/30/2018 11:15:46</publishTime>
@@ -4057,10 +4057,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/17/2021 14:25:30</publishTime>
     </File>
     <File Include="css/select2totree.css">
-      <publishTime>01/03/2021 16:29:12</publishTime>
+      <publishTime>03/01/2021 16:29:12</publishTime>
     </File>
     <File Include="css/Site.css">
       <publishTime>02/17/2021 14:18:55</publishTime>
+    </File>
+    <File Include="css/site.min.css">
+      <publishTime>03/05/2021 15:25:50</publishTime>
     </File>
     <File Include="css/sm-blue-1.css">
       <publishTime>05/30/2018 11:15:46</publishTime>
@@ -4084,7 +4087,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/18/2021 09:10:17</publishTime>
     </File>
     <File Include="css/style.css">
-      <publishTime>02/24/2021 13:48:41</publishTime>
+      <publishTime>03/12/2021 07:54:38</publishTime>
     </File>
     <File Include="css/style.responsive-1.css">
       <publishTime>05/30/2018 11:15:46</publishTime>
@@ -4103,6 +4106,60 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="css/www-player-webp.css">
       <publishTime>02/17/2021 14:25:29</publishTime>
+    </File>
+    <File Include="data/cover-home-1.jpg">
+      <publishTime>03/05/2021 11:33:27</publishTime>
+    </File>
+    <File Include="data/cover-home-2-N.jpg">
+      <publishTime>03/05/2021 11:33:27</publishTime>
+    </File>
+    <File Include="data/cover-home-2.jpg">
+      <publishTime>03/05/2021 11:33:27</publishTime>
+    </File>
+    <File Include="data/cover-home-3.jpg">
+      <publishTime>03/05/2021 11:33:27</publishTime>
+    </File>
+    <File Include="data/cover-home-5.jpg">
+      <publishTime>03/05/2021 11:33:27</publishTime>
+    </File>
+    <File Include="data/cover-home-6.jpg">
+      <publishTime>03/05/2021 11:33:27</publishTime>
+    </File>
+    <File Include="data/cover-home_mobile-1.jpg">
+      <publishTime>03/05/2021 11:33:27</publishTime>
+    </File>
+    <File Include="data/cover-home_mobile-2.jpg">
+      <publishTime>03/05/2021 11:33:27</publishTime>
+    </File>
+    <File Include="data/cover-home_mobile-2_N.jpg">
+      <publishTime>03/05/2021 11:33:27</publishTime>
+    </File>
+    <File Include="data/cover-home_mobile-3.jpg">
+      <publishTime>03/05/2021 11:33:27</publishTime>
+    </File>
+    <File Include="data/cover-home_mobile-5.jpg">
+      <publishTime>03/05/2021 11:33:27</publishTime>
+    </File>
+    <File Include="data/cover-home_mobile-6-N.jpg">
+      <publishTime>03/05/2021 11:33:27</publishTime>
+    </File>
+    <File Include="data/icon-tieubieu.png">
+      <publishTime>03/05/2021 11:33:27</publishTime>
+    </File>
+    <File Include="data/icon1_chamsockhachhang.png">
+      <publishTime>03/05/2021 11:33:27</publishTime>
+    </File>
+    <File Include="data/icon1_lichbacsi.png">
+      <publishTime>03/05/2021 11:33:27</publishTime>
+    </File>
+    <File Include="data/icon1_vip.png">
+      <publishTime>03/05/2021 11:33:27</publishTime>
+    </File>
+    <File Include="data/logo_benhviennhandan115.jpg">
+      <publishTime>03/05/2021 11:33:27</publishTime>
+    </File>
+    <File Include="data/logo_footer_Benhviennhandan115.jpg">
+      <publishTime>03/05/2021 11:33:27</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>02/05/2021 14:40:06</publishTime>
@@ -4156,7 +4213,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/05/2021 09:27:47</publishTime>
     </File>
     <File Include="Images/094554130.jpg">
-      <publishTime>02/05/2021 09:27:50</publishTime>
+      <publishTime>03/11/2021 13:24:31</publishTime>
     </File>
     <File Include="Images/101115408.jpg">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -4792,13 +4849,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/30/2018 11:24:06</publishTime>
     </File>
     <File Include="Images/loading-3-1.gif">
-      <publishTime>01/06/2018 17:26:19</publishTime>
+      <publishTime>06/01/2018 17:26:19</publishTime>
     </File>
     <File Include="Images/loading-3.gif">
-      <publishTime>01/06/2018 17:25:28</publishTime>
+      <publishTime>06/01/2018 17:25:28</publishTime>
     </File>
     <File Include="Images/loading.gif">
-      <publishTime>04/06/2018 15:31:25</publishTime>
+      <publishTime>06/04/2018 15:31:25</publishTime>
     </File>
     <File Include="Images/load_bar-1.gif">
       <publishTime>05/30/2018 11:24:06</publishTime>
@@ -4843,7 +4900,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/30/2018 10:55:31</publishTime>
     </File>
     <File Include="Images/maxresdefault.jpg">
-      <publishTime>04/06/2018 10:54:43</publishTime>
+      <publishTime>06/04/2018 10:54:43</publishTime>
     </File>
     <File Include="Images/minh-anh-about-new-3.png">
       <publishTime>05/30/2018 10:55:32</publishTime>
@@ -5278,7 +5335,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/05/2021 14:40:06</publishTime>
     </File>
     <File Include="js/dataTables.bootstrap.min.js">
-      <publishTime>04/06/2018 15:34:24</publishTime>
+      <publishTime>06/04/2018 15:34:24</publishTime>
     </File>
     <File Include="js/en.js">
       <publishTime>02/05/2021 14:40:06</publishTime>
@@ -5323,7 +5380,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/05/2021 14:40:06</publishTime>
     </File>
     <File Include="js/jquery.dataTables.min.js">
-      <publishTime>04/06/2018 15:34:24</publishTime>
+      <publishTime>06/04/2018 15:34:24</publishTime>
     </File>
     <File Include="js/jquery.lazyload.min.js">
       <publishTime>02/05/2021 14:40:06</publishTime>
@@ -5362,7 +5419,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/05/2021 14:40:06</publishTime>
     </File>
     <File Include="js/js-v=3.exp&amp;sensor=false&amp;callback=initializeMap.js">
-      <publishTime>02/05/2021 14:40:06</publishTime>
+      <publishTime>03/05/2021 15:35:49</publishTime>
     </File>
     <File Include="js/jwplayer.js">
       <publishTime>02/05/2021 14:40:06</publishTime>
@@ -5374,7 +5431,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/05/2021 14:40:06</publishTime>
     </File>
     <File Include="js/MethodView/Administrator.js">
-      <publishTime>03/03/2021 16:59:01</publishTime>
+      <publishTime>03/11/2021 14:44:03</publishTime>
+    </File>
+    <File Include="js/MethodView/BangGiaDVKT.js">
+      <publishTime>03/08/2021 09:42:43</publishTime>
+    </File>
+    <File Include="js/MethodView/DatLichKham.js">
+      <publishTime>03/11/2021 08:24:28</publishTime>
     </File>
     <File Include="js/metisMenu-1.js">
       <publishTime>02/05/2021 14:40:06</publishTime>
@@ -5407,7 +5470,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/05/2021 14:40:06</publishTime>
     </File>
     <File Include="js/select2totree.js">
-      <publishTime>03/01/2021 16:29:12</publishTime>
+      <publishTime>01/03/2021 16:29:12</publishTime>
+    </File>
+    <File Include="js/site.min.js">
+      <publishTime>03/05/2021 11:33:27</publishTime>
     </File>
     <File Include="js/users.js">
       <publishTime>02/05/2021 14:40:06</publishTime>
@@ -5440,13 +5506,31 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/02/2020 17:45:20</publishTime>
     </File>
     <File Include="lib/datatables/jquery.dataTables.min.css">
-      <publishTime>01/02/2020 17:45:20</publishTime>
+      <publishTime>03/08/2021 09:29:22</publishTime>
     </File>
     <File Include="lib/datatables/jquery.dataTables.min.js">
       <publishTime>01/02/2020 17:45:20</publishTime>
     </File>
     <File Include="lib/datatables/select.dataTables.min.css">
       <publishTime>01/02/2020 17:45:20</publishTime>
+    </File>
+    <File Include="lib/toastr/toastr-icon.png">
+      <publishTime>01/02/2020 17:45:20</publishTime>
+    </File>
+    <File Include="lib/toastr/toastr.css">
+      <publishTime>01/02/2020 17:45:20</publishTime>
+    </File>
+    <File Include="lib/toastr/toastr.js">
+      <publishTime>01/02/2020 17:45:20</publishTime>
+    </File>
+    <File Include="lib/toastr/toastr.less">
+      <publishTime>01/02/2020 17:45:20</publishTime>
+    </File>
+    <File Include="lib/Vietnamese.json">
+      <publishTime>02/06/2020 20:40:26</publishTime>
+    </File>
+    <File Include="lib/VietnameseBanDo.json">
+      <publishTime>01/20/2020 08:30:17</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>02/05/2021 14:40:06</publishTime>
@@ -5524,10 +5608,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/05/2021 14:40:06</publishTime>
     </File>
     <File Include="Views/Administrator/DangBai.cshtml">
-      <publishTime>03/03/2021 13:50:07</publishTime>
+      <publishTime>03/05/2021 08:53:10</publishTime>
     </File>
     <File Include="Views/Administrator/Index.cshtml">
-      <publishTime>03/04/2021 07:51:42</publishTime>
+      <publishTime>03/11/2021 14:18:26</publishTime>
+    </File>
+    <File Include="Views/BangGiaDVKT/Index.cshtml">
+      <publishTime>03/08/2021 16:03:36</publishTime>
     </File>
     <File Include="Views/Detail/Details.cshtml">
       <publishTime>02/23/2021 09:16:34</publishTime>
@@ -5545,10 +5632,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/05/2021 14:40:06</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>02/03/2021 10:36:40</publishTime>
+      <publishTime>03/12/2021 07:54:38</publishTime>
+    </File>
+    <File Include="Views/LienHe/Index.cshtml">
+      <publishTime>03/05/2021 14:38:19</publishTime>
+    </File>
+    <File Include="Views/Login/Index.cshtml">
+      <publishTime>03/11/2021 15:52:25</publishTime>
+    </File>
+    <File Include="Views/Login/Login.cshtml">
+      <publishTime>03/11/2021 16:05:55</publishTime>
+    </File>
+    <File Include="Views/Main/Index.cshtml">
+      <publishTime>03/05/2021 16:03:49</publishTime>
     </File>
     <File Include="Views/MainParent/Details.cshtml">
-      <publishTime>02/24/2021 16:38:33</publishTime>
+      <publishTime>03/10/2021 14:19:15</publishTime>
     </File>
     <File Include="Views/MainParent/DetailsMainParent.cshtml">
       <publishTime>02/26/2021 09:41:02</publishTime>
@@ -5586,14 +5685,20 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Shared/_Layout.cshtml">
       <publishTime>02/05/2021 14:40:06</publishTime>
     </File>
+    <File Include="Views/Shared/_LayoutMasterPage.cshtml">
+      <publishTime>03/05/2021 15:55:50</publishTime>
+    </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>02/05/2021 14:40:06</publishTime>
     </File>
     <File Include="Views/Shared/_MasterPage.cshtml">
-      <publishTime>02/03/2021 09:28:30</publishTime>
+      <publishTime>03/12/2021 07:56:02</publishTime>
     </File>
     <File Include="Views/Shared/_MenuAction.cshtml">
-      <publishTime>01/03/2021 07:45:15</publishTime>
+      <publishTime>03/11/2021 10:40:26</publishTime>
+    </File>
+    <File Include="Views/Shared/_MenuAction2.cshtml">
+      <publishTime>03/05/2021 15:37:36</publishTime>
     </File>
     <File Include="Views/TinTuc/Details.cshtml">
       <publishTime>02/23/2021 13:50:42</publishTime>
@@ -5605,7 +5710,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/05/2021 14:40:06</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
-      <publishTime>02/22/2021 08:39:04</publishTime>
+      <publishTime>03/12/2021 07:54:38</publishTime>
     </File>
     <File Include="Web.config">
       <publishTime>03/04/2021 07:52:00</publishTime>

@@ -1,0 +1,99 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MasterPage.cshtml";
+}
+    <div class="site-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-7 site-section-heading text-center pt-4">
+                    <h2>BẢN ĐỒ CHỈ ĐƯỜNG</h2>
+                    <p style="font-size: 14px;"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div id="map" style="width:100%;">
+                    <iframe src="./lien-he_files/embed.html" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-7 site-section-heading text-center pt-4">
+                    <h2>THÔNG TIN LIÊN HỆ</h2>
+                    <p style="font-size: 14px;">Bạn vui lòng điền thông tin vào Form bên đưới.</p>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <form action="http://benhnhietdoi.vn/lien-he?ParentID=LienHe" method="post">
+                        <div class="p-3 p-lg-5 border">
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label for="LienHe_sName" class="text-black">Họ và tên <span class="text-danger">*</span></label><span class="field-validation-valid" data-valmsg-for="LienHe_err_sName" data-valmsg-replace="true"></span>
+                                    <input id="LienHe_sName" name="LienHe_sName" value="" placeholder="Họ và tên" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label for="LienHe_sDienThoai" class="text-black">Điện thoại <span class="text-danger">*</span></label><span class="field-validation-valid" data-valmsg-for="LienHe_err_sDienThoai" data-valmsg-replace="true"></span>
+                                    <input id="LienHe_sDienThoai" name="LienHe_sDienThoai" value="" placeholder="Điện thoại" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label for="LienHe_sEmail" class="text-black">Email</label>
+                                    <input id="LienHe_sEmail" name="LienHe_sEmail" value="" placeholder="Email" type="email" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label for="LienHe_sTieuDe" class="text-black">Tiêu đề liên hệ <span class="text-danger">*</span></label><span class="field-validation-valid" data-valmsg-for="LienHe_err_sTieuDe" data-valmsg-replace="true"></span>
+                                    <input id="LienHe_sTieuDe" name="LienHe_sTieuDe" value="" placeholder="Tiêu đề liên hệ" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label for="LienHe_sNoiDung" class="text-black">Nội dung liên hệ</label>
+                                    <textarea id="LienHe_sNoiDungHienThi" name="LienHe_sNoiDungHienThi" placeholder="Nội dung" type="text" class="form-control" style="height: 60px;"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <div class="g-recaptcha" data-sitekey="6LdTY5IUAAAAAH1XE0s4xKTYCwucYA4zmI6Z7O_c" style="width: 100%;"><div style="width: 304px; height: 78px;"><div><iframe src="./lien-he_files/anchor.html" width="304" height="78" role="presentation" name="a-tm6mfypquknl" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;" src="./lien-he_files/saved_resource.html"></iframe></div>
+                                    <span class="field-validation-valid" data-valmsg-for="LienHe_err_sCapCha" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-12">
+                                    <input type="submit" class="btn btn-primary btn-lg btn-block" value="Gửi liên hệ">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-5 ml-auto">
+                    <div class="p-4 border mb-3">
+                        <span class="d-block text-primary h6 text-uppercase">CƠ SỞ 1:</span>
+                        <p class="mb-0">Địa chỉ: Thôn Bầu, xã Kim Chung, huyện Đông Anh, thành phố Hà Nội.</p>
+                        <p class="mb-0"><a href="tel://02435810172">Hành chính: (024).3581 0172</a></p>
+                        <p class="mb-0"><a href="tel://0978667832">Phòng tiêm vắc xin: 0978.667.832</a></p>
+                    </div>
+                    <div class="p-4 border mb-3">
+                        <span class="d-block text-primary h6 text-uppercase">CƠ SỞ 2:</span>
+                        <p class="mb-0">Địa chỉ: Số 78, Đường Giải Phóng, Hà Nội.</p>
+                        <p class="mb-0"><a href="tel://02435763491">Hành chính: (024).3576 3491</a></p>
+                        <p class="mb-0"><a href="tel://02435764305">Fax: (024).3576 4305</a></p>
+                        <p class="mb-0"><a href="tel://02463265762">Phòng tiêm vắc xin: (024).6326 5762</a></p>
+                        <p class="mb-0">Thôn Bầu, xã Kim Chung, huyện Đông Anh, thành phố Hà Nội.</p>
+                    </div>
+                    <div class="p-4 border mb-3">
+                        <span class="d-block text-primary h6 text-uppercase">THÔNG TIN KHÁC</span>
+                        <p class="mb-0"><a href="http://benhnhietdoi.vn/">Website: benhnhietdoi.vn</a></p>
+                        <p class="mb-0"><a href="mailto:emailaddress@domain.com">emailaddress@domain.com</a></p>
+                        <p class="mb-0">Giấy phép số 257/GP-TTĐT do Cục QL Phát thanh Truyền hình &amp; Thông tin điện tử - Bộ TT &amp; TT, cấp ngày 03/12/2010</p>
+                        <p class="mb-0">Đơn vị chủ quản: Bộ Y tế - Chịu trách nhiệm nội dung: GS.TS Nguyễn Văn Kính - Giám đốc Bệnh viện</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
