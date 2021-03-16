@@ -1,6 +1,7 @@
 ﻿var files;
 $(document).ready(function () {
     //var dataTinTuc = @ViewBag.TinTuc_Details;
+    //var someSessionVariable = '@Session["Data"]';
     var pageURL = $(location).attr("href");
     if (pageURL.indexOf('DangBai') != -1) {
         if (id !== 0) {
@@ -45,9 +46,9 @@ function readURL(input) {
         reader.readAsDataURL(input.files[0]);
     }
 }
-$.post("/Administrator/PostMethod",function (response) {
-        $("#danhmuc").select2ToTree({ treeData: { dataArr: response }, maximumSelectionLength: 3 });
-    }
+$.post("/Administrator/PostMethod", function (response) {
+    $("#danhmuc").select2ToTree({ treeData: { dataArr: response }, maximumSelectionLength: 3 });
+}
 )
 $("#btn_brow_IMG").change(function () {
     files = this.files;
@@ -60,7 +61,7 @@ $('#datepicker_NgayDang').datepicker({
     todayHighlight: true,
 });
 $('#datepicker_NgayDang').datepicker("setDate", new Date());
-$('#capnhat').click(function () { 
+$('#capnhat').click(function () {
     var valdata = renderdata();
     $.ajax({
         url: "/Administrator/CreateTinTuc",
@@ -79,9 +80,9 @@ $('#capnhat').click(function () {
                 err = JSON.parse(xhr.responseText).Message;
             console.log(err);
         }
-    });  
+    });
 })
-function uploadImage () {
+function uploadImage() {
     if (files.length > 0) {
         if (window.FormData !== undefined) {
             var data = new FormData();
@@ -103,26 +104,26 @@ function uploadImage () {
                     console.log(err);
                 }
             });
-        } 
+        }
     }
 }
 function renderdata() {
-    var formData = new FormData(); 
+    var formData = new FormData();
     formData.append("idTinTuc", id);
     formData.append("LoaiTinTuc", $("#danhmuc option:selected").val().trim());
     formData.append("TieuDe", $("#tieude").val());
     formData.append("TomTatNoiDung", $("#txtlead").val());
     var editorText = CKEDITOR.instances.htmlNoiDung.getData();
     formData.append("NoiDung", editorText);
-    if (id === 0 || files.length>0) {
+    if (id === 0 || files.length > 0) {
         formData.append("Avata", '/Images/' + files[0].name);
-    }        
+    }
     else
         formData.append("Avata", $("#imghinhanh").attr('src'));
     formData.append("NgayTao", $("#datepicker_NgayDang").val());
     formData.append("NgaySua", $("#datepicker_NgayDang").val());
     formData.append("NgayDuyet", $("#datepicker_NgayDang").val());
-    formData.append("TrangThai",2 );
+    formData.append("TrangThai", 2);
     formData.append("NguoiTao", 1);
     formData.append("NguoiSua", 1);
     formData.append("NguoiDuyet", 1);
@@ -136,136 +137,185 @@ function renderdata() {
     if (files !== undefined)
         formData.append("FileImages", files[0]);
     return formData;
-    
+
 }
 
 function loaddataDefault(data) {
-    
+
 
     var table = $('#example1').DataTable();
     table.destroy();
 
     var url = "/Administrator/DanhSachTinTuc?" + data;
 
-    $('#example1').DataTable({
-        autofill: true,
-        select: true,
-        responsive: true,
-        buttons: true,
-        length: 10,
-        //"bSort": false,
-        "language": {
-            "url": "/lib/Vietnamese.json",
-            "paginate": {
-                "first": '<i class="fa fa-angle-double-left"></i>',
-                "previous": '<i class="fa fa-angle-left"></i>',
-                "next": '<i class="fa fa-angle-right"></i>',
-                "last": '<i class="fa fa-angle-double-right"></i>'
+    $.ajax({
+        type: "POST",
+        url: url,
+        contentType: false,
+        processData: false,
+        success: function (result) {
+            if (result === "Login failed") {
+                window.location.replace("/Login/Index2");
             }
+            else {
+                $('#example1').DataTable({
+                    autofill: true,
+                    select: true,
+                    responsive: true,
+                    buttons: true,
+                    length: 10,
+                    //"bSort": false,
+                    "language": {
+                        "url": "/lib/Vietnamese.json",
+                        "paginate": {
+                            "first": '<i class="fa fa-angle-double-left"></i>',
+                            "previous": '<i class="fa fa-angle-left"></i>',
+                            "next": '<i class="fa fa-angle-right"></i>',
+                            "last": '<i class="fa fa-angle-double-right"></i>'
+                        }
+                    },
+                    data: result,
+                    "columns": [
+                        {
+                            "data": "idTinTuc",
+                            "name": "ID",
+                            render: function (data) {
+                                if (data !== undefined)
+                                    return '<a  href="/Administrator/DangBai/' + data + '" style="color: #031fe6;" >' + data + '</a>'
+                                else
+                                    return '';
+                            }
+                        },
+                        {
+                            "data": "TieuDe",
+                            "name": "Title",
+                            render: function (data) {
+                                if (data !== undefined)
+                                    return data;
+                                else
+                                    return '';
+                            }
+                        },
+                        {
+                            "data": "TomTatNoiDung",
+                            "name": "Sampo",
+                            render: function (data) {
+                                if (data !== undefined)
+                                    return data;
+                                else
+                                    return '';
+                            }
+                        },
+                        {
+                            "data": "TenMenu",
+                            "name": "Danh mục",
+                            render: function (data) {
+                                if (data !== undefined)
+                                    return data;
+                                else
+                                    return '';
+                            }
+                        },
+                        {
+                            "data": "NgayTao",
+                            "name": "Ngày đăng",
+                            render: function (data) {
+                                if (data !== undefined)
+                                    return data.substring(0, 10);
+                                else
+                                    return '';
+                            }
+                        },
+                        {
+                            "data": "NguoiDuyet",
+                            "name": "Người Đăng",
+                            render: function (data) {
+                                if (data !== undefined)
+                                    return data;
+                                else
+                                    return '';
+                            }
+                        },
+                        {
+                            "data": "Avata",
+                            "name": "Avata",
+                            render: function (data, type, full, meta) {
+                                if (data === null || data === undefined || data === "")
+                                    return '';
+                                else
+                                    return '<a><img " style="max-width: 200px; max-height=100px" src="' + data + '" alt="" /></a>';
+                                //return '<img  data-image-id-anhdaidien ="' + data.camera_image + '" style="max-width: 80px;" src="' + HOST_UPLOAD_ADMIN + '/uploads/' + data.camera_image + '" alt="" />';
+                            }
+                        },
+                        {
+                            "data": "CrawData",
+                            "name": "CrawData",
+                            render: function (data) {
+                                if (data === 1)
+                                    return '\n\ <label class="switch"><input class="checkStatus" type= "checkbox" id="' + data + '" checked disabled="disabled"><span class="slider round"></span></label>';
+                                else
+                                    return '\n\ <label class="switch"><input class="checkStatus" type= "checkbox" id="' + data + '" disabled="disabled"><span class="slider round"></span></label>';
+                            }
+                        },
+                        {
+                            "data": null,
+                            "name": 'Status',
+                            render: function (data) {
+                                var _Type = data.Type == 2 ? 'true' : 'false';
+                                var _sildes = data.Sildes == 1 ? 'true' : 'false';
+                                if (data.TrangThai === 1)
+                                    return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,this.checked,' + _Type + ',' + _sildes + ')" type= "checkbox" id="' + data.idTinTuc + '" checked ><span class="slider round"></span></label>';
+                                else
+                                    return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,this.checked,' + _Type + ',' + _sildes + ')"  type= "checkbox" id="' + data.idTinTuc + '"><span class="slider round"></span></label>';
+                            }
+                        },
+                        {
+                            "data": null,
+                            "name": 'Duyệt Bài',
+                            render: function (data) {
+                                var _TrangThai = data.TrangThai == 1 ? 'true' : 'false';
+                                var _sildes = data.Sildes == 1 ? 'true' : 'false';
+                                if (data.Type === 1)
+                                    return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,' + _TrangThai + ',this.checked,' + _sildes + ')" type= "checkbox" id="' + data.idTinTuc + '"  ><span class="slider round"></span></label>';
+                                else
+                                    return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,' + _TrangThai + ',this.checked,' + _sildes + ')" type= "checkbox" id="' + data.idTinTuc + '" checked><span class="slider round"></span></label>';
+                            }
+                        },
+                        {
+                            "data": null,
+                            "name": 'Slides',
+                            render: function (data) {
+                                var _Type = data.Type == 2 ? 'true' : 'false';
+                                var _TrangThai = data.TrangThai == 1 ? 'true' : 'false';
+                                if (data.Sildes === 0)
+                                    return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,' + _TrangThai + ',' + _Type + ',this.checked)" type= "checkbox" id="' + data.idTinTuc + '"  ><span class="slider round"></span></label>';
+                                else
+                                    return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,' + _TrangThai + ',' + _Type + ',this.checked)" type= "checkbox" id="' + data.idTinTuc + '" checked><span class="slider round"></span></label>';
+                            }
+                        },
+                    ],
+                    order: [
+                        [0, 'DECS']
+                    ]
+                });
+            }
+
         },
-        "ajax": {
-            "url": url,
-            "dataSrc": "",
-            "type": "POST"
-        },
-        "columns": [
-            {
-                "data": "idTinTuc",
-                "name": "ID",
-                render: function (data) {
-                    return '<a  href="/Administrator/DangBai/' + data + '" style="color: #031fe6;" >' + data+'</a>'
-                }
-            },
-            {
-                "data": "TieuDe",
-                "name": "Title"
-            },
-            {
-                "data": "TomTatNoiDung",
-                "name": "Sampo"
-            },
-            {
-                "data": "TenMenu",
-                "name": "Danh mục"
-            },
-            {
-                "data": "NgayTao",
-                "name": "Ngày đăng",
-                render: function (data) {
-                    return data.substring(0, 10);
-                }
-            },
-            {
-                "data": "NguoiDuyet",
-                "name": "Người Đăng"
-            },
-            {
-                "data": "Avata",
-                "name": "Avata",
-                render: function (data, type, full, meta) {
-                    if (data === null || data === undefined || data === "")
-                        return '';
-                    else
-                        return '<a><img " style="max-width: 200px; max-height=100px" src="' + data + '" alt="" /></a>';
-                    //return '<img  data-image-id-anhdaidien ="' + data.camera_image + '" style="max-width: 80px;" src="' + HOST_UPLOAD_ADMIN + '/uploads/' + data.camera_image + '" alt="" />';
-                }
-            },
-            {
-                "data": "CrawData",
-                "name": "CrawData",
-                render: function (data) {
-                    if (data === 1)
-                        return '\n\ <label class="switch"><input class="checkStatus" type= "checkbox" id="' + data + '" checked disabled="disabled"><span class="slider round"></span></label>';
-                    else
-                        return '\n\ <label class="switch"><input class="checkStatus" type= "checkbox" id="' + data + '" disabled="disabled"><span class="slider round"></span></label>';
-                }
-            },
-            {
-                "data": null,
-                "name": 'Status',
-                render: function (data) {
-                    var _Type = data.Type == 2 ? 'true' : 'false';
-                    var _sildes = data.Sildes == 1 ? 'true' : 'false';
-                    if (data.TrangThai === 1)
-                        return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,this.checked,' + _Type + ',' + _sildes+')" type= "checkbox" id="' + data.idTinTuc + '" checked ><span class="slider round"></span></label>';
-                    else
-                        return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,this.checked,' + _Type + ',' + _sildes +')"  type= "checkbox" id="' + data.idTinTuc + '"><span class="slider round"></span></label>';
-                }
-            },
-            {
-                "data": null,
-                "name": 'Duyệt Bài',
-                render: function (data) {
-                    var _TrangThai = data.TrangThai == 1 ? 'true' : 'false';
-                    var _sildes = data.Sildes == 1 ? 'true' : 'false';
-                    if (data.Type === 1)
-                        return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,' + _TrangThai + ',this.checked,' + _sildes +')" type= "checkbox" id="' + data.idTinTuc + '"  ><span class="slider round"></span></label>';
-                    else
-                        return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,' + _TrangThai + ',this.checked,' + _sildes +')" type= "checkbox" id="' + data.idTinTuc + '" checked><span class="slider round"></span></label>';
-                }
-            },
-            {
-                "data": null,
-                "name": 'Slides',
-                render: function (data) {
-                    var _Type = data.Type == 2 ? 'true' : 'false';
-                    var _TrangThai = data.TrangThai == 1 ? 'true' : 'false';
-                    if (data.Sildes === 0)
-                        return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,' + _TrangThai + ',' + _Type + ',this.checked)" type= "checkbox" id="' + data.idTinTuc + '"  ><span class="slider round"></span></label>';
-                    else
-                        return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,' + _TrangThai + ',' + _Type + ',this.checked)" type= "checkbox" id="' + data.idTinTuc + '" checked><span class="slider round"></span></label>';
-                }
-            },
-        ],
-        order: [
-            [0, 'DECS']
-        ]
+        error: function (xhr, status, p3, p4) {
+            var err = "Error " + " " + status + " " + p3 + " " + p4;
+            if (xhr.responseText && xhr.responseText[0] == "{")
+                err = JSON.parse(xhr.responseText).Message;
+            console.log(err);
+        }
     });
+
+
+
 }
 $('#loadtinbai').click(function () {
     var data = "type=" + $("#trangthai").val() + "&status=" + $("#type_delete").val() + "&loaitintuc=" + $("#danhmuc option:selected").val()
         + "&tungay=" + $("#datepicker_tungay").val() + "&denngay=" + $("#datepicker_denngay").val();
-    loaddataDefault(data);    
+    loaddataDefault(data);
 })
 
 function AdminUpdateStatusMes(id, TrangThai, type, Sildes) {

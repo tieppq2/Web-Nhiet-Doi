@@ -13,29 +13,31 @@
             <div class="navbar" role="navigation">
                 <div class="navbar-collapse collapse">
                     <nav>
-                        @*<ul class="cf">*@
-                        <li class="active"><a href="/Home/Index">Trang Chủ</a></li>
-
-                        @foreach (var itemparent in Model.ListParentMenu)
-                        {
-                            if (@itemparent.CapMenu == 0)
+                        <ul>
+                            <li class="active">
+                                <a style="text-align: right;" href="/Home/Index" title="Trang chủ">
+                                    <img style="    height: 32px;" src="../../Images/home.svg">
+                                </a></li>
+                            @foreach (var itemparent in Model.ListParentMenu)
                             {
-                                <li class=" has-children">
-                                    <a href="@itemparent.Linkurl" title="@itemparent.TenMenu">@itemparent.TenMenu</a>
-                                    <ul class="">
-                                        @foreach (var item in Model.ListMenu)
-                                        {
-                                            if (@item.IdCha == @itemparent.Id)
+                                if (@itemparent.CapMenu == 0)
+                                {
+                                    <li class=" has-children">
+                                        <a href="@itemparent.Linkurl" title="@itemparent.TenMenu"><div>@itemparent.TenMenu</div></a>
+                                        <ul class="">
+                                            @foreach (var item in Model.ListMenu)
                                             {
-                                                <li><a href="@item.Linkurl" title="@item.TenMenu" style="font-size: 10px;">@item.TenMenu</a></li>
+                                                if (@item.IdCha == @itemparent.Id)
+                                                {
+                                                    <li><a href="@item.Linkurl" title="@item.TenMenu" style="font-size: 12px;">@item.TenMenu</a></li>
+                                                }
                                             }
-                                        }
-                                    </ul>
-                                </li>
+                                        </ul>
+                                    </li>
+                                }
                             }
-                        }
-                        <li class="active"><a href="#">Liên hệ</a></li>
-                        @*</ul>*@
+                            <li class="active"><a href="#">Liên hệ</a></li>
+                        </ul>
                     </nav>
                 </div>
             </div>

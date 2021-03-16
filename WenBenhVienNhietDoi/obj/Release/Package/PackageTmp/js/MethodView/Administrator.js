@@ -1,4 +1,41 @@
 ﻿var files;
+$(document).ready(function () {
+    //var dataTinTuc = @ViewBag.TinTuc_Details;
+    var pageURL = $(location).attr("href");
+    if (pageURL.indexOf('DangBai') != -1) {
+        if (id !== 0) {
+            $.ajax({
+                url: "/Administrator/GetDetailsTinTuc/" + id,
+                type: "POST",
+                contentType: false,
+                processData: false,
+                //data: valdata,
+                success: function (response) {
+                    //$("#danhmuc").append("<option value='" + response[0].LoaiTinTuc + "' selected>" + response[0].TenMenu + "</option>");
+                    $("#danhmuc").val(response[0].LoaiTinTuc).trigger('change.select2');;
+                    //$('#danhmuc').select2(response[0].LoaiTinTuc, response[0].TenMenu);
+                    $("#tieude").val(response[0].TieuDe);
+                    $("#txtlead").val(response[0].TomTatNoiDung);
+                    CKEDITOR.instances['htmlNoiDung'].setData(response[0].NoiDung)
+                    //$("#htmlNoiDung").val(response.);
+                    $('#imghinhanh').attr('src', response[0].Avata);
+                    $('#trangthai').val(response[0].Type);
+                },
+                error: function (xhr, status, p3, p4) {
+                    var err = "Error " + " " + status + " " + p3 + " " + p4;
+                    if (xhr.responseText && xhr.responseText[0] == "{")
+                        err = JSON.parse(xhr.responseText).Message;
+                    console.log(err);
+                }
+            });
+        }
+    }
+    else {
+        var data = "type=" + $("#trangthai").val() + "&status=" + $("#type_delete").val() + "&loaitintuc=0"
+            + "&tungay=" + $("#datepicker_tungay").val() + "&denngay=" + $("#datepicker_denngay").val();
+        loaddataDefault(data);
+    }
+});
 function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
@@ -8,8 +45,7 @@ function readURL(input) {
         reader.readAsDataURL(input.files[0]);
     }
 }
-$.post("/Administrator/PostMethod",
-function (response) {
+$.post("/Administrator/PostMethod",function (response) {
         $("#danhmuc").select2ToTree({ treeData: { dataArr: response }, maximumSelectionLength: 3 });
     }
 )
@@ -67,21 +103,22 @@ function uploadImage () {
                     console.log(err);
                 }
             });
-        } else {
-            alert("This browser doesn't support HTML5 file uploads!");
-        }
+        } 
     }
 }
 function renderdata() {
-
     var formData = new FormData(); 
-    formData.append("idTinTuc", 0);
+    formData.append("idTinTuc", id);
     formData.append("LoaiTinTuc", $("#danhmuc option:selected").val().trim());
     formData.append("TieuDe", $("#tieude").val());
     formData.append("TomTatNoiDung", $("#txtlead").val());
     var editorText = CKEDITOR.instances.htmlNoiDung.getData();
     formData.append("NoiDung", editorText);
-    formData.append("Avata", '/Images/'+files[0].name);
+    if (id === 0 || files.length>0) {
+        formData.append("Avata", '/Images/' + files[0].name);
+    }        
+    else
+        formData.append("Avata", $("#imghinhanh").attr('src'));
     formData.append("NgayTao", $("#datepicker_NgayDang").val());
     formData.append("NgaySua", $("#datepicker_NgayDang").val());
     formData.append("NgayDuyet", $("#datepicker_NgayDang").val());
@@ -96,108 +133,159 @@ function renderdata() {
     formData.append("MenuParent", "");
     formData.append("TenMenu", "");
     formData.append("CapMenu", 1);
-    formData.append("FileImages", files[0]);
-    //Objectdata["TieuDe"] = $("#tieude").val().trim();
-    //var Objectdata = {};    
-    //Objectdata["LoaiTinTuc"] = $("#danhmuc option:selected").val().trim();
-
-    //Objectdata["TieuDe"] = $("#tieude").val().trim();
-
-    //Objectdata["TomTatNoiDung"] = $("#txtlead").val();
-    //Objectdata["NoiDung"] = $("#htmlNoiDung").text();
-    //Objectdata["Avata"] = files[0];
-    ////Objectdata["TrangThai"] = $("#group").val().trim();
-    //Objectdata["NgayTao"] = $("#datepicker_NgayDang").val();
-    //Objectdata["NgaySua"] = $("#datepicker_NgayDang").val();
-    //Objectdata["TrangThai"] = $("#trangthai option:selected").val();
-    //Objectdata["NguoiTao"] = 1; 
-
+    if (files !== undefined)
+        formData.append("FileImages", files[0]);
     return formData;
     
 }
-$('#loadtinbai').click(function () {
-    var formData = new FormData();
-    formData.append("type", $("#trangthai").val());
-    formData.append("status", $("#type_delete").val());
-    formData.append("loaitintuc", $("#danhmuc option:selected").val());
-    formData.append("tungay", JSON.stringify($("#datepicker_tungay").val()));
-    formData.append("denngay", JSON.stringify($("#datepicker_denngay").val()));
-    var data = "type=" + $("#trangthai").val() + "&status=" + $("#type_delete").val() + "&loaitintuc=" + $("#danhmuc option:selected").val()
-        + "&tungay=" + $("#datepicker_tungay").val() + "&denngay=" + $("#datepicker_denngay").val();
+
+function loaddataDefault(data) {
+    
+
     var table = $('#example1').DataTable();
     table.destroy();
 
     var url = "/Administrator/DanhSachTinTuc?" + data;
+
+    $('#example1').DataTable({
+        autofill: true,
+        select: true,
+        responsive: true,
+        buttons: true,
+        length: 10,
+        //"bSort": false,
+        "language": {
+            "url": "/lib/Vietnamese.json",
+            "paginate": {
+                "first": '<i class="fa fa-angle-double-left"></i>',
+                "previous": '<i class="fa fa-angle-left"></i>',
+                "next": '<i class="fa fa-angle-right"></i>',
+                "last": '<i class="fa fa-angle-double-right"></i>'
+            }
+        },
+        "ajax": {
+            "url": url,
+            "dataSrc": "",
+            "type": "POST"
+        },
+        "columns": [
+            {
+                "data": "idTinTuc",
+                "name": "ID",
+                render: function (data) {
+                    return '<a  href="/Administrator/DangBai/' + data + '" style="color: #031fe6;" >' + data+'</a>'
+                }
+            },
+            {
+                "data": "TieuDe",
+                "name": "Title"
+            },
+            {
+                "data": "TomTatNoiDung",
+                "name": "Sampo"
+            },
+            {
+                "data": "TenMenu",
+                "name": "Danh mục"
+            },
+            {
+                "data": "NgayTao",
+                "name": "Ngày đăng",
+                render: function (data) {
+                    return data.substring(0, 10);
+                }
+            },
+            {
+                "data": "NguoiDuyet",
+                "name": "Người Đăng"
+            },
+            {
+                "data": "Avata",
+                "name": "Avata",
+                render: function (data, type, full, meta) {
+                    if (data === null || data === undefined || data === "")
+                        return '';
+                    else
+                        return '<a><img " style="max-width: 200px; max-height=100px" src="' + data + '" alt="" /></a>';
+                    //return '<img  data-image-id-anhdaidien ="' + data.camera_image + '" style="max-width: 80px;" src="' + HOST_UPLOAD_ADMIN + '/uploads/' + data.camera_image + '" alt="" />';
+                }
+            },
+            {
+                "data": "CrawData",
+                "name": "CrawData",
+                render: function (data) {
+                    if (data === 1)
+                        return '\n\ <label class="switch"><input class="checkStatus" type= "checkbox" id="' + data + '" checked disabled="disabled"><span class="slider round"></span></label>';
+                    else
+                        return '\n\ <label class="switch"><input class="checkStatus" type= "checkbox" id="' + data + '" disabled="disabled"><span class="slider round"></span></label>';
+                }
+            },
+            {
+                "data": null,
+                "name": 'Status',
+                render: function (data) {
+                    var _Type = data.Type == 2 ? 'true' : 'false';
+                    var _sildes = data.Sildes == 1 ? 'true' : 'false';
+                    if (data.TrangThai === 1)
+                        return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,this.checked,' + _Type + ',' + _sildes+')" type= "checkbox" id="' + data.idTinTuc + '" checked ><span class="slider round"></span></label>';
+                    else
+                        return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,this.checked,' + _Type + ',' + _sildes +')"  type= "checkbox" id="' + data.idTinTuc + '"><span class="slider round"></span></label>';
+                }
+            },
+            {
+                "data": null,
+                "name": 'Duyệt Bài',
+                render: function (data) {
+                    var _TrangThai = data.TrangThai == 1 ? 'true' : 'false';
+                    var _sildes = data.Sildes == 1 ? 'true' : 'false';
+                    if (data.Type === 1)
+                        return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,' + _TrangThai + ',this.checked,' + _sildes +')" type= "checkbox" id="' + data.idTinTuc + '"  ><span class="slider round"></span></label>';
+                    else
+                        return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,' + _TrangThai + ',this.checked,' + _sildes +')" type= "checkbox" id="' + data.idTinTuc + '" checked><span class="slider round"></span></label>';
+                }
+            },
+            {
+                "data": null,
+                "name": 'Slides',
+                render: function (data) {
+                    var _Type = data.Type == 2 ? 'true' : 'false';
+                    var _TrangThai = data.TrangThai == 1 ? 'true' : 'false';
+                    if (data.Sildes === 0)
+                        return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,' + _TrangThai + ',' + _Type + ',this.checked)" type= "checkbox" id="' + data.idTinTuc + '"  ><span class="slider round"></span></label>';
+                    else
+                        return '\n\ <label class="switch"><input class="checkStatus" onchange="AdminUpdateStatusMes(this.id,' + _TrangThai + ',' + _Type + ',this.checked)" type= "checkbox" id="' + data.idTinTuc + '" checked><span class="slider round"></span></label>';
+                }
+            },
+        ],
+        order: [
+            [0, 'DECS']
+        ]
+    });
+}
+$('#loadtinbai').click(function () {
+    var data = "type=" + $("#trangthai").val() + "&status=" + $("#type_delete").val() + "&loaitintuc=" + $("#danhmuc option:selected").val()
+        + "&tungay=" + $("#datepicker_tungay").val() + "&denngay=" + $("#datepicker_denngay").val();
+    loaddataDefault(data);    
+})
+
+function AdminUpdateStatusMes(id, TrangThai, type, Sildes) {
+    var _trangthai = TrangThai ? 2 : 1;
+    var _type = type ? 2 : 1;
+    var _Sildes = Sildes ? 1 : 0;
+    var url = '/Administrator/AdminUpdateStatusMes?ID=' + id + '&TrangThai=' + _trangthai + '&type=' + _type + '&slides=' + _Sildes;
     $.ajax({
         type: "POST",
         url: url,
-        //data: "query=" + query + '&_token=' + _token,
-        cache: false,
-
-        success: function (html) {
-            //html is a json_encode array so we need to parse it before using
-            var result = jQuery.parseJSON(html);
-            $('#example1').DataTable({
-                //here is the solution
-                "data": result,
-                "ajax": {
-                    "url": result,
-                    "dataSrc": ""
-                },
-                "columns": [
-                    { "data": "idTinTuc" },
-                    { "data": "TieuDe" },
-                    { "data": "TomTatNoiDung" },
-                    { "data": "TenMenu" },
-                    { "data": "NgayDuyet" },
-                    { "data": "NgayDuyet" },
-                    { "data": "Avata" },
-                    { "data": "CrawData" },
-                    { "data": "Type" },
-                    { "data": "TrangThai" }
-                ]
-            });
+        contentType: false,
+        processData: false,
+        success: function (result) {
+            console.log(result);
+        },
+        error: function (xhr, status, p3, p4) {
+            var err = "Error " + " " + status + " " + p3 + " " + p4;
+            if (xhr.responseText && xhr.responseText[0] == "{")
+                err = JSON.parse(xhr.responseText).Message;
+            console.log(err);
         }
     });
-    //$.ajax({
-    //    url: "/Administrator/DanhSachTinTuc?" + data,
-    //    type: "POST",
-    //    contentType: false,
-    //    async: false,
-    //    dataType: 'text',
-    //    processData: false,
-    //    //data: {
-    //    //    type: $("#trangthai").val(),
-    //    //    status: $("#type_delete").val(),
-    //    //    loaitintuc: $("#danhmuc option:selected").val(),
-    //    //    tungay: JSON.stringify($("#datepicker_tungay").val()),
-    //    //        denngay: JSON.stringify($("#datepicker_denngay").val())
-    //    //},
-    //    success: function (response) {
-    //        var tblEmployee = $("#example1"); 
-    //        var data = JSON.parse(response)
-    //        //if (response == 'File uploaded successfully')
-    //        $.each(data, function (index, item) {
-    //                var tr = $("<tr></tr>");
-    //                tr.html(("<td>" + item.idTinTuc + "</td>")
-    //                    + " " + ("<td>" + item.TieuDe + "</td>")
-    //                    + " " + ("<td>" + item.TomTatNoiDung + "</td>")
-    //                    + " " + ("<td>" + item.TenMenu + "</td>")
-    //                    + " " + ("<td>" + item.NgayDuyet + "</td>")
-    //                    + " " + ("<td>" + item.NguoiDuyet + "</td>")
-    //                    + " " + ("<td>" + item.Avata + "</td>")
-    //                    + " " + ("<td>" + item.CrawData + "</td>")
-    //                    + " " + ("<td>" + item.Type + "</td>")
-    //                    + " " + ("<td>" + item.TrangThai + "</td>"));
-    //                tblEmployee.append(tr);
-    //            }); 
-    //        console.log(response);
-    //    },
-    //    error: function (xhr, status, p3, p4) {
-    //        var err = "Error " + " " + status + " " + p3 + " " + p4;
-    //        if (xhr.responseText && xhr.responseText[0] == "{")
-    //            err = JSON.parse(xhr.responseText).Message;
-    //        console.log(err);
-    //    }
-    //});
-})
+}

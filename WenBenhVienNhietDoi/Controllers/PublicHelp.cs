@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using WenBenhVienNhietDoi.Models;
@@ -254,5 +255,35 @@ namespace WenBenhVienNhietDoi.Controllers
             return statusEx;
         }
 
+        public DataTable DangNhap(string username, string pass)
+        {
+            pass = CreateMD5(pass);
+            SqlParameter[] paras = {
+                new SqlParameter("@UserName", SqlDbType.NVarChar),
+                new SqlParameter("@Pass", SqlDbType.NVarChar),
+            };
+            paras[0].Value = Convert.ToString(username);
+            paras[1].Value = Convert.ToString(pass);
+
+            return DBProcess.GetDataTable("DangNhap", paras);
+        }
+        public static string CreateMD5(string input)
+        {
+            // Use input string to calculate MD5 hash
+            input = "TiepPQ@" + input;
+            using (System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create())
+            {
+                byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+                byte[] hashBytes = md5.ComputeHash(inputBytes);
+
+                // Convert the byte array to hexadecimal string
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < hashBytes.Length; i++)
+                {
+                    sb.Append(hashBytes[i].ToString("X2"));
+                }
+                return sb.ToString();
+            }
+        }
     }
 }

@@ -1,0 +1,354 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-language" content="vi" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Bệnh viện đa khoa nhân dân 115 by alobacsi.vn" />
+    <meta name='COPYRIGHT' content='&copy; BV115.com' />
+    <meta property="og:site_name" content="Bệnh viện Đa khoa Nhân Dân 115" />
+    <meta name="keywords" content=" benh vien nhan dan 115, benh vien 115, bệnh viện đa khoa 115, kham benh truc tuyen, kham benh online, kham benh theo yeu cau, chua benh, ung thu, sot xuat huyet, HIV, benh nan y, benh vien da khoa 115, bvdk 115, bv115, bv 115, bệnh viện 115" />
+    <meta name="description" content="Bệnh viện Đa khoa Nhân Dân 115" />
+    <meta property="og:title" content="B&#x1EC7;nh vi&#x1EC7;n Nh&#xE2;n D&#xE2;n 115 - Bệnh viện Đa khoa Nhân Dân 115" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:url" content="/" />
+    <meta property="fb:pages" content="1959276030968171" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>B&#x1EC7;nh vi&#x1EC7;n Nh&#xE2;n D&#xE2;n 115 - Bệnh viện Nhân Dân 115</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,500italic,700,700italic,900,900italic,400italic|Roboto+Condensed:400,700,700italic,400italic|Roboto+Mono:400,500,400italic,500italic,700,700italic|Roboto+Slab:400,700" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/site.min.css?v=nLFellpLZx4brMV2iZSsGclPYU1x4FK3f1Iyrgcngxs" />
+    <meta name="google-site-verification" content="VeUAzK45nZlCPE1Krh3_kIEyB9473tPg-BXrEeKdVEI" />
+</head>
+<body>
+
+    <div class="header">
+        @*<div class="nav-hdr container-fluid text-right hidden-xs">
+            <ul>
+                <li><a href="/bao-hiem-y-te/3">Bảo hiểm y tế</a></li>
+                <li><a href="/dao-tao/4">Đào tạo</a></li>
+                <li><a href="/kien-thuc-y-khoa/5">Kiến thức y khoa</a></li>
+                <li><a href="/tu-van-bac-si/6">Tư vấn bác sĩ</a></li>
+                <li><a href="/tam-long-vang/8">Tấm lòng vàng</a></li>
+            </ul>
+        </div>*@
+        <div class="main-hdr container-fluid">
+            <div class="pull-left logo-hdr"><a href="/" title="Logo Bệnh viện Nhân dân 115"><img alt="Logo Bệnh viện Nhân dân 115" src="~/data/logo_benhviennhandan115.jpg" /></a></div>
+            <ul class="pull-right">
+                <li class="allcate"><a href="#menu"><i class="fa fa-list-ul" aria-hidden="true"></i>Danh mục</a></li>
+                <li class="hidden-xs"><a data-toggle="modal" data-target="#login"><i class="fa fa-user-plus" aria-hidden="true"></i>Nhận tin từ bệnh viện</a></li>
+                <li class="hidden-xs"><a data-toggle="modal" data-target="#send-email"><i class="fa fa-envelope" aria-hidden="true"></i>Gửi Email</a></li>
+                <li class=" dropdown">
+                    <a href="#" class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="fa fa-search" aria-hidden="true"></i>Tìm kiếm</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <form action="/tim-kiem" method="get">
+                            <p><input type="text" class="box-search form-control" placeholder="Nhập từ khóa cần tìm kiếm" name="q" /></p>
+                            <input type="submit" class="btn btn-blue btn-red" value="Tìm kiếm" />
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        @Html.Action("MenuAction2", "Home")       
+    </div><!--header-->
+
+    <div class="wrapper">
+        <div class="cover-home cover-home-pc">
+            <div id="cover-home" class="owl-carousel ">
+                <div class="img-coverhome">
+                    <img alt="..." src="~/data/cover-home-1.jpg" />
+                    <div class="txt-coverh"><p>Bệnh viện Nhân dân 115</p></div>
+                </div>
+                <div class="img-coverhome">
+                    <img alt="..." src="~/data/cover-home-6.jpg" />
+                    <div class="txt-coverh"><p>Tự hào là bệnh viện đa khoa hạng I</p></div>
+                </div>
+                <div class="img-coverhome">
+                    <img alt="..." src="~/data/cover-home-2-N.jpg" />
+                    <div class="txt-coverh"><p>"Thân thiện - Hiện đại"<br />là định hướng của Giám đốc - TS.BS Phan Văn Báu</p></div>
+                </div>
+                <div class="img-coverhome">
+                    <img alt="..." src="~/data/cover-home-3.jpg" />
+                    <div class="txt-coverh"><p>Trang thiết bị - Cơ sở vật chất hiện đại<br />Đáp ứng nhu cầu bệnh nhân</p></div>
+                </div>
+                <div class="img-coverhome">
+                    <img alt="..." src="~/data/cover-home-2.jpg" />
+                    <div class="txt-coverh"><p>Đội ngũ Y - Bác sĩ tận tình, chu đáo</p></div>
+                </div>
+                <div class="img-coverhome">
+                    <img alt="..." src="~/data/cover-home-5.jpg" />
+                    <div class="txt-coverh"><p>Trao yêu thương, trao sức khỏe</p></div>
+                </div>
+            </div><!--carousel-cover-home-->
+        </div><!--cover-home-pc-->
+        @RenderBody()
+
+        <div class="footer-benhvien">
+            <div class="menu-footer menu-hdr hidden-xs">
+                <ul class="container">
+                    <li class="menu-active"><a href="#">Trang chủ</a></li>
+                    <li class="dropup">
+                        <a href="/gioi-thieu-tong-quan" class="dropdown-toggle" id="gioithieu-ft" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Giới thiệu</a>
+                        <ul class="dropdown-menu" aria-labelledby="gioithieu-ft">
+                            <li><a href="/gioi-thieu-tong-quan">Giới thiệu tổng quan</a></li>
+                            <li><a href="/so-do-to-chuc">Sơ đồ tổ chức</a></li>
+                            <li><a href="/lich-su-hinh-thanh">Lịch sử hình thành</a></li>
+                            <li><a href="/khoa">Danh sách Phòng/Khoa</a></li>
+                            <li><a href="/bac-si">Danh sách bác sĩ theo các chuyên khoa</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropup"><a href="/tin-tuc-va-hoat-dong/2">Tin tức & Hoạt động</a></li>
+                    <li class="dropup">
+                        <a href="#" class="dropdown-toggle" id="dichvu-ft" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dịch vụ khám bệnh</a>
+                        <ul class="dropdown-menu" aria-labelledby="dichvu-ft">
+                            <li class="sub-menu-ft">Quy trình khám bệnh</li>
+                            <li><a href="#">Khám bảo hiểm</a></li>
+                            <li><a href="#">Khám bình thường</a></li>
+                            <li><a href="#">Khám dịch vụ</a></li>
+                            <li class="sub-menu-ft">Giới thiệu các dịch vụ</li>
+                            <li><a href="#">Phòng Tâm lý Trị liệu</a></li>
+                            <li><a href="#">Khám bệnh trong giờ</a></li>
+                            <li><a href="#">Khám sức khỏe tổng quát</a></li>
+                            <li><a href="#">Khám Sức Khỏe Chuyên Khoa</a></li>
+                            <li><a href="#">Khám sức khỏe định kỳ</a></li>
+                            <li><a href="#">Khám sức khỏe cho công ty</a></li>
+                            <li><a href="#">Dịch vụ thẫm mỹ</a></li>
+                            <li class="sub-menu-ft">Dịch vụ đặc biệt</li>
+                            <li><a href="#">Dịch vụ nuôi bệnh tại bệnh viện, tại nhà</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropup">
+                        <a href="#" class="dropdown-toggle" id="chamsoc-ft" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Chăm sóc khách hàng</a>
+                        <div class="dropdown-menu home-chamsockhachhang text-center" aria-labelledby="chamsoc-ft">
+                            <img alt="..." src="data/icon1_chamsockhachhang.png" />
+                            <h4><a href="#">Chăm sóc khách hàng</a></h4>
+                            <p>Trả lời câu hỏi  - Tư vấn sức khỏe</p>
+                            <p class="number-chamsockhachhang">(08) 38.620.011 - 0902.768.115</p>
+                            <p><i>hoặc</i></p>
+                            <a class="btn btn-chamsockhachhang"><b>Gửi câu hỏi</b><i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/lich-kham-benh">Lịch làm việc</a>
+                    </li>
+                    <li class="dropup">
+                        <a href="/bang-gia/13" class="dropdown-toggle" id="lichkham-ft" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bảng giá</a>
+                        <ul class="dropdown-menu" aria-labelledby="lichkham-ft">
+                            <li class="sub-menu-ft">Bảng giá</li>
+                            <li><a href="/bang-gia-kham-benh/bang-gia-dich-vu-kham-benh/2017112411032996">Bảng giá khám bệnh</a></li>
+                            <li><a href="/bang-gia-phong-cac-loai/gia-dich-vu-giuong-benh/20170630040947232">Bảng giá phòng các loại</a></li>
+                            <li><a href="/bang-gia-dich-vu-y-te/bang-gia-kham-benh-va-dieu-tri-/2017063004599664">Bảng giá dịch vụ y tế</a></li>
+                            <li><a href="/bang-gia/13">Bảng giá vật tư y tế</a></li>
+                            <li><a href="/gia-thuoc/85">Giá thuốc</a></li>
+                            <li><a href="/bang-gia-dich-vu-can-lam-sang/bang-gia-dich-vu-ky-thuat-va-xet-nghiem-/20171124111547881">Bảng giá dịch vụ cận lâm sàng</a></li>
+                            <li><a href="/bang-gia/13">Bảng giá phẫu thuật - thủ thuật</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!--menu-footer-->
+            <div class="menu-hdr main-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-7 left-main-footer pull-left">
+                            <a class="footer-logo" href="/" title="Bệnh viện Nhân dân 115"><img alt="logo benh vien da khoa 115" src="~/data/logo_footer_Benhviennhandan115.jpg" /></a>
+                            <h4>Bệnh viện nhân dân 115</h4>
+                            <p>Địa chỉ: 527 Sư Vạn Hạnh, Phường 12, Quận 10, Thành phố Hồ Chí Minh</p>
+                            <p>Số điện thoại: 028 3865 2368 - 028 3865 4139 - 028 3865 5110, Fax 028 3865 5193</p>
+                            <p><span>Copyright © 2017, bản quyền thuộc về <b>BỆNH VIỆN NHÂN DÂN 115</b>.</span></p>
+                            <p>Phát triển bởi <a href="http://alobacsi.com" target="_blank">AloBacsi.vn</a></p>
+                        </div>
+                        <div class="col-xs-5 right-main-footer pull-right text-right">
+                            <h4>Kết nối với chúng tôi</h4>
+                            <ul>
+                                <li class="youtube email"><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                                <li class="youtube"><a href="https://www.youtube.com/channel/UCXRGwFdvSj4AU7_sR7fIqmA" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.facebook.com/benhviennhandan115/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div><!--main-footer-->
+        </div><!--footer-benhvien-->
+        <div class="phone-tongdai text-center">
+            <span><i class="fa fa-phone" aria-hidden="true"></i> TỔNG ĐÀI TƯ VẤN</span>
+            <h3>(02213) 603.835</h3>
+        </div>
+        <!--modal-email-->
+        <div class="modal fade" id="send-email" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form data-ajax-method="post" data-ajax="true" data-ajax-success="AjaxSuccess" data-ajax-failure="AjaxFailure" action="/contact" method="post">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title number-chamsockhachhang">Gửi Email</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="sender" class="control-label">Email của bạn:</label>
+                                <input type="text" class="form-control" id="sender" name="sender">
+                            </div>
+                            <div class="form-group">
+                                <label for="title" class="control-label">Tiêu đề:</label>
+                                <input type="text" class="form-control" id="title" name="title">
+                            </div>
+                            <div class="form-group">
+                                <label for="message-text" class="control-label">Nhập nội dung email:</label>
+                                <textarea class="form-control" id="message-text" name="message"></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                            <button type="submit" class="btn btn-blue">Gửi email</button>
+                        </div>
+                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Jj4ZFTxxWxPsUj6o_VZN1PyRb1W_xoSsADL37EIi0cgPoxOZ-vwhM0oWKo3frh1rELYioCf_fW2va_OVBn8eXe8c-mit1On2eR4bi-0q2cPjgRxPYVbFVQfn68Gwlhdi38gcTTKTn1ZTuyrwEwGVw4" />
+                    </form>
+                    }
+                </div>
+            </div>
+        </div>
+        <!--subscription-->
+        <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content" id="mc_embed_signup">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title number-chamsockhachhang">Đăng ký nhận thông tin từ bệnh viện</h4>
+                    </div>
+                    <form action="//benhvien115.us8.list-manage.com/subscribe/post?u=2056185b7965a9808a716912c&amp;id=7268c9f00f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="recipient-name" class="control-label">Địa chỉ email:</label>
+                                <input type="email" class="form-control" name="EMAIL" id="mce-EMAIL">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" name="subscribe" class="btn btn-blue" id="mc-embedded-subscribe">Đăng ký</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+        <!--gototop-->
+        <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () { scrollFunction() };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("myBtn").style.display = "block";
+                } else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Chrome, Safari and Opera
+                document.documentElement.scrollTop = 0; // For IE and Firefox
+            }
+        </script>
+        <!-- allmenu-mobile -->
+        <nav id="menu">
+            <ul>
+                <li class="top-menumoblie">
+                    <a data-toggle="modal" data-target="#send-email"><i class="fa fa-envelope" aria-hidden="true"></i>Gửi Email</a>
+                </li>
+                <li class="menu-active"><a href="/">Trang chủ</a></li>
+                <li>
+                    <a href="/gioi-thieu-tong-quan">Giới thiệu</a>
+                    <ul class="list-unstyled alias-menu">
+                        <li><a href="/gioi-thieu-tong-quan">Giới thiệu tổng quan</a></li>
+                        <li><a href="/so-do-to-chuc">Sơ đồ tổ chức</a></li>
+                        <li><a href="/lich-su-hinh-thanh">Lịch sử hình thành</a></li>
+                        <li><a href="/khoa">Danh sách Phòng/Khoa</a></li>
+                        <li><a href="/bac-si">Danh sách bác sĩ theo các chuyên khoa</a></li>
+                    </ul>
+                </li>
+                <li><a href="/tin-tuc-va-hoat-dong/2" class="m-noti">Tin tức & Hoạt động</a></li>
+                <li>
+                    <a href="/dich-vu/7" class="m-noti">Truyền Nhiễm</a>
+                    <ul class="list-unstyled alias-menu">
+                        <li class="text-uppercase"><a>1. Quy trình khám bệnh</a></li>
+                        <li><a href="#">Khám bảo hiểm</a></li>
+                        <li><a href="#">Khám bình thường</a></li>
+                        <li><a href="#">Khám dịch vụ</a></li>
+                        <li class="text-uppercase"><a>2. Giới thiệu các dịch vụ</a></li>
+                        <li><a href="/kham-v-i-p-doanh-nhan/65">Khám V.I.P - Doanh nhân</a></li>
+                        <li><a href="/phong-tam-ly-tri-lieu/79">Phòng Tâm lý Trị liệu</a></li>
+                        <li><a href="/kham-benh-trong-gio/16">Khám bệnh trong giờ</a></li>
+                        <li><a href="/kham-benh-hen-gio-/67">Khám bệnh hẹn giờ </a></li>
+                        <li><a href="/kham-benh-tai-nha-/68">Khám bệnh tại nhà </a></li>
+                        <li><a href="/kham-suc-khoe-tong-quat-/69">Khám sức khỏe tổng quát </a></li>
+                        <li><a href="/kham-suc-khoe-chuyen-khoa-/70">Khám sức khỏe chuyên khoa </a></li>
+                        <li><a href="/kham-suc-khoe-cho-cong-ty-/72">Khám sức khỏe cho công ty </a></li>
+                        <li><a href="/dich-vu-tham-my-/74">Dịch vụ thẩm mỹ </a></li>
+                        <li><a href="/dich-vu-chung-ngua-/75">Dịch vụ chủng ngừa </a></li>
+                        <li><a href="/quan-ly-chat-luong-benh-vien-/77">Quản lý chất lượng bệnh viện </a></li>
+                        <li class="text-uppercase"><a>3. Dịch vụ đặc biệt</a></li>
+                        <li><a href="#">Dịch vụ nuôi bệnh tại bệnh viện, tại nhà</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="m-noti">Chăm sóc khách hàng</a>
+                    <ul class="list-unstyled alias-menu">
+                        <li>
+                            <div class="home-chamsockhachhang">
+                                <img alt="..." src="~/data/icon1_chamsockhachhang.png" />
+                                <p>Trả lời câu hỏi  - Tư vấn sức khỏe:</p>
+                                <span class="number-chamsockhachhang">(028) 38.683.496 - 0906.336.115</span>
+                                <p><a class="btn btn-chamsockhachhang"><b>Gửi câu hỏi</b><i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/lich-kham-benh" class="m-noti">Lịch làm việc</a>
+                </li>
+                <li>
+                    <a href="/bang-gia/13" class="m-noti">Bảng giá</a>
+                    <ul class="list-unstyled alias-menu">
+                        <li class="text-uppercase"><a>Bảng giá</a></li>
+                        <li><a href="/bang-gia-kham-benh/bang-gia-dich-vu-kham-benh/2017112411032996">Bảng giá khám bệnh</a></li>
+                        <li><a href="/bang-gia-phong-cac-loai/gia-dich-vu-giuong-benh/20170630040947232">Bảng giá phòng các loại</a></li>
+                        <li><a href="/bang-gia-dich-vu-y-te/bang-gia-kham-benh-va-dieu-tri-/2017063004599664">Bảng giá dịch vụ y tế</a></li>
+                        <li><a href="/bang-gia/13">Bảng giá vật tư y tế</a></li>
+                        <li><a href="/gia-thuoc/85">Giá thuốc</a></li>
+                        <li><a href="/bang-gia-dich-vu-can-lam-sang/bang-gia-dich-vu-ky-thuat-va-xet-nghiem-/20171124111547881">Bảng giá dịch vụ cận lâm sàng</a></li>
+                        <li><a href="/bang-gia/13">Bảng giá phẫu thuật - thủ thuật</a></li>
+                    </ul>
+                </li>
+                <li><a href="/tam-long-vang/8" class="m-noti">Tấm lòng vàng</a></li>
+
+                <li><a href="/tu-van-bac-si/6" class="m-noti">Bác sĩ tư vấn</a></li>
+                <li><a href="/kien-thuc-y-khoa/5" class="m-noti">Kiến thức y khoa</a></li>
+                <li><a href="/dao-tao/4" class="m-noti">Đào tạo</a></li>
+                <li><a href="/bao-hiem-y-te/3" class="m-noti">Bảo hiểm y tế</a></li>
+                <li>
+                    <a href="/tuyen-dung/90" class="m-noti">tuyển dụng</a>
+                </li>
+                <li>
+                    <a href="/thong-bao/91" class="m-noti">thông báo</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-102330412-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <script type="text/javascript" src="~/js/site.min.js"></script>
+</body>
+</html>
