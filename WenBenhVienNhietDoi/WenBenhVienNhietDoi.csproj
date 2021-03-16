@@ -1371,6 +1371,7 @@
     <Content Include="css\animate.min-1.css" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\aui.css" />
+    <Content Include="css\BangGiaDVKT.css" />
     <Content Include="css\bghome1.gif" />
     <Content Include="css\bghome1_right.gif" />
     <Content Include="css\bgright.png" />
@@ -1608,6 +1609,7 @@
     <Content Include="Images\hinh-minh-hoa-h3.jpg" />
     <Content Include="Images\hoang-giang.jpg" />
     <Content Include="Images\hoi-chan-cap-cuu.jpg" />
+    <Content Include="Images\home.png" />
     <Content Include="Images\huynh-thi-thuy-ai.jpg" />
     <Content Include="Images\icon-arrow-32.png" />
     <Content Include="Images\icon-calendar-1.png" />
