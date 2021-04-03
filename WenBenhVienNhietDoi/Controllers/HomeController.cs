@@ -22,8 +22,10 @@ namespace WenBenhVienNhietDoi.Controllers
             DataSet DanhSach_TinTuc_TRNH = _publicHelp.DanhSach_TinTuc("DanhSach_TinTuc_main", 0, 19, 4);
             DataSet DanhSach_TinTuc_KHDT = _publicHelp.DanhSach_TinTuc("DanhSach_TinTuc_main", 0, 14, 3);
 
-            ViewBag.DanhSach_TinTuc_Top5_main = _publicHelp.ConvertToList<TinTucModels>(DanhSach_TinTuc_TOP_main.Tables[0]);
-            ViewBag.DanhSach_TinTuc_Top_main = _publicHelp.ConvertToList<TinTucModels>(DanhSach_TinTuc_TOP_main.Tables[1]);
+            var list_TinTuc_TOP_main = _publicHelp.ConvertToList<TinTucModels>(DanhSach_TinTuc_TOP_main.Tables[0]);
+            ViewBag.DanhSach_TinTuc_Top_main = _publicHelp.ConvertToList<TinTucModels>(DanhSach_TinTuc_TOP_main.Tables[0]);
+            
+            //ViewBag.DanhSach_TinTuc_Top5_main = list_TinTuc_TOP_main.Skip(1).First();
             ViewBag.DanhSach_Slides = _publicHelp.ConvertToList<TinTucModels>(DanhSach_TinTuc_TOP_main.Tables[2]);
             ViewBag.DanhSach_TinTuc_HDBV = _publicHelp.ConvertToList<TinTucModels>(DanhSach_TinTuc_HDBV.Tables[0]);
             ViewBag.DanhSach_TinTuc_KHDT = _publicHelp.ConvertToList<TinTucModels>(DanhSach_TinTuc_KHDT.Tables[0]);

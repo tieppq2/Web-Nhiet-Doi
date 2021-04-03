@@ -26,7 +26,7 @@ namespace WenBenhVienNhietDoi.Controllers
             DataSet dt;
             if (CapMenu==2)
             {
-                 dt = _publicHelp.DanhSach_TinTuc("MainParent_tinTuc", ID, 0, 5);
+                dt = _publicHelp.DanhSach_TinTuc("MainParent_tinTuc", ID, 0, 5);
                 ViewBag.Name_MenuParent = _publicHelp.ConvertToList<MenuModels>(dt.Tables[0]);
                 ViewBag.TinTuc_Main_Details = _publicHelp.ConvertToList<TinTucModels>(dt.Tables[1]);
                 //ViewBag.TinTuc_Top5_NewOther = _publicHelp.ConvertToList<TinTucModels>(TinTuc_Details.Tables[2]);

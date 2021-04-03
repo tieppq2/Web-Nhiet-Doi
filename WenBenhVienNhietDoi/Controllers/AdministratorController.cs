@@ -32,6 +32,7 @@ namespace WenBenhVienNhietDoi.Controllers
             //}
             //else
             //{
+            ViewBag.TinTuc_ID = ID;
                 return View();
             //}
             //else
@@ -40,7 +41,7 @@ namespace WenBenhVienNhietDoi.Controllers
         [HttpPost]
         public JsonResult GetDetailsTinTuc(int ID)
         {
-            if (Session["ID"] == null)
+            if (Session["Data"] == null)
             {
                 return Json("Login failed");
             }
@@ -69,7 +70,7 @@ namespace WenBenhVienNhietDoi.Controllers
         [HttpPost]
         public async Task<JsonResult> UploadHomeReport()
         {
-            if (Session["ID"] == null)
+            if (Session["Data"] == null)
             {
                 return Json("Login failed");
             }
@@ -103,7 +104,7 @@ namespace WenBenhVienNhietDoi.Controllers
         [HttpPost, ValidateInput(false)]
         public async Task<JsonResult> CreateTinTuc(TinTucModels TinTuc)
         {
-            if (Session["ID"] == null)
+            if (Session["Data"] == null)
             {
                 return Json("Login failed");
             }
@@ -157,7 +158,7 @@ namespace WenBenhVienNhietDoi.Controllers
         [HttpPost]
         public JsonResult AdminUpdateStatusMes(int ID, int TrangThai, int type, int slides)
         {
-            if (Session["ID"] == null)
+            if (Session["Data"] == null)
             {
                 return Json("Login failed");
             }

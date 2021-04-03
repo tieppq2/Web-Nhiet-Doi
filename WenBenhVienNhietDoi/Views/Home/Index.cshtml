@@ -5,52 +5,17 @@
 }
 <div class="site-section block-8" style="margin: 0; padding: 0;">
     <div class="slideshow-container">
-        @foreach (var item in ViewBag.DanhSach_Slides)
-            {
-                //@index_slides = @index_slides + 1;
+        @foreach (var item_sile in ViewBag.DanhSach_Slides)
+        {
+            //@index_slides = @index_slides + 1;
             <div class="mySlides fades" style="display: none;">
-                <a href="/TinTuc/Details/@item.idTinTuc">
+                <a href="/TinTuc/Details/@item_sile.idTinTuc">
                     <div class="numbertext">1 / 5</div>
-                    <img src="@item.Avata" style="width:100%;height: 575px;" title="@item.TieuDe">
+                    <img src="@item_sile.Avata" style="width:100%;height: 575px;" title="@item_sile.TieuDe">
                     <div class="text">@*Dự án xây dựng bệnh viện nhiệt đới trung ương*@</div>
                 </a>
             </div>
         }
-        @*<div class="mySlides fades" style="display: none;">
-            <a href="/Home/Index">
-                <div class="numbertext">1 / 5</div>
-                <img src="./Images/noi-tru1.jpg" style="width:100%;height: 575px;" title="Dự án xây dựng bệnh viện nhiệt đới trung ương">
-                <div class="text">Dự án xây dựng bệnh viện nhiệt đới trung ương</div>
-            </a>
-        </div>
-        <div class="mySlides fades" style="display: block;">
-            <a href="/Home/Index">
-                <div class="numbertext">2 / 5</div>
-                <img src="../Images/noi-soi-2.jpg" style="width:100%;height: 575px;" title="LỄ CÔNG BỐ QUYẾT ĐỊNH BỔ NHIỆM GIÁM ĐỐC VÀ PHÓ GIÁM ĐỐC PHỤ TRÁCH KINH TẾ BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG">
-                <div class="text">LỄ CÔNG BỐ QUYẾT ĐỊNH BỔ NHIỆM GIÁM ĐỐC VÀ PHÓ GIÁM ĐỐC PHỤ TRÁCH KINH TẾ BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG</div>
-            </a>
-        </div>
-        <div class="mySlides fades" style="display: none;">
-            <a href="/Home/Index">
-                <div class="numbertext">3 / 5</div>
-                <img src="../Images/noi-soi-3.jpg" style="width:100%;height: 575px;" title="PHÓ CHỦ TỊCH NƯỚC ĐẶNG THỊ NGỌC THỊNH TRAO TẶNG HUÂN CHƯƠNG LAO ĐỘNG HẠNG 3 CHO BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG">
-                <div class="text">PHÓ CHỦ TỊCH NƯỚC ĐẶNG THỊ NGỌC THỊNH TRAO TẶNG HUÂN CHƯƠNG LAO ĐỘNG HẠNG 3 CHO BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG</div>
-            </a>
-        </div>
-        <div class="mySlides fades" style="display: none;">
-            <a href="/Home/Index">
-                <div class="numbertext">4 / 5</div>
-                <img src="../Images/141631853.jpg" style="width:100%;height: 575px;" title="BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG BÁO CÁO THÀNH TÍCH ĐIỂN HÌNH TIÊN TIẾN VỚI CHỦ TỊCH QUỐC HỘI NGUYỄN THỊ KIM NGÂN TRƯỚC THỀM ĐẠI HỘI THI ĐUA YÊU NƯỚC TOÀN QUỐC NĂM 2020">
-                <div class="text">BỆNH VIỆN BỆNH NHIỆT ĐỚI TRUNG ƯƠNG BÁO CÁO THÀNH TÍCH ĐIỂN HÌNH TIÊN TIẾN VỚI CHỦ TỊCH QUỐC HỘI NGUYỄN THỊ KIM NGÂN TRƯỚC THỀM ĐẠI HỘI THI ĐUA YÊU NƯỚC TOÀN QUỐC NĂM 2020</div>
-            </a>
-        </div>
-        <div class="mySlides fades" style="display: none;">
-            <a href="/Home/Index">
-                <div class="numbertext">5 / 5</div>
-                <img src="../Images/dien-sinh-ky-1.jpg" style="width:100%;height: 575px;" title="LỄ KÝ KẾT HỢP TÁC">
-                <div class="text">LỄ KÝ KẾT HỢP TÁC</div>
-            </a>
-        </div>*@
 
         <a class="prev" style="top: 25%;" onclick="plusSlides(-1)">❮</a>
         <a class="next" style="top: 25%;" onclick="plusSlides(1)">❯</a>
@@ -101,17 +66,18 @@
         <div class="row">
             <div class="col-md-8 col-sm-12">
                 <div class="row" style="width:100%; padding: 2px; margin-left:0px;">
-                    <!--Tin mới-->                  
-                        <h2 style="font-weight:bold;">
-                            <a style=" font-size: 30px;color: #2096db;text-transform:uppercase;    font-family: 'Roboto Condensed',Roboto,arial;">
-                                Tin Mới
-                            </a>
-                        </h2>
-                        <span style="width:100%; height:1px;background-color:#c2c2c2;display:inline-block;">
-                        </span>
+                    <!--Tin mới-->
+                    <h2 style="font-weight:bold;">
+                        <a style=" font-size: 30px;color: #2096db;text-transform:uppercase;    font-family: 'Roboto Condensed',Roboto,arial;">
+                            Tin Mới
+                        </a>
+                    </h2>
+                    <span style="width:100%; height:1px;background-color:#c2c2c2;display:inline-block;">
+                    </span>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:10px 10px 10px 0px;margin-top:10px;">
-                        @foreach (var item in ViewBag.DanhSach_TinTuc_Top_main)
-                        {
+                        @*foreach (var item in ViewBag.DanhSach_TinTuc_Top_main)*@
+                        @{
+                            var item = ViewBag.DanhSach_TinTuc_Top_main[0];
                             <div class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="item active">
@@ -131,31 +97,31 @@
                                 </div>
                             </div>
                         }
-                        <div style="position: absolute;    left: 50%;">
-                            <a id="prev-page" style="color: #000;"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-                            &nbsp;&nbsp;
-                            <a id="next-page" style="color: #000;"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        </div>
+                        @*<div>
+                                <input aria-expanded="false" class="btn btn-outline-danger-xemthem" style="right: 7%;"
+                                       data-toggle="collapse" value="Xem Thêm" />
+                            </div>*@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 news-row" style="margin-top:10px; padding: 0;">
-                        @foreach (var item in ViewBag.DanhSach_TinTuc_Top5_main)
+                        @for (var index = 1;index <  ViewBag.DanhSach_TinTuc_Top_main.Count;index++)
                         {
+                            var item_top5 = ViewBag.DanhSach_TinTuc_Top_main[index];
                             <div class="news-hot-home">
                                 <div style="float: left; z-index: 2;">
-                                    <a href="/TinTuc/Details/@item.idTinTuc" target="_blank">
-                                        <img src="@item.Avata" alt="@item.TieuDe" style="width:120px; height:80px;">
+                                    <a href="/TinTuc/Details/@item_top5.idTinTuc" target="_blank">
+                                        <img src="@item_top5.Avata" alt="@item_top5.TieuDe" style="width:120px; height:80px;">
                                     </a>
                                 </div>
                                 <div style="padding-left:135px;">
                                     <div class="titleTranblock">
-                                        <a href="/TinTuc/Details/@item.idTinTuc" target="_blank">@item.TieuDe</a>
+                                        <a href="/TinTuc/Details/@item_top5.idTinTuc" target="_blank">@item_top5.TieuDe</a>
                                     </div>
                                     <div class="line-time"></div>
                                     <div class="title-time">
                                         <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
-                                        @item.NgayDuyet&nbsp;&nbsp;&nbsp;&nbsp;
+                                        @item_top5.NgayDuyet&nbsp;&nbsp;&nbsp;&nbsp;
                                         <i class="fa fa-eye" style="color:red; padding:0; font-size: 14px;"></i>
-                                        <span id="idView">@item.SoLuongXem</span>
+                                        <span id="idView">@item_top5.SoLuongXem</span>
                                     </div>
                                 </div>
                             </div>
@@ -291,83 +257,81 @@
 <div class="site-blocks-cover site-blocks-1 bg-light" style="padding-top: 20px; background: #f8f8f8;">
     <div class="container">
         <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 news-row" style="margin-top:10px;margin-bottom: 20px; padding: 0;">
-                    <!--Hoạt động BV-->
-                    <div class="content-box3-news">
-                        <h2 style="font-weight:bold;">
-                            <a style=" font-size: 20px;color: #2096db;text-transform:uppercase;    font-family: 'Roboto Condensed',Roboto,arial;">
-                                Hoạt động bệnh viện
-                            </a>
-                        </h2>
-                        <span style="width:100%; height:1px;background-color:#c2c2c2;display:inline-block;">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 news-row" style="margin-top:10px;margin-bottom: 20px; padding: 0;">
+                <!--Hoạt động BV-->
+                <div class="content-box3-news">
+                    <h2 style="font-weight:bold;">
+                        <a style=" font-size: 20px;color: #2096db;text-transform:uppercase;    font-family: 'Roboto Condensed',Roboto,arial;">
+                            Hoạt động bệnh viện
+                        </a>
+                    </h2>
+                    <span style="width:100%; height:1px;background-color:#c2c2c2;display:inline-block;">
 
-                        </span>
+                    </span>
 
-                        @foreach (var item in ViewBag.DanhSach_TinTuc_HDBV)
-                        {
-                            <div class="news-hot-home-2" style="margin-top:10px;">
-                                <div style="float: left; z-index: 2;">
-                                    <a href="/TinTuc/Details/@item.idTinTuc" target="_blank">
-                                        <img src="@item.Avata" alt="@item.TieuDe" style="width:120px; height:80px;">
-                                    </a>
-                                </div>
-                                <div style="padding-left:135px;">
-                                    <div class="titleTranblock">
-                                        <a href="/TinTuc/Details/@item.idTinTuc" target="_blank">@item.TieuDe</a>
-                                    </div>
-                                    <div class="line-time"></div>
-                                    <div class="title-time" style="text-align: right;">
-                                        <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
-                                        @item.NgayDuyet&nbsp;&nbsp;&nbsp;&nbsp;
-                                    </div>
-                                    @*<p style="margin-top:10px;">@item.TomTatNoiDung</p>*@
-                                </div>
+                    @foreach (var item_HDBV in ViewBag.DanhSach_TinTuc_HDBV)
+                    {
+                        <div class="news-hot-home-2" style="margin-top:10px;">
+                            <div style="float: left; z-index: 2;">
+                                <a href="/TinTuc/Details/@item.idTinTuc" target="_blank">
+                                    <img src="@item_HDBV.Avata" alt="@item_HDBV.TieuDe" style="width:120px; height:80px;">
+                                </a>
                             </div>
-                        }
-                        <div class="td-next-prev-wrap">
-                            <a id="prev-page" style="color: #000;"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-                            &nbsp;&nbsp;
-                            <a id="next-page" style="color: #000;"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                            <div style="padding-left:135px;">
+                                <div class="titleTranblock">
+                                    <a href="/TinTuc/Details/@item_HDBV.idTinTuc" target="_blank">@item_HDBV.TieuDe</a>
+                                </div>
+                                <div class="line-time"></div>
+                                <div class="title-time" style="text-align: right;">
+                                    <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                    @item_HDBV.NgayDuyet&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                                @*<p style="margin-top:10px;">@item.TomTatNoiDung</p>*@
+                            </div>
                         </div>
+                    }
+                    <div class="news-hot-home-2" style="margin-top:10px;height: 0px;">
+                        <input aria-expanded="false" class="btn btn-outline-danger-xemthem"
+                               data-toggle="collapse" value="Xem Thêm" onclick="location.href='/MainParent/Details?ID=9&CapMenu=1'" />
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 news-row" style="margin-top:10px; margin-bottom: 20px; padding: 0;">
-                    <!--Tin truyền nhiễm-->
-                    <div class="content-box3-news">
-                        <h2 style="font-weight:bold;">
-                            <a style=" font-size: 20px;color: #2096db;text-transform:uppercase;    font-family: 'Roboto Condensed',Roboto,arial;">
-                                Tin truyền nhiễm
-                            </a>
-                        </h2>
-                        <span style="width:100%; height:1px;background-color:#c2c2c2;display:inline-block;">
-                        </span>
-                        @foreach (var item in ViewBag.DanhSach_TinTuc_TRNH)
-                        {
-                            <div class="news-hot-home-2" style="margin-top:10px";>
-                                <div style="float: left; z-index: 2;">
-                                    <a href="/TinTuc/Details/@item.idTinTuc" target="_blank">
-                                        <img src="@item.Avata" alt="@item.TieuDe" style="width:120px; height:80px;">
-                                    </a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 news-row" style="margin-top:10px; margin-bottom: 20px; padding: 0;">
+                <!--Tin truyền nhiễm-->
+                <div class="content-box3-news">
+                    <h2 style="font-weight:bold;">
+                        <a style=" font-size: 20px;color: #2096db;text-transform:uppercase;    font-family: 'Roboto Condensed',Roboto,arial;">
+                            Tin truyền nhiễm
+                        </a>
+                    </h2>
+                    <span style="width:100%; height:1px;background-color:#c2c2c2;display:inline-block;">
+                    </span>
+                    @foreach (var item_TRNH in ViewBag.DanhSach_TinTuc_TRNH)
+                    {
+                        <div class="news-hot-home-2" style="margin-top:10px">
+                            <div style="float: left; z-index: 2;">
+                                <a href="/TinTuc/Details/@item_TRNH.idTinTuc" target="_blank">
+                                    <img src="@item_TRNH.Avata" alt="@item_TRNH.TieuDe" style="width:120px; height:80px;">
+                                </a>
+                            </div>
+                            <div style="padding-left:135px;">
+                                <div class="titleTranblock">
+                                    <a href="/TinTuc/Details/@item_TRNH.idTinTuc" target="_blank">@item_TRNH.TieuDe</a>
                                 </div>
-                                <div style="padding-left:135px;">
-                                    <div class="titleTranblock">
-                                        <a href="/TinTuc/Details/@item.idTinTuc" target="_blank">@item.TieuDe</a>
-                                    </div>
-                                    <div class="line-time"></div>
-                                    <div class="title-time" style="text-align: right;">
-                                        <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
-                                        @item.NgayDuyet&nbsp;&nbsp;&nbsp;&nbsp;
-                                    </div>
+                                <div class="line-time"></div>
+                                <div class="title-time" style="text-align: right;">
+                                    <i class="fa fa-calendar" style="color:red; padding:0; font-size: 14px;"></i>
+                                    @item_TRNH.NgayDuyet&nbsp;&nbsp;&nbsp;&nbsp;
                                 </div>
                             </div>
-                        }
-                        <div class="td-next-prev-wrap">
-                            <a id="prev-page" style="color: #000;"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-                            &nbsp;&nbsp;
-                            <a id="next-page" style="color: #000;"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                         </div>
+                    }
+                    <div class="news-hot-home-2" style="margin-top:10px;height: 0px;">
+                        <input aria-expanded="false" class="btn btn-outline-danger-xemthem"
+                               data-toggle="collapse" value="Xem Thêm" onclick="location.href='/MainParent/Details?ID=19&CapMenu=1'" />
                     </div>
                 </div>
+            </div>
         </div>
     </div>
 </div>
@@ -430,12 +394,12 @@
     <div class="container">
         <div class="row">
             @*<section class="elementor-section elementor-inner-section elementor-element elementor-element-ea5040e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ea5040e" data-element_type="section">
-            <div class="elementor-widget-container">
-                <h2 class="elementor-heading-title elementor-size-default">
-                    Đội ngũ bác sĩ
-                </h2>
-            </div>
-        </section>*@
+                    <div class="elementor-widget-container">
+                        <h2 class="elementor-heading-title elementor-size-default">
+                            Đội ngũ bác sĩ
+                        </h2>
+                    </div>
+                </section>*@
             <h2 style="font-weight:bold;">
                 <a style=" font-size: 30px;color: #2096db;text-transform:uppercase;    font-family: 'Roboto Condensed',Roboto,arial;">
                     Đội ngũ bác sĩ
@@ -451,7 +415,7 @@
                         <h5>Caroline Grant</h5>
                         <span>Plastic surgeon</span>
                         <div class="team__item__social">
-                          
+
                         </div>
                     </div>
                 </div>
@@ -461,7 +425,7 @@
                         <h5>Dr. Maria Angel</h5>
                         <span>Plastic surgeon</span>
                         <div class="team__item__social">
-                            
+
                         </div>
                     </div>
                 </div>
@@ -471,7 +435,7 @@
                         <h5>Nathan Mullins</h5>
                         <span>Plastic surgeon</span>
                         <div class="team__item__social">
-                            
+
                         </div>
                     </div>
                 </div>
@@ -481,64 +445,64 @@
 
 
             @*<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 news-row" style="margin-top:10px; padding: 0;">
-                <div class="nonloop-block-3 owl-carousel owl-loaded owl-drag">
-                    <div class="owl-stage-outer">
-                        <div class="owl-item active plc4">
-                            <div class="item">
-                                <div class="block-38 text-center">
-                                    <div class="block-38-img text-center">
-                                        <div class="block-38-header text-center">
-                                            <img style="width: 85%; margin-left: 13px;" src="../Images/102741329.jpg" alt="TS. Phạm Ngọc Thạch" class="mb-4">
-                                            <h3 class="block-38-heading h4" style="font-size: 16px;">TS. Phạm Ngọc Thạch</h3>
-                                            <p class="block-38-subheading" style="font-size: 11px;">Giám đốc</p>
-                                        </div>
-                                        <div class="block-38-body">
-                                            <p></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="owl-item active plc4">
-                            <div class="item">
-                                <div class="block-38 text-center">
-                                    <div class="block-38-img text-center">
-                                        <div class="block-38-header text-center">
-                                            <img style="width: 85%; margin-left: 13px;" src="../Images/150310772.jpg" alt="Ths.BS Đặng Hồng Hải" class="mb-4">
-                                            <h3 class="block-38-heading h4" style="font-size: 16px;">Ths.BS Đặng Hồng Hải</h3>
-                                            <p class="block-38-subheading" style="font-size: 11px;">Trưởng phòng Kế hoạch Tổng hợp</p>
-                                        </div>
-                                        <div class="block-38-body">
-                                            <p></p>
+                    <div class="nonloop-block-3 owl-carousel owl-loaded owl-drag">
+                        <div class="owl-stage-outer">
+                            <div class="owl-item active plc4">
+                                <div class="item">
+                                    <div class="block-38 text-center">
+                                        <div class="block-38-img text-center">
+                                            <div class="block-38-header text-center">
+                                                <img style="width: 85%; margin-left: 13px;" src="../Images/102741329.jpg" alt="TS. Phạm Ngọc Thạch" class="mb-4">
+                                                <h3 class="block-38-heading h4" style="font-size: 16px;">TS. Phạm Ngọc Thạch</h3>
+                                                <p class="block-38-subheading" style="font-size: 11px;">Giám đốc</p>
+                                            </div>
+                                            <div class="block-38-body">
+                                                <p></p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="owl-item active plc4">
-                            <div class="item">
-                                <div class="block-38 text-center">
-                                    <div class="block-38-img text-center">
-                                        <div class="block-38-header text-center">
-                                            <img style="width: 85%; margin-left: 13px;" src="../Images/140543393.jpg" alt="BsCKII. Nguyễn Trung Cấp" class="mb-4">
-                                            <h3 class="block-38-heading h4" style="font-size: 16px;">BsCKII. Nguyễn Trung Cấp</h3>
-                                            <p class="block-38-subheading" style="font-size: 11px;">Phó Giám đốc</p>
-                                        </div>
-                                        <div class="block-38-body">
-                                            <p></p>
+                            <div class="owl-item active plc4">
+                                <div class="item">
+                                    <div class="block-38 text-center">
+                                        <div class="block-38-img text-center">
+                                            <div class="block-38-header text-center">
+                                                <img style="width: 85%; margin-left: 13px;" src="../Images/150310772.jpg" alt="Ths.BS Đặng Hồng Hải" class="mb-4">
+                                                <h3 class="block-38-heading h4" style="font-size: 16px;">Ths.BS Đặng Hồng Hải</h3>
+                                                <p class="block-38-subheading" style="font-size: 11px;">Trưởng phòng Kế hoạch Tổng hợp</p>
+                                            </div>
+                                            <div class="block-38-body">
+                                                <p></p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div><div class="owl-nav"><div class="owl-prev disabled"><span class="icon-arrow_back"></span></div><div class="owl-next"><span class="icon-arrow_forward"></span></div></div><div class="owl-dots"><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div></div>
-                </div>
-                <div class="td-next-prev-wrap" style="margin-bottom:-20px">
-                    <a id="prev-page" style="color: #000;"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-                    &nbsp;&nbsp;
-                    <a id="next-page" style="color: #000;"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                </div>
-            </div>*@
+                            <div class="owl-item active plc4">
+                                <div class="item">
+                                    <div class="block-38 text-center">
+                                        <div class="block-38-img text-center">
+                                            <div class="block-38-header text-center">
+                                                <img style="width: 85%; margin-left: 13px;" src="../Images/140543393.jpg" alt="BsCKII. Nguyễn Trung Cấp" class="mb-4">
+                                                <h3 class="block-38-heading h4" style="font-size: 16px;">BsCKII. Nguyễn Trung Cấp</h3>
+                                                <p class="block-38-subheading" style="font-size: 11px;">Phó Giám đốc</p>
+                                            </div>
+                                            <div class="block-38-body">
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><div class="owl-nav"><div class="owl-prev disabled"><span class="icon-arrow_back"></span></div><div class="owl-next"><span class="icon-arrow_forward"></span></div></div><div class="owl-dots"><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div></div>
+                    </div>
+                    <div class="td-next-prev-wrap" style="margin-bottom:-20px">
+                        <a id="prev-page" style="color: #000;"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                        &nbsp;&nbsp;
+                        <a id="next-page" style="color: #000;"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>*@
         </div>
 
     </div>
@@ -547,14 +511,22 @@
 <div class="site-blocks-cover site-blocks-1 bg-light" style="padding-top: 50px;">
     <div class="container">
         <div class="row">
-            <div style="    width: inherit; " class="elementor-element elementor-element-46ca6b9 elementor-widget elementor-widget-heading" data-element_type="widget" data-widget_type="heading.default">
+            @*<div style="    width: inherit; " class="elementor-element elementor-element-46ca6b9 elementor-widget elementor-widget-heading" data-element_type="widget" data-widget_type="heading.default">
                 <div class="elementor-widget-container-2" style="margin-top:37px">
                     <h3 class="h3-element-heading" style="text-align: left;">
                         Văn bản mới nhất
                         <div style=" display: inline-block; float: right;"><a target="_blank" href="http://emohbackup.moh.gov.vn/publish"><i class="fa fa-search"></i>&nbsp;Tìm kiếm</a></div>
                     </h3>
                 </div>
-            </div>
+            </div>*@
+            <h2 style="font-weight:bold;">
+                <a style=" font-size: 30px;color: #2096db;text-transform:uppercase;    font-family: 'Roboto Condensed',Roboto,arial;">
+                    Văn bản mới nhất
+                </a>
+                <a target="_blank" style=" display: inline-block; float: right;text-align: right;" @*href="http://emohbackup.moh.gov.vn/publish"*@>
+                    <i class="fa fa-search"></i>&nbsp;Tìm kiếm
+                </a>
+            </h2>
             <div class="site-section block-3 site-blocks-2">
                 <div class="container">
                     <div class="row">
@@ -633,5 +605,41 @@
         box-shadow: 0 0 5px 0 #eee;
         padding: 20px 15px;
         float: left;
+        width: 98%;
     }
+    /*.btn-outline-danger {
+        color: #dc3545;
+        background-color: transparent;
+        background-image: none;
+        border-color: #dc3545;
+    }*/
+    .btn-outline-danger-xemthem {
+        position: absolute;
+        right: 6%;
+        bottom: 5%;
+        width: 105px;
+        display: inline-block;
+        padding: -1px 24px;
+        font-size: 15px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #868eef;
+        border: none;
+        border-radius: 16px;
+        box-shadow: 0 9px #99b;
+    }
+
+        .btn-outline-danger-xemthem:hover {
+            background-color: #4c54af;
+            color: #fff;
+        }
+
+        .btn-outline-danger-xemthem:active {
+            background-color: #868eef;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
 </style>
