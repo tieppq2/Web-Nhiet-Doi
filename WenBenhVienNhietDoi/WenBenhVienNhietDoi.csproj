@@ -597,7 +597,6 @@
     <Content Include="ckfinder\bin\Debug\CKFinder.pdb" />
     <Content Include="ckfinder\bin\Release\CKFinder.dll" />
     <Content Include="ckfinder\changelog.txt" />
-    <Content Include="ckfinder\ckfinder.html" />
     <Content Include="ckfinder\ckfinder.js" />
     <Content Include="ckfinder\ckfinder_v1.js" />
     <Content Include="ckfinder\config.ascx" />
@@ -1842,6 +1841,7 @@
     <Content Include="Images\xet-nghiem1.jpg" />
     <Content Include="Images\youto.png" />
     <Content Include="Images\zalo.png" />
+    <Content Include="js\Administrator\jquery.min.js" />
     <Content Include="js\bootstrap.min-1.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\comment-1.js" />
