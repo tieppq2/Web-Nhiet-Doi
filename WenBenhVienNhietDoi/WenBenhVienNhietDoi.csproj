@@ -196,6 +196,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MenuLinkModels.cs" />
     <Compile Include="Models\MenuModels.cs" />
+    <Compile Include="Models\TaiKhoanModels.cs" />
     <Compile Include="Models\ThongTinDatLichModels.cs" />
     <Compile Include="Models\TinTucModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
