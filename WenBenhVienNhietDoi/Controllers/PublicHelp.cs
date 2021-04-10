@@ -35,17 +35,33 @@ namespace WenBenhVienNhietDoi.Controllers
                 return objT;
             }).ToList();
         }
-        public DataSet DanhSach_TinTuc(string store, int ID, int ID_Parent, int Top)
+        public DataSet DanhSach_TinTuc(string store,int ID, int ID_Parent,int top)
         {
             SqlParameter[] paras = {
                 new SqlParameter("@ID", SqlDbType.Int),
                 new SqlParameter("@ID_Parent", SqlDbType.Int),
-                new SqlParameter("@count", SqlDbType.Int),
+                new SqlParameter("@count", SqlDbType.Int)
             };
             paras[0].Value = Convert.ToInt32(ID);
             paras[1].Value = Convert.ToInt32(ID_Parent);
-            paras[2].Value = Convert.ToInt32(Top);
+            paras[2].Value = Convert.ToInt32(top);
             return DBProcess.GetDataSet(store, paras);
+        }
+        public DataSet DanhSach_TinTuc_Page(int Page, int recodperpage, int Pagesize, int ID, int ID_Parent)
+        {
+            SqlParameter[] paras = {
+                new SqlParameter("@currPage", SqlDbType.Int),
+                new SqlParameter("@recodperpage", SqlDbType.Int),
+                new SqlParameter("@Pagesize", SqlDbType.Int),
+                new SqlParameter("@ID", SqlDbType.Int),
+                new SqlParameter("@ID_parent", SqlDbType.Int)
+            };
+            paras[0].Value = Convert.ToInt32(Page);
+            paras[1].Value = Convert.ToInt32(recodperpage);
+            paras[2].Value = Convert.ToInt32(Pagesize);
+            paras[3].Value = Convert.ToInt32(ID);
+            paras[4].Value = Convert.ToInt32(ID_Parent);
+            return DBProcess.GetDataSet("TB_News_PagingByCateID", paras);
         }
         public DataSet DanhSach_TinTuc_MainParent(string store, int ID_Parent, int level, int Top)
         {
